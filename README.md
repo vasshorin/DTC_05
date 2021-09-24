@@ -12,6 +12,8 @@ This browser based web application to ...
 *Don't forget to save the file   
 
 Resolving issues
+
+SPECIAL FOR RYO
 	
 ## Technologies
 Technologies used for this project:
