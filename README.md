@@ -7,6 +7,7 @@
 ## General Info
 This browser based web application to ...
 Vasily added first line
+Vasily added second line 
 	
 ## Technologies
 Technologies used for this project:
