@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-
+*This is Ryo, again.
 	
 ## Technologies
 Technologies used for this project:
