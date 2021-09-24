@@ -7,6 +7,13 @@
 ## General Info
 This browser based web application to ...
 Hi this is Yaqin (Frida), I am excited!!
+
+*This is Ryo, again. It is so difficutl to get used to.qq
+*Don't forget to save the file   
+
+Resolving issues
+
+SPECIAL FOR RYO
 	
 ## Technologies
 Technologies used for this project:
