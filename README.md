@@ -7,8 +7,10 @@
 ## General Info
 This is Vasily's third attemp
 This browser based web application to ...
-Changing line
 
+*This is Ryo, again.
+
+Resolving issues
 	
 ## Technologies
 Technologies used for this project:
