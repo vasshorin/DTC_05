@@ -5,12 +5,20 @@
 * [Contents](#content)
 
 ## General Info
+This is Vasily's third attemp
 This browser based web application to ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff. 
 =======
 *This is Ryo, again.
 >>>>>>> 24720f939273a0cc3a120c44a49374a386888692
+=======
+
+*This is Ryo, again.
+
+Resolving issues
+>>>>>>> 4494a48b27a8e0ba3e907caa55f765746b5f7391
 	
 ## Technologies
 Technologies used for this project:
