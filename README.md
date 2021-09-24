@@ -11,6 +11,8 @@ This browser based web application to ...
 *This is Ryo, again.
 
 Resolving issues
+
+SPECIAL FOR RYO
 	
 ## Technologies
 Technologies used for this project:
