@@ -8,7 +8,8 @@
 This is Vasily's third attemp
 This browser based web application to ...
 
-*This is Ryo, again. It is so difficutl to get used to.
+*This is Ryo, again. It is so difficutl to get used to.qq
+*Don't forget to save the file   
 
 Resolving issues
 	
