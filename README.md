@@ -6,7 +6,11 @@
 
 ## General Info
 This browser based web application to ...
+<<<<<<< HEAD
 Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff. 
+=======
+*This is Ryo, again.
+>>>>>>> 24720f939273a0cc3a120c44a49374a386888692
 	
 ## Technologies
 Technologies used for this project:
