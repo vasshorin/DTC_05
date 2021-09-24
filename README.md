@@ -5,16 +5,7 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
-<<<<<<< HEAD
-Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff.
-=======
-Vasily added first line
-<<<<<<< HEAD
-Vasily added second line 
-=======
->>>>>>> f9804a303389447884bdfa24c158f77a850f0f53
->>>>>>> 29b4ed2b1756f4a179f26023a2582120cb7eb932
+This is Vasily's third attemp
 	
 ## Technologies
 Technologies used for this project:
