@@ -6,11 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-<<<<<<< HEAD
-Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff.
-=======
-Vasily added first line
->>>>>>> f9804a303389447884bdfa24c158f77a850f0f53
+Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff. 
 	
 ## Technologies
 Technologies used for this project:
