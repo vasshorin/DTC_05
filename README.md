@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+Hi this is Yaqin (Frida), I am excited about this project because I will learn a lot of new stuff.
 	
 ## Technologies
 Technologies used for this project:
