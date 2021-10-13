@@ -7,4 +7,9 @@ i a:link {
 
 #nav-right {
     width: 7rem;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
 }
