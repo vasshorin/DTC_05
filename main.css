@@ -1,0 +1,20 @@
+#body-title {text-align: center;}
+.d-inline-block {margin-left: 46.6%;
+                margin-top: 2%;}
+.card {margin: 5%;}
+.card-title{text-align: center;}
+.body-icon{margin-left:48%;}
+.card-text{text-align: center;}
+.btn1{margin-left:40%;}
+.btn2{margin-left:40%;}
+.btn3 {margin-left:38%;}
+.btn4 {margin-left:38%;}
+@media screen and (max-width: 600px){
+    .btn1{margin-left:37%;}
+    .btn2 {margin-left:33%;}
+    .btn3 {margin-left:34%;}
+    .btn4 {margin-left:30%;}
+    .d-inline-block {margin-left: 40.5%;
+                     margin-top: 2%;}
+    .card {margin: 3%;}
+    }
