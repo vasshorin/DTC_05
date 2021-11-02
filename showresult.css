@@ -22,6 +22,7 @@ h1 {
 }
 
 .container1 {
+    height: 120px;
     position: relative;
 }
 
