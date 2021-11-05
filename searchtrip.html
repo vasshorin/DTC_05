@@ -8,10 +8,11 @@
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
     <!-- Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="showresult.css">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -28,15 +29,16 @@
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <!-- <i class="fas fa-bars"></i> -->
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./countries.html">Countries</a>
@@ -58,406 +60,763 @@
         </nav>
     </div>
 
-    <div>
-        <h1>Regulations, Visa, and Customs Results for Your Trip</h1>
+    <div id="container">
 
-        <div id="regulation-section">
-            <h3>Regulations for Travel to Canada</h3>
-            <br>
-            <ol>
-                <li>Entering Canada as a fully vaccinated travellers</li>
-                <br>
-                <p>
-                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExamplp">
-                        <i class="material-icons icon1">arrow_drop_down</i> Check if you qualify as a fully vaccinated
-                        traveller
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <b>To qualify as a fully vaccinated traveller to Canada, you must:</b>
-                        <ul>
-                            <li> Have received at least 2 doses of a Government of Canada-accepted COVID-19 vaccine or a
-                                mix of 2 accepted vaccines</li>
-                            <li> Have received your second dose at least 14 full days prior to the day you enter Canada
-                            </li>
-                            <li> Upload your proof of vaccination in ArriveCAN</li>
-                            <li> Have no signs or symptoms of COVID-19</li>
-                            <li> Get pre-entry test result and meet other requirements listed below</li>
-                        </ul>
-                        <br>
-                        <i>*More details can be found at<a
-                                href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada">
-                                COVID-19 vaccinated travellers entering Canada.</a></i>
-                    </div>
-                </div>
-                <br>
-                <li>Pre-entry testing and other requirements</li>
-                <br>
-                <p>
-                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                        <i class="material-icons icon1">arrow_drop_down</i> Get a pre-entry test
-                    </button>
-                </p>
-                <div class="collapse" id="collapse1">
-                    <div class="card card-body">
-                        <b>Who must take a pre-entry test</b>
-                        <p>All travellers <b>5 years of age or older</b>, regardless of citizenship or vaccination
-                            status, must:</p>
-                        <ul>
-                            <li>
-                                Provide proof of a COVID-19 negative molecular test result to enter Canada <b>OR</b>
-                            </li>
-                            <li>
-                                Proof of a previous positive test result taken between 14 and 180 days.
-                            </li>
-                        </ul>
-                        <br>
-                        <b>Types of pre-entry test</b>
-                        <p>Accepted types of molecular tests:</p>
-                        <ul>
-                            <li>PCR - Polymerase chain reaction</li>
-                            <li>Nucleic acid test (NAT) or Nucleic acid amplification test (NAATs)</li>
-                            <li>Reverse transcription loop-mediated isothermal amplification (RT-LAMP)</li>
-                        </ul>
-                        <p>These tests use methods such as a nasopharyngeal (NP) swab, nose swab, or saliva sample. </p>
-
-                        <b>When to get a negative pre-entry test result</b>
-                        <i>Flying to Canada</i>
-                        <p>You must take a molecular test within <b>72 hours</b> of the scheduled departure time of your
-                            flight to Canada.</p>
-                        <p>Airlines will refuse boarding to travellers who are unable to provide a valid negative
-                            molecular test result or proof of a previous positive molecular test result taken between 14
-                            and 180 days.</p>
-
-                        <i>*More details can be found at<a
-                                href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada">
-                                COVID-19 vaccinated travellers entering Canada.</a></i>
-                    </div>
-                </div>
-
-                <p>
-                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                        <i class="material-icons icon1">arrow_drop_down</i>Quarantine plan in case you don’t qualify as a
-                        fully vaccinated traveller
-                    </button>
-                </p>
-                <div class="collapse" id="collapse2">
-                    <div class="card card-body">
-                        <p>You must be prepared to quarantine for 14 days, in case you: </p>
-                        <ul>
-                            <li>Don’t meet the requirements of a fully vaccinated traveller</li>
-                        </ul>
-                        <br>
-                        <p>A suitable quarantine plan must be entered into ArriveCAN. You may be asked to explain your
-                            quarantine plan at the border. </p>
-                        <i>*More details can be found at<a
-                                href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada">
-                                COVID-19 vaccinated travellers entering Canada.</a></i>
-                    </div>
-                </div>
-
-                <p>
-                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                        <i class="material-icons icon1">arrow_drop_down</i>Upload proof of vaccination in ArriveCAN
-                    </button>
-                </p>
-                <div class="collapse" id="collapse3">
-                    <div class="card card-body">
-                        <p>You <b>must use ArriveCAN</b>, which is free to use, to enter your proof of vaccination,
-                            quarantine and travel information up to 72 hours before your travel.</p>
-                        <p>If you <b>don't </b>provide the required information in ArriveCAN before arriving at the
-                            border you <b>won't</b> be considered as a fully vaccinated traveller, even if you meet all
-                            the other requirements.</p>
-                        <b>Use an official proof of vaccination</b>
-                        <p>The photos or files of your proof of vaccination may include a QR code and must include text
-                            with:</p>
-                        <ul>
-                            <li>Your name</li>
-                            <li>The name of the government or organization who administered the vaccine</li>
-                            <li>The brand name or any other information that identifies the vaccine that was
-                                administered</li>
-                            <li>The date(s) on which the vaccine(s) was (were) given</li>
-                        </ul>
-                        <br>
-                        <b>Uploading proof of your vaccination in ArriveCAN</b>
-                        <p>In ArriveCAN, <b>within 72 hours before your travel</b>, you must:</p>
-                        <ul>
-                            <li>provide information on your vaccination status. This includes information on any first
-                                or, if applicable, second vaccine doses that you received, including:</li>
-                            <ul>
-                                <li>Dates the vaccines were administered</li>
-                                <li>The country where they were given</li>
-                                <li>Name of vaccine</li>
-                            </ul>
-                            <li>Upload a photo or PDF file of your proof of each vaccination:</li>
-                            <ul>
-                                <li>Upload either one image containing proof of all vaccine doses with dates and vaccine
-                                    details (for example, your vaccination card)
-                                    <i>OR</i>upload separate images for each dose that include the dates and vaccine
-                                    details
-                                </li>
-                                <li>File formats accepted: PDF, PNG, JPEG or JPG</li>
-                                <li>Maximum file size for upload: each image upload has a 2 MB size limit</li>
-                            </ul>
-                            <li>Preferred file format: if you received a PDF file of your vaccination record, upload the
-                                PDF rather than an image, since the PDF is clearer and easier to read</li>
-                            <li>These must be in English, French, or a <b>certified translation into English or
-                                    French</b></li>
-                        </ul>
-                        <br>
-                        <p>Bring your original proof of vaccination with you while you travel and for 14 days after
-                            entry.</p>
-                        <p>Final determination of your vaccination status will be made at the border. You must bring a
-                            digital or paper copy of your proof(s) of vaccination with you.</p>
-                        <i>*More details can be found at<a
-                                href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada">
-                                COVID-19 vaccinated travellers entering Canada.</a></i>
-                    </div>
-                </div>
-            </ol>
-            <br>
-            <br>
+        <h1>Please fill out the form to get receive most accurate information below:</h1>
+        <h6>Choose destination country:</h6>
+        <select class="form-control">
+            <option>--Select one--</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Åland Islands">Åland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of
+                The</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote D'ivoire">Cote D'ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guernsey">Guernsey</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-bissau">Guinea-bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands
+            </option>
+            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jersey">Jersey</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's
+                Republic of</option>
+            <option value="Korea, Republic of">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic
+            </option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former
+                Yugoslav Republic of</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+            <option value="Moldova, Republic of">Moldova, Republic of</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Netherlands Antilles">Netherlands Antilles</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Pitcairn">Pitcairn</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Helena">Saint Helena</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines
+            </option>
+            <option value="Samoa">Samoa</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                Sandwich Islands</option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-leste">Timor-leste</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying
+                Islands</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+        <h6>Your nationality:</h6>
+        <select class="form-control">
+            <option value="">-- select one --</option>
+            <option value="afghan">Afghan</option>
+            <option value="albanian">Albanian</option>
+            <option value="algerian">Algerian</option>
+            <option value="american">American</option>
+            <option value="andorran">Andorran</option>
+            <option value="angolan">Angolan</option>
+            <option value="antiguans">Antiguans</option>
+            <option value="argentinean">Argentinean</option>
+            <option value="armenian">Armenian</option>
+            <option value="australian">Australian</option>
+            <option value="austrian">Austrian</option>
+            <option value="azerbaijani">Azerbaijani</option>
+            <option value="bahamian">Bahamian</option>
+            <option value="bahraini">Bahraini</option>
+            <option value="bangladeshi">Bangladeshi</option>
+            <option value="barbadian">Barbadian</option>
+            <option value="barbudans">Barbudans</option>
+            <option value="batswana">Batswana</option>
+            <option value="belarusian">Belarusian</option>
+            <option value="belgian">Belgian</option>
+            <option value="belizean">Belizean</option>
+            <option value="beninese">Beninese</option>
+            <option value="bhutanese">Bhutanese</option>
+            <option value="bolivian">Bolivian</option>
+            <option value="bosnian">Bosnian</option>
+            <option value="brazilian">Brazilian</option>
+            <option value="british">British</option>
+            <option value="bruneian">Bruneian</option>
+            <option value="bulgarian">Bulgarian</option>
+            <option value="burkinabe">Burkinabe</option>
+            <option value="burmese">Burmese</option>
+            <option value="burundian">Burundian</option>
+            <option value="cambodian">Cambodian</option>
+            <option value="cameroonian">Cameroonian</option>
+            <option value="canadian">Canadian</option>
+            <option value="cape verdean">Cape Verdean</option>
+            <option value="central african">Central African</option>
+            <option value="chadian">Chadian</option>
+            <option value="chilean">Chilean</option>
+            <option value="chinese">Chinese</option>
+            <option value="colombian">Colombian</option>
+            <option value="comoran">Comoran</option>
+            <option value="congolese">Congolese</option>
+            <option value="costa rican">Costa Rican</option>
+            <option value="croatian">Croatian</option>
+            <option value="cuban">Cuban</option>
+            <option value="cypriot">Cypriot</option>
+            <option value="czech">Czech</option>
+            <option value="danish">Danish</option>
+            <option value="djibouti">Djibouti</option>
+            <option value="dominican">Dominican</option>
+            <option value="dutch">Dutch</option>
+            <option value="east timorese">East Timorese</option>
+            <option value="ecuadorean">Ecuadorean</option>
+            <option value="egyptian">Egyptian</option>
+            <option value="emirian">Emirian</option>
+            <option value="equatorial guinean">Equatorial Guinean</option>
+            <option value="eritrean">Eritrean</option>
+            <option value="estonian">Estonian</option>
+            <option value="ethiopian">Ethiopian</option>
+            <option value="fijian">Fijian</option>
+            <option value="filipino">Filipino</option>
+            <option value="finnish">Finnish</option>
+            <option value="french">French</option>
+            <option value="gabonese">Gabonese</option>
+            <option value="gambian">Gambian</option>
+            <option value="georgian">Georgian</option>
+            <option value="german">German</option>
+            <option value="ghanaian">Ghanaian</option>
+            <option value="greek">Greek</option>
+            <option value="grenadian">Grenadian</option>
+            <option value="guatemalan">Guatemalan</option>
+            <option value="guinea-bissauan">Guinea-Bissauan</option>
+            <option value="guinean">Guinean</option>
+            <option value="guyanese">Guyanese</option>
+            <option value="haitian">Haitian</option>
+            <option value="herzegovinian">Herzegovinian</option>
+            <option value="honduran">Honduran</option>
+            <option value="hungarian">Hungarian</option>
+            <option value="icelander">Icelander</option>
+            <option value="indian">Indian</option>
+            <option value="indonesian">Indonesian</option>
+            <option value="iranian">Iranian</option>
+            <option value="iraqi">Iraqi</option>
+            <option value="irish">Irish</option>
+            <option value="israeli">Israeli</option>
+            <option value="italian">Italian</option>
+            <option value="ivorian">Ivorian</option>
+            <option value="jamaican">Jamaican</option>
+            <option value="japanese">Japanese</option>
+            <option value="jordanian">Jordanian</option>
+            <option value="kazakhstani">Kazakhstani</option>
+            <option value="kenyan">Kenyan</option>
+            <option value="kittian and nevisian">Kittian and Nevisian</option>
+            <option value="kuwaiti">Kuwaiti</option>
+            <option value="kyrgyz">Kyrgyz</option>
+            <option value="laotian">Laotian</option>
+            <option value="latvian">Latvian</option>
+            <option value="lebanese">Lebanese</option>
+            <option value="liberian">Liberian</option>
+            <option value="libyan">Libyan</option>
+            <option value="liechtensteiner">Liechtensteiner</option>
+            <option value="lithuanian">Lithuanian</option>
+            <option value="luxembourger">Luxembourger</option>
+            <option value="macedonian">Macedonian</option>
+            <option value="malagasy">Malagasy</option>
+            <option value="malawian">Malawian</option>
+            <option value="malaysian">Malaysian</option>
+            <option value="maldivan">Maldivan</option>
+            <option value="malian">Malian</option>
+            <option value="maltese">Maltese</option>
+            <option value="marshallese">Marshallese</option>
+            <option value="mauritanian">Mauritanian</option>
+            <option value="mauritian">Mauritian</option>
+            <option value="mexican">Mexican</option>
+            <option value="micronesian">Micronesian</option>
+            <option value="moldovan">Moldovan</option>
+            <option value="monacan">Monacan</option>
+            <option value="mongolian">Mongolian</option>
+            <option value="moroccan">Moroccan</option>
+            <option value="mosotho">Mosotho</option>
+            <option value="motswana">Motswana</option>
+            <option value="mozambican">Mozambican</option>
+            <option value="namibian">Namibian</option>
+            <option value="nauruan">Nauruan</option>
+            <option value="nepalese">Nepalese</option>
+            <option value="new zealander">New Zealander</option>
+            <option value="ni-vanuatu">Ni-Vanuatu</option>
+            <option value="nicaraguan">Nicaraguan</option>
+            <option value="nigerien">Nigerien</option>
+            <option value="north korean">North Korean</option>
+            <option value="northern irish">Northern Irish</option>
+            <option value="norwegian">Norwegian</option>
+            <option value="omani">Omani</option>
+            <option value="pakistani">Pakistani</option>
+            <option value="palauan">Palauan</option>
+            <option value="panamanian">Panamanian</option>
+            <option value="papua new guinean">Papua New Guinean</option>
+            <option value="paraguayan">Paraguayan</option>
+            <option value="peruvian">Peruvian</option>
+            <option value="polish">Polish</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="qatari">Qatari</option>
+            <option value="romanian">Romanian</option>
+            <option value="russian">Russian</option>
+            <option value="rwandan">Rwandan</option>
+            <option value="saint lucian">Saint Lucian</option>
+            <option value="salvadoran">Salvadoran</option>
+            <option value="samoan">Samoan</option>
+            <option value="san marinese">San Marinese</option>
+            <option value="sao tomean">Sao Tomean</option>
+            <option value="saudi">Saudi</option>
+            <option value="scottish">Scottish</option>
+            <option value="senegalese">Senegalese</option>
+            <option value="serbian">Serbian</option>
+            <option value="seychellois">Seychellois</option>
+            <option value="sierra leonean">Sierra Leonean</option>
+            <option value="singaporean">Singaporean</option>
+            <option value="slovakian">Slovakian</option>
+            <option value="slovenian">Slovenian</option>
+            <option value="solomon islander">Solomon Islander</option>
+            <option value="somali">Somali</option>
+            <option value="south african">South African</option>
+            <option value="south korean">South Korean</option>
+            <option value="spanish">Spanish</option>
+            <option value="sri lankan">Sri Lankan</option>
+            <option value="sudanese">Sudanese</option>
+            <option value="surinamer">Surinamer</option>
+            <option value="swazi">Swazi</option>
+            <option value="swedish">Swedish</option>
+            <option value="swiss">Swiss</option>
+            <option value="syrian">Syrian</option>
+            <option value="taiwanese">Taiwanese</option>
+            <option value="tajik">Tajik</option>
+            <option value="tanzanian">Tanzanian</option>
+            <option value="thai">Thai</option>
+            <option value="togolese">Togolese</option>
+            <option value="tongan">Tongan</option>
+            <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+            <option value="tunisian">Tunisian</option>
+            <option value="turkish">Turkish</option>
+            <option value="tuvaluan">Tuvaluan</option>
+            <option value="ugandan">Ugandan</option>
+            <option value="ukrainian">Ukrainian</option>
+            <option value="uruguayan">Uruguayan</option>
+            <option value="uzbekistani">Uzbekistani</option>
+            <option value="venezuelan">Venezuelan</option>
+            <option value="vietnamese">Vietnamese</option>
+            <option value="welsh">Welsh</option>
+            <option value="yemenite">Yemenite</option>
+            <option value="zambian">Zambian</option>
+            <option value="zimbabwean">Zimbabwean</option>
+            </option>
+        </select>
+        <h6>Country of residence:</h6>
+        <select class="form-control">
+            <option>--Select one--</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Åland Islands">Åland Islands</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+            <option value="Angola">Angola</option>
+            <option value="Anguilla">Anguilla</option>
+            <option value="Antarctica">Antarctica</option>
+            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Aruba">Aruba</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="Bahrain">Bahrain</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Barbados">Barbados</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Belize">Belize</option>
+            <option value="Benin">Benin</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Bouvet Island">Bouvet Island</option>
+            <option value="Brazil">Brazil</option>
+            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+            <option value="Brunei Darussalam">Brunei Darussalam</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Burkina Faso">Burkina Faso</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Canada">Canada</option>
+            <option value="Cape Verde">Cape Verde</option>
+            <option value="Cayman Islands">Cayman Islands</option>
+            <option value="Central African Republic">Central African Republic</option>
+            <option value="Chad">Chad</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Christmas Island">Christmas Island</option>
+            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+            <option value="Congo">Congo</option>
+            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of
+                The</option>
+            <option value="Cook Islands">Cook Islands</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Cote D'ivoire">Cote D'ivoire</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Dominica">Dominica</option>
+            <option value="Dominican Republic">Dominican Republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Equatorial Guinea">Equatorial Guinea</option>
+            <option value="Eritrea">Eritrea</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+            <option value="Faroe Islands">Faroe Islands</option>
+            <option value="Fiji">Fiji</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="French Guiana">French Guiana</option>
+            <option value="French Polynesia">French Polynesia</option>
+            <option value="French Southern Territories">French Southern Territories</option>
+            <option value="Gabon">Gabon</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Gibraltar">Gibraltar</option>
+            <option value="Greece">Greece</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Grenada">Grenada</option>
+            <option value="Guadeloupe">Guadeloupe</option>
+            <option value="Guam">Guam</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Guernsey">Guernsey</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea-bissau">Guinea-bissau</option>
+            <option value="Guyana">Guyana</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands
+            </option>
+            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Iceland">Iceland</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Isle of Man">Isle of Man</option>
+            <option value="Israel">Israel</option>
+            <option value="Italy">Italy</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Japan">Japan</option>
+            <option value="Jersey">Jersey</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Kiribati">Kiribati</option>
+            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's
+                Republic of</option>
+            <option value="Korea, Republic of">Korea, Republic of</option>
+            <option value="Kuwait">Kuwait</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic
+            </option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former
+                Yugoslav Republic of</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Martinique">Martinique</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mayotte">Mayotte</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+            <option value="Moldova, Republic of">Moldova, Republic of</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nauru">Nauru</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Netherlands Antilles">Netherlands Antilles</option>
+            <option value="New Caledonia">New Caledonia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Niue">Niue</option>
+            <option value="Norfolk Island">Norfolk Island</option>
+            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+            <option value="Norway">Norway</option>
+            <option value="Oman">Oman</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Pitcairn">Pitcairn</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Reunion">Reunion</option>
+            <option value="Romania">Romania</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Helena">Saint Helena</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines
+            </option>
+            <option value="Samoa">Samoa</option>
+            <option value="San Marino">San Marino</option>
+            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South
+                Sandwich Islands</option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+            <option value="Swaziland">Swaziland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor-leste">Timor-leste</option>
+            <option value="Togo">Togo</option>
+            <option value="Tokelau">Tokelau</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="United States Minor Outlying Islands">United States Minor Outlying
+                Islands</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Virgin Islands, British">Virgin Islands, British</option>
+            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+            <option value="Wallis and Futuna">Wallis and Futuna</option>
+            <option value="Western Sahara">Western Sahara</option>
+            <option value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select>
+        <h6>Purpose of stay:</h6>
+        <select class="form-control">
+            <option>--Select one--</option>
+            <option value="Tourism">Tourism</option>
+            <option value="Business">Business</option>
+            <option value="Study">Study</option>
+            <option value="Duty">Duty</option>
+        </select>
+        <h6>Transit country?</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
+                value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+                Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
+                value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                No
+            </label>
+        </div>
+        <h6>Do you have a return ticket?</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2"
+                value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+                Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2"
+                value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                No
+            </label>
         </div>
 
-        <div id="visa-section">
-            <h3>Required Visa</h3>
-            <br>
-            <i>Visitor Visa required</i>
+        <button><a href="#"></a> Enter</button>
+        <button>Clear</button>
 
-            <p>
-                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                    <i class="material-icons icon1">arrow_drop_down</i>About the visitor visa
-                </button>
-            </p>
-            <div class="collapse" id="collapse4">
-                <div class="card card-body">
-                    <b>About the document</b>
-                    <p>A visitor visa (also called a temporary resident visa) is an official document that we stick in
-                        your passport. It shows that you meet the
-                        requirements needed to enter Canada.</p>
-                    <b>How long you can stay</b>
-                    <p>Most visitors can stay for up to 6 months in Canada.</p>
-                    <b>How to apply</b>
-                    <p>Following <a
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/steps-apply-visitor-visa.html">steps
-                            to apply for a visitor visa.</a></p>
-                    <i>*More details can be found at<a
-                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/about-visitor-visa.html">
-                            Visitor visa: About the document.</a></i>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
 
-        <div id="custom-section">
-            <h3>Items You Can Bring Into Canada </h3>
-            <br>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Cash
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Under Canada's <u>Proceeds of Crime (Money Laundering) and Terrorist Financing Act</u>,
-                                there are no restrictions on the amount of money that you can bring into or
-                                take out of Canada. You must, however, report amounts of currency <b>equal to or
-                                    greater than CAN $10,000 or its equivalent in a foreign currency</b> to the
-                                <u>Canada
-                                    Border Services Agency</u>. These rules apply whether you are bringing the money
-                                into,
-                                or taking it out of Canada, or carrying the money with you or sending it by mail or by
-                                courier.</p>
-                            <i>*More details can be found at<a
-                                    href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
-                                    What you can bring home to Canada.</a></i>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Alcoholic Beverages
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Alcoholic beverages are products that <b>exceed 0.5% alcohol by volume</b>.</p>
-                            <p>You are allowed to import only one of the following amounts of alcohol and alcoholic
-                                beverages free of duty and taxes as part of your personal exemption:</p>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="table-secondary" scope="col">Product</th>
-                                        <th class="table-secondary" scope="col">Metric</th>
-                                        <th class="table-secondary" scope="col">Imperial</th>
-                                        <th class="table-secondary" scope="col">*Estimates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td scope="row"><b>Wine</b></td>
-                                        <td>Up to 1.5 Litres</td>
-                                        <td>Up to 53 fluid ounces</td>
-                                        <td>Two 750-ml bottles of wine</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row"><b>Alcoholic Beverages</b></td>
-                                        <td>Up to 1.14 litres</td>
-                                        <td>Up to 40 fluid ounces</td>
-                                        <td>One large standard bottle of liquor</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row"><b>Beer or Ale</b></td>
-                                        <td>Up to 8.5 litres</td>
-                                        <td>Up to 287 fluid ounces</td>
-                                        <td>Approximately 24, 355-ml cans or bottles of beer or ale</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p>*Bottle sizes vary, but the amounts listed are firm.</p>
-                            <p>You <b> must be of legal age </b>in the province into which you are importing
-                                the alcoholic beverages. While you are permitted to import more than
-                                the amounts listed above, you will be responsible for paying duty and
-                                taxes on the additional alcoholic beverages you are importing.</p>
-                            <i>*More details can be found at<a
-                                    href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
-                                    What you can bring home to Canada.</a></i>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Tobacco Products
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>If you are <b>18 years of age or over</b>, you are allowed to bring in all
-                                of the following amounts of tobacco into Canada duty- and taxes-free
-                                within your personal exemption:</p>
-                            <ul>
-                                <li>200 cigarettes</li>
-                                <li>50 cigars</li>
-                                <li>200 grams (7 ounces) of manufactured tobacco, and</li>
-                                <li>200 tobacco sticks.</li>
-                            </ul>
-                            <i>*More details can be found at<a
-                                    href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
-                                    What you can bring home to Canada.</a></i>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Gifts
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>While you are outside Canada, you can send gifts free of duty and taxes to
-                                friends at home in Canada under certain conditions. To qualify, each gift
-                                <b>must not be worth more than CAN$60</b>and cannot be a tobacco product, an
-                                alcoholic beverage or advertising matter. If the gift is worth more than
-                                CAN$60, the recipient will have to pay regular duty and taxes on the excess
-                                amount. It is always a good idea to include a gift card to avoid any misunderstanding.
-                            </p>
-                            <p>Gifts you send from outside Canada do not count as part of your personal exemption,
-                                but gifts you bring back in your personal baggage do and are treated like any other
-                                purchases. </p>
-                            <i>*More details can be found at<a
-                                    href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
-                                    What you can bring home to Canada.</a></i>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br>
-        <br>
-        <br>
 
     </div>
-
-    <!-- Save Button -->
-    <div>
-        <div class="container1">
-        <div class="center">
-        <button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Save
-            Search
-            Result</button>
-        </div>
-        </div>
-        <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Name:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                            style="margin-right:35%;">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal" data-bs-dismiss="modal"
-                            style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-            tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
-                        Your search has been saved!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                            style="margin-right:45%;">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <footer>
         <div class="fixed-bottom py-3 bg-secondary">
@@ -466,23 +825,10 @@
             </div>
         </div>
     </footer>
-
     <!-- Bootstrap JS script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        var exampleModal = document.getElementById('exampleModalToggle')
-        exampleModal.addEventListener('show.bs.modal', function (event) {
-            // Button that triggered the modal
-            var button = event.relatedTarget
-            // Extract info from data-bs-* attributes
-            var recipient = button.getAttribute('data-bs-whatever')
-            // If necessary, you could initiate an AJAX request here
-            // and then do the updating in a callback.
-        })
-
-
-    </script>
-
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
