@@ -10,11 +10,16 @@
 .btn3 {margin-left:38%;}
 .btn4 {margin-left:38%;}
 @media screen and (max-width: 600px){
-    .btn1{margin-left:37%;}
-    .btn2 {margin-left:33%;}
-    .btn3 {margin-left:34%;}
-    .btn4 {margin-left:30%;}
+    .btn{
+        margin: 0;
+        margin-top:4%;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
     .d-inline-block {margin-left: 40.5%;
                      margin-top: 2%;}
-    .card {margin: 3%;}
+    .card {margin: 3%;
+        padding:7%;}
     }
