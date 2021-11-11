@@ -1,0 +1,157 @@
+#submitBtn {
+    text-decoration: none;
+    border: 2px solid #333;
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+#submitBtn:hover {
+    background: #FFCC00;
+}
+
+@media screen and (min-width:701px) {
+    .formContainer {
+        display: grid;
+        grid-template-rows: 10% 35% 30% 15% 15%;
+    }
+
+    #titleBackground {
+        display: grid;
+        grid-row: 1;
+        padding: 13% 13%;
+        background-image: url("/images/worldMap.jpg");
+        background-size: 1950px 500px;
+        z-index: -1;
+        opacity: 1.5;
+    }
+
+    h1 {
+        text-align: center;
+        color: #FFCC00;
+        text-decoration: underline overline;
+    }
+
+    #title>p {
+        text-align: center;
+        margin-left: 22%;
+        padding-top: 4%;
+        width: 55%;
+        color: white;
+        font-size: 19px;
+    }
+
+    #title>button {
+        text-decoration: none;
+        border: 2px solid #333;
+        background: #fff;
+        color: #333;
+        font-weight: bold;
+        padding: 5px 10px;
+        margin-top: 4%;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #title>button:hover {
+        background: #FFCC00;
+    }
+
+    #card-section{
+        display: grid;
+        grid-row: 3;
+        grid-template-columns: 45% 40%;
+        margin-left:25%;
+    }
+
+    #list {
+        display: grid;
+        grid-row: 4;
+        margin: 5% 20%;
+    }
+
+    .centerButton {
+        margin: 65% 0%;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .formContainer {
+        display: grid;
+        grid-template-rows: 10% 35% 35% 15% 15%;
+    }
+
+    #titleBackground {
+        display: grid;
+        grid-row: 1;
+        padding: 30% 30%;
+        background-repeat: no-repeat;
+        background-image: url("/images/worldMap.jpg");
+        background-size: 700px 420px;
+        z-index: -1;
+        opacity: 1.5;
+    }
+
+    h1 {
+        text-align: center;
+        color: #FFCC00;
+        text-decoration: underline overline;
+    }
+
+    #title>p {
+        text-align: center;
+        margin-left: 22%;
+        padding-top: 5%;
+        width: 55%;
+        color: white;
+        font-size: 19px;
+    }
+
+    #title>button {
+        text-decoration: none;
+        border: 2px solid #333;
+        background: #fff;
+        color: #333;
+        font-weight: bold;
+        padding: 5px 10px;
+        margin-top: 5%;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #title>button:hover {
+        background: #FFCC00;
+    }
+
+    #card-section{
+        display: grid;
+        grid-row: 3;
+        grid-template-columns: 50% 50%;
+        margin-left:5%;
+    }
+
+    #list {
+        display: grid;
+        grid-row: 4;
+        margin: 5% 7%;
+    }
+
+    .centerButton {
+        margin-top:150%;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+}

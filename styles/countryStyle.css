@@ -1,0 +1,291 @@
+.collapseTitle {
+	width: 30%;
+	text-align: center;
+	flex-shrink: 0;
+	margin-right: 20px;
+	padding-top: 20px;
+}
+
+.regulationTitle {
+	width: 45%;
+}
+
+.customTitle {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.conBox {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.conBox>div {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.conBox>h1,
+.conBox>h2,
+.conBox>h3 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.conBox #regulation-section {
+	width: 100%;
+	padding: 50px 10%;
+	box-sizing: border-box;
+	background: #f5f5f3;
+	position: relative;
+	overflow: hidden;
+}
+
+.rbg1,
+.rbg2 {
+	background: #fc0;
+	width: 200%;
+	height: 6rem;
+}
+
+.rbg1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-50%) rotate(-45deg);
+	transform-origin: 50% 0;
+}
+
+.rbg2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 18rem;
+	background-size: 100% 9rem;
+	background: linear-gradient(180deg, #fc0, #fc0 33%, transparent 33%, transparent 66%, #fc0 66%, #fc0);
+	transform: translateX(50%) rotate(-45deg);
+	transform-origin: 50% 100%;
+}
+
+#regulation-section .regulationTitle {
+	z-index: 10;
+}
+
+#regulation-section ol {
+	z-index: 10;
+}
+
+.conBox .whiteB,
+.conBox .grayB {
+	width: 100%;
+	padding: 0 10%;
+	box-sizing: border-box;
+}
+
+.saveBox {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.whiteB {
+	background: #fff;
+}
+
+.whiteB .card {
+	background: #fff !important;
+}
+
+.grayB {
+	background: #F5F5F3 !important;
+}
+
+.grayB .card {
+	background: #F5F5F3 !important;
+	border: none;
+}
+
+.itemsBox {
+	z-index: 10;
+}
+
+#regulation-section button {
+	border: 2px solid #333;
+	background: #fff;
+	border-radius: 0;
+	color: #333;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#regulation-section button:hover {
+	background: #FFCC00;
+}
+
+.saveBox .btn-secondary {
+	border: 2px solid #333;
+	background: #fff;
+	border-radius: 0;
+	color: #333;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.saveBox .btn-primary {
+	border: 2px solid #333;
+	background: #333;
+	border-radius: 0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#btnShow:hover {
+	background: #FFCC00;
+}
+
+.center {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width:701px) {
+	.conBox {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.saveBox {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
+
+	.regulationTitle {
+		width: 45%;
+	}
+
+	#regulation-section>div.itemsBox {
+		margin-left: 20px;
+		display: block;
+	}
+
+	.customTitle {
+		display: grid;
+		grid-column: 1;
+		margin-right: 20px;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	#custom-section {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		margin-top: 50px;
+	}
+
+	#topBtn{
+		position: fixed;
+		bottom: 80px;
+		right: 25px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: #FFCC00;;
+		color: black;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 13px;
+		border-radius: 4px;
+	  }
+	
+	#topBtn:hover{
+		background-color: black;
+		color:#FFCC00;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	h2 {
+		margin-bottom: 4%;
+	}
+
+	.conBox {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.saveBox {
+		width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+
+	.conBox .whiteB,
+	.conBox .grayB {
+		width: 100%;
+		padding: 0 7%;
+		box-sizing: border-box;
+	}
+
+	.collapseTitle {
+		width: 30%;
+		text-align: left;
+		padding-right: 50px;
+		padding-top: 25px;
+	}
+
+	.customTitle {
+		margin-left: 0;
+		margin-bottom: 5%;
+		text-align: left;
+	}
+
+	.d-flex {
+		flex-wrap: wrap;
+	}
+
+	.d-flex h2 {
+		width: 100%;
+	}
+
+	.regulationTitle {
+		width: 100%;
+		margin-left: 5%;
+		text-align: center;
+	}
+
+	#regulation-section>div.itemsBox {
+		display: block;
+		margin-left: 10px;
+	}
+
+	.itemsBox button {
+		margin-left: 20px;
+	}
+
+	#topBtn{
+	  position: fixed;
+	  bottom: 80px;
+	  right: 10px;
+	  z-index: 99;
+	  font-size: 15px;
+	  border: none;
+	  outline: none;
+	  background-color: #FFCC00;;
+	  color: black;
+	  font-weight: bold;
+	  cursor: pointer;
+	  padding: 10px;
+	  border-radius: 4px;
+	}
+	
+	#topBtn:hover{
+		background-color: black;
+		color:#FFCC00;
+	}
+}

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My BCIT Project</title>
+	<meta name="comp1800 boilerplate code" content="my bcit project">
+	<meta name="author" content="BCIT">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!-- Google Icons (Material Design)-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Firebase 8 CDNs-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+
+	<!-- Link to the api keys for your firebase project -->
+	<script src="./scripts/firebaseAPI.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="styles/countryStyle.css" />
+</head>
+
+<body>
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <i class="fas fa-bars"></i> -->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./countries.html">Countries</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./searchtrip.html">Search trip</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nav-right">
+					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+					<i class="material-icons"><a href="./notification.html">notifications</a></i>
+					<i class="material-icons"><a href="./login.html">account_circle</a></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="conBox">
+		<div id="regulation-section" class="d-flex">
+			<p class="rbg1"></p>
+			<p class="rbg2"></p>
+			<div class="regulationTitle">
+				<h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="country"></span></h1>
+			</div>
+
+			<h3 class="mb-3">Regulations:</h3>
+			<ol>
+				<li class="mb-3">Entering the United Kingdom as a fully vaccinated travellers</li>
+				<p>
+					<button id="ukCheckBtn" class="btn btn-outline-secondary" type="button">
+						Check if you qualify as a fully vaccinated traveller
+					</button>
+				</p>
+
+				<li class="mb-3">Post-entry testing and other requirements</li>
+				<p>
+					<button id="ukGetBtn" class="btn btn-outline-secondary" type="button">
+						Get a post-entry test
+					</button>
+				</p>
+
+				<p>
+					<button id="ukQuarantineBtn" class="btn btn-outline-secondary" type="button">
+						Quarantine plan in case your test result is positive
+					</button>
+				</p>
+
+
+				<p>
+					<button id="ukShowBtn" class="btn btn-outline-secondary" type="button">
+						Present proof of vaccination
+					</button>
+				</p>
+
+			</ol>
+			<div class="itemsBox">
+				<h3 class="mb-3">Customs:</h3>
+				<h3>
+					<button id="itemsBtn" class="btn btn-outline-secondary" type="button">
+						Items You Can Bring Into the United Kingdom
+					</button>
+				</h3>
+			</div>
+			<br>
+			<br>
+		</div>
+
+		<br>
+		<br>
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+		<div class="d-flex mb-3 whiteB" id="ukCollapseBox1">
+			<h2 class="collapseTitle">Check if you qualify as a fully vaccinated traveller</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body" id="fully">
+					<p>To qualify under the fully vaccinated rules for travel to England, you must have proof of
+						full
+						vaccination with a full course of an approved vaccine.</p>
+
+					<p> You must have had your final dose of the vaccine <b>at least 14 days before you
+							arrive</b> in
+						England.
+						The day you had your final dose does not count as one of the 14 days.</p>
+
+					<b> The proof of vaccination must have been issued by either:</b>
+					<ul>
+						<li> the UK vaccination programme</li>
+						<li> an overseas vaccination programme with an approved proof of vaccination for travel
+							to
+							the UK
+						</li>
+					</ul>
+					<br>
+					<b>Even if you are not fully vaccinated, the fully vaccinated rules apply if you are:</b>
+					<ul>
+						<li>under 18 and resident in the UK or a country or territory which has approved proof
+							of vaccination</li>
+						<li>taking part in an approved COVID-19 vaccine trial in the UK or the USA (US residents
+							only for USA trials)</li>
+						<li>unable to have a COVID-19 vaccination for a medical reason which has been approved
+							by a clinician under the medical
+							exemptions process, and you are resident in England</li>
+					</ul>
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.gov.uk/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19#check-if-you-qualify-as-fully-vaccinated">
+							Travel to England from another country during coronavirus (COVID-19).</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 grayB" id="ukCollapseBox2">
+			<h2 class="collapseTitle">Get a post-entry test</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<b>Before you travel to England – fully vaccinated</b>
+					<p>Before you travel to England you must:</p>
+					<ul>
+						<li><a href="https://www.gov.uk/find-travel-test-provider">book and pay for a COVID-19
+								test</a> – to be taken before the end of day 2 in England</li>
+						<li><a href="https://www.gov.uk/provide-journey-contact-details-before-travel-uk">complete
+								a passenger locator form</a> – to be completed in the 48 hours before you arrive
+							in England</li>
+					</ul>
+					<p>You can choose a lateral flow test or a PCR test.</p>
+					<p>You will need to enter your COVID-19 test booking reference number on your passenger
+						locator form.</p>
+					<p>If you will be in England for less than 2 days you still need to book and pay for a day 2
+						COVID-19 test.</p>
+					<br>
+					<b>When you arrive in England – fully vaccinated</b>
+					<p>After you arrive in England you must take a COVID-19 test on or before day 2. The day you
+						arrive is day 0.
+					</p>
+					<p>You must <a href="https://www.gov.uk/find-travel-test-provider">book this test</a> before
+						you travel. </p>
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.gov.uk/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19#check-if-you-qualify-as-fully-vaccinated">
+							Travel to England from another country during coronavirus (COVID-19).</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 whiteB" id="ukCollapseBox3">
+			<h2 class="collapseTitle">Quarantine plan in case your test result
+				is positive</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p><b>If the test result is positive – lateral flow test</b></p>
+					<p>If you booked a lateral flow test and the result is positive, <a
+							href="https://www.gov.uk/get-coronavirus-test">you must take a PCR test</a> to
+						confirm the result.
+						You must self-isolate until you get the result of the PCR test.</p>
+					<p> If the PCR test result is positive, you <a
+							href="https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-and-treatment/when-to-self-isolate-and-what-to-do">
+							must self-isolate</a> for 10 full days. The day you took the lateral flow
+						test is day 0. Members of your household may also be asked to self-isolate.</p>
+					<br>
+					<p><b>If the test result is positive – PCR test</b></p>
+					<p>If you booked a PCR test and the result is positive, <a
+							href="https://www.nhs.uk/conditions/coronavirus-covid-19/self-isolation-and-treatment/when-to-self-isolate-and-what-to-do">
+							you must self-isolate</a> for 10 full days. The day of the test
+						is day 0. Members of your household may also be asked to self-isolate. </p>
+					<i>*More details can be found at<a
+							href="https://www.gov.uk/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19#check-if-you-qualify-as-fully-vaccinated">
+							Travel to England from another country during coronavirus (COVID-19).</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 grayB" id="ukCollapseBox4">
+			<h2 class="collapseTitle">Show proof of vaccination</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p> <b>Proving your vaccination status</b></p>
+					<p>If you are fully vaccinated under the UK vaccination programme, you can prove your
+						vaccination
+						status using either:</p>
+					<ul>
+						<li><a href="https://www.gov.uk/guidance/nhs-covid-pass">NHS COVID Pass</a> for England
+							and Wales</li>
+						<li> <a href="https://www.nhsinform.scot/covid-status">NHS Scotland COVID Status app</a>
+						</li>
+						<li> <a href="https://covid-19.hscni.net/covidcert-ni-mobile-app">COVIDCert NI </a>in
+							Northern Ireland</li>
+					</ul>
+					<p>Paper certificates are also available.</p>
+					<p>There are different ways to prove your vaccination status if you were vaccinated outside
+						of the UK.</p>
+					<p><a
+							href="https://www.gov.uk/guidance/countries-with-approved-covid-19-vaccination-programmes-and-proof-of-vaccination">
+							Check what proof is required for the country or territory where you were
+							vaccinated.</a></p>
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.gov.uk/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19#check-if-you-qualify-as-fully-vaccinated">
+							Travel to England from another country during coronavirus (COVID-19)</a></i>
+				</div>
+			</div>
+		</div>
+		<div id="custom-section">
+			<h3 class="customTitle">Items You Can Bring Into the United Kingdom</h3>
+			<div class="accordion accordion-flush" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Cash
+						</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p><b>Taking cash in and out of Great Britain</b></p>
+							<ul>
+								<li> You <b>must declare cash of £10,000 or more </b>to UK customs authorities if
+									you carry
+									it <b>between Great Britain</b> (England, Scotland and Wales) and another
+									country.</li>
+								<li>You <b>must declare cash of £10,000 or more</b> if you carry it<b>from Great
+										Britain to Northern
+										Ireland</b>. You do not need to declare any amount of cash if you’re
+									carrying it from Northern Ireland
+									to Great Britain.</li>
+							</ul>
+							<br>
+							<b>Taking cash in and out of Northern Ireland</b>
+							<ul>
+								<li>You must declare cash of <b>€10,000 or more</b> if you carry it <b>between
+										Northern Ireland and any non-EU country</b>.</li>
+								<li>You do not need to declare cash if you’re carrying it between Northern Ireland
+									and an EU country.</li>
+								<li>You<b> must declare cash of £10,000 or more</b> if you carry it <b>from Great
+										Britain to Northern Ireland</b>. You do not need
+									to declare any amount of cash if you’re carrying it from Northern Ireland to
+									Great Britain.</li>
+								<li>Customs authorities may ask you to <b>fill in a cash disclosure form </b>if you
+									send cash of <b>€10,000 or more</b> by freight,
+									post or courier between Northern Ireland and any non-EU country. This includes
+									cash sent from Great Britain to Northern Ireland.</li>
+							</ul>
+							<b>Types of cash</b>
+							<p>The types of cash you must declare are:</p>
+							<ul>
+								<li>notes and coins</li>
+								<li>bearer bonds</li>
+								<li>travellers’ cheques</li>
+								<li>cheques (including travellers’ cheques) that are signed but not made out to a
+									person or organisation</li>
+							</ul>
+							<p>If you are carrying cash in or out of <b>Northern Ireland</b>, you must also declare:
+							</p>
+							<ul>
+								<li>money orders</li>
+								<li>gold coins, bullion or nuggets</li>
+								<li>prepaid cards</li>
+							</ul>
+							<br>
+							<i>*More details can be found at<a href="https://www.gov.uk/bringing-cash-into-uk">
+									Take cash in and out of the UK.</a></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Alcoholic Beverages
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>There are <b>no personal allowances</b> for alcohol if you’re <b>under 17</b>. </p>
+							<p>How much you can bring depends on the type of alcohol. You can bring in:</p>
+							<ul>
+								<li>beer - 42 litres</li>
+								<li>wine (still) - 18 litres</li>
+							</ul>
+							<p>You can also bring in either:</p>
+							<ul>
+								<li>spirits and other liquors over 22% alcohol - 4 litres</li>
+								<li>sparkling wine, fortified wine (for example port, sherry) and other alcoholic
+									drinks up to 22% alcohol (not including beer or still wine) - 9 litres</li>
+							</ul>
+							<p>You can split this last allowance, for example you could bring 4.5 litres of
+								fortified wine
+								and 2 litres of spirits (both half of your allowance).</p>
+							<p>You may have to pay import VAT, customs duty and <a
+									href="https://www.gov.uk/alcohol-and-tobacco-excise-duty">
+									excise duty</a> on alcohol you declare.</p>
+							<br>
+							<i>*More details can be found at<a
+									href="https://www.gov.uk/bringing-goods-into-uk-personal-use/arriving-in-Great-Britain">
+									Bringing goods into the UK for personal use.</a></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Tobacco Products
+						</button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>There are <b>no personal allowances</b> for tobacco if you’re <b>under 17</b>. </p>
+							<p>You can bring in one from the following:</p>
+							<ul>
+								<li>200 cigarettes</li>
+								<li>100 cigarillos</li>
+								<li>50 cigars</li>
+								<li>250g tobacco</li>
+								<li>200 sticks of tobacco for electronic heated tobacco devices</li>
+							</ul>
+							<p>You can split this allowance - so you could bring in 100 cigarettes and 25 cigars
+								(both half of your allowance).
+							</p>
+							<p>You may have to pay import VAT, customs duty and <a
+									href="https://www.gov.uk/alcohol-and-tobacco-excise-duty">
+									excise duty</a> on tobacco you declare.</p>
+							<br>
+							<i>*More details can be found at<a
+									href="https://www.gov.uk/bringing-goods-into-uk-personal-use/arriving-in-Great-Britain">
+									Bringing goods into the UK for personal use.</a></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingFour">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							Other goods
+						</button>
+					</h2>
+					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>You can bring some goods from abroad without having to pay UK tax or duty, if they’re
+								either:</p>
+							<ul>
+								<li> for your own use</li>
+								<li>you want to give them as a gift</li>
+							</ul>
+							<br>
+							<b> Allowance for other goods:</b>
+							<ul>
+								<li>You can bring in other goods <b>worth up to £390</b> (or <b>up to £270</b> if
+									you arrive by private plane or boat).</li>
+								<li>If you go over your allowance you pay tax and duty on the total value of the
+									goods, not just the value above the allowance.</li>
+								<li>You may have to pay import VAT and customs duty if you exceed your allowance.
+								</li>
+							</ul>
+							<br>
+							<i>*More details can be found at<a
+									href="https://www.gov.uk/bringing-goods-into-uk-personal-use/arriving-in-Great-Britain">
+									Bringing goods into the UK for personal use.</a></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+	<!-- Save Button -->
+	<div class="saveBox">
+		<div class="container1">
+			<div class="center">
+				<button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal"
+					data-bs-target="#exampleModalToggle">Save
+					Search
+					Result</button>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="mb-3">
+								<label for="recipient-name" class="col-form-label">Name:</label>
+								<input type="text" class="form-control" id="recipient-name">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+							style="margin-right:35%;">Cancel</button>
+						<button type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
+							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+						Your search has been saved!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+							style="margin-right:45%;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="fixed-bottom py-3 bg-dark" style="color:white;">
+			<div class="container text-center">
+				(C) Copyright DTC 05, 2021
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Bootstrap JS script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		var exampleModal = document.getElementById('exampleModalToggle')
+		exampleModal.addEventListener('show.bs.modal', function (event) {
+			// Button that triggered the modal
+			var button = event.relatedTarget
+			// Extract info from data-bs-* attributes
+			var recipient = button.getAttribute('data-bs-whatever')
+			// If necessary, you could initiate an AJAX request here
+			// and then do the updating in a callback.
+		})
+	</script>
+
+	<script>
+		function displayCountries() {
+			db.collection("Countries").get()
+				.then(allCountries => {
+					allCountries.forEach(doc => {
+							var countryName = doc.data().country; 
+							if (countryName != "" && countryName != "Canada" && countryName != "Australia" &&
+							countryName != "New Zealand" && countryName != "United States") {
+							console.log("country");
+							document.getElementById("country").innerText = countryName;
+						}
+					})
+				})
+		}
+		displayCountries();
+	</script>
+
+</body>
+
+</html>
