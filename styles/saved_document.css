@@ -1,0 +1,50 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://coolbackgrounds.io/images/backgrounds/white/white-triangle-369b8d2d.jpg");
+	height: 500px;
+}
+
+.container {
+}
+
+#recent-list {
+    text-align: center;
+    padding-right: 20%;
+    padding-left: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+#recent-list a{
+    background-color:rgba(231, 245, 35, 0.993);
+    border-radius: 25px;
+}
+
+.accordion {
+    padding-right: 10%;
+    padding-left: 10%;
+    border-width: thick;
+}
+
+.category-h3 {
+    text-align: center;
+}
+
+#delete-proof {
+    background-color: rgb(255, 0, 0);
+    color:rgb(255, 255, 255)
+}
+
+#delete-passport {
+    background-color:rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#open-passport {
+    color: rgb(255, 255, 255)
+}
+
+#open-proof {
+    color:rgb(255, 255, 255)
+}

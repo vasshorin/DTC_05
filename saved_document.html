@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My BCIT Project</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/saved_document.css">
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Firebase 8 CDNs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+    <!--jQuery bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to the api keys for your firebase project -->
+    <script src="./scripts/firebaseAPI.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+	<div id="navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <i class="fas fa-bars"></i> -->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./countries.html">Countries</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./searchtrip.html">Search trip</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nav-right">
+					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+					<i class="material-icons"><a href="./notification.html">notifications</a></i>
+					<i class="material-icons"><a href="./login.html">account_circle</a></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+  <div class="container">
+
+    <div id="recent-list">
+    <h1>Saved Document</h1>
+
+        <h3>Recently Saved</h3>
+        <br>
+        <a href="canada.html" class="list-group-item list-group-item-action" aria-current="true">
+          <h4><span id="first-country">Canada</span></h4>
+        </a>
+
+<br>
+
+        <a href="usa.html" class="list-group-item list-group-item-action">
+          <h4><span id="second-country">United States</span></h4>
+        </a>
+
+<br>
+
+        <a href="newZealand.html" class="list-group-item list-group-item-action">
+          <h4><span id="third-country">New Zealand</span></h4>
+        </a>
+    </div>
+
+<br><br>
+      
+      <div class="accordion" id="accordionExample">
+        <h3 class="category-h3">Category</h3>
+        <br>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Regulations
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="list-group">
+                  <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                    <a href="australia.html">
+                      Australia
+                    </a>
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action">
+                    <a href="canada.html">
+                    Canada
+                    </a>
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action">
+                    <a href="newZealand.html">
+                      New Zealand
+                    </a>
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action">
+                    <a href="uk.html">
+                        United Kingdom
+                    </a>
+                  </button>
+                  <button type="button" class="list-group-item list-group-item-action">
+                    <a href="usa.html">
+                      United States of America
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Personal Documents
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Passport</h5>
+                        <p class="card-text"></p>
+                        <button class="btn btn-primary" id="open-passport" type="submit"><strong>OPEN</strong></button>
+                        <button class="btn btn-primary" id="delete-passport" type="submit"><strong>DELETE</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">The Proof of Covid-19 Vaccination</h5>
+                        <p class="card-text"></p>
+                        <button class="btn btn-primary" id="open-proof" type="submit"><strong>OPEN</strong></button>
+                        <button class="btn btn-primary" id="delete-proof" type="submit"><strong>DELETE</strong></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <br>
+        <br>
+
+
+      <!-- Bootstrap JS script -->
+      <script>
+        var database = firebase.database();
+      </script>
+
+  </div>
+</body>
+</html>
+
