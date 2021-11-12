@@ -1,12 +1,13 @@
-let submitButton = document.getElementById("sumbitBtn")
+let submitButton = document.getElementById("submitBtn")
 let Country = document.getElementById("country")
 let Nationality = document.getElementById("nationality")
 
 function searchCountry(){
 	console.log(Country.value)
     console.log(Nationality.value)
-	if(Country.value == 'Australia' && Nationality.value == "Germany"){
-		submitButton.setAttribute("href",'./australia.html')
+	if(Country.value == 'Australia' && Nationality.value == 'Canada'){
+		console.log("asdsa")
+		submitButton.setAttribute("href",'./australia-visa.html')
 	}
 	if(Country.value == 'Canada'){
 		submitButton.setAttribute("href",'./canada.html')
