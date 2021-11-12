@@ -8,6 +8,11 @@
     padding: 5px 10px;
 }
 
+#nav-right i a {
+	color: white;
+	text-decoration: none;
+}
+
 #submitBtn:hover {
     background: #FFCC00;
 }

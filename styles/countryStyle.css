@@ -10,6 +10,11 @@
 	width: 45%;
 }
 
+#nav-right i a {
+	color: white;
+	text-decoration: none;
+}
+
 .customTitle {
 	padding-top: 20px;
 	text-align: center;
