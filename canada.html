@@ -511,6 +511,19 @@
 				})
 		}
 		displayCountries();
+
+		var customName = document.getElementById("recipient-name").value;
+		var btn = document.getElementById("saves");
+		btn.addEventListener("click", saveDocument)
+		function saveDocument(){
+			console.log("the document is saved")
+			var document = db.collection("saved_document");
+			document.add({
+				nation: "Canada",
+				link: "http://127.0.0.1:5500/canada.html",
+				name: customName,
+			})
+		}
 	</script>
 </body>
 
