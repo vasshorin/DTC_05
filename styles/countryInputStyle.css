@@ -17,6 +17,7 @@
     background: #FFCC00;
 }
 
+
 @media screen and (min-width:701px) {
     .formContainer {
         display: grid;
@@ -27,12 +28,12 @@
         display: grid;
         grid-row: 1;
         padding: 13% 13%;
-        background-image: url("/images/worldMap.jpg");
+        background-image: url("../images/worldMap.jpg");
         background-size: 1950px 500px;
         z-index: -1;
         opacity: 1.5;
     }
-
+    
     h1 {
         text-align: center;
         color: #FFCC00;
@@ -80,7 +81,7 @@
     }
 
     .centerButton {
-        margin: 65% 0%;
+        margin: 70% 0%;
         position: absolute;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
@@ -98,12 +99,12 @@
         display: grid;
         grid-row: 1;
         padding: 30% 30%;
-        background-repeat: no-repeat;
-        background-image: url("/images/worldMap.jpg");
-        background-size: 700px 420px;
+        background-image: url("../images/worldMap.jpg");
+        background-size: 700px 490px;
         z-index: -1;
         opacity: 1.5;
     }
+    
 
     h1 {
         text-align: center;
@@ -148,7 +149,7 @@
     #list {
         display: grid;
         grid-row: 4;
-        margin: 5% 7%;
+        margin: 3% 7%;
     }
 
     .centerButton {

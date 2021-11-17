@@ -108,8 +108,9 @@ function scrollTo(ele,speed){
 }
 
 //top button
-var mybutton = document.getElementById("myBtn");
+var mybutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
+
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
