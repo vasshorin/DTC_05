@@ -98,13 +98,17 @@
                 <option>Australia</option>
                 <option>Austria</option>
                 <option>Canada</option>
-                <option>United Kingdom</option>
+                <option>France</option>
                 <option>Germany</option>
                 <option>Italy</option>
+                <option>Japan</option>
                 <option>Netherlands</option>
                 <option>New Zealand</option>
-                <option>United States</option>
+                <option>Singapore</option>
                 <option>Switzerland</option>
+                <option>Thailand</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
             </select>
         <div id="list_nationality">
             <div><label for="nationality" style="font-weight: bold;">Nationality</label><span style="color: red !important; display: inline; float: none;">*</span></div>
@@ -113,13 +117,17 @@
                 <option>Australia</option>
                 <option>Austria</option>
                 <option>Canada</option>
-                <option>United Kingdom</option>
+                <option>France</option>
                 <option>Germany</option>
                 <option>Italy</option>
+                <option>Japan</option>
                 <option>Netherlands</option>
                 <option>New Zealand</option>
-                <option>United States</option>
+                <option>Singapore</option>
                 <option>Switzerland</option>
+                <option>Thailand</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
             </select>
         <h6>Country of residence:</h6>
         <select class="form-control">
@@ -194,14 +202,14 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"> </script>
         <script>
-            function saveUserInfo() {
-                let nationalities = document.getElementById("nationality").value;
-                var nationalityRef = db.collection("Nationality");
-                nationalityRef.add({
-                    nationality: nationalities
-                });
-            }
-            saveUserInfo();
+            // function saveUserInfo() {
+            //     let nationalities = document.getElementById("nationality").value;
+            //     var nationalityRef = db.collection("Nationality");
+            //     nationalityRef.add({
+            //         nationality: nationalities
+            //     });
+            // }
+            // saveUserInfo();
         </script>
     </div>
 </body>

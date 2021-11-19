@@ -71,6 +71,7 @@
 		</nav>
 	</div>
 
+
 	<div class="conBox">
 		<div id="regulation-section" class="d-flex">
 			<p class="rbg1"></p>
@@ -128,7 +129,7 @@
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 		<div class="d-flex mb-3 whiteB" id="auCollapseBox1">
-			<h2 class="collapseTitle">Based on your information <span style="color: red;">you need visa</span> to go to Australia.</h2>
+			<h2 class="collapseTitle">Based on your information you <span style="color: green;"> do not need visa</span> to go to Australia.</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
 					<b>There are many types of visa, we outline some of the most popular here for you.</b>
@@ -523,8 +524,8 @@
 		})
 	</script>
 
-	<!-- <script>
-		function read_display_country() {
+<script>
+	function read_display_country() {
 			db.collection("Country").doc(
 					"Australia") //name of the collection and documents should matach excatly with what you have in Firestore
 				.onSnapshot(AustraliaDoc => { //arrow notation
@@ -534,7 +535,9 @@
 				})
 		}
 		read_display_country()
-	</script> -->
+
+</script>
+
 
 
 </body>
