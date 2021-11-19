@@ -446,14 +446,14 @@
                         <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Name:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <input type="text" class="form-control" id="file-name">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             style="margin-right:35%;">Cancel</button>
-                        <button type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+                        <button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
                             data-bs-toggle="modal" data-bs-dismiss="modal"
                             style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
                     </div>
@@ -505,29 +505,29 @@
     </script>
 
     <script>
-    //    function read_display_country() {
-	// 		db.collection("Country").doc(
-	// 				"UnitedStates") //name of the collection and documents should matach excatly with what you have in Firestore
-	// 			.onSnapshot(UnitedStatesDoc => { //arrow notation
-	// 				console.log("current document data: " + UnitedStatesDoc.data()); //.data() returns data object
-	// 				document.getElementById("countrySelected").innerHTML = UnitedStatesDoc.data()
-	// 					.unitedstates; //using javascript to display the data on the right place
-	// 			})
-	// 	}
-	// 	read_display_country()
-
-        // var customName = document.getElementById("recipient-name").value;
-		// var btn = document.getElementById("saves");
-		// btn.addEventListener("click", saveDocument)
-		// function saveDocument(){
-		// 	console.log("the document is saved")
-		// 	var document = db.collection("saved_document");
-		// 	document.add({
-		// 		nation: "United States of America",
-		// 		link: "http://127.0.0.1:5500/usa.html",
-		// 		name: customName,
-		// 	})
+        /*Display the name of country*/
+        // function read_display_country() {
+		// 	db.collection("Country").doc(
+		// 			"UnitedStates") //name of the collection and documents should matach excatly with what you have in Firestore
+		// 		.onSnapshot(UnitedStatesDoc => { //arrow notation
+		// 			console.log("current document data: " + UnitedStatesDoc.data()); //.data() returns data object
+		// 			document.getElementById("countrySelected").innerHTML = UnitedStatesDoc.data()
+		// 				.unitedstates; //using javascript to display the data on the right place
+		// 		})
 		// }
+		// read_display_country()
+
+        /*Save document*/
+        // function saveInfo() {
+        //     let file_name = document.getElementById("file-name").value;
+        //     var countriesRef = db.collection("saved_document");
+        //     countriesRef.add({
+        //         nation: "United States of America (USA)",
+		// 		link: "http://127.0.0.1:5500/usa.html",
+		// 		name: file_name
+        //     });
+        // }
+
     </script>
 
 
