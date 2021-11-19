@@ -499,27 +499,27 @@
     </script>
 
     <script>
-    //    function read_display_country() {
-	// 		db.collection("Country").doc(
-	// 				"NewZealand") //name of the collection and documents should matach excatly with what you have in Firestore
-	// 			.onSnapshot(NewZealandDoc => { //arrow notation
-	// 				console.log("current document data: " + NewZealandDoc.data()); //.data() returns data object
-	// 				document.getElementById("countrySelected").innerHTML = NewZealandDoc.data()
-	// 					.newzealand; //using javascript to display the data on the right place
-	// 			})
-	// 	}
-	// 	read_display_country()
+        function read_display_country() {
+	 		db.collection("Country").doc(
+	 				"NewZealand") //name of the collection and documents should matach excatly with what you have in Firestore
+	 			.onSnapshot(NewZealandDoc => { //arrow notation
+	 				console.log("current document data: " + NewZealandDoc.data()); //.data() returns data object
+        				document.getElementById("countrySelected").innerHTML = NewZealandDoc.data()
+					.newzealand; //using javascript to display the data on the right place
+	 			})
+	 	}
+	    read_display_country()
 
         /*Save document*/
-        // function saveInfo() {
-        //     let file_name = document.getElementById("file-name").value;
-        //     var countriesRef = db.collection("saved_document");
-        //     countriesRef.add({
-        //         nation: "New Zealand",
-		// 		link: "http://127.0.0.1:5500/newZealand.html",
-		// 		name: file_name
-        //     });
-        // }
+        function saveInfo() {
+             let file_name = document.getElementById("file-name").value;
+             var countriesRef = db.collection("saved_document");
+             countriesRef.add({
+                 nation: "New Zealand",
+		 		link: "http://127.0.0.1:5500/newZealand.html",
+		 		name: file_name
+             });
+        }
     </script>
 
 </body>

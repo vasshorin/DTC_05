@@ -462,14 +462,14 @@
 						<form>
 							<div class="mb-3">
 								<label for="recipient-name" class="col-form-label">Name:</label>
-								<input type="text" class="form-control" id="recipient-name">
+								<input type="text" class="form-control" id="file-name">
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
 							data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
@@ -535,6 +535,16 @@
 				})
 		}
 		read_display_country()
+
+		function saveInfo() {
+             let file_name = document.getElementById("file-name").value;
+             var countriesRef = db.collection("saved_document");
+             countriesRef.add({
+                 nation: "Australia",
+		 		link: "http://127.0.0.1:5500/australia-no-visa.html",
+		 		name: file_name
+            	});
+        	}
 
 </script>
 

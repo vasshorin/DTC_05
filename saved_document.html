@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <link rel="stylesheet" type="text/css" href="./styles/saved_document.css">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -71,33 +71,32 @@
 	</div>
 
 
+  <br>
+
+
   <div class="container">
 
     <div id="recent-list">
+      <br>
     <h1>Saved Document</h1>
 
         <h3>Recently Saved</h3>
         <br>
         <a href="canada.html" class="list-group-item list-group-item-action" aria-current="true">
-          <h4><span id="first-country">Canada</span></h4>
+          <h4><span id="first-country"></span></h4>
         </a>
-
 <br>
-
         <a href="usa.html" class="list-group-item list-group-item-action">
-          <h4><span id="second-country">United States</span></h4>
+          <h4><span id="second-country"></span></h4>
         </a>
-
 <br>
-
-        <a href="newZealand.html" class="list-group-item list-group-item-action">
-          <h4><span id="third-country">New Zealand</span></h4>
+        <a href="japan.html" class="list-group-item list-group-item-action">
+          <h4><span id="third-country"></span></h4>
         </a>
     </div>
-
-<br><br>
-      
+<br><br>  
       <div class="accordion" id="accordionExample">
+        <br>
         <h3 class="category-h3">Category</h3>
         <br>
           <div class="accordion-item">
@@ -106,32 +105,42 @@
                 Regulations
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse Close" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <div class="list-group">
                   <button type="button" class="list-group-item list-group-item-action" aria-current="true">
                     <a href="australia.html">
-                      Australia
+                      <span id="country-1">
+                      <!--name goes here-->
+                      </span>
                     </a>
                   </button>
                   <button type="button" class="list-group-item list-group-item-action">
                     <a href="canada.html">
-                    Canada
+                      <span id="country-2">
+                    <!--name goes here-->
+                      </span>
                     </a>
                   </button>
                   <button type="button" class="list-group-item list-group-item-action">
                     <a href="newZealand.html">
-                      New Zealand
+                      <span id="country-3">
+                      <!--name goes here-->
+                      </span>
                     </a>
                   </button>
                   <button type="button" class="list-group-item list-group-item-action">
                     <a href="uk.html">
-                        United Kingdom
+                      <span id="country-4">
+                        <!--name goes here-->
+                      </span>
                     </a>
                   </button>
                   <button type="button" class="list-group-item list-group-item-action">
                     <a href="usa.html">
-                      United States of America
+                      <span id="country-5">
+                      <!--name goes here-->
+                      </span>
                     </a>
                   </button>
                 </div>
@@ -178,10 +187,113 @@
         <br>
         <br>
 
+        <footer>
+          <div class="fixed-bottom py-3 bg-dark" style="color:white;">
+            <div class="container text-center">
+              (C) Copyright DTC 05, 2021
+            </div>
+          </div>
+        </footer>
 
-      <!-- Bootstrap JS script -->
+
+      <!-- JS script -->
       <script>
-        var database = firebase.database();
+      
+        /*the recent area*/
+
+        function display_recentCountry() {
+          db.collection("saved_document").doc(
+            "LPZhCzjJpFB09ce2P6By")
+            .onSnapshot(LPZhCzjJpFB09ce2P6ByDoc => {
+              console.log("the country is displayed");
+              document.getElementById("first-country").innerHTML = LPZhCzjJpFB09ce2P6ByDoc.data()
+                .name;
+            })
+        }
+        display_recentCountry()
+
+        function display_recentCountry_2() {
+          db.collection("saved_document").doc(
+            "USA")
+            .onSnapshot(USADoc => {
+              console.log("the country is displayed");
+              document.getElementById("second-country").innerHTML = USADoc.data()
+                .name;
+            })
+        }
+        display_recentCountry_2()
+
+        function display_recentCountry_3() {
+          db.collection("saved_document").doc(
+            "Japan")
+            .onSnapshot(JapanDoc => {
+              console.log("the country is displayed");
+              document.getElementById("third-country").innerHTML = JapanDoc.data()
+                .name;
+            })
+        }
+        display_recentCountry_3()
+
+
+
+
+        /*-------------Collapse bar areas---------------------*/
+
+        function display_country() {
+          db.collection("saved_document").doc(
+            "iVYUXI1DTrlU04IK8mBO")
+            .onSnapshot(iVYUXI1DTrlU04IK8mBODoc => {
+              console.log("the country is displayed");
+              document.getElementById("country-1").innerHTML = iVYUXI1DTrlU04IK8mBODoc.data()
+                .name;
+            })
+        }
+        display_country()
+
+        function display_country_2() {
+          db.collection("saved_document").doc(
+            "LPZhCzjJpFB09ce2P6By")
+            .onSnapshot(LPZhCzjJpFB09ce2P6ByDoc => {
+              console.log("the country is displayed");
+              document.getElementById("country-2").innerHTML = LPZhCzjJpFB09ce2P6ByDoc.data()
+                .name;
+            })
+        }
+        display_country_2()
+
+        function display_country_3() {
+          db.collection("saved_document").doc(
+            "newzealand")
+            .onSnapshot(newzealandDoc => {
+              console.log("the country is displayed");
+              document.getElementById("country-3").innerHTML = newzealandDoc.data()
+                .name;
+            })
+        }
+        display_country_3()
+
+        function display_country_4() {
+          db.collection("saved_document").doc(
+            "pQ266U8PkUr6WDxooHxg")
+            .onSnapshot(pQ266U8PkUr6WDxooHxgDoc => {
+              console.log("the country is displayed");
+              document.getElementById("country-4").innerHTML = pQ266U8PkUr6WDxooHxgDoc.data()
+                .name;
+            })
+        }
+        display_country_4()
+
+        function display_country_5() {
+          db.collection("saved_document").doc(
+            "USA")
+            .onSnapshot(USADoc => {
+              console.log("the country is displayed");
+              document.getElementById("country-5").innerHTML = USADoc.data()
+                .name;
+            })
+        }
+        display_country_5()
+                
       </script>
 
   </div>

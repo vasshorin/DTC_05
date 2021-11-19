@@ -461,7 +461,7 @@
 						<form>
 							<div class="mb-3">
 								<label for="recipient-name" class="col-form-label">Name:</label>
-								<input type="text" class="form-control" id="recipient-name">
+								<input onclick="saveInfo()" type="text" class="form-control" id="file-name">
 							</div>
 						</form>
 					</div>
@@ -523,7 +523,7 @@
 		})
 	</script>
 
-	<!-- <script>
+	<script>
 		function read_display_country() {
 			db.collection("Country").doc(
 					"Australia") //name of the collection and documents should matach excatly with what you have in Firestore
@@ -534,7 +534,17 @@
 				})
 		}
 		read_display_country()
-	</script> -->
+
+		function saveInfo() {
+             let file_name = document.getElementById("file-name").value;
+             var countriesRef = db.collection("saved_document");
+             countriesRef.add({
+                 nation: "Australia",
+		 		link: "http://127.0.0.1:5500/australia-visa.html",
+		 		name: file_name
+            	});
+        	}
+	</script>
 
 
 </body>
