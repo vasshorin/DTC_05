@@ -8,8 +8,23 @@ function countryChange(){
 	if(Country.value == 'Canada'){
 		submitButton.setAttribute("href",'./canada.html')
 	}
+	if(Country.value == 'France'){
+		submitButton.setAttribute("href",'./france.html')
+	}
+	if(Country.value == 'Germany'){
+		submitButton.setAttribute("href",'./germany.html')
+	}
+	if(Country.value == 'Japan'){
+		submitButton.setAttribute("href",'./japan.html')
+	}
 	if(Country.value == 'New Zealand'){
 		submitButton.setAttribute("href",'./newZealand.html')
+	}
+	if(Country.value == 'Singapore'){
+		submitButton.setAttribute("href",'./singapore.html')
+	}
+	if(Country.value == 'Thailand'){
+		submitButton.setAttribute("href",'./thailand.html')
 	}
 	if(Country.value == 'United Kingdom'){
 		submitButton.setAttribute("href",'./uk.html')

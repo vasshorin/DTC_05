@@ -75,7 +75,7 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="country"></span></h1>
+				<h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="countrySelected"></span></h1>
 			</div>
 
 			<h3 class="mb-3">Regulations:</h3>
@@ -431,9 +431,7 @@
 		<div class="container1">
 			<div class="center">
 				<button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal"
-					data-bs-target="#exampleModalToggle">Save
-					Search
-					Result</button>
+					data-bs-target="#exampleModalToggle">Save Search Result</button>
 			</div>
 		</div>
 		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
@@ -448,14 +446,14 @@
 						<form>
 							<div class="mb-3">
 								<label for="recipient-name" class="col-form-label">Name:</label>
-								<input type="text" class="form-control" id="recipient-name">
+								<input type="text" class="form-control" id="file-name">
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
 							data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
@@ -507,20 +505,40 @@
 	</script>
 
 	<script>
-		function displayCountries() {
-			db.collection("Countries").get()
-				.then(allCountries => {
-					allCountries.forEach(doc => {
-							var countryName = doc.data().country; 
-							if (countryName != "" && countryName != "Canada" && countryName != "Australia" &&
-							countryName != "New Zealand" && countryName != "United States") {
-							console.log("country");
-							document.getElementById("country").innerText = countryName;
-						}
-					})
-				})
-		}
-		// displayCountries();
+		// function read_display_country() {
+		// 	db.collection("Country").doc(
+		// 			"UnitedKingdom") //name of the collection and documents should matach excatly with what you have in Firestore
+		// 		.onSnapshot(UnitedKingdomDoc => { //arrow notation
+		// 			console.log("current document data: " + UnitedKingdomDoc.data()); //.data() returns data object
+		// 			document.getElementById("countrySelected").innerHTML = UnitedKingdomDoc.data()
+		// 				.unitedkingdom; //using javascript to display the data on the right place
+		// 		})
+		// }
+		// read_display_country()
+
+		// function saveInfo() {
+        //     let file_name = document.getElementById("file-name").value;
+        //     var countriesRef = db.collection("saved_document");
+        //     countriesRef.add({
+        //         nation: "United Kingdom (UK)",
+		// 		link: "http://127.0.0.1:5500/uk.html",
+		// 		name: file_name
+        //     });
+        // }
+
+
+		// var customName = document.getElementById("recipient-name").value;
+		// var btn = document.getElementById("saves");
+		// btn.addEventListener("click", saveDocument)
+		// function saveDocument(){
+		// 	console.log("the document is saved")
+		// 	var document = db.collection("saved_document");
+		// 	document.add({
+		// 		nation: "United Kingdom (UK)",
+		// 		link: "http://127.0.0.1:5500/uk.html",
+		// 		name: customName
+		// 	})
+		// }
 	</script>
 
 </body>

@@ -80,8 +80,10 @@
         margin: 5% 20%;
     }
 
-    .centerButton {
-        margin: 70% 0%;
+    .centerButton>a {
+        display:grid;
+        grid-row: 5;
+        margin-top: 3%;
         position: absolute;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
@@ -152,8 +154,10 @@
         margin: 3% 7%;
     }
 
-    .centerButton {
-        margin-top:150%;
+    .centerButton>a {
+        display:grid;
+        grid-row: 5;
+        margin-top:5%;
         position: absolute;
         left: 50%;
         -ms-transform: translate(-50%, -50%);

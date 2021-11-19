@@ -75,7 +75,7 @@
             <p class="rbg1"></p>
             <p class="rbg2"></p>
             <div class="regulationTitle">
-                <h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="country"></span></h1>
+                <h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="countrySelected"></span></h1>
             </div>
 
             <h3 class="mb-3">Regulations:</h3>
@@ -505,20 +505,29 @@
     </script>
 
     <script>
-        function displayCountries() {
-            db.collection("Countries").get()
-                .then(allCountries => {
-                    allCountries.forEach(doc => {
-                        var countryName = doc.data().country; 
-                        if (countryName != "" && countryName != "Canada" && countryName != "Australia" &&
-                            countryName != "New Zealand" && countryName != "United Kingdom") {
-                            console.log("country");
-                            document.getElementById("country").innerText = countryName;
-                        }
-                    })
-                })
-        }
-        // displayCountries();
+    //    function read_display_country() {
+	// 		db.collection("Country").doc(
+	// 				"UnitedStates") //name of the collection and documents should matach excatly with what you have in Firestore
+	// 			.onSnapshot(UnitedStatesDoc => { //arrow notation
+	// 				console.log("current document data: " + UnitedStatesDoc.data()); //.data() returns data object
+	// 				document.getElementById("countrySelected").innerHTML = UnitedStatesDoc.data()
+	// 					.unitedstates; //using javascript to display the data on the right place
+	// 			})
+	// 	}
+	// 	read_display_country()
+
+        // var customName = document.getElementById("recipient-name").value;
+		// var btn = document.getElementById("saves");
+		// btn.addEventListener("click", saveDocument)
+		// function saveDocument(){
+		// 	console.log("the document is saved")
+		// 	var document = db.collection("saved_document");
+		// 	document.add({
+		// 		nation: "United States of America",
+		// 		link: "http://127.0.0.1:5500/usa.html",
+		// 		name: customName,
+		// 	})
+		// }
     </script>
 
 
