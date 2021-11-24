@@ -23,7 +23,7 @@ function searchCountry(){
 		submitButton.setAttribute("href",link)
 		localStorage.setItem('div1', visa)
 	} else {
-		submitButton.setAttribute("href",link_no)
+		submitButton.setAttribute("href",link)
 		localStorage.setItem('div1', noVisa)
 	}
 	console.log(exists)

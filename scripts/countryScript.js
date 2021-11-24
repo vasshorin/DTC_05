@@ -18,7 +18,7 @@ function countryChange(){
 		submitButton.setAttribute("href",'./japan.html')
 	}
 	if(Country.value == 'New Zealand'){
-		submitButton.setAttribute("href",'./newZealand.html')
+		submitButton.setAttribute("href",'./countries/newZealand.html')
 	}
 	if(Country.value == 'Singapore'){
 		submitButton.setAttribute("href",'./singapore.html')
