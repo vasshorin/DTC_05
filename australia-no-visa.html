@@ -124,7 +124,7 @@
 			</div>
 			<br>
 		</div>
-
+		<p id="div12">asdasdas</p>
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
@@ -536,17 +536,24 @@
 		}
 		read_display_country()
 
-		function saveInfo() {
-             let file_name = document.getElementById("file-name").value;
-             var countriesRef = db.collection("saved_document");
-             countriesRef.add({
-                 nation: "Australia",
-		 		link: "http://127.0.0.1:5500/australia-no-visa.html",
-		 		name: file_name
-            	});
-        	}
-
+	function saveInfo() {
+			let file_name = document.getElementById("file-name").value;
+			var countriesRef = db.collection("saved_document");
+			countriesRef.add({
+				nation: "Australia",
+			link: "http://127.0.0.1:5500/australia-no-visa.html",
+			name: file_name
+			});
+		}
 </script>
+	<script>
+		function getData(){
+		var visa = localStorage.getItem("div1");
+		console.log(visa);
+		document.getElementById("div12").innerHTML = visa;
+		};
+	getData()
+	</script>
 
 
 
