@@ -6,3 +6,35 @@
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.55);
 }
+
+#submitBtn {
+	border: 1px solid black;
+  	padding: 10px;
+  	box-shadow: 1px 1px;
+	background: #fff;
+	text-decoration: none;
+	color:black
+}
+
+#submitBtn:hover {
+	border: 1px solid black;
+  	padding: 10px;
+  	box-shadow: 1px 1px;
+	background: #FFCC00;
+}
+
+#reset {
+	border: 1px solid black;
+  	padding: 10px;
+  	box-shadow: 1px 1px;
+	background: #fff;
+	text-decoration: none;
+	color:black
+}
+
+#reset:hover {
+	border: 1px solid black;
+  	padding: 10px;
+  	box-shadow: 1px 1px;
+	background: #ff3131;
+}
