@@ -22,10 +22,10 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/countryStyle.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/countryStyle.css" />
 </head>
 
 <body>
@@ -81,9 +81,9 @@
 			<div id="top-title">
 			<h3 class="mb-3" id="regulations">Regulations:</h3>
 			<ol>
-				<li class="mb-3">Entering Australia as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Singapore as a fully vaccinated travellers</li>
 				<p>
-					<button id="auCheckBtn" class="btn btn-outline-secondary" type="button">
+					<button id="auCheckBtn" class="btn btn-outline-secondary check" type="button">
 						Check if you qualify as a fully vaccinated traveller
 					</button>
 				</p>
@@ -95,14 +95,14 @@
 				</p>
 
 				<p>
-					<button id="auQuarantineBtn" class="btn btn-outline-secondary quarantine" type="button">
-						Quarantine plan in case you don’t qualify as a fully vaccinated traveller
+					<button id="auQuarantineBtn" class="btn btn-outline-secondary" type="button">
+						Quarantine regulations
 					</button>
 				</p>
 
 				<p>
 					<button id="auPresentBtn" class="btn btn-outline-secondary" type="button">
-						Present proof of vaccination
+						Additional required documents
 					</button>
 				</p>
 
@@ -114,10 +114,11 @@
 				<h3 class="mb-3">Customs:</h3>
 				<h3>
 					<button id="itemsBtn" class="btn btn-outline-secondary" type="button">
-						Items You Can Bring Into Australia
+						Items You Can Bring Into Singapore
 					</button>
 				</h3>
 			</div>
+			<br>
 		</div>
 
 		<br>
@@ -127,46 +128,34 @@
 			<h2 class="collapseTitle">Check if you qualify as a fully vaccinated traveller</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<b>To qualify as a fully vaccinated traveller to Australia, you must:</b>
-					<ul>
-						<li> if you have completed a course, including a mixed dose, of a <a
-								href="https://www.tga.gov.au/covid-19-vaccines-not-registered-australia-current-international-use-tga-advice-recognition-0">
-								TGA approved or recognised vaccine </a>. Current accepted vaccines and dosages
-							for
-							the purposes of travel are:
-							<br> Two doses at least 14 days apart of:
+					<p>Travelers are required to <b>present a valid international certificate for full vaccination against COVID-19</b>, with the use of an approved vaccine. 
+						The final dose must have been administered <b>at least 14 days before departure</b>.</p>
+					
+					<p>
+						Only specific vaccination certificates issued in specific countries are accepted. Additionally, travelers <b>must have spent the previous 14 days 
+						in these countries, prior to traveling to Singapore</b>. The list of countries and certificates accepted can be found at 
+						<a href="https://safetravel.ica.gov.sg/vtl/requirements-and-process">'Vaccinated Travel Lane (VTL) Overview'.</a>
+					</p>
 
-							<ul>
-								<li>AstraZeneca Vaxzevria </li>
-								<li> AstraZeneca Covishield</li>
-								<li> Pfizer/Biontech Comirnaty </li>
-								<li> Moderna Spikevax</li>
-								<li>Sinovac Coronavac</li>
-								<li> Sinopharm BBIBP-CorV (for people aged 18-60) </li>
-								<li> Bharat Biotech Covaxin.</li>
-							</ul>
-							Or one dose of:
-							<ul>
-								<li>Johnson & Johnson/ Janssen-Cilag COVID Vaccine. </li>
+					<p>
+						All vaccinated travelers must <b>apply for the 'Vaccinated Travel Pass' (VTP) between 7 to 60 days before travel</b>. Applications can be made at 
+						<a href="https://eservices.ica.gov.sg/STO1/VTL">'Vaccinated Travel Pass (VTP) Application Portal'.</a>
+					</p>
 
-							</ul>
-						</li>
+					<p>
+						Vaccinated travelers are required to <b>take designated vaccinated travel lane (VTL) flights</b> for entry to Singapore. Further information on 
+						designated VTL flights can be found at <a href="https://safetravel.ica.gov.sg/vtl/requirements-and-process">'Vaccinated Travel Lane (VTL) Overview'.</a>
+					</p>
 
+					<p>
+						<b>This does not apply to returning nationals and residents</b>, who can enter without being fully vaccinated but will be required to self-isolate for 7 days. An additional PCR test will 
+						be administered on day 7 of the quarantine period.
+					</p>
 
-						<li> Seven days must have passed since the final dose of vaccine in a course of
-							immunisation for you to be considered fully vaccinated. Mixed doses count towards
-							being fully vaccinated as long as all vaccines are approved or recognised by the
-							TGA.
-						</li>
-						<li> Travellers vaccinated in Australia will need to present an Australian International
-							COVID-19 Vaccination Certificate (ICVC).</li>
-						<li> Have no signs or symptoms of COVID-19</li>
-						<li> Get pre-entry test result and meet other requirements listed below</li>
-					</ul>
 					<br>
 					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
+						href="https://www.skyscanner.ca/travel-restrictions/singapore/29475332">
+						Singapore travel updates and COVID-19 restrictions.</a></i>
 				</div>
 			</div>
 		</div>
@@ -174,90 +163,54 @@
 			<h2 class="collapseTitle">Get a pre-entry test</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<ul>
-						<li>People travelling to Australia need to provide a negative COVID-19 PCR test result.
-						</li>
-
-						<li> This includes people travelling on flights from New Zealand. </li>
-
-						<li> You must present evidence of a negative COVID-19 PCR test taken within 3 days of
-							your
-							flight’s scheduled departure to your airline when you check-in for your flight.
-						</li>
-
-						<li> Find out more about PCR test requirements, including what to do if your PCR test
-							result
-							is positive,
-							when you have already had and recovered from COVID-19, and medical exemptions for
-							pre-departure testing. </li>
-					</ul>
+					<p>Proof of a negative PCR test, taken <b>within the previous 48 hours</b>, 
+						must be provided on departure.</p>
+					
 					<br>
 
 					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
+						href="https://www.skyscanner.ca/travel-restrictions/singapore/29475332">
+						Singapore travel updates and COVID-19 restrictions.</a></i>
 				</div>
 			</div>
 		</div>
 		<div class="d-flex mb-3 whiteB" id="auCollapseBox3">
-			<h2 class="collapseTitle">Quarantine plan in case you don’t qualify
-				as
-				a fully vaccinated traveller</h2>
+			<h2 class="collapseTitle">Quarantine regulations</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p> <b>What are the current quarantine arrangements? </b> </p>
-					<p>Quarantine arrangements are managed by the state and territory governments, with the
-						support
-						of the Australian
-						Government. Modified quarantine arrangements, including home quarantine, may vary
-						depending
-						on the state or
-						territory of your first arrival. You can find information on the current quarantine
-						arrangements for the state
-						or territory of your first arrival via their local government website. </p>
+					<p>A PCR test will be administered <b>on arrival</b> and self-isolation is required <b>until a negative result is confirmed</b>. 
+						Travelers must register and pay for the test in advance at<a href="https://safetravel.changiairport.com/#/">'Safe Travel Concierge'.</a></p>
 
 					<br>
 
 					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19">
-							Advice for International travellers page.</a></i>
+						href="https://www.skyscanner.ca/travel-restrictions/singapore/29475332">
+						Singapore travel updates and COVID-19 restrictions.</a></i>
 				</div>
 			</div>
 		</div>
 		<div class="d-flex mb-3 grayB" id="auCollapseBox4">
-			<h2 class="collapseTitle">Present proof of vaccination</h2>
+			<h2 class="collapseTitle">Additonal required documents</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>Traveling to Australia must provide an international COVID-19 vaccination certificate
-						(ICVC)
-						as evidence of vaccination.
-					</p>
-					<p>You can get your ICVC through the <a
-							href="https://my.gov.au/LoginServices/main/login?execution=e1s1">MyGov portal</a>.
-					</p>
-					<p>Travellers vaccinated in other countries will be able to present certificates in formats
-						that meet the following criteria:</p>
+					<p>Travelers must complete <b>an 'SG Arrival Card' within 72 hours prior to arrival</b>. This includes submitting health, travel history, 
+						and accommodation declarations. A 'Visit Pass' (e-pass) will then be sent via email, indicating the period of stay and the last day allowed.</p>
+					
+					<p><b>Short-term visitors</b> are required to present <b>proof of COVID-19 travel insurance</b> with minimal coverage of $30,000 SGD.</p>
+					
+					<p>Additionally, <b>the 'TraceTogether' app</b> must be downloaded onto a mobile device.</p>
 					<ul>
-						<li>Issued by a national or state/provincial-level authority or an accredited
-							vaccination provider</li>
-						<li> written in English or accompanied by a certified translation</li>
-						<li>containing at a minimum:</li>
-						<ul>
-							<li> name as it appears in the traveller's passport</li>
-							<li> either date of birth or passport number</li>
-							<li> the vaccine brand name, and</li>
-							<li> the date of each dose or the date on which a full course of immunisation was
-								completed.</li>
-						</ul>
+						<li><a href="https://www.tracetogether.gov.sg/">Download here</a></li>
 					</ul>
+
 					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
+						href="https://www.skyscanner.ca/travel-restrictions/singapore/29475332">
+						Singapore travel updates and COVID-19 restrictions.</a></i>
 				</div>
 			</div>
 		</div>
 		<div id="custom-section">
-			<h3 class="customTitle">Items You Can Bring Into Australia</h3>
+			<h3 class="customTitle">Items You Can Bring Into Singapore</h3>
 			<div class="accordion accordion-flush" id="accordionExample">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne">
@@ -269,19 +222,21 @@
 					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
 						data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>There is no limit to the amount of currency (cash) you can bring in or out of
-								Australia.
-								However, you must declare amounts of AUD 10,000 or more in Australian currency or
-								foreign equivalent.</p>
+							<p>If you are entering or leaving Singapore with Physical Currency or Bearer Negotiable Instruments (CBNI)* 
+								with a <b>total value exceeding S$20,000</b> (or its equivalent in a foreign currency), you must fill in the 
+								<b>Physical Currency and Bearer Negotiable Instruments Report (Traveller)</b>, or NP727, form. The forms are 
+								available at all checkpoints and police establishment or can be downloaded from the <a href="https://www.police.gov.sg/">
+								Singapore Police Force</a> website. Submit your completed form at the Customs Red Channel on arrival in Singapore, and at 
+								the immigration counters on departure from Singapore.
+							</p>
 
-							<p>You must disclose any promissory notes, travellers' cheques, personal cheques,
-								money orders, postal orders or other bearer negotiable instruments, regardless of
-								value,
-								if requested by one of our officers or a police officer.</p>
+							<p>* <b>‘Physical currency’</b> refers to coins and printed money. Examples of bearer negotiable instruments include a bill of exchange, 
+								cheque, promissory note, bearer bond, money order and postal order.</p>
+			
+							<br>
 							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
-
+									href="https://www.ica.gov.sg/enter-depart/at-our-checkpoints/for-travellers/CBNI">
+									Taking Cash In and Out of Singapore.</a></i>
 						</div>
 					</div>
 				</div>
@@ -295,22 +250,73 @@
 					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
 						data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>If you are aged 18 years or over, you can bring 2.25 litres of alcoholic beverages
-								duty free into Australia with you, regardless of whether you are travelling as a
-								passenger or crew member. All alcoholic beverages in accompanied baggage are
-								included
-								in this category, regardless of where or how they were purchased.</p>
+							<b>Liquor Products Travellers are entitled to duty-free concession for liquors if all the following conditions are met: </b>
+							
+							<ul>
+								<li>You are 18 years old or above;</li>
+								<li>You have spent 48 hours or more outside Singapore immediately before arrival;</li>
+								<li>You are not arriving from Malaysia;</li>
+								<li>The liquor is for your own consumption; and</li>
+								<li>The liquor is not prohibited from import into Singapore.</li>
+							</ul>
 
-							<p>Aviation security regulations may restrict the volume of liquids that you can bring
-								into
-								Australia as
-								hand luggage. As an alternative, duty free alcoholic beverages can be purchased in
-								an
-								airport duty free
-								shop on arrival in Australia. </p>
+							<p>Travellers are given duty-free concession for liquors on one of the following options:</p>
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="table-secondary" scope="col">Option</th>
+										<th class="table-secondary" scope="col">Spirits</th>
+										<th class="table-secondary" scope="col">Wine</th>
+										<th class="table-secondary" scope="col">Beer</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row"><b>A</b></td>
+										<td>1 Litre</td>
+										<td>1 Litre</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td scope="row"><b>B</b></td>
+										<td>1 Litre</td>
+										<td>-</td>
+										<td>1 Litre</td>
+									</tr>
+									<tr>
+										<td scope="row"><b>C</b></td>
+										<td>-</td>
+										<td>1 Litre</td>
+										<td>1 Litre</td>
+									</tr>
+
+									<tr>
+										<td scope="row"><b>D</b></td>
+										<td>-</td>
+										<td>2 Litres</td>
+										<td>-</td>
+									</tr>
+
+									<tr>
+										<td scope="row"><b>F</b></td>
+										<td>-</td>
+										<td>-</td>
+										<td>2 Litres</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p>These options are also applicable for the following liquors:</p>
+							<ul>
+								<li>Liquors consumed for health reasons such as Yomeishu (wine), D.O.M (spirits), samsu (spirits)</li>
+								<li>Liquors used in cooking such as rice wine and cooking wine (wine)</li>
+								<li>Sake (wine)</li>
+								<li>Soju (spirits)</li>
+							</ul>
+
 							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
+								href="https://www.customs.gov.sg/individuals/going-through-customs/arrivals/duty-free-concession-and-gst-relief">
+								Duty-Free Concession and GST Relief.</a></i>
 
 						</div>
 					</div>
@@ -325,17 +331,17 @@
 					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
 						data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>From 1 July 2017, you can bring 25 grams of tobacco in any form (cigarette, loose
-								leaf,
-								etc.), equivalent to
-								approximately 25 cigarettes, plus an open packet, for each traveller 18 years or
-								older,
-								regardless of whether
-								you are travelling as a passenger or crew member.</p>
+							<p><b>Cigarettes and Tobacco Products</b> There is no duty-free concession and Goods and 
+								Services Tax (GST) relief for cigarettes and tobacco products in Singapore.</p>
+							<p>With effect <b>from 1 July 2020</b>, all cigarettes and other tobacco products imported into, sold, 
+								offered for sale or distributed in Singapore must comply with the <b>new Standardised Packaging (SP) 
+								requirements</b>. For further information, you may refer to
+								<a href="https://www.hsa.gov.sg/tobacco-regulation/overview">Health Sciences Authority (HSA)’s website</a> </p>
+
 							<br>
 							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
+								href="https://www.customs.gov.sg/individuals/going-through-customs/arrivals/duty-free-concession-and-gst-relief">
+								Duty-Free Concession and GST Relief.</a></i>
 
 						</div>
 					</div>
@@ -344,35 +350,48 @@
 					<h2 class="accordion-header" id="headingFour">
 						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 							data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-							General goods
+							Other goods
 						</button>
 					</h2>
 					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
 						data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>General goods include gifts, souvenirs, cameras, electronic equipment, leather goods,
-								perfume concentrates,
-								jewellery, watches and sporting equipment.
-							</p>
-							<p><b>Return to Australia with goods subject to the Tourist Refund Scheme (TRS)
-									provisions</b></p>
-							<p>If you return to Australia with goods for which you have claimed a GST refund under
-								the
-								TRS on departure,
-								you must declare those goods at Question 3 on the Incoming Passenger Card (IPC).</p>
+							<p>Travellers are granted GST import relief on new goods that are purchased overseas and brought 
+								into Singapore for their personal use. The relief amount is based on the duration that the traveller 
+								has spent outside Singapore:</p> 
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="table-secondary" scope="col">Time Spent Away from Singapore</th>
+											<th class="table-secondary" scope="col">Value of Goods Granted GST Relief *</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td scope="row"><b>48 hours or more</b></td>
+											<td>S$500</td>
+										</tr>
+										<tr>
+											<td scope="row"><b>Less than 48 hours</b></td>
+											<td>S$100</td>
+										</tr>
+									</tbody>
+								</table>
 
-							<p> GST refunds received on goods claimed under the TRS will have to be repaid if the
-								items
-								are brought into Australia.</p>
+								<p>*GST is applicable on the value of goods in excess of the respective relief limits</p>
+								<p>Goods granted GST import relief include new articles, souvenirs, gifts and food 
+									preparations <b>intended for the traveller’s personal use or consumption</b>. The GST
+									import relief does not apply to intoxicating liquor and tobacco, as well as goods 
+									imported for commercial purposes. Holders of a work permit, employment pass, student pass, 
+									dependent pass or long-term pass issued by the Singapore Government, and crew members are not 
+									entitled to GST import relief.</p>
 
-							<p> See the <a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme">Tourist
-									Refund Scheme</a>
-								page for more detail about how it works.</p>
+								<p>Travellers are required to pay GST on the value of the goods that <b>exceeds the amount of GST</b> 
+									import relief granted to them.</p>
 							<br>
 							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
+								href="https://www.customs.gov.sg/individuals/going-through-customs/arrivals/duty-free-concession-and-gst-relief">
+								Duty-Free Concession and GST Relief.</a></i>
 
 						</div>
 					</div>
@@ -451,7 +470,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
@@ -471,11 +490,11 @@
 	<script>
 		function read_display_country() {
 		 	db.collection("Country").doc(
-		 			"Australia") //name of the collection and documents should matach excatly with what you have in Firestore
-		 		.onSnapshot(AustraliaDoc => { //arrow notation
-		 			console.log("current document data: " + AustraliaDoc.data()); //.data() returns data object
-		 			document.getElementById("countrySelected").innerHTML = AustraliaDoc.data()
-		 			.australia; //using javascript to display the data on the right place
+		 			"Singapore") //name of the collection and documents should matach excatly with what you have in Firestore
+		 		.onSnapshot(SingaporeDoc => { //arrow notation
+		 			console.log("current document data: " + SingaporeDoc.data()); //.data() returns data object
+		 			document.getElementById("countrySelected").innerHTML = SingaporeDoc.data()
+		 			.singapore; //using javascript to display the data on the right place
 		 		})
 		}
 		read_display_country()
@@ -485,11 +504,12 @@
              let file_name = document.getElementById("file-name").value;
              var countriesRef = db.collection("saved_document");
              countriesRef.add({
-                 nation: "Australia",
-		 		link: "http://127.0.0.1:5500/australia.html",
+                 nation: "Singapore",
+		 		link: "http://127.0.0.1:5500/singapore.html",
 		 		name: file_name
-            	});
-        	}
+             });
+        }
+
 	</script>
 
 

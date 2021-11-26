@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering New Brunswick as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Alberta as a fully vaccinated travellers</li>
 				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
@@ -88,7 +88,7 @@
 						Self-isolation requirements
 					</button>
 				</p>
-				
+	
 				<p>
 					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
@@ -105,21 +105,24 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p><b>Fully vaccinated</b>: A person is considered to be fully vaccinated when at least two weeks 
-					   has passed since their final dose of a Health Canada approved COVID-19 vaccine. </p>
-					
-					<p><b>Partially vaccinated</b>: A person is considered to be partially vaccinated when at least two weeks have passed 
-					   since their first dose of a Health Canada approved COVID-19 vaccine. This only applies to vaccines that 
-					   consist of two doses.</p>
-
-					<p>Fully vaccinated travellers are <b>required to upload proof of vaccination</b> to the Travel Form. People who do not upload 
-						appropriate proof will be required to follow the rules for unvaccinated travellers.</p>
-
+					<p>As of November 15, 2021, <b> Albertans 12 and older </b>can only show their proof of vaccination through an 
+						<a href="https://covidrecords.alberta.ca/home">Alberta vaccine record QR code</a>. Visitors from 
+						other provinces can show their proof of vaccination in whatever form their home province has issued. 
+						The following businesses will be required to check for proof of vaccine or a privately paid negative
+						COVID test (within 72 hours) for <b>customers over the age of 12</b>:</p>
+					<ul>
+						<li>Restaurants (for sit-down dining);  </li>
+						<li>Entertainment and recreation centres (bowling, racing entertainment, arcades, billiards halls, other similar venues);</li>
+						<li>Movie theatres;</li>
+						<li>Private social events held in public facilities;</li>
+						<li>Amenities in hotels (pools, gyms, etc.);</li>
+						<li>Conferences, meeting spaces, halls and rented spaces;</li>
+						<li>Weddings and funerals held in public venues;</li>
+					</ul>
 					<br>
-	
 					<i>*More details can be found at<a
-							href="https://www.gov.nl.ca/covid-19/travel/travel-restrictions/">
-							Travelling to Newfoundland and Labrador.</a></i>
+							href="https://www.visitcalgary.com/covid-19-traveller-update">
+							COVID-19 Traveller Updates.</a></i>
 				</div>
 			</div>
 		</div>
@@ -127,28 +130,12 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p><b>Fully vaccinated</b> travellers are <b>not required to self-isolate</b> or be tested for COVID-19.</p>
-
-					<p><b>Partially vaccinated and unvaccinated travellers</b> are required to:</p>
-					<ul>
-						<li>Fully self-isolate until they <b>receive negative results</b> from a test taken on day 7 or later. 
-							If the traveller chooses not to have a test, they <b>must self-isolate for 14 days</b>.</li>
-						<li><b>After receipt of negative test results</b> on day 7 or later, and until the <b>full 14 days of a self-isolation 
-							period has passed</b>, partially vaccinated and unvaccinated travellers, as well as any children that travelled 
-							with them or have isolated with them, must:</li>
-							<ul>
-								<li>Avoid vulnerable people, long term care and personal care homes.</li>
-								<li>Not attend daycare, camp, sporting events, and must avoid large crowded settings.</li>
-								<li>After receipt of negative test results, children can attend school but must otherwise limit contact with others 
-									as described above and cannot attend before or after school programs.</li>
-								<li>Those younger than 5 are not required to be tested as long as the parents have their test on day 7 or later but 
-									are still required to abide by these limitations after the parents receive a negative test.</li>
-							</ul>
-					</ul>
+					<p>If you qualify as a fully vaccinated traveller, no further travel restrictions apply. 
+						<b>No quarantine required</b>.</p>
 					
 					<i>*More details can be found at<a
-							href="https://www.gov.nl.ca/covid-19/travel/travel-restrictions/">
-							Travelling to Newfoundland and Labrador.</a></i>
+							href="https://www.alberta.ca/covid-19-travel-advice.aspx">
+							COVID-19 travel requirements.</a></i>
 				</div>
 			</div>
 		</div>
@@ -156,23 +143,17 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Effective September 22
-						Masks will be mandatory in all indoor public spaces, including:</b>
-					
+					<b>Masks are mandatory: </b>
 					<ul>
-						<li>public spaces where the public and employees interact, such as retail businesses,
-							malls, service centres, places of worship, and restaurants and bars except while eating;</li>
-						<li>organized indoor gatherings in public spaces, such as weddings and funerals;</li>
-						<li>common areas like lobbies, elevators and hallways, and public shared spaces including those in
-							private sector and government workspaces; and</li>
-						<li>public transportation.</li>
+						<li>in all indoor public spaces, workplaces and places of worship, including eligible businesses that implement the Restriction Exemption Program</li>
+						<li>for employees in all indoor work settings, except while alone in work station</li>
+						<li>for all students in Grades 4 and up, plus staff and teachers in all grades</li>
 					</ul>
-
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/masks.html">
-							Masks - Government of New Brunswick.</a></i>
+							href="https://www.alberta.ca/masks.aspx">
+							COVID-19: Mask requirements.</a></i>
 				</div>
 			</div>
 		</div>
@@ -247,7 +228,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -265,11 +246,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"NewBrunswick") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(NewBrunswickDoc => { //arrow notation
-					console.log("current document data: " + NewBrunswickDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = NewBrunswickDoc.data()
-						.newbrunswick; //using javascript to display the data on the right place
+					"Alberta") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(AlbertaDoc => { //arrow notation
+					console.log("current document data: " + AlbertaDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = AlbertaDoc.data()
+						.alberta; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function

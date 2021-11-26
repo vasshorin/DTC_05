@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,25 +78,19 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Newfoundland and Labrador as a fully vaccinated travellers</li>
-				<p><button id="newCheckBtn" class="btn btn-outline-secondary" type="button">
+				<li class="mb-3">Entering Ontario as a fully vaccinated travellers</li>
+				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
 				<li class="mb-3">Self-isolation and other requirements</li>
 				<p>
-					<button id="newIsolationBtn" class="btn btn-outline-secondary" type="button">
+					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
 						Self-isolation requirements
-					</button>
-				</p>
-
-				<p>
-					<button id="newFormBtn" class="btn btn-outline-secondary" type="button">
-						'Travel Form' submission
 					</button>
 				</p>
 				
 				<p>
-					<button id="newMaskBtn" class="btn btn-outline-secondary" type="button">
+					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
@@ -107,98 +101,72 @@
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<div class="d-flex mb-3 whiteB" id="newCollapseExampleBox">
+		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>Travellers <b>aged 12 or older</b> entering New Brunswick <b>must pre-register online 
-						and provide proof of vaccination</b> against COVID-19 or proof of medical exemption. </p>
-					
-					<b>How to enroll in the New Brunswick Travel Registration program:</b>
-					<ul>
-						<li>Fill out the New Brunswick <a href="https://www.pxw1.snb.ca/snb9000/product.aspx?productid=A001P783003a">
-							Travel Registration form</a></li>
-						<li>Each person who is <b>eligible to receive a COVID-19 vaccine</b>, (i.e., will be at least 12 years of age by December 31, 2021), 
-							<b>must fill in a separate application</b>. Persons under the age of 12 travelling with a parent or guardian should be listed on the same form. </li>
-						<li>As part of the application, upload your proof of vaccination if you are fully vaccinated or your proof of medical exemption signed by a healthcare 
-							provider if you are unable to be vaccinated. </li>
-						<li>A confirmation email with your travel registration and pass will be sent to the email address you used to register.</li>
-					</ul>
+					<p>You <b>must provide proof of full vaccination</b> against COVID-19 and personal identification to 
+						access certain businesses and settings.</p>
+
+					<p>If you are visiting from outside of Ontario and have <b>proof of vaccination from another province, 
+						territory or country</b>, it is valid if it shows the you are fully vaccinated against COVID-19.</p>
+					<p><a href="https://covid-19.ontario.ca/proof-covid-19-vaccination#overview">Learn what it means to be
+						 fully vaccinated</a>.</p>
+
 					<br>
 	
 					<i>*More details can be found at<a
-							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/travel.html">
-							Travel Registration Program.</a></i>
+							href="https://covid-19.ontario.ca/proof-covid-19-vaccination">
+							Travelling during COVID-19.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 grayB" id="newCollapse1Box">
+		<div class="d-flex mb-3 grayB" id="collapse1Box">
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>If you are <b>fully vaccinated</b>, <b>no self-isolation will be required</b>. Vaccinated individuals 
-						are now able to apply for a multi-use pass. Once your request is successfully processed, 
-						you will receive an email with your multi use pass.</p>
+					<p>You <b>do not have to quarantine</b> when you enter Ontario from another Canadian province, 
+						territory or region <b>unless you have symptoms of COVID-19</b>.</p>
 
-					<p>If you are <b>not fully vaccinated</b>, you must <b>self-isolate for 14 days</b> or until you receive a negative 
-						COVID-19 result from a test taken on Day 10 or later. Unvaccinated individuals will be required to 
-						register for each trip into the province.</p>
-
-					<p><b>Children under 12</b> are not eligible to be vaccinated. As long as all people travelling with children under 12 have been 
-						vaccinated, the group does not require isolation or testing.</p>
-					
-					<i>*More details can be found at<a
-							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/travel.html">
-							Travel Registration Program.</a></i>
-				</div>
-			</div>
-		</div>
-
-		<div class="d-flex mb-3 whiteB" id="newCollapse2Box">
-			<h2 class="collapseTitle">'Travel Form' submission</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body">
-					<b>All travellers entering Newfoundland and Labrador are required to: </b>
+					<p>When you arrive in Ontario, you must:</p>
 					<ul>
-						<li>Submit the <a href="https://travel-declaration.nlchi.nl.ca/">Travel Form</a> 
-							within 30 days of their expected travel date.</li>
+						<li>follow all <a href="https://covid-19.ontario.ca/public-health-measures">
+							provincial public health measures and rules</a>.</li>
+						<li>continue to monitor yourself for <a href="https://www.ontario.ca/page/covid-19-stop-spread#symptoms">
+							symptoms of COVID-19</a>. </li>
+						<li>practice physical distance and stay at least two metres apart from people 
+							outside your household or a caregiver</li>
+						<li>wear a mask or face covering in all indoor public spaces (it is also recommended 
+							to wear one outdoors where physical distancing is a challenge)</li>
 					</ul>
-					<p>Submitted forms <b>cannot be edited</b>. If you make a mistake, you will need to re-submit the form.</p>
-					<ul>
-						<li>If you are <b>fully vaccinated</b> you will only need to complete the form once. You will use the same 
-							reference # each time you arrive in Newfoundland and Labrador.</li>
-						<li>If you are <b>partially vaccinated or unvaccinated</b> you will need to complete it each time you travel 
-							to Newfoundland and Labrador.</li>
-					</ul>
+
 					<br>
 					<i>*More details can be found at<a
-							href="https://travel-declaration.nlchi.nl.ca/">
-							COVID-19 Travel Form.</a></i>
+							href="https://www.ontario.ca/page/travelling-during-covid-19">
+							Travelling during COVID-19.</a></i>
 				</div>
 			</div>
 		</div>
-
-		<div class="d-flex mb-3 whiteB" id="newCollapse3Box">
+		<div class="d-flex mb-3 whiteB" id="collapse2Box">
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>Effective September 18, 2021, wearing a <b>non-medical mask</b> that covers the nose and mouth 
-					is mandatory for people <b>ages 5 years or older</b>, with some exemptions (see below), in the 
-					following public indoor settings:</p>
-					
+					<p>When you do go out, you <b>must use a face covering</b> (non-medical mask, such as a cloth mask) 
+						in public indoor spaces and whenever physical distancing is a challenge.</p>
+
+					<p>This includes:</p>
 					<ul>
-						<li>Public transit</li>
-						<li>Restaurants, food courts, cafes or lounges</li>
-						<li>Retail businesses, malls, markets, and service companies</li>
-						<li>Common areas of tourist accommodations (hotels, motels, etc.)</li>
-						<li>Theatres or performing arts venues, cinemas, bingo halls, indoor entertainment businesses</li>
+						<li>public spaces (for example, inside stores, event spaces, entertainment facilities 
+							and common areas in hotels)</li>
+						<li>workplaces, even those that are not open to the public</li>
+						<li>vehicles that operate as part of a business or organization, including taxis and rideshares</li>
 					</ul>
 
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://www.gov.nl.ca/covid-19/public-health-guidance/guidance/masks/">
-							Masks - COVID-19 - Government of Newfoundland and Labrador.</a></i>
+							href="https://www.ontario.ca/page/face-coverings-and-face-masks">
+							Face coverings and face masks.</a></i>
 				</div>
 			</div>
 		</div>
@@ -273,7 +241,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -291,11 +259,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"NewFoundland") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(NewfoundlandDoc => { //arrow notation
-					console.log("current document data: " + NewfoundlandDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = NewfoundlandDoc.data()
-						.newfoundland; //using javascript to display the data on the right place
+					"Ontario") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(OntarioDoc => { //arrow notation
+					console.log("current document data: " + OntarioDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = OntarioDoc.data()
+						.ontario; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function

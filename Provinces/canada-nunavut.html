@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,122 +78,120 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Northwest Territories as a fully vaccinated travellers</li>
-				<p><button id="northCheckBtn" class="btn btn-outline-secondary" type="button">
+				<li class="mb-3">Entering Nunavut as a fully vaccinated travellers</li>
+				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
 				<li class="mb-3">Self-isolation and other requirements</li>
 				<p>
-					<button id="northIsolationBtn" class="btn btn-outline-secondary" type="button">
+					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
 						Self-isolation requirements
 					</button>
 				</p>
+
 				<p>
-					<button id="northTestBtn" class="btn btn-outline-secondary" type="button">
-						Additional Testing
-					</button>
-				</p>
-				
-				<p>
-					<button id="northMaskBtn" class="btn btn-outline-secondary" type="button">
+					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-	
+
 		</div>
 
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<div class="d-flex mb-3 whiteB" id="northCollapseExampleBox">
+		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>Non-residents or those who <b>received their vaccine outside the NWT</b> will be required to <b>provide proof of vaccination upon request</b>. 
-					   It is recommended that these travellers have proof of vaccination from the jurisdiction in which it was received before travelling.</p>
-					
-					<p>All travellers entering the NWT are required to <b>complete a self-isolation plan</b>, to show their vaccination status. We recommend you complete 
-						your self-isolation plan <b>two weeks before you will arrive in the NWT</b>. </p>
+					<b>Fully vaccinated travellers:</b>
 					<ul>
-						<li>Complete your <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
-							self-isolation plan</a>.</li>
-						<li>After you have completely your self-isolation plan, you will receive an email approving your plan and providing you with information about whether 
-							you need to self-isolate and how to complete your symptom checks.</li>
+						<li>Proof of vaccination certificate or PVC and,</li>
+						<li>Nunavut CPHO travel authorization letter.</li>
 					</ul>
-
+					<p>As a reminder, PVC letters can be obtained by contacting your local health centre.
+						For vaccine exemption application process and to <b>obtain a CPHO travel authorization
+							letter</b>,
+						please go to: <a
+							href="https://gov.nu.ca/health/information/travel-and-isolation#Vaccinated%20travellers">
+							Vaccinated travellers</a>.</p>
 					<br>
-	
-					<i>*More details can be found at<a
-							href="https://www.gov.nt.ca/covid-19/en/services/vaccination-testing/self-isolation-plan">
-							Self-isolation plan.</a></i>
+
+					<i>*More details can be found at<a href="https://manitoba.ca/covid19/prs/index.html#guidance">
+							Proof of Vaccinaation Guidelines.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 grayB" id="northCollapse1Box">
+		<div class="d-flex mb-3 grayB" id="collapse1Box">
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>All travellers need to submit a <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
-					Self-Isolation Plan</a> regardless of vaccination status.</b>
+					<b>All partially vaccinated or unvaccinated travellers:</b>
 
-					<p><b>No self-isolation for fully vaccinated travellers</b> and household members (regardless of vaccination status) who did not travel, 
-						provided they are not sharing accommodations with travellers who are not fully vaccinated.</p>
-					<p>Fully vaccinated individuals travelling with <b>unvaccinated individuals</b> will be <b>required to isolate</b> upon return to the NWT for the 
-						duration of the least vaccinated traveller if they live in the same household.</p>
+					<p>All partially vaccinated or unvaccinated travellers
+						(other than dependents traveling on a vaccinated parent or
+						guardian exemption, and medical travellers on the EMTI program):</p>
 
-					<p>Fully vaccinated travellers will be able to <b>return directly to small communities</b>, but they <b>must complete a Day 1 and Day 8 COVID-19 test</b>.</p>
-					
-					<i>*More details can be found at<a
-							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
-							Self-Isolation.</a></i>
-				</div>
-			</div>
-		</div>
-
-		<div class="d-flex mb-3 whiteB" id="northCollapse2Box">
-			<h2 class="collapseTitle">Addtional testing</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body">
 					<ul>
-						<li><b>Fully vaccinated travellers</b> entering small NWT communities will require a day 1 test and a day 8 test.</li>
-						<li><b>Partially vaccinated travellers</b> will require a day 8 negative test if they are travelling to a small community 
-							after completing their self-isolation in a larger centre.</li>
-						<li><b>Unvaccinated travellers</b> will require a day 10 negative test if they are travelling to a small community after
-							 completing their self-isolation in a larger centre.</li>
+						<li>Nunavut CPHO travel authorization proving <b>completion of 14-day isolation</b>
+							in designated GN isolation site.</li>
 					</ul>
 
-					<p>Small communities are any NWT community that does not include the hub communities of Yellowknife, Hay River, Inuvik, 
-						and Fort Smith, as well as Fort Simpson and Norman Wells.</p>
-					
+					<p>All partially vaccinated and unvaccinated <b>EMTI program travellers</b>:</p>
+					<ul>
+						<li>Nunavut CPHO travel authorization proving <b>completion of 14-day isolation</b>
+							in designated GN isolation site, and</li>
+						<li>A <b>negative COVID-19 rapid molecular test</b> taken within 72 hours of departure.</li>
+					</ul>
+
+					<p>For more information on the EMTI program see
+						<a
+							href="https://gov.nu.ca/health/information/travel-and-isolation#Expedited%20Medical%20Travel%20Isolation%20(EMTI)">
+							Expedited Medical Travel Isolation (EMTI)</a>.</p>
+
 					<br>
-					<i>*More details can be found at<a
-							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
-							GNWT's Response to COVID-19.</a></i>
+					<b>Isolation process:</b>
+					<ul>
+						<li>Seven days prior to the isolation check-in date, travellers must complete the <a
+								href="https://gov.nu.ca/sites/default/files/pre-isolation_check-in_form_v1.pdf">
+								Pre-Isolation Check-In form</a> and submit it to
+							<a href="mailto:nuisolationreservations@nunavutcare.ca">nuisolationreservations@nunavutcare.ca</a>, as soon as possible.</li>
+						<li>Travellers will receive an email confirming receipt of their <b>Pre-Isolation Check-In
+								form</b> and an Isolation Information Package.</li>
+						<li><b>At the end of the 14 days</b>, residents will be cleared and provided a letter signed by
+							the Chief Public Health Officer allowing them to
+							return to their home community.</li>
+					</ul>
+					<br>
+					<i>*More details can be found at<a href="https://gov.nu.ca/health/information/travel-and-isolation">
+							Travel and Isolation.</a></i>
 				</div>
 			</div>
 		</div>
-
-		<div class="d-flex mb-3 whiteB" id="northCollapse3Box">
+		<div class="d-flex mb-3 whiteB" id="collapse2Box">
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>COVID-19 spreads in the air far more easily than by surface. To protect yourself and others, 
-						<b>wear a non-medical mask</b> or face covering:</p>
-					
+					<b>Customers who do not have a mandatory face covering will not be allowed to travel. </b>
+					<p>Masks must be made from <b>at least two layers of tightly woven fabric</b>, must be clean and
+						dry,
+						and must fully cover the nose and mouth.</p>
+					<p>Please note that the following masks that will not be accepted, as they do not limit the spread
+						of COVID-19:</p>
 					<ul>
-						<li>Anytime it is required by a business or service</li>
-						<li>Indoors in crowded places</li>
-						<li>Indoors in a location with poor ventilation</li>
-						<li>Indoors where there is shouting, singing, playing music (especially wind instruments) or exercise (if applicable)</li>
-						<li>Outdoors in crowded spaces when it is difficult to maintain physical distance.</li>
+						<li>Non-medical masks with an exhalation valve or vent.</li>
+						<li>Non-medical masks made with mesh or lace fabric.</li>
+						<li>Masks that are moist, dirty or damaged.</li>
+						<li>Neck gaiters.</li>
+						<li>Bandanas.</li>
+						<li>Face shields.</li>
 					</ul>
 
 					<br>
-					
-					<i>*More details can be found at<a
-							href="https://www.gov.nt.ca/covid-19/en/services/healthy-habits/masks">
-							Masks - GNWT's Response to COVID-19.</a></i>
+
+					<i>*More details can be found at<a href="https://gov.nu.ca/health/information/travel-and-isolation">
+							Face covering requirements for air travellers.</a></i>
 				</div>
 			</div>
 		</div>
@@ -232,8 +230,8 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves"
+							data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
@@ -268,7 +266,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -286,26 +284,26 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Northwest") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(NorthwestDoc => { //arrow notation
-					console.log("current document data: " + NorthwestDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = NorthwestDoc.data()
-						.northwest; //using javascript to display the data on the right place
+					"Nunavut") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NunavutDoc => { //arrow notation
+					console.log("current document data: " + NunavutDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NunavutDoc.data()
+						.nunavut; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function
 
 
 		// /*Save document*/
-        // function saveInfo() {
-    	//      let file_name = document.getElementById("file-name").value;
-        //      var countriesRef = db.collection("saved_document");
-        //      countriesRef.add({
-        //          nation: "Canada",
+		// function saveInfo() {
+		//      let file_name = document.getElementById("file-name").value;
+		//      var countriesRef = db.collection("saved_document");
+		//      countriesRef.add({
+		//          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-        //      });
-        //  }
+		//      });
+		//  }
 	</script>
 </body>
 

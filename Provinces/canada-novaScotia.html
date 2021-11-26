@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,19 +78,25 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Ontario as a fully vaccinated travellers</li>
-				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
+				<li class="mb-3">Entering Nova Scotia as a fully vaccinated travellers</li>
+				<p><button id="novaCheckBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
 				<li class="mb-3">Self-isolation and other requirements</li>
 				<p>
-					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
+					<button id="novaIsolationBtn" class="btn btn-outline-secondary" type="button">
 						Self-isolation requirements
+					</button>
+				</p>
+
+				<p>
+					<button id="novaFormBtn" class="btn btn-outline-secondary" type="button">
+						Nova Scotia Safe Check-in Form
 					</button>
 				</p>
 				
 				<p>
-					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
+					<button id="novaMaskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
@@ -101,72 +107,105 @@
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
+		<div class="d-flex mb-3 whiteB" id="novaCollapseExampleBox">
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>You <b>must provide proof of full vaccination</b> against COVID-19 and personal identification to 
-						access certain businesses and settings.</p>
-
-					<p>If you are visiting from outside of Ontario and have <b>proof of vaccination from another province, 
-						territory or country</b>, it is valid if it shows the you are fully vaccinated against COVID-19.</p>
-					<p><a href="https://covid-19.ontario.ca/proof-covid-19-vaccination#overview">Learn what it means to be
-						 fully vaccinated</a>.</p>
-
-					<br>
+						<p>Vaccination documentation needs to provide proof that you received the COVID-19 vaccine, 
+							including the <b>date</b>, <b>location</b>, <b>type</b>, <b>brand</b> and <b>lot number</b> of
+							COVID-19 vaccine you received. </p>
+						
+						<p>Documentation must be issued by the government or the organization that administered the vaccine 
+							and show the name of the issuing government or the name and civic address of the organization 
+							that administered the vaccine.</p>
 	
-					<i>*More details can be found at<a
-							href="https://covid-19.ontario.ca/proof-covid-19-vaccination">
-							Travelling during COVID-19.</a></i>
+						<br>
+		
+						<i>*More details can be found at<a
+								href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+								Travel into Nova Scotia.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 grayB" id="collapse1Box">
+		<div class="d-flex mb-3 grayB" id="novaCollapse1Box">
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>You <b>do not have to quarantine</b> when you enter Ontario from another Canadian province, 
-						territory or region <b>unless you have symptoms of COVID-19</b>.</p>
+					<p>Self-isolation requirements for people who travel from another Canadian province or territory (outside Nova Scotia) are based on 
+						<b>vaccination status and testing</b>. Self-isolation requirements include:</p>
 
-					<p>When you arrive in Ontario, you must:</p>
 					<ul>
-						<li>follow all <a href="https://covid-19.ontario.ca/public-health-measures">
-							provincial public health measures and rules</a>.</li>
-						<li>continue to monitor yourself for <a href="https://www.ontario.ca/page/covid-19-stop-spread#symptoms">
-							symptoms of COVID-19</a>. </li>
-						<li>practice physical distance and stay at least two metres apart from people 
-							outside your household or a caregiver</li>
-						<li>wear a mask or face covering in all indoor public spaces (it is also recommended 
-							to wear one outdoors where physical distancing is a challenge)</li>
+						<li>people who are <b>fully vaccinated</b> (2 doses of a COVID-19 vaccine or 2 doses of a combination of COVID-19 vaccines 
+							<a href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada#determine-fully">
+							accepted by the Government of Canada</a>, 1 dose of Janssen/Johnson & Johnson COVID-19 vaccine or a complete series of a COVID-19 vaccine 
+							authorized by the World Health Organization) at least 14 days before arriving in Nova Scotia <b>don’t need to self-isolate</b>; 
+							<a href="https://novascotia.ca/coronavirus/symptoms-and-testing/#who-can-be-tested">testing is recommended</a>.</li>
+						<li>people who are <b>not fully vaccinated</b> (partially vaccinated with a first dose of a 2-dose COVID-19 vaccine or 0 doses of a COVID-19 vaccine) 
+							at least 14 days before arriving in Nova Scotia <b>must self-isolate for 7 days</b> and <b>receive 2 negative tests results</b> in order to leave 
+							self-isolation after 7 days</li>
+						<li>people who have a letter from Public Health in a Canadian province or territory stating that they’ve <b>recovered from COVID-19</b> in the 12 weeks 
+							before arriving in Nova Scotia and are not fully vaccinated at least 14 days before arriving in Nova Scotia <b>must self-isolate for 7 days</b> 
+							(you <b>don’t need to get tested</b> in order to leave self-isolation after 7 days)</li>
 					</ul>
-
-					<br>
+					
 					<i>*More details can be found at<a
-							href="https://www.ontario.ca/page/travelling-during-covid-19">
-							Travelling during COVID-19.</a></i>
+							href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+							Travel into Nova Scotia.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 whiteB" id="collapse2Box">
+
+		<div class="d-flex mb-3 whiteB" id="novaCollapse2Box">
+			<h2 class="collapseTitle">Nova Scotia Safe Check-in Form</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>Starting 1 November 2021 – Everyone <b>(12 or older)</b> who travels from another Canadian province or territory 
+						(outside Nova Scotia) needs to <b>complete the Safe Check-in Form</b>.</p>
+					<ul>
+						<li>Children who <b>turn 12 between 1 September and 1 November 2021</b> and are <b>not fully vaccinated</b> need to be included 
+							on the Safe Check-in Form of the least vaccinated person they’re travelling with (12 or older). 
+							Starting 2 March 2022, they need complete a separate Safe Check-in Form if they’re not fully vaccinated.</li>
+						<li>Children who <b>turn 12 after 1 November 2021</b> and are <b>not fully vaccinated</b> need to be included on the Safe Check-in Form of the 
+							least vaccinated person they’re travelling with (12 or older). Starting 4 months from their birthday, they need to complete 
+							a separate Safe Check-in Form if they’re not fully vaccinated.</li>
+						<li>You can <b>complete your own form if you're 16 or older</b> (you can also have someone complete the form for you). A parent or guardian needs to 
+							complete the form for someone 15 or younger.</li>
+					</ul>
+					
+					<p><b>Proof of vaccination status</b> needs to be provided for each traveller (12 or older) when you complete the Safe Check-in Form.</p>
+					<p>After you complete the Safe Check-in Form, you receive a confirmation email. You get the confirmation right away.</p>
+					<br>
+					<i>*More details can be found at<a
+							href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+							Nova Scotia Safe Check-in Form.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="novaCollapse3Box">
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>When you do go out, you <b>must use a face covering</b> (non-medical mask, such as a cloth mask) 
-						in public indoor spaces and whenever physical distancing is a challenge.</p>
-
-					<p>This includes:</p>
+					<p>Wearing a <b>non-medical mask is required</b> in most indoor public places. </p>
+					<p>Public places include:</p>
+					
 					<ul>
-						<li>public spaces (for example, inside stores, event spaces, entertainment facilities 
-							and common areas in hotels)</li>
-						<li>workplaces, even those that are not open to the public</li>
-						<li>vehicles that operate as part of a business or organization, including taxis and rideshares</li>
+						<li>train stations, bus stations, ferry terminals and airports</li>
+						<li>places for cultural or entertainment activities and services (like movie theatres, 
+							theatre performances, dance recitals, festivals and concerts)</li>
+						<li>personal services businesses like hair salons, barber shops, spas, nail salons and body art establishments 
+							(except during services that require removing a mask)</li>
+						<li>restaurants and liquor licensed (drinking) establishments like bars, wineries, distillery tasting 
+							rooms and craft taprooms, including the kitchen and preparatory space and outdoor serviced seating areas 
+							like patios (except for holes on the golf course that are licensed and when you're eating or drinking)</li>
+						<li>common areas of tourist accommodations (like lobbies, elevators and hallways)</li>
 					</ul>
 
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://www.ontario.ca/page/face-coverings-and-face-masks">
-							Face coverings and face masks.</a></i>
+							href="https://novascotia.ca/coronavirus/masks/#When">
+							Coronavirus (COVID-19): masks.</a></i>
 				</div>
 			</div>
 		</div>
@@ -241,7 +280,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -259,11 +298,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Ontario") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(OntarioDoc => { //arrow notation
-					console.log("current document data: " + OntarioDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = OntarioDoc.data()
-						.ontario; //using javascript to display the data on the right place
+					"NovaScotia") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NovaScotiaDoc => { //arrow notation
+					console.log("current document data: " + NovaScotiaDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NovaScotiaDoc.data()
+						.novascotia; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function

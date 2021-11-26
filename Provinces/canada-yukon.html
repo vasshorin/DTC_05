@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Alberta as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Yukon as a fully vaccinated travellers</li>
 				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
@@ -88,7 +88,7 @@
 						Self-isolation requirements
 					</button>
 				</p>
-	
+				
 				<p>
 					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
@@ -105,24 +105,15 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>As of November 15, 2021, <b> Albertans 12 and older </b>can only show their proof of vaccination through an 
-						<a href="https://covidrecords.alberta.ca/home">Alberta vaccine record QR code</a>. Visitors from 
-						other provinces can show their proof of vaccination in whatever form their home province has issued. 
-						The following businesses will be required to check for proof of vaccine or a privately paid negative
-						COVID test (within 72 hours) for <b>customers over the age of 12</b>:</p>
-					<ul>
-						<li>Restaurants (for sit-down dining);  </li>
-						<li>Entertainment and recreation centres (bowling, racing entertainment, arcades, billiards halls, other similar venues);</li>
-						<li>Movie theatres;</li>
-						<li>Private social events held in public facilities;</li>
-						<li>Amenities in hotels (pools, gyms, etc.);</li>
-						<li>Conferences, meeting spaces, halls and rented spaces;</li>
-						<li>Weddings and funerals held in public venues;</li>
-					</ul>
+					<p>As of November 30, 2021, all travellers 12 years of age plus 4 months and older <b>boarding domestic flights and trains</b> 
+						need to be <b>fully-vaccinated</b>.</p>
+					<p>If you’re <b>12 years of age or older</b> you must have proof that you’ve <b>received 2 doses</b> of a COVID-19 vaccination. 
+						You cannot access a setting that requires proof of vaccination if you’ve had only 1 dose or are not vaccinated.</p>
 					<br>
+	
 					<i>*More details can be found at<a
-							href="https://www.visitcalgary.com/covid-19-traveller-update">
-							COVID-19 Traveller Updates.</a></i>
+							href="https://www.travelyukon.com/en/travelupdates">
+							Things to know before coming to the Yukon.</a></i>
 				</div>
 			</div>
 		</div>
@@ -130,12 +121,13 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>If you qualify as a fully vaccinated traveller, no further travel restrictions apply. 
-						<b>No quarantine required</b>.</p>
-					
+					<p>Travellers arriving in the Yukon are <b>no longer required to complete a self-isolation period</b>.</p>
+
+
+					<br>
 					<i>*More details can be found at<a
-							href="https://www.alberta.ca/covid-19-travel-advice.aspx">
-							COVID-19 travel requirements.</a></i>
+						href="https://www.travelyukon.com/en/travelupdates">
+						Things to know before coming to the Yukon.</a></i>
 				</div>
 			</div>
 		</div>
@@ -143,17 +135,17 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Masks are mandatory: </b>
+					<b>Anyone aged 5 and over must wear a mask:</b>
 					<ul>
-						<li>in all indoor public spaces, workplaces and places of worship, including eligible businesses that implement the Restriction Exemption Program</li>
-						<li>for employees in all indoor work settings, except while alone in work station</li>
-						<li>for all students in Grades 4 and up, plus staff and teachers in all grades</li>
+						<li>in any indoor public place, including retail and service businesses; </li>
+						<li>in private vehicles where the occupants are from more than 1 household; and</li>
+						<li>in outdoor public places when people cannot maintain 2 metres of distancing.</li>
 					</ul>
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://www.alberta.ca/masks.aspx">
-							COVID-19: Mask requirements.</a></i>
+							href="https://yukon.ca/en/designated-settings">
+							Mask wearing - Government of Yukon.</a></i>
 				</div>
 			</div>
 		</div>
@@ -228,7 +220,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -246,11 +238,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Alberta") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(AlbertaDoc => { //arrow notation
-					console.log("current document data: " + AlbertaDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = AlbertaDoc.data()
-						.alberta; //using javascript to display the data on the right place
+					"Yukon") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(YukonDoc => { //arrow notation
+					console.log("current document data: " + YukonDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = YukonDoc.data()
+						.yukon; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function

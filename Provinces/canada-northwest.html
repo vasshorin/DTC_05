@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,19 +78,24 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Quebec as a fully vaccinated travellers</li>
-				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
+				<li class="mb-3">Entering Northwest Territories as a fully vaccinated travellers</li>
+				<p><button id="northCheckBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
 				<li class="mb-3">Self-isolation and other requirements</li>
 				<p>
-					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
+					<button id="northIsolationBtn" class="btn btn-outline-secondary" type="button">
 						Self-isolation requirements
+					</button>
+				</p>
+				<p>
+					<button id="northTestBtn" class="btn btn-outline-secondary" type="button">
+						Additional Testing
 					</button>
 				</p>
 				
 				<p>
-					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
+					<button id="northMaskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
@@ -101,61 +106,94 @@
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
+		<div class="d-flex mb-3 whiteB" id="northCollapseExampleBox">
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>Individuals who do not live in Québec and are travelling in Québec may enter places and participate in activities requiring a vaccine passport 
-						if they present the following two documents at the door:</p>
-						<ul>
-							<li>Valid <b>photo ID</b> with an address outside Québec</li>
-							<li>A <b>vaccine passport</b> with a QR code or <b>official proof of vaccination</b> against COVID-19 issued by their country or province in Canada</li>
-						</ul>
+					<p>Non-residents or those who <b>received their vaccine outside the NWT</b> will be required to <b>provide proof of vaccination upon request</b>. 
+					   It is recommended that these travellers have proof of vaccination from the jurisdiction in which it was received before travelling.</p>
+					
+					<p>All travellers entering the NWT are required to <b>complete a self-isolation plan</b>, to show their vaccination status. We recommend you complete 
+						your self-isolation plan <b>two weeks before you will arrive in the NWT</b>. </p>
+					<ul>
+						<li>Complete your <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
+							self-isolation plan</a>.</li>
+						<li>After you have completely your self-isolation plan, you will receive an email approving your plan and providing you with information about whether 
+							you need to self-isolate and how to complete your symptom checks.</li>
+					</ul>
+
 					<br>
 	
 					<i>*More details can be found at<a
-							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination/covid-19-vaccination-passport/travellers-to-quebec">
-							Travellers to Quebec.</a></i>
+							href="https://www.gov.nt.ca/covid-19/en/services/vaccination-testing/self-isolation-plan">
+							Self-isolation plan.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 grayB" id="collapse1Box">
+		<div class="d-flex mb-3 grayB" id="northCollapse1Box">
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>There are <b>no preventive isolation measures</b> for people arriving from other Canadian provinces. 
-						However, non-essential travel should be avoided.</p>
+					<b>All travellers need to submit a <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
+					Self-Isolation Plan</a> regardless of vaccination status.</b>
 
+					<p><b>No self-isolation for fully vaccinated travellers</b> and household members (regardless of vaccination status) who did not travel, 
+						provided they are not sharing accommodations with travellers who are not fully vaccinated.</p>
+					<p>Fully vaccinated individuals travelling with <b>unvaccinated individuals</b> will be <b>required to isolate</b> upon return to the NWT for the 
+						duration of the least vaccinated traveller if they live in the same household.</p>
 
-					<br>
+					<p>Fully vaccinated travellers will be able to <b>return directly to small communities</b>, but they <b>must complete a Day 1 and Day 8 COVID-19 test</b>.</p>
+					
 					<i>*More details can be found at<a
-							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/measures-in-force/travel/travel-canada-or-internationally#c122271">
-							Instructions for travel within Canada.</a></i>
+							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
+							Self-Isolation.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 whiteB" id="collapse2Box">
+
+		<div class="d-flex mb-3 whiteB" id="northCollapse2Box">
+			<h2 class="collapseTitle">Addtional testing</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<ul>
+						<li><b>Fully vaccinated travellers</b> entering small NWT communities will require a day 1 test and a day 8 test.</li>
+						<li><b>Partially vaccinated travellers</b> will require a day 8 negative test if they are travelling to a small community 
+							after completing their self-isolation in a larger centre.</li>
+						<li><b>Unvaccinated travellers</b> will require a day 10 negative test if they are travelling to a small community after
+							 completing their self-isolation in a larger centre.</li>
+					</ul>
+
+					<p>Small communities are any NWT community that does not include the hub communities of Yellowknife, Hay River, Inuvik, 
+						and Fort Smith, as well as Fort Simpson and Norman Wells.</p>
+					
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
+							GNWT's Response to COVID-19.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="northCollapse3Box">
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>Wearing a mask or face covering that covers the nose to under the chin is<b>mandatory on public transit</b>
-						(buses, the subway, ferries, taxis, car services, etc.) and in <b>enclosed or partially enclosed public places </b> 
-						for people age 10 and over.</p>
-					<p>This obligation, with exceptions, will apply in the following places:</p>
+					<p>COVID-19 spreads in the air far more easily than by surface. To protect yourself and others, 
+						<b>wear a non-medical mask</b> or face covering:</p>
+					
 					<ul>
-						<li>a personal care business (e.g., hairdressers, beauty care) ;</li>
-						<li>a shopping mall;</li>
-						<li>a place where cultural or entertainment activities or services are offered;</li>
-						<li>a restaurant or bar (except when seated to eating or drink);</li>
-						<li>a common area in a tourist accommodation facility (including an elevator);</li>
-						<li>a train or bus station, a river station, a metro station or an airport;</li>
+						<li>Anytime it is required by a business or service</li>
+						<li>Indoors in crowded places</li>
+						<li>Indoors in a location with poor ventilation</li>
+						<li>Indoors where there is shouting, singing, playing music (especially wind instruments) or exercise (if applicable)</li>
+						<li>Outdoors in crowded spaces when it is difficult to maintain physical distance.</li>
 					</ul>
 
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/mask-or-face-covering/wearing-a-face-covering-in-public-settings-covid-19">
-							Wearing a mask or a face covering in public settings in the context of the COVID-19 pandemic.</a></i>
+							href="https://www.gov.nt.ca/covid-19/en/services/healthy-habits/masks">
+							Masks - GNWT's Response to COVID-19.</a></i>
 				</div>
 			</div>
 		</div>
@@ -230,7 +268,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -248,11 +286,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Quebec") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(QuebecDoc => { //arrow notation
-					console.log("current document data: " + QuebecDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = QuebecDoc.data()
-						.quebec; //using javascript to display the data on the right place
+					"Northwest") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NorthwestDoc => { //arrow notation
+					console.log("current document data: " + NorthwestDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NorthwestDoc.data()
+						.northwest; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function

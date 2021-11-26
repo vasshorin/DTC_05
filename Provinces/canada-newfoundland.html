@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,120 +78,127 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Nunavut as a fully vaccinated travellers</li>
-				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
+				<li class="mb-3">Entering Newfoundland and Labrador as a fully vaccinated travellers</li>
+				<p><button id="newCheckBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
 				<li class="mb-3">Self-isolation and other requirements</li>
 				<p>
-					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
+					<button id="newIsolationBtn" class="btn btn-outline-secondary" type="button">
 						Self-isolation requirements
 					</button>
 				</p>
 
 				<p>
-					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
+					<button id="newFormBtn" class="btn btn-outline-secondary" type="button">
+						'Travel Form' submission
+					</button>
+				</p>
+				
+				<p>
+					<button id="newMaskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-
+	
 		</div>
 
 		<br>
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
+		<div class="d-flex mb-3 whiteB" id="newCollapseExampleBox">
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<b>Fully vaccinated travellers:</b>
+					<p>Travellers <b>aged 12 or older</b> entering New Brunswick <b>must pre-register online 
+						and provide proof of vaccination</b> against COVID-19 or proof of medical exemption. </p>
+					
+					<b>How to enroll in the New Brunswick Travel Registration program:</b>
 					<ul>
-						<li>Proof of vaccination certificate or PVC and,</li>
-						<li>Nunavut CPHO travel authorization letter.</li>
+						<li>Fill out the New Brunswick <a href="https://www.pxw1.snb.ca/snb9000/product.aspx?productid=A001P783003a">
+							Travel Registration form</a></li>
+						<li>Each person who is <b>eligible to receive a COVID-19 vaccine</b>, (i.e., will be at least 12 years of age by December 31, 2021), 
+							<b>must fill in a separate application</b>. Persons under the age of 12 travelling with a parent or guardian should be listed on the same form. </li>
+						<li>As part of the application, upload your proof of vaccination if you are fully vaccinated or your proof of medical exemption signed by a healthcare 
+							provider if you are unable to be vaccinated. </li>
+						<li>A confirmation email with your travel registration and pass will be sent to the email address you used to register.</li>
 					</ul>
-					<p>As a reminder, PVC letters can be obtained by contacting your local health centre.
-						For vaccine exemption application process and to <b>obtain a CPHO travel authorization
-							letter</b>,
-						please go to: <a
-							href="https://gov.nu.ca/health/information/travel-and-isolation#Vaccinated%20travellers">
-							Vaccinated travellers</a>.</p>
 					<br>
-
-					<i>*More details can be found at<a href="https://manitoba.ca/covid19/prs/index.html#guidance">
-							Proof of Vaccinaation Guidelines.</a></i>
+	
+					<i>*More details can be found at<a
+							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/travel.html">
+							Travel Registration Program.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 grayB" id="collapse1Box">
+		<div class="d-flex mb-3 grayB" id="newCollapse1Box">
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>All partially vaccinated or unvaccinated travellers:</b>
+					<p>If you are <b>fully vaccinated</b>, <b>no self-isolation will be required</b>. Vaccinated individuals 
+						are now able to apply for a multi-use pass. Once your request is successfully processed, 
+						you will receive an email with your multi use pass.</p>
 
-					<p>All partially vaccinated or unvaccinated travellers
-						(other than dependents traveling on a vaccinated parent or
-						guardian exemption, and medical travellers on the EMTI program):</p>
+					<p>If you are <b>not fully vaccinated</b>, you must <b>self-isolate for 14 days</b> or until you receive a negative 
+						COVID-19 result from a test taken on Day 10 or later. Unvaccinated individuals will be required to 
+						register for each trip into the province.</p>
 
-					<ul>
-						<li>Nunavut CPHO travel authorization proving <b>completion of 14-day isolation</b>
-							in designated GN isolation site.</li>
-					</ul>
-
-					<p>All partially vaccinated and unvaccinated <b>EMTI program travellers</b>:</p>
-					<ul>
-						<li>Nunavut CPHO travel authorization proving <b>completion of 14-day isolation</b>
-							in designated GN isolation site, and</li>
-						<li>A <b>negative COVID-19 rapid molecular test</b> taken within 72 hours of departure.</li>
-					</ul>
-
-					<p>For more information on the EMTI program see
-						<a
-							href="https://gov.nu.ca/health/information/travel-and-isolation#Expedited%20Medical%20Travel%20Isolation%20(EMTI)">
-							Expedited Medical Travel Isolation (EMTI)</a>.</p>
-
-					<br>
-					<b>Isolation process:</b>
-					<ul>
-						<li>Seven days prior to the isolation check-in date, travellers must complete the <a
-								href="https://gov.nu.ca/sites/default/files/pre-isolation_check-in_form_v1.pdf">
-								Pre-Isolation Check-In form</a> and submit it to
-							<a href="mailto:nuisolationreservations@nunavutcare.ca">nuisolationreservations@nunavutcare.ca</a>, as soon as possible.</li>
-						<li>Travellers will receive an email confirming receipt of their <b>Pre-Isolation Check-In
-								form</b> and an Isolation Information Package.</li>
-						<li><b>At the end of the 14 days</b>, residents will be cleared and provided a letter signed by
-							the Chief Public Health Officer allowing them to
-							return to their home community.</li>
-					</ul>
-					<br>
-					<i>*More details can be found at<a href="https://gov.nu.ca/health/information/travel-and-isolation">
-							Travel and Isolation.</a></i>
+					<p><b>Children under 12</b> are not eligible to be vaccinated. As long as all people travelling with children under 12 have been 
+						vaccinated, the group does not require isolation or testing.</p>
+					
+					<i>*More details can be found at<a
+							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/travel.html">
+							Travel Registration Program.</a></i>
 				</div>
 			</div>
 		</div>
-		<div class="d-flex mb-3 whiteB" id="collapse2Box">
+
+		<div class="d-flex mb-3 whiteB" id="newCollapse2Box">
+			<h2 class="collapseTitle">'Travel Form' submission</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<b>All travellers entering Newfoundland and Labrador are required to: </b>
+					<ul>
+						<li>Submit the <a href="https://travel-declaration.nlchi.nl.ca/">Travel Form</a> 
+							within 30 days of their expected travel date.</li>
+					</ul>
+					<p>Submitted forms <b>cannot be edited</b>. If you make a mistake, you will need to re-submit the form.</p>
+					<ul>
+						<li>If you are <b>fully vaccinated</b> you will only need to complete the form once. You will use the same 
+							reference # each time you arrive in Newfoundland and Labrador.</li>
+						<li>If you are <b>partially vaccinated or unvaccinated</b> you will need to complete it each time you travel 
+							to Newfoundland and Labrador.</li>
+					</ul>
+					<br>
+					<i>*More details can be found at<a
+							href="https://travel-declaration.nlchi.nl.ca/">
+							COVID-19 Travel Form.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="newCollapse3Box">
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Customers who do not have a mandatory face covering will not be allowed to travel. </b>
-					<p>Masks must be made from <b>at least two layers of tightly woven fabric</b>, must be clean and
-						dry,
-						and must fully cover the nose and mouth.</p>
-					<p>Please note that the following masks that will not be accepted, as they do not limit the spread
-						of COVID-19:</p>
+					<p>Effective September 18, 2021, wearing a <b>non-medical mask</b> that covers the nose and mouth 
+					is mandatory for people <b>ages 5 years or older</b>, with some exemptions (see below), in the 
+					following public indoor settings:</p>
+					
 					<ul>
-						<li>Non-medical masks with an exhalation valve or vent.</li>
-						<li>Non-medical masks made with mesh or lace fabric.</li>
-						<li>Masks that are moist, dirty or damaged.</li>
-						<li>Neck gaiters.</li>
-						<li>Bandanas.</li>
-						<li>Face shields.</li>
+						<li>Public transit</li>
+						<li>Restaurants, food courts, cafes or lounges</li>
+						<li>Retail businesses, malls, markets, and service companies</li>
+						<li>Common areas of tourist accommodations (hotels, motels, etc.)</li>
+						<li>Theatres or performing arts venues, cinemas, bingo halls, indoor entertainment businesses</li>
 					</ul>
 
 					<br>
-
-					<i>*More details can be found at<a href="https://gov.nu.ca/health/information/travel-and-isolation">
-							Face covering requirements for air travellers.</a></i>
+					
+					<i>*More details can be found at<a
+							href="https://www.gov.nl.ca/covid-19/public-health-guidance/guidance/masks/">
+							Masks - COVID-19 - Government of Newfoundland and Labrador.</a></i>
 				</div>
 			</div>
 		</div>
@@ -230,8 +237,8 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves"
-							data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
@@ -266,7 +273,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -284,26 +291,26 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Nunavut") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(NunavutDoc => { //arrow notation
-					console.log("current document data: " + NunavutDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = NunavutDoc.data()
-						.nunavut; //using javascript to display the data on the right place
+					"NewFoundland") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NewfoundlandDoc => { //arrow notation
+					console.log("current document data: " + NewfoundlandDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NewfoundlandDoc.data()
+						.newfoundland; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function
 
 
 		// /*Save document*/
-		// function saveInfo() {
-		//      let file_name = document.getElementById("file-name").value;
-		//      var countriesRef = db.collection("saved_document");
-		//      countriesRef.add({
-		//          nation: "Canada",
+        // function saveInfo() {
+    	//      let file_name = document.getElementById("file-name").value;
+        //      var countriesRef = db.collection("saved_document");
+        //      countriesRef.add({
+        //          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-		//      });
-		//  }
+        //      });
+        //  }
 	</script>
 </body>
 

@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Manitoba as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Quebec as a fully vaccinated travellers</li>
 				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
@@ -88,14 +88,14 @@
 						Self-isolation requirements
 					</button>
 				</p>
-
+				
 				<p>
 					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-
+	
 		</div>
 
 		<br>
@@ -105,23 +105,17 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>Proof of vaccination is required for those <b>12 years of age and older</b> to attend certain
-						businesses
-						and events, including indoor and outdoor dining.</p>
-
-					<p>People must present <b>official documentation</b> confirming they are fully immunized against
-						COVID-19. This includes
-						<b>the Manitoba Immunization Card</b>, as well as <a
-							href="https://manitoba.ca/covid19/vaccine/immunizationrecord/businesses.html#proof">
-							official vaccination records issued by another jurisdiction</a>.</p>
-					<p>When a person presents digital or physical Manitoba Immunization Card, <b>which includes QR
-							code</b>, the QR Code must be scanned. This also
-						includes a screenshot or a print-out of the QR code.</p>
-
+					<p>Individuals who do not live in Québec and are travelling in Québec may enter places and participate in activities requiring a vaccine passport 
+						if they present the following two documents at the door:</p>
+						<ul>
+							<li>Valid <b>photo ID</b> with an address outside Québec</li>
+							<li>A <b>vaccine passport</b> with a QR code or <b>official proof of vaccination</b> against COVID-19 issued by their country or province in Canada</li>
+						</ul>
 					<br>
-
-					<i>*More details can be found at<a href="https://manitoba.ca/covid19/prs/index.html#guidance">
-							Proof of Vaccinaation Guidelines.</a></i>
+	
+					<i>*More details can be found at<a
+							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/progress-of-the-covid-19-vaccination/covid-19-vaccination-passport/travellers-to-quebec">
+							Travellers to Quebec.</a></i>
 				</div>
 			</div>
 		</div>
@@ -129,27 +123,14 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p><b>Fully vaccinated (two doses) individuals</b> can now travel within Canada
-						<b>without being required to self-isolate (quarantine) for 14 days</b> upon
-						arrival back in the province.</p>
+					<p>There are <b>no preventive isolation measures</b> for people arriving from other Canadian provinces. 
+						However, non-essential travel should be avoided.</p>
 
-					<p><b>14 days of self-isolation (quarantine)</b>, is still required for people returning
-						or coming to Manitoba from all jurisdictions if <b>they are not fully vaccinated</b>.
-						For information on current exemptions, visit:
-						<a href="https://manitoba.ca/covid19/fundamentals/self-isolation.html#exemptions">
-							Self-isolation Exemptions</a>.</p>
 
-					<p><b>All domestic travellers who are not exempt from quarantine</b> in the orders are strongly
-						advised to get <b>two COVID-19 tests</b> -- one on the day of arrival, and another on the 10th
-						day after arriving in Manitoba regardless of if they are displaying symptoms, and whether
-						they are visiting Manitoba or are returning from out of the province.</p>
-
-					<p>Testing as a result of domestic travel is <b>not required</b> for individuals <b>who are exempt
-							from
-							quarantine</b> in the provincial public health orders.</p>
-
-					<i>*More details can be found at<a href="https://manitoba.ca/covid19/prs/index.html#guidance">
-							Travel to and from Manitoba.</a></i>
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/measures-in-force/travel/travel-canada-or-internationally#c122271">
+							Instructions for travel within Canada.</a></i>
 				</div>
 			</div>
 		</div>
@@ -157,25 +138,24 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Mask use is required in indoor public places.</b>
-					<p>A person who enters or remains in an indoor public place must wear a mask in a
-						manner that covers their mouth, nose and chin without gapping. An indoor public
-						space includes:</p>
+					<p>Wearing a mask or face covering that covers the nose to under the chin is<b>mandatory on public transit</b>
+						(buses, the subway, ferries, taxis, car services, etc.) and in <b>enclosed or partially enclosed public places </b> 
+						for people age 10 and over.</p>
+					<p>This obligation, with exceptions, will apply in the following places:</p>
 					<ul>
-						<li>any part of a retail store where the public has access;</li>
-						<li>any part of the common areas of a residential building;</li>
-						<li>a health care facility;</li>
-						<li>an educational institution or facility;</li>
-						<li>an elevator;</li>
-						<li>a motor vehicle used for public transportation, including a bus, taxi, limousine
-							or other vehicle for hire; and</li>
-						<li>a bus shelter, pedestrian tunnel or enclosed pedestrian walkway.</li>
+						<li>a personal care business (e.g., hairdressers, beauty care) ;</li>
+						<li>a shopping mall;</li>
+						<li>a place where cultural or entertainment activities or services are offered;</li>
+						<li>a restaurant or bar (except when seated to eating or drink);</li>
+						<li>a common area in a tourist accommodation facility (including an elevator);</li>
+						<li>a train or bus station, a river station, a metro station or an airport;</li>
 					</ul>
 
 					<br>
-
-					<i>*More details can be found at<a href="https://manitoba.ca/covid19/prs/index.html#guidance">
-							Additional guidance at the Restricted Level.</a></i>
+					
+					<i>*More details can be found at<a
+							href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/mask-or-face-covering/wearing-a-face-covering-in-public-settings-covid-19">
+							Wearing a mask or a face covering in public settings in the context of the COVID-19 pandemic.</a></i>
 				</div>
 			</div>
 		</div>
@@ -214,8 +194,8 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves"
-							data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
@@ -250,7 +230,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -268,26 +248,26 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-				"Manitoba") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(ManitobaDoc => { //arrow notation
-					console.log("current document data: " + ManitobaDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = ManitobaDoc.data()
-						.manitoba; //using javascript to display the data on the right place
+					"Quebec") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(QuebecDoc => { //arrow notation
+					console.log("current document data: " + QuebecDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = QuebecDoc.data()
+						.quebec; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function
 
 
 		// /*Save document*/
-		// function saveInfo() {
-		//      let file_name = document.getElementById("file-name").value;
-		//      var countriesRef = db.collection("saved_document");
-		//      countriesRef.add({
-		//          nation: "Canada",
+        // function saveInfo() {
+    	//      let file_name = document.getElementById("file-name").value;
+        //      var countriesRef = db.collection("saved_document");
+        //      countriesRef.add({
+        //          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-		//      });
-		//  }
+        //      });
+        //  }
 	</script>
 </body>
 

@@ -21,9 +21,9 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/canada-province.css" />
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Yukon as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Prince Edward Island as a fully vaccinated travellers</li>
 				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
@@ -105,15 +105,22 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>As of November 30, 2021, all travellers 12 years of age plus 4 months and older <b>boarding domestic flights and trains</b> 
-						need to be <b>fully-vaccinated</b>.</p>
-					<p>If you’re <b>12 years of age or older</b> you must have proof that you’ve <b>received 2 doses</b> of a COVID-19 vaccination. 
-						You cannot access a setting that requires proof of vaccination if you’ve had only 1 dose or are not vaccinated.</p>
+					<b>People must be fully vaccinated (+14 days) to be eligible for a PEI Pass.</b>
+					<br>
+					<p><a href="https://www.princeedwardisland.ca/en/service/apply-for-a-pei-pass">Apply for a PEI Pass</a>:</p>
+					<ul>
+						<li>The PEI Pass allows returning Islanders and visitors who meet the appropriate criteria to be exempt from self-isolation when entering the province.</li>
+						<li>Travelers who have been <b>fully vaccinated</b> (e.g. two doses + 14 days) with a COVID-19 vaccine are eligible to apply for a PEI Pass</li>
+					</ul>
+					
+					<p>Proof of vaccination may be required on airplanes, trains, marine vessels or other conveyances  
+						by the federal government or private businesses. You are responsible for confirming your eligibility to travel with the transportation service provider.</p>
+					<p>For information about the Government of Canada’s vaccination requirements in the <a href="https://travel.gc.ca/travel-covid">transportation sector</a>.</p>
 					<br>
 	
 					<i>*More details can be found at<a
-							href="https://www.travelyukon.com/en/travelupdates">
-							Things to know before coming to the Yukon.</a></i>
+							href="https://www.princeedwardisland.ca/en/topic/non-residents-travelling-to-pei">
+							Non-Residents Travelling to PEI.</a></i>
 				</div>
 			</div>
 		</div>
@@ -121,13 +128,14 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>Travellers arriving in the Yukon are <b>no longer required to complete a self-isolation period</b>.</p>
+					<p>All people arriving in PEI who are <b>not fully vaccinated</b>, including those who are <b>partially vaccinated</b>, will need to self-isolate for <b>8 days</b> (subject to a test on day 8) 
+						and complete a <a href="https://www.princeedwardisland.ca/en/service/pei-self-isolation-declaration">self-isolation declaration</a>. </p>
 
 
 					<br>
 					<i>*More details can be found at<a
-						href="https://www.travelyukon.com/en/travelupdates">
-						Things to know before coming to the Yukon.</a></i>
+							href="https://www.princeedwardisland.ca/en/topic/non-residents-travelling-to-pei">
+							Non-Residents Travelling to PEI.</a></i>
 				</div>
 			</div>
 		</div>
@@ -135,17 +143,20 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Anyone aged 5 and over must wear a mask:</b>
+					<p>Masks are <b>mandatory in all enclosed public spaces</b> in Prince Edward Island including:</p>
 					<ul>
-						<li>in any indoor public place, including retail and service businesses; </li>
-						<li>in private vehicles where the occupants are from more than 1 household; and</li>
-						<li>in outdoor public places when people cannot maintain 2 metres of distancing.</li>
+						<li>Retail businesses, shopping centres, buildings or rooms of businesses where services are provided to the public</li>
+						<li>Restaurants or drinking establishments (except when drinking or eating)</li>
+						<li>Arts, cultural, entertainment venues when not seated</li>
+						<li>Bus stations, ferry terminals, airports</li>
+						<li>Public transit, public passenger vehicles, taxis</li>
 					</ul>
+
 					<br>
 					
 					<i>*More details can be found at<a
-							href="https://yukon.ca/en/designated-settings">
-							Mask wearing - Government of Yukon.</a></i>
+							href="https://www.princeedwardisland.ca/en/information/health-and-wellness/wearing-non-medical-masks-in-the-community">
+							Wearing Non-Medical Masks in the Community.</a></i>
 				</div>
 			</div>
 		</div>
@@ -220,7 +231,7 @@
 		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
-	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -238,11 +249,11 @@
 	<script>
 		function read_display_province() {
 			db.collection("Province").doc(
-					"Yukon") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(YukonDoc => { //arrow notation
-					console.log("current document data: " + YukonDoc.data()); //.data() returns data object
-					document.getElementById("provinceSelected").innerHTML = YukonDoc.data()
-						.yukon; //using javascript to display the data on the right place
+					"PrinceEdward") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(PrinceEdwardDoc => { //arrow notation
+					console.log("current document data: " + PrinceEdwardDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = PrinceEdwardDoc.data()
+						.princeedward; //using javascript to display the data on the right place
 				})
 		}
 		read_display_province() //calling the function
