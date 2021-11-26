@@ -1,5 +1,6 @@
 let submitButton = document.getElementById("submitBtn")
 let Country = document.getElementById("country")
+let Province = document.getElementById("province")
 function countryChange(){
 	console.log(Country.value)
 	if(Country.value == 'Australia'){
@@ -32,6 +33,48 @@ function countryChange(){
 	if(Country.value == 'United States'){
 		submitButton.setAttribute("href",'./usa.html')
 	}
+
+// Provinces
+	if(Country.value == 'Canada' && Province.value == "Alberta"){
+		submitButton.setAttribute("href",'./canada-alberta.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "British Columbia"){
+		submitButton.setAttribute("href",'./canada-bc.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Manitoba"){
+		submitButton.setAttribute("href",'./canada-manitoba.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "New Brunswick"){
+		submitButton.setAttribute("href",'./canada-brunswick.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Newfoundland and Labrador"){
+		submitButton.setAttribute("href",'./canada-newfoundland.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Northwest Territories"){
+		submitButton.setAttribute("href",'./canada-northwest.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Nova Scotia"){
+		submitButton.setAttribute("href",'./canada-novaScotia.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Nunavut"){
+		submitButton.setAttribute("href",'./canada-nunavut.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Ontario"){
+		submitButton.setAttribute("href",'./canada-ontario.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Prince Edward Island"){
+		submitButton.setAttribute("href",'./canada-princeEdward.html')
+	}	
+	if(Country.value == 'Canada' && Province.value == "Quebec"){
+		submitButton.setAttribute("href",'./canada-quebec.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Saskatchewan"){
+		submitButton.setAttribute("href",'./canada-saskatchewan.html')
+	}
+	if(Country.value == 'Canada' && Province.value == "Yukon"){
+		submitButton.setAttribute("href",'./canada-yukon.html')
+	}
+
 }
 
 //countries

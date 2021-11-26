@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My BCIT Project</title>
+	<meta name="comp1800 boilerplate code" content="my bcit project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="BCIT">
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Google Icons (Material Design)-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Firebase 8 CDNs-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+
+	<!-- Link to the api keys for your firebase project -->
+	<script src="./scripts/firebaseAPI.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+</head>
+
+<body>
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <i class="fas fa-bars"></i> -->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./countries.html">Countries</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./searchtrip.html">Search trip</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nav-right">
+					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+					<i class="material-icons"><a href="./notification.html">notifications</a></i>
+					<i class="material-icons"><a href="./login.html">account_circle</a></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="conBox">
+		<div id="regulation-section" class="d-flex">
+			<p class="rbg1"></p>
+			<p class="rbg2"></p>
+			<div class="regulationTitle">
+				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span> (Canada)</h1>
+			</div>
+
+			<h3 class="mb-3">Restrictions:</h3>
+			<ol>
+				<li class="mb-3">Entering Nova Scotia as a fully vaccinated travellers</li>
+				<p><button id="novaCheckBtn" class="btn btn-outline-secondary" type="button">
+						Proof of vaccination
+					</button></p>
+				<li class="mb-3">Self-isolation and other requirements</li>
+				<p>
+					<button id="novaIsolationBtn" class="btn btn-outline-secondary" type="button">
+						Self-isolation requirements
+					</button>
+				</p>
+
+				<p>
+					<button id="novaFormBtn" class="btn btn-outline-secondary" type="button">
+						Nova Scotia Safe Check-in Form
+					</button>
+				</p>
+				
+				<p>
+					<button id="novaMaskBtn" class="btn btn-outline-secondary" type="button">
+						Mask requirements
+					</button>
+				</p>
+			</ol>
+	
+		</div>
+
+		<br>
+		<br>
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+		<div class="d-flex mb-3 whiteB" id="novaCollapseExampleBox">
+			<h2 class="collapseTitle">Proof of vanccination</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body" id="fully">
+						<p>Vaccination documentation needs to provide proof that you received the COVID-19 vaccine, 
+							including the <b>date</b>, <b>location</b>, <b>type</b>, <b>brand</b> and <b>lot number</b> of
+							COVID-19 vaccine you received. </p>
+						
+						<p>Documentation must be issued by the government or the organization that administered the vaccine 
+							and show the name of the issuing government or the name and civic address of the organization 
+							that administered the vaccine.</p>
+	
+						<br>
+		
+						<i>*More details can be found at<a
+								href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+								Travel into Nova Scotia.</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 grayB" id="novaCollapse1Box">
+			<h2 class="collapseTitle">Self-isolation requirements</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>Self-isolation requirements for people who travel from another Canadian province or territory (outside Nova Scotia) are based on 
+						<b>vaccination status and testing</b>. Self-isolation requirements include:</p>
+
+					<ul>
+						<li>people who are <b>fully vaccinated</b> (2 doses of a COVID-19 vaccine or 2 doses of a combination of COVID-19 vaccines 
+							<a href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada#determine-fully">
+							accepted by the Government of Canada</a>, 1 dose of Janssen/Johnson & Johnson COVID-19 vaccine or a complete series of a COVID-19 vaccine 
+							authorized by the World Health Organization) at least 14 days before arriving in Nova Scotia <b>don’t need to self-isolate</b>; 
+							<a href="https://novascotia.ca/coronavirus/symptoms-and-testing/#who-can-be-tested">testing is recommended</a>.</li>
+						<li>people who are <b>not fully vaccinated</b> (partially vaccinated with a first dose of a 2-dose COVID-19 vaccine or 0 doses of a COVID-19 vaccine) 
+							at least 14 days before arriving in Nova Scotia <b>must self-isolate for 7 days</b> and <b>receive 2 negative tests results</b> in order to leave 
+							self-isolation after 7 days</li>
+						<li>people who have a letter from Public Health in a Canadian province or territory stating that they’ve <b>recovered from COVID-19</b> in the 12 weeks 
+							before arriving in Nova Scotia and are not fully vaccinated at least 14 days before arriving in Nova Scotia <b>must self-isolate for 7 days</b> 
+							(you <b>don’t need to get tested</b> in order to leave self-isolation after 7 days)</li>
+					</ul>
+					
+					<i>*More details can be found at<a
+							href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+							Travel into Nova Scotia.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="novaCollapse2Box">
+			<h2 class="collapseTitle">Nova Scotia Safe Check-in Form</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>Starting 1 November 2021 – Everyone <b>(12 or older)</b> who travels from another Canadian province or territory 
+						(outside Nova Scotia) needs to <b>complete the Safe Check-in Form</b>.</p>
+					<ul>
+						<li>Children who <b>turn 12 between 1 September and 1 November 2021</b> and are <b>not fully vaccinated</b> need to be included 
+							on the Safe Check-in Form of the least vaccinated person they’re travelling with (12 or older). 
+							Starting 2 March 2022, they need complete a separate Safe Check-in Form if they’re not fully vaccinated.</li>
+						<li>Children who <b>turn 12 after 1 November 2021</b> and are <b>not fully vaccinated</b> need to be included on the Safe Check-in Form of the 
+							least vaccinated person they’re travelling with (12 or older). Starting 4 months from their birthday, they need to complete 
+							a separate Safe Check-in Form if they’re not fully vaccinated.</li>
+						<li>You can <b>complete your own form if you're 16 or older</b> (you can also have someone complete the form for you). A parent or guardian needs to 
+							complete the form for someone 15 or younger.</li>
+					</ul>
+					
+					<p><b>Proof of vaccination status</b> needs to be provided for each traveller (12 or older) when you complete the Safe Check-in Form.</p>
+					<p>After you complete the Safe Check-in Form, you receive a confirmation email. You get the confirmation right away.</p>
+					<br>
+					<i>*More details can be found at<a
+							href="https://novascotia.ca/coronavirus/travel/#from-outside-atlantic-canada">
+							Nova Scotia Safe Check-in Form.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="novaCollapse3Box">
+			<h2 class="collapseTitle">Mask requirements</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>Wearing a <b>non-medical mask is required</b> in most indoor public places. </p>
+					<p>Public places include:</p>
+					
+					<ul>
+						<li>train stations, bus stations, ferry terminals and airports</li>
+						<li>places for cultural or entertainment activities and services (like movie theatres, 
+							theatre performances, dance recitals, festivals and concerts)</li>
+						<li>personal services businesses like hair salons, barber shops, spas, nail salons and body art establishments 
+							(except during services that require removing a mask)</li>
+						<li>restaurants and liquor licensed (drinking) establishments like bars, wineries, distillery tasting 
+							rooms and craft taprooms, including the kitchen and preparatory space and outdoor serviced seating areas 
+							like patios (except for holes on the golf course that are licensed and when you're eating or drinking)</li>
+						<li>common areas of tourist accommodations (like lobbies, elevators and hallways)</li>
+					</ul>
+
+					<br>
+					
+					<i>*More details can be found at<a
+							href="https://novascotia.ca/coronavirus/masks/#When">
+							Coronavirus (COVID-19): masks.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+	<!-- Save Button -->
+	<div class="saveBox">
+		<div class="container1">
+			<div class="center">
+				<button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal"
+					data-bs-target="#exampleModalToggle">Save Search Result</button>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
+						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="mb-3">
+								<label for="recipient-name" class="col-form-label">Name:</label>
+								<input type="text" class="form-control" id="file-name">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+							style="margin-right:35%;">Cancel</button>
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
+							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+						Your search has been saved!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+							style="margin-right:45%;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="fixed-bottom py-3 bg-dark" style="color:white;">
+			<div class="container text-center">
+				(C) Copyright DTC 05, 2021
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Bootstrap JS script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		var exampleModal = document.getElementById('exampleModalToggle')
+		exampleModal.addEventListener('show.bs.modal', function (event) {
+			// Button that triggered the modal
+			var button = event.relatedTarget
+			// Extract info from data-bs-* attributes
+			var recipient = button.getAttribute('data-bs-whatever')
+			// If necessary, you could initiate an AJAX request here
+			// and then do the updating in a callback.
+		})
+	</script>
+
+	<script>
+		function read_display_province() {
+			db.collection("Province").doc(
+					"NovaScotia") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NovaScotiaDoc => { //arrow notation
+					console.log("current document data: " + NovaScotiaDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NovaScotiaDoc.data()
+						.novascotia; //using javascript to display the data on the right place
+				})
+		}
+		read_display_province() //calling the function
+
+
+		// /*Save document*/
+        // function saveInfo() {
+    	//      let file_name = document.getElementById("file-name").value;
+        //      var countriesRef = db.collection("saved_document");
+        //      countriesRef.add({
+        //          nation: "Canada",
+		//  		link: "http://127.0.0.1:5500/canada.html",
+		//  		name: file_name
+        //      });
+        //  }
+	</script>
+</body>
+
+</html>

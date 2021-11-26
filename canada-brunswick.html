@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My BCIT Project</title>
+	<meta name="comp1800 boilerplate code" content="my bcit project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="BCIT">
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Google Icons (Material Design)-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Firebase 8 CDNs-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+
+	<!-- Link to the api keys for your firebase project -->
+	<script src="./scripts/firebaseAPI.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="styles/canada-province.css" />
+</head>
+
+<body>
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <i class="fas fa-bars"></i> -->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./countries.html">Countries</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./searchtrip.html">Search trip</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nav-right">
+					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+					<i class="material-icons"><a href="./notification.html">notifications</a></i>
+					<i class="material-icons"><a href="./login.html">account_circle</a></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="conBox">
+		<div id="regulation-section" class="d-flex">
+			<p class="rbg1"></p>
+			<p class="rbg2"></p>
+			<div class="regulationTitle">
+				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span> (Canada)</h1>
+			</div>
+
+			<h3 class="mb-3">Restrictions:</h3>
+			<ol>
+				<li class="mb-3">Entering New Brunswick as a fully vaccinated travellers</li>
+				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
+						Proof of vaccination
+					</button></p>
+				<li class="mb-3">Self-isolation and other requirements</li>
+				<p>
+					<button id="isolationBtn" class="btn btn-outline-secondary" type="button">
+						Self-isolation requirements
+					</button>
+				</p>
+				
+				<p>
+					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
+						Mask requirements
+					</button>
+				</p>
+			</ol>
+	
+		</div>
+
+		<br>
+		<br>
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
+			<h2 class="collapseTitle">Proof of vanccination</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body" id="fully">
+					<p><b>Fully vaccinated</b>: A person is considered to be fully vaccinated when at least two weeks 
+					   has passed since their final dose of a Health Canada approved COVID-19 vaccine. </p>
+					
+					<p><b>Partially vaccinated</b>: A person is considered to be partially vaccinated when at least two weeks have passed 
+					   since their first dose of a Health Canada approved COVID-19 vaccine. This only applies to vaccines that 
+					   consist of two doses.</p>
+
+					<p>Fully vaccinated travellers are <b>required to upload proof of vaccination</b> to the Travel Form. People who do not upload 
+						appropriate proof will be required to follow the rules for unvaccinated travellers.</p>
+
+					<br>
+	
+					<i>*More details can be found at<a
+							href="https://www.gov.nl.ca/covid-19/travel/travel-restrictions/">
+							Travelling to Newfoundland and Labrador.</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 grayB" id="collapse1Box">
+			<h2 class="collapseTitle">Self-isolation requirements</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p><b>Fully vaccinated</b> travellers are <b>not required to self-isolate</b> or be tested for COVID-19.</p>
+
+					<p><b>Partially vaccinated and unvaccinated travellers</b> are required to:</p>
+					<ul>
+						<li>Fully self-isolate until they <b>receive negative results</b> from a test taken on day 7 or later. 
+							If the traveller chooses not to have a test, they <b>must self-isolate for 14 days</b>.</li>
+						<li><b>After receipt of negative test results</b> on day 7 or later, and until the <b>full 14 days of a self-isolation 
+							period has passed</b>, partially vaccinated and unvaccinated travellers, as well as any children that travelled 
+							with them or have isolated with them, must:</li>
+							<ul>
+								<li>Avoid vulnerable people, long term care and personal care homes.</li>
+								<li>Not attend daycare, camp, sporting events, and must avoid large crowded settings.</li>
+								<li>After receipt of negative test results, children can attend school but must otherwise limit contact with others 
+									as described above and cannot attend before or after school programs.</li>
+								<li>Those younger than 5 are not required to be tested as long as the parents have their test on day 7 or later but 
+									are still required to abide by these limitations after the parents receive a negative test.</li>
+							</ul>
+					</ul>
+					
+					<i>*More details can be found at<a
+							href="https://www.gov.nl.ca/covid-19/travel/travel-restrictions/">
+							Travelling to Newfoundland and Labrador.</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 whiteB" id="collapse2Box">
+			<h2 class="collapseTitle">Mask requirements</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<b>Effective September 22
+						Masks will be mandatory in all indoor public spaces, including:</b>
+					
+					<ul>
+						<li>public spaces where the public and employees interact, such as retail businesses,
+							malls, service centres, places of worship, and restaurants and bars except while eating;</li>
+						<li>organized indoor gatherings in public spaces, such as weddings and funerals;</li>
+						<li>common areas like lobbies, elevators and hallways, and public shared spaces including those in
+							private sector and government workspaces; and</li>
+						<li>public transportation.</li>
+					</ul>
+
+					<br>
+					
+					<i>*More details can be found at<a
+							href="https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/masks.html">
+							Masks - Government of New Brunswick.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+	<!-- Save Button -->
+	<div class="saveBox">
+		<div class="container1">
+			<div class="center">
+				<button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal"
+					data-bs-target="#exampleModalToggle">Save Search Result</button>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
+						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="mb-3">
+								<label for="recipient-name" class="col-form-label">Name:</label>
+								<input type="text" class="form-control" id="file-name">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+							style="margin-right:35%;">Cancel</button>
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
+							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+						Your search has been saved!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+							style="margin-right:45%;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="fixed-bottom py-3 bg-dark" style="color:white;">
+			<div class="container text-center">
+				(C) Copyright DTC 05, 2021
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Bootstrap JS script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		var exampleModal = document.getElementById('exampleModalToggle')
+		exampleModal.addEventListener('show.bs.modal', function (event) {
+			// Button that triggered the modal
+			var button = event.relatedTarget
+			// Extract info from data-bs-* attributes
+			var recipient = button.getAttribute('data-bs-whatever')
+			// If necessary, you could initiate an AJAX request here
+			// and then do the updating in a callback.
+		})
+	</script>
+
+	<script>
+		function read_display_province() {
+			db.collection("Province").doc(
+					"NewBrunswick") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(NewBrunswickDoc => { //arrow notation
+					console.log("current document data: " + NewBrunswickDoc.data()); //.data() returns data object
+					document.getElementById("provinceSelected").innerHTML = NewBrunswickDoc.data()
+						.newbrunswick; //using javascript to display the data on the right place
+				})
+		}
+		read_display_province() //calling the function
+
+
+		// /*Save document*/
+        // function saveInfo() {
+    	//      let file_name = document.getElementById("file-name").value;
+        //      var countriesRef = db.collection("saved_document");
+        //      countriesRef.add({
+        //          nation: "Canada",
+		//  		link: "http://127.0.0.1:5500/canada.html",
+		//  		name: file_name
+        //      });
+        //  }
+	</script>
+</body>
+
+</html>

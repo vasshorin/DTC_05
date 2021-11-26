@@ -72,7 +72,7 @@
         <div id="title">
         <h1>CHOOSE YOUR DESTINATION</h1>
         <p>Please choose your desired country of destination to see specific to it information</p>
-        <button class="btn btn-secondary" type="button" id="selectBtn">SELECT A COUNTRY</button>
+        <button class="btn btn-secondary" type="button" id="selectBtn">SELECT YOUR DESTINATION</button>
         </div>
         <div id="titleBackground">
         </div>
@@ -98,7 +98,7 @@
         <div id="list">
         <div><label for="country" style="font-weight: bold;">Country</label><span style="color: red !important; display: inline; float: none;">*</span></div>
         <select id="country" name="country" class="form-control" onchange="countryChange()">
-            <option value="" disabled selected>Select your destination</option>
+            <option value="" disabled selected>Select a country</option>
             <option>Australia</option>
             <option>Austria</option>
             <option>Canada</option>
@@ -115,6 +115,26 @@
             <option>United States</option>
         </select>
         </div>
+
+        <div id="list1">
+            <div><label for="country" style="font-weight: bold;">Province</label></div>
+            <select id="province" name="province" class="form-control" onchange="countryChange()">
+                <option value="" disabled selected>Select a province</option>
+                <option>Alberta</option>
+                <option>British Columbia</option>
+                <option>Manitoba</option>
+                <option>New Brunswick</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Northwest Territories</option>
+                <option>Nova Scotia</option>
+                <option>Nunavut</option>
+                <option>Ontario</option>
+                <option>Prince Edward Island</option>
+                <option>Quebec</option>
+                <option>Saskatchewan</option>
+                <option>Yukon</option>
+            </select>
+            </div>
         
         <div class="centerButton">
         <a onclick="saveUserInfo()" id="submitBtn" href="#">Submit</a>

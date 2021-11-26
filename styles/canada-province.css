@@ -15,11 +15,6 @@
 	text-decoration: none;
 }
 
-.customTitle {
-	padding-top: 20px;
-	text-align: center;
-}
-
 .conBox {
 	width: 100%;
 	margin: 0 auto;
@@ -48,7 +43,7 @@
 
 .rbg1,
 .rbg2 {
-	background: #fc0;
+	background: #adaacd;
 	width: 200%;
 	height: 6rem;
 }
@@ -67,7 +62,7 @@
 	right: 0;
 	height: 18rem;
 	background-size: 100% 9rem;
-	background: linear-gradient(180deg, #fc0, #fc0 33%, transparent 33%, transparent 66%, #fc0 66%, #fc0);
+	background: linear-gradient(180deg, #adaacd, #adaacd 33%, transparent 33%, transparent 66%, #adaacd	66%, #adaacd);
 	transform: translateX(50%) rotate(-45deg);
 	transform-origin: 50% 100%;
 }
@@ -90,7 +85,7 @@
 .saveBox {
 	width: 80%;
 	margin: 0 auto;
-	margin-bottom: 100px;
+	margin-bottom: 120px;
 }
 
 .whiteB {
@@ -110,10 +105,6 @@
 	border: none;
 }
 
-.itemsBox {
-	z-index: 10;
-}
-
 #regulation-section button {
 	border: 2px solid #333;
 	background: #fff;
@@ -124,7 +115,8 @@
 }
 
 #regulation-section button:hover {
-	background: #FFCC00;
+	background: #adaacd
+	;
 }
 
 .saveBox .btn-secondary {
@@ -146,7 +138,7 @@
 }
 
 #btnShow:hover {
-	background: #FFCC00;
+	background: #adaacd;
 }
 
 .center {
@@ -169,19 +161,6 @@
 		margin-bottom: 100px;
 	}
 
-	#top-title{
-		display: grid;
-		grid-template-rows: 14% 50%;
-		margin-left: 8%;
-		z-index: 10;
-	}
-	
-	#regulations {
-		display: grid;
-		grid-row: 1;
-		margin-top:1%;
-	}
-
 	.regulationTitle {
 		width: 45%;
 	}
@@ -192,48 +171,7 @@
 	}
 
 	#regulation-section h3 {
-		margin-left:5%;
-	}
-
-	#regulation-section>div.itemsBox {
-		margin-left: 20px;
-		display: block;
-	}
-
-	.customTitle {
-		display: grid;
-		grid-column: 1;
-		margin-right: 0px;
-		padding-top: 5px;
-		text-align: center;
-	}
-
-	.itemsBox {
-		z-index: 10;
-		padding-left:1%;
-	}
-	
-	#itemsBtn{
-		width: 120%;
-		/* margin-top:25%; */
-		text-align: center;
-	}
-
-	#quarantineBtn, .quarantine{
-		width: 112%;
-		/* margin-top:25%; */
-		text-align: center;
-	}
-
-	.check {
-		width:105%;
-		text-align: center;
-	}
-
-	#custom-section {
-		display: grid;
-		grid-template-columns: 30% 70%;
-		margin-top: 50px;
+		margin-left:10%;
 	}
 
 	#topBtn{
@@ -244,7 +182,7 @@
 		font-size: 18px;
 		border: none;
 		outline: none;
-		background-color: #FFCC00;;
+		background-color: #adaacd;
 		color: black;
 		font-weight: bold;
 		cursor: pointer;
@@ -254,7 +192,7 @@
 	
 	#topBtn:hover{
 		background-color: black;
-		color:#FFCC00;
+		color:#adaacd;
 	}
 }
 
@@ -288,11 +226,6 @@
 		padding-top: 25px;
 	}
 
-	.customTitle {
-		margin-left: 0;
-		margin-bottom: 5%;
-		text-align: center;
-	}
 
 	.d-flex {
 		flex-wrap: wrap;
@@ -302,28 +235,13 @@
 		width: 100%;
 	}
 
-	#top-title{
-		z-index: 10;
-	}
-	
-	#regulations {
-		z-index: 10;
-	}
-
 	.regulationTitle {
 		width: 100%;
 		margin-left: 5%;
 		text-align: center;
+		margin-bottom: 5%;
 	}
 
-	#regulation-section>div.itemsBox {
-		display: block;
-		margin-left: 10px;
-	}
-
-	.itemsBox button {
-		margin-left: 20px;
-	}
 
 	#topBtn{
 	  position: fixed;
@@ -333,7 +251,7 @@
 	  font-size: 15px;
 	  border: none;
 	  outline: none;
-	  background-color: #FFCC00;;
+	  background-color: #adaacd;
 	  color: black;
 	  font-weight: bold;
 	  cursor: pointer;
@@ -343,6 +261,6 @@
 	
 	#topBtn:hover{
 		background-color: black;
-		color:#FFCC00;
+		color:#adaacd;
 	}
 }

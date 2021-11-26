@@ -21,7 +21,7 @@
 @media screen and (min-width:701px) {
     .formContainer {
         display: grid;
-        grid-template-rows: 10% 35% 30% 15% 15%;
+        grid-template-rows: 10% 35% 30% 15% 15% 15%;
     }
 
     #titleBackground {
@@ -71,18 +71,24 @@
         display: grid;
         grid-row: 3;
         grid-template-columns: 45% 40%;
-        margin-left:25%;
+        margin-left: 25%;
     }
 
-    #list {
+    #list{
         display: grid;
         grid-row: 4;
-        margin: 5% 20%;
+        margin: 3% 20%;
+    }
+
+    #list1{
+        display: grid;
+        grid-row: 5;
+        margin: 3% 20%;
     }
 
     .centerButton>a {
         display:grid;
-        grid-row: 5;
+        grid-row: 6;
         margin-top: 3%;
         position: absolute;
         left: 50%;
@@ -94,7 +100,7 @@
 @media screen and (max-width: 700px) {
     .formContainer {
         display: grid;
-        grid-template-rows: 10% 35% 35% 15% 15%;
+        grid-template-rows: 10% 35% 35% 15% 15% 15%;
     }
 
     #titleBackground {
@@ -145,7 +151,7 @@
         display: grid;
         grid-row: 3;
         grid-template-columns: 50% 50%;
-        margin-left:5%;
+        margin-left:2%;
     }
 
     #list {
@@ -154,10 +160,16 @@
         margin: 3% 7%;
     }
 
+    #list1{
+        display: grid;
+        grid-row: 5;
+        margin: 3% 7%;
+    }
+
     .centerButton>a {
         display:grid;
-        grid-row: 5;
-        margin-top:5%;
+        grid-row: 6;
+        margin-top:8%;
         position: absolute;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
