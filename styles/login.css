@@ -1,7 +1,8 @@
 body {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
 }
 
 i a:link {
@@ -34,4 +35,17 @@ main {
 
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.55);
+}
+
+@media (max-width: 868px) {
+    body {
+        max-width: 720px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    body {
+        max-width: 540px;
+    }
 }

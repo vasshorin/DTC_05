@@ -114,7 +114,8 @@
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
-			<h2 class="collapseTitle">Based on your information you <span style="color: green;"> do not need visa </span></h2>
+			<h2 class="collapseTitle">Based on your information you <span style="color: green;"> do not need visa
+				</span></h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
 					<b>To qualify as a fully vaccinated traveller to Canada, you must:</b>
@@ -442,8 +443,8 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves"
+							data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
@@ -506,16 +507,55 @@
 		// read_display_country() //calling the function
 
 
-		/*Save document*/
-        // function saveInfo() {
-        //     let file_name = document.getElementById("file-name").value;
-        //     var countriesRef = db.collection("saved_document");
-        //     countriesRef.add({
-        //         nation: "Canada",
+		 /*Save document*/
+		// function saveInfo() {
+		// 	let file_name = document.getElementById("file-name").value;
+		// 	var countriesRef = db.collection("saved_document");
+		// 	countriesRef.add({
+		// 		nation: "Canada",
 		// 		link: "http://127.0.0.1:5500/canada.html",
 		// 		name: file_name
-        //     });
-        // }
+		// 	});
+		// }
+
+		// firebase.auth().onAuthStateChanged(function (user) {
+		// 	if (user) {
+		// 		// User is signed in.
+		// 	} else {
+		// 		// No user is signed in.
+		// 	}
+		// });
+
+		// const user = firebase.auth().currentUser;
+		// if (user !== null) {
+		// 	// The user object has basic properties such as display name, email, etc.
+		// 	const displayName = user.displayName;
+		// 	const email = user.email;
+		// 	const photoURL = user.photoURL;
+		// 	const emailVerified = user.emailVerified;
+
+		// 	// The user's ID, unique to the Firebase project. Do NOT use
+		// 	// this value to authenticate with your backend server, if
+		// 	// you have one. Use User.getToken() instead.
+		// 	const uid = user.uid;
+		// }
+
+		// function saveInfo() {
+		// 	let file_name = document.getElementById("file-name").value;
+		// 	const countriesRef = db.collection("users").doc(uid).collection("favarite");
+		// 	countriesRef.set({
+		// 			nation: "Canada",
+		// 			link: "http://127.0.0.1:5500/canada.html",
+		// 			name: file_name
+		// 		})
+		// 		.then(() => {
+		// 			console.log("Document successfully written!");
+		// 		})
+		// 		.catch((error) => {
+		// 			console.error("Error writing document: ", error);
+		// 		});
+
+		// }
 	</script>
 </body>
 
