@@ -4,75 +4,75 @@ let Province = document.getElementById("province")
 function countryChange(){
 	console.log(Country.value)
 	if(Country.value == 'Australia'){
-		submitButton.setAttribute("href",'./australia.html')
+		submitButton.setAttribute("href",'countries/australia.html')
 	}
 	if(Country.value == 'Canada'){
-		submitButton.setAttribute("href",'./canada.html')
+		submitButton.setAttribute("href",'countries/canada.html')
 	}
 	if(Country.value == 'France'){
-		submitButton.setAttribute("href",'./france.html')
+		submitButton.setAttribute("href",'countries/france.html')
 	}
 	if(Country.value == 'Germany'){
-		submitButton.setAttribute("href",'./germany.html')
+		submitButton.setAttribute("href",'countries/germany.html')
 	}
 	if(Country.value == 'Japan'){
-		submitButton.setAttribute("href",'./japan.html')
+		submitButton.setAttribute("href",'countries/japan.html')
 	}
 	if(Country.value == 'New Zealand'){
-		submitButton.setAttribute("href",'./countries/newZealand.html')
+		submitButton.setAttribute("href",'countries/newZealand.html')
 	}
 	if(Country.value == 'Singapore'){
-		submitButton.setAttribute("href",'./singapore.html')
+		submitButton.setAttribute("href",'countries/singapore.html')
 	}
 	if(Country.value == 'Thailand'){
-		submitButton.setAttribute("href",'./thailand.html')
+		submitButton.setAttribute("href",'countries/thailand.html')
 	}
 	if(Country.value == 'United Kingdom'){
-		submitButton.setAttribute("href",'./uk.html')
+		submitButton.setAttribute("href",'countries/uk.html')
 	}
 	if(Country.value == 'United States'){
-		submitButton.setAttribute("href",'./usa.html')
+		submitButton.setAttribute("href",'countries/usa.html')
 	}
 
 // Provinces
 	if(Country.value == 'Canada' && Province.value == "Alberta"){
-		submitButton.setAttribute("href",'./canada-alberta.html')
+		submitButton.setAttribute("href",'provinces/canada-alberta.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "British Columbia"){
-		submitButton.setAttribute("href",'./canada-bc.html')
+		submitButton.setAttribute("href",'provinces/canada-bc.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Manitoba"){
-		submitButton.setAttribute("href",'./canada-manitoba.html')
+		submitButton.setAttribute("href",'provinces/canada-manitoba.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "New Brunswick"){
-		submitButton.setAttribute("href",'./canada-brunswick.html')
+		submitButton.setAttribute("href",'provinces/canada-brunswick.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Newfoundland and Labrador"){
-		submitButton.setAttribute("href",'./canada-newfoundland.html')
+		submitButton.setAttribute("href",'provinces/canada-newfoundland.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Northwest Territories"){
-		submitButton.setAttribute("href",'./canada-northwest.html')
+		submitButton.setAttribute("href",'provinces/canada-northwest.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Nova Scotia"){
-		submitButton.setAttribute("href",'./canada-novaScotia.html')
+		submitButton.setAttribute("href",'provinces/canada-novaScotia.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Nunavut"){
-		submitButton.setAttribute("href",'./canada-nunavut.html')
+		submitButton.setAttribute("href",'provinces/canada-nunavut.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Ontario"){
-		submitButton.setAttribute("href",'./canada-ontario.html')
+		submitButton.setAttribute("href",'provinces/canada-ontario.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Prince Edward Island"){
-		submitButton.setAttribute("href",'./canada-princeEdward.html')
+		submitButton.setAttribute("href",'provinces/canada-princeEdward.html')
 	}	
 	if(Country.value == 'Canada' && Province.value == "Quebec"){
-		submitButton.setAttribute("href",'./canada-quebec.html')
+		submitButton.setAttribute("href",'provinces/canada-quebec.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Saskatchewan"){
-		submitButton.setAttribute("href",'./canada-saskatchewan.html')
+		submitButton.setAttribute("href",'provinces/canada-saskatchewan.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Yukon"){
-		submitButton.setAttribute("href",'./canada-yukon.html')
+		submitButton.setAttribute("href",'provinces/canada-yukon.html')
 	}
 
 }
