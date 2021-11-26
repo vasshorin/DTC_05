@@ -2,144 +2,203 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
+  <meta charset="utf-8">
+  <title>My BCIT Project</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    
-    <!-- Google Icons (Material Design)-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+  <!-- Link to the css file-->
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <link rel="stylesheet" type="text/css" href="styles/profile.css">
 
-    <!-- Bootstrap FirebaseUI CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Icons (Material Design)-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Firebase 8 CDNs-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <!-- Link to the api keys for your firebase project -->
-    <script src="./scripts/firebaseAPI.js"></script>
+  <!-- Boostrap JS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+
+  <!-- Firebase 8 related CSS CDN -->
+
+  <!-- Firebase 8 CDNs-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+  <!-- Link to the api keys for your firebase project -->
+  <script src="./scripts/firebaseAPI.js"></script>
+
+
 </head>
 
 <body>
-   <!-- NAVIGATION -->
-	<div id="navigation">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container-fluid">
-				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
-				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+  <!-- NAVIGATION -->
+  <div id="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					<!-- <i class="fas fa-bars"></i> -->
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./countries.html">Countries</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Map</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./searchtrip.html">Search trip</a>
-						</li>
-					</ul>
-				</div>
-				<div id="nav-right">
-					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
-					<i class="material-icons"><a href="./notification.html">notifications</a></i>
-					<i class="material-icons"><a href="./login.html">account_circle</a></i>
-				</div>
-			</div>
-		</nav>
-	</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <!-- <i class="fas fa-bars"></i> -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./countries.html" style="color: white;">Countries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./searchtrip.html" style="color: white;">Search trip</a>
+            </li>
+          </ul>
+        </div>
+        <div id="nav-right">
+          <i class="material-icons"><a href="./upload.html">upload_file</a></i>
+          <i class="material-icons"><a href="./notification.html">notifications</a></i>
+          <i class="material-icons"><a href="./login.html">account_circle</a></i>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-    <div id="container">
-        <img src="./images/user.png" alt="" width="100" height="100" class="d-inline-block align-text-top">
-        <h1 id="body-title">Hello!</h1>
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Personal Information</h5>
-                  <i class="material-icons body-icon">manage_accounts</i>
-                  <p class="card-text">Keep your information up to date</p>
-                  <a href="#" class="btn btn1 btn-secondary">Update Info</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Password</h5>
-                  <i class="material-icons body-icon">vpn_key</i>
-                  <p class="card-text">Change your password at any time</p>
-                  <a href="#" class="btn btn2 btn-secondary">Change Password</a>
-                </div>
-              </div>
-            </div>
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <h1 data-swiftype-index="true" id="main" tabindex="-1" class="page-heading__title">
+            Hello <span id="name-goes-here"></span>
+          </h1>
+          <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172"
+            style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c39.5815,0 71.66667,-32.08517 71.66667,-71.66667c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM86,34.04167c12.86417,0 23.29167,10.4275 23.29167,23.29167c0,12.86417 -10.4275,23.29167 -23.29167,23.29167c-12.86417,0 -23.29167,-10.4275 -23.29167,-23.29167c0,-12.86417 10.4275,-23.29167 23.29167,-23.29167zM86,143.33333c-17.47233,0 -33.11717,-7.81883 -43.63067,-20.15267c-2.7305,-3.2035 -2.12133,-8.01233 1.23983,-10.54217c10.87183,-8.17717 30.6805,-12.30517 42.39083,-12.30517c11.71033,0 31.519,4.128 42.398,12.30517c3.36117,2.52983 3.97033,7.34583 1.23983,10.54217c-10.52067,12.33383 -26.1655,20.15267 -43.63783,20.15267z">
+                </path>
+              </g>
+            </g>
+          </svg>
+          <p data-swiftype-index="true" class="page-heading__lead lead">
+            Choose what you would like to do
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><u>Personal Information</u></h5>
+            <i class="material-icons body-icon">manage_accounts</i>
+            <p class="card-text">Keep your information up to date</p>
+            <a href="#" class="btn btn1 btn-warning">Update Info</a>
           </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Saved Documents</h5>
-                  <i class="material-icons body-icon">source</i>
-                  <p class="card-text">See all the documents you have saved</p>
-                  <a href="saved_document.html" class="btn btn3 btn-secondary">View Documents</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Notification</h5>
-                  <i class="material-icons body-icon">notifications_active</i>
-                  <p class="card-text"> Manage notification for what you want to receive</p>
-                  <a href="#" class="btn btn4 btn-secondary">Manage Notification</a>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><u>Password</u></h5>
+            <i class="material-icons body-icon">vpn_key</i>
+            <p class="card-text">Change your password at any time</p>
+            <a href="#" class="btn btn2 btn-warning">Change Password</a>
           </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
+        </div>
+      </div>
+    </div>
+    <div class="row" class="row-bottom">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><u>Saved Documents</u></h5>
+            <i class="material-icons body-icon">source</i>
+            <p class="card-text">See all the documents you have saved</p>
+            <a href="saved_document.html" class="btn btn3 btn-warning">View Documents</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6" id="bottom-position">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><u>Notification</u></h5>
+            <i class="material-icons body-icon">notifications_active</i>
+            <p class="card-text"> Manage notification for what you want to receive</p>
+            <a href="#" class="btn btn4 btn-warning">Manage Notification</a>
+          </div>
+        </div>
+      </div>
     </div>
 
+
+
     <footer>
-        <div class="fixed-bottom py-3 bg-secondary">
-            <div class="container text-center">
-                (C) Copyright DTC 05, 2021
-            </div>
+      <div class="fixed-bottom py-3 bg-dark" style="color:white;">
+        <div class="container text-center">
+          (C) Copyright DTC 05, 2021
         </div>
+      </div>
     </footer>
     <!-- Bootstrap JS script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+
+    <script>
+
+      /* display user name */
+      function insertName() {
+        firebase.auth().onAuthStateChanged(user => {
+          //Check if user is signed in:
+          if (user) {
+            // Do something for the current logged-in user here: 
+            //console.log(user.uid);
+            //go to the correct user document by referencing to the user uid
+            currentUser = db.collection("users").doc(user.uid)
+            //get the document for current user.
+            currentUser.get()
+              .then(userDoc => {
+                var user_Name = userDoc.data().name;
+                console.log(user_Name);
+                //document.getElementById("username").innerText = n;
+                $("#name-goes-here").text(user_Name); //using jquery
+              })
+          } else {
+            //No user is signed in.
+          }
+        })
+      }
+      insertName();
+    </script>
 </body>
 
 </html>

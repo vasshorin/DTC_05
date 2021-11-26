@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My BCIT Project</title>
+	<meta name="comp1800 boilerplate code" content="my bcit project">
+	<meta name="author" content="BCIT">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Google Icons (Material Design)-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Firebase 8 CDNs-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+
+	<!-- Link to the api keys for your firebase project -->
+	<script src="./scripts/firebaseAPI.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../styles/countryStyle.css" />
+</head>
+
+<body>
+	<!-- NAVIGATION -->
+	<div id="navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					<!-- <i class="fas fa-bars"></i> -->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href=".././index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href=".././countries.html">Countries</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href=".././searchtrip.html">Search trip</a>
+						</li>
+					</ul>
+				</div>
+				<div id="nav-right">
+					<i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+					<i class="material-icons"><a href="./notification.html">notifications</a></i>
+					<i class="material-icons"><a href="./login.html">account_circle</a></i>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="conBox">
+		<div id="regulation-section" class="d-flex">
+			<p class="rbg1"></p>
+			<p class="rbg2"></p>
+			<div class="regulationTitle">
+				<h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
+			</div>
+
+			<h3 class="mb-3">Regulations:</h3>
+			<ol>
+				<li class="mb-3">Entering France as a fully vaccinated travellers</li>
+				<p>
+					<button id="auCheckBtn" class="btn btn-outline-secondary" type="button">
+						Check if you qualify as a fully vaccinated traveller
+					</button>
+				</p>
+				<li class="mb-3">Pre-entry testing and other requirements</li>
+				<p>
+					<button id="auGetBtn" class="btn btn-outline-secondary" type="button">
+						Get a pre-entry test
+					</button>
+				</p>
+
+				<p>
+					<button id="auQuarantineBtn" class="btn btn-outline-secondary" type="button">
+						EU Digital COVID Certificate
+					</button>
+				</p>
+
+				<p>
+					<button id="auPresentBtn" class="btn btn-outline-secondary" type="button">
+						Additional required documents
+					</button>
+				</p>
+
+			</ol>
+
+
+			<div class="itemsBox">
+				<h3 class="mb-3">Customs:</h3>
+				<h3>
+					<button id="itemsBtn" class="btn btn-outline-secondary" type="button">
+						Items You Can Bring Into France
+					</button>
+				</h3>
+			</div>
+			<br>
+		</div>
+
+		<br>
+		<br>
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+        <div id="not-needed-visa" style="text-align: center; height: 150px;">
+			<h1 style="vertical-align: middle; padding-top: 50px;">Based on our infromation</h1>
+			<h1><span style="color: green; margin-bottom: 50px;">You do not need a visa</span></h1>
+			<hr>
+		</div>
+		<br>
+		<br>
+		<div id="show">
+			<div class="d-flex mb-6 whiteB" id="auCollapseBox">
+				<h2 class="collapseTitle">Based on your information you <span id="visa_info" style="color: green;"> do not need visa</span> to go to France.</h2>
+				<div class="flex-fill ml-2">
+					<div class="card card-body">
+						<b>There are many types of visa, we outline some of the most popular here for you.</b>
+						<ul>
+							<li> The complete list of visas as follows:<a
+									href="https://france-visas.gouv.fr/en/web/france-visas/">
+									VISAS </a>.
+								<br> <li>Visitors visa</li> 
+								<ul>
+									<li><a href="https://france-visas.gouv.fr/en/web/france-visas/tourism-private-stay" style="text-decoration: underline; color: black;">Visitors visa </a></li>
+								</ul>
+								<li>Studying and Work visas</li> 
+								<ul>
+									<li><a href="https://france-visas.gouv.fr/en/web/france-visas/professional-purpose">Work</a></li>
+									<li><a href="https://france-visas.gouv.fr/en/web/france-visas/studies-training">Study</a></li>
+									<!-- <li>Training visa (subclass 407) </li> -->
+								</ul>
+								<!-- <li>Family and partner visas</li>  -->
+								<ul>
+									<!-- <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/coronavirus-covid19/visitors/immediate-family.html">Reuniting with family</a></li> -->
+									<!-- <li>Aged Dependent Relative visa (subclass 114)</li> -->
+									<!-- <li>Aged Dependent Relative visa (subclass 838)</li> -->
+								</ul>
+							</li>
+						</ul>
+						<br>
+						<!-- <i>*More details can be found at<a
+								href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing">
+								Visa listings.</a></i> -->
+					</div>
+				</div>
+			<!-- </div> -->
+			</div>
+            </div>
+			<br>
+			<br>
+		<div class="d-flex mb-3 whiteB" id="auCollapseBox1">
+			<h2 class="collapseTitle">Check if you qualify as a fully vaccinated traveller</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body" id="fully">
+					<b>To qualify as a fully vaccinated traveller to France, you must:</b>
+
+					<p><b>Proof of vaccination</b>. It will only be valid if it proves that you are fully vaccinated,
+						i.e.:</p>
+					<ul>
+						<li>Seven days after the second shot for two-shot vaccines (Pfizer, Moderna, AstraZeneca
+							(Vaxevria and Covishield));</li>
+						<li>Four weeks after the shot for one-shot vaccines (Johnson & Johnson);</li>
+						<li>Seven days after the shot for vaccines administered to people who have already had COVID-19
+							(only one dose is necessary).</li>
+						<li>Only vaccines authorized by the European Medicines Agency (EMA) (Pfizer (Comirnaty),
+							Moderna, AstraZeneca (Vaxzevria),
+							Johnson & Johnson (Janssen)), or AstraZeneca (Covishield) will be accepted.</li>
+						<li>Seven days after a booster ARNm dose (Moderna or Pfizer) after two shots of a vaccine on the
+							WHO’s health emergencies
+							list (Sinovac/Coronavac or Sinopharm/BBIB-PVeroCells)</li>
+					</ul>
+
+					<p>A <b>sworn declaration</b>, which you can download from the <a
+							href="https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Certificate-of-international-travel">
+							Interior Ministry’s website</a> stating that:</p>
+
+					<ul>
+						<li>you have no symptoms of COVID-19 infection;</li>
+						<li>to your knowledge, you have not been in contact with a confirmed case of COVID-19 in the 14
+							days prior to your journey.</li>
+					</ul>
+
+					<p><b>Starting on 15 December</b>, people <b>65 and older</b> or who were vaccinated with a Janssen
+						vaccine must provide proof of
+						booster vaccination for their COVID certificate to be extended.</p>
+
+					<br>
+					<i>*More details can be found at<a
+							href="https://www.diplomatie.gouv.fr/en/coming-to-france/coronavirus-advice-for-foreign-nationals-in-france">
+							Coronavirus - Advice for Foreign Nationals in France.</a></i>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex mb-3 grayB" id="auCollapseBox2">
+			<h2 class="collapseTitle">Get a pre-entry test</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>Proof of a <b>negative PCR test</b>, taken within the previous <b>72 hours</b>, must be provided
+						on departure.</p>
+					<p>Alternatively, those who have recently <b>recovered from COVID-19</b> are exempt from testing
+						requirements and may
+						<b>provide proof of a positive antigen or PCR test</b>, taken at least 11 days before departure
+						and not more than 180 days,
+						on departure.
+					</p>
+
+					<br>
+
+					<i>*More details can be found at<a
+							href="https://www.skyscanner.ca/travel-restrictions/France/29475385?origin=29475436#MapContainer">
+							France travel updates and COVID-19 restrictions.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 grayB" id="auCollapseBox3">
+			<h2 class="collapseTitle">EU Digital COVID Certificate</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+				<ul>
+					<li><b>Travel with the EU Digital COVID Certificate:</b></li>
+					<br>
+					<p>
+						Travelers may provide their EU Digital Certificate <b>in paper or digital format</b> as
+						proof of vaccination, negative test result, or previous recovery. Health documents
+						provided this way will not require further verification on arrival.
+					</p>
+					<p>Full details on the EU Digital Certificate, including how EU residents can access their
+						certificate, can be found at
+						<a
+							href="https://ec.europa.eu/info/live-work-travel-eu/coronavirus-response/safe-covid-19-vaccines-europeans/eu-digital-covid-certificate_e">website
+							here.</a>
+					</p>
+
+					<li>Entering this country <b>without the EU Digital COVID certificate</b> or with a certificate not
+						compliant with national requirements.</li>
+					<br>
+					<p>Travellers can access France if they hold one of the following documents:</p>
+					<ul>
+						<li>Proof of full vaccination, completed:</li>
+						<li>7 days after the second dose for double injection vaccines (Pfizer, Moderna,
+							AstraZeneca/Vaxzevria/Covishield)</li>
+						<li>4 weeks after injection for vaccines with a single injection (Johnson & Johnson)</li>
+						<li>7 days after the injection for vaccines for people who have had Covid19 once (only 1
+							injection necessary)</li>
+						<li>Proof of recovery from COVID-19 (PCR or antigen test) dating at least 11 days and less than
+							6 months.</li>
+						<li>Negative PCR test of less than 72 hours or antigen test of less than 48 hours.</li>
+					</ul>
+				</ul>
+
+					<i>*More details can be found at<a
+							href="https://europa.eu/youreurope/citizens/travel/travel-and-covid/france/index_en.htm">
+							France - Covid travel rules, EU Digital Covid Certificate, restrictions and measures in
+							place.</a></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="d-flex mb-3 whiteB" id="auCollapseBox4">
+			<h2 class="collapseTitle">Additional required documents</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<p>A <b>completed 'statement' form</b> must be completed before departure by all travelers.</p>
+					<ul>
+						<li><a
+								href="https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Certificate-of-international-travel">
+								Statement Form</a></li>
+					</ul>
+					<p>Those traveling to Corsica must complete an additional 'sworn statement'.</p>
+					<ul>
+						<li><a
+								href="https://www.prefectures-regions.gouv.fr/corse/Documents-publications/Salle-de-presse/Communique-de-presse/Covid-19-nouvelles-dispositions-applicables-avant-l-arrivee-en-Corse">
+								Corsica Sworn Statement</a></li>
+					</ul>
+					<br>
+
+					<i>*More details can be found at<a
+							href="https://www.skyscanner.ca/travel-restrictions/France/29475385?origin=29475436#MapContainer">
+							France travel updates and COVID-19 restrictions.</a></i>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="custom-section">
+			<h3 class="customTitle">Items You Can Bring Into France</h3>
+			<div class="accordion accordion-flush" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Cash
+						</button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<b>Above a specific threshold, you must declare cash, securities and valuables to French Customs.</b>
+
+							<p>Sums of money (cash or cheques), securities (shares, bonds, etc.) or valuables in an amount <b>equal 
+							   to or greater than €10,000</b> (or its foreign currency equivalent) carried by an individual must be 
+							   declared to French Customs, which carries out controls in this area. The goal is to combat the 
+							   laundering of the proceeds from illegal activities, particularly drug trafficking.</p>
+							
+							<b>You must declare to French Customs negotiable instruments that are in bearer form or endorsable as well as cash.</b>
+							<p>In particular, you must declare the following securities and valuables:</p>
+							<ul>
+								<li>Coins and banknotes</li>
+								<li>Bearer cheques</li>
+								<li>Traveller's cheques</li>
+								<li>Cheques for which the drawer is not the beneficiary</li>
+								<li>Non-domiciled commercial papers</li>
+								<li>Non-domiciled letters of credit</li>
+								<li>Anonymous bearer bonds</li>
+								<li>Money orders</li>
+								<li>Securities, bearer bonds and other negotiable debt papers in bearer form or endorsable</li>
+							</ul>
+
+							<br>
+							<i>*More details can be found at<a
+									href="https://www.douane.gouv.fr/fiche/obligation-declare-cash-securities-and-valuables">
+									The obligation to declare cash, securities and valuables.</a></i>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Alcoholic Beverages
+						</button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>Alcoholic beverages may be of different kinds within the allowed maximum tax-free
+								quantity.</p>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="table-secondary" scope="col">PRODUCTS and GOODS</th>
+										<th class="table-secondary" scope="col">MAXIMUM QUANTITIES* ALLOWED (per person
+											17 or older)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row"><b>ALCOHOLIC BEVERAGES</b></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td scope="row">Alcohol and alcoholic beverages with over 22° alcohol per volume
+										</td>
+										<td>1 litre</td>
+									</tr>
+
+									<tr>
+										<td scope="row" style="color:red; text-align: center;">or</td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td scope="row">Alcohol and alcoholic beverages with less than 22° alcohol per volume</td>
+										<td>2 litres</td>
+									</tr>
+
+									<tr>
+										<td scope="row" style="color:red; text-align: center;">and</td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td scope="row">Still (not sparkling) wine</td>
+										<td>4 litres</td>
+									</tr>
+
+									<tr>
+										<td scope="row">Beer</td>
+										<td>16 litres</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>* Persons under 17 are not entitled to the alcohol allowance.</p>
+
+							<br>
+							<i>*More details can be found at<a
+									href="https://franceintheus.org/IMG/pdf/trouble_free_travel_with_french_customs-2.pdf">
+									What you need to know about French Customs.</a></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Tobacco Products
+						</button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>Tobacco may be of different kinds within the allowed maximum tax-free
+								quantity.</p>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="table-secondary" scope="col">PRODUCTS and GOODS</th>
+										<th class="table-secondary" scope="col">MAXIMUM QUANTITIES* ALLOWED (per person
+											17 or older)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row"><b>TOBACCO</b></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td scope="row">Cigarettes</td>
+										<td>200 units</td>
+									</tr>
+
+									<tr>
+										<td scope="row">or Cigarillos</td>
+										<td>100 units</td>
+									</tr>
+
+									<tr>
+										<td scope="row">or Cigars</td>
+										<td>50 units</td>
+									</tr>
+
+									<tr>
+										<td scope="row">or Smoking tobacco</td>
+										<td>250 g</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>* Persons under 17 are not entitled to the tobacco allowance.</p>
+							<p><b>For instance</b>, if you only buy 100 cigarettes, you will have
+								used only half your tobacco allowance for this category: you
+								may then use the remaining to buy half the cigarillo allowance
+								(50 cigarillos) half the cigar allowance (25 cigars), or half the
+								smoking tobacco allowance (125g).</p>
+
+							<br>
+							<i>*More details can be found at<a
+									href="https://franceintheus.org/IMG/pdf/trouble_free_travel_with_french_customs-2.pdf">
+									What you need to know about French Customs.</a></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingFour">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							Goods you have purchased or received as gifts in a third country
+						</button>
+					</h2>
+					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+						data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<p>When entering France, you may bring with you, in your
+								personal luggage, goods purchased or received as gifts in a
+								third country without filling out a declaration or paying duties
+								and taxes.</p>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="table-secondary" scope="col" style="column-span: all;">
+											Depending on the case, the value of the said goods must not
+											exceed the amounts listed below:</th>
+										<th class="table-secondary" scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">Travellers <b>under 15</b> (regardless of means of
+											transportation)</td>
+										<td>€150</td>
+									</tr>
+									<tr>
+										<td scope="row">Travellers <b>15 and older</b> using a means of
+											transportation <b>other than air or maritime transport</b></td>
+										<td>€300</td>
+									</tr>
+									<tr>
+										<td scope="row">Travellers 15 and older <b>using air
+												or maritime transport</b></td>
+										<td>€430</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<br>
+							<i>*More details can be found at<a
+									href="https://franceintheus.org/IMG/pdf/trouble_free_travel_with_french_customs-2.pdf">
+									What you need to know about French Customs.</a></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+	<!-- Save Button -->
+	<div class="saveBox">
+		<div class="container1">
+			<div class="center">
+				<button class="btn btn-secondary" id="btnShow" type="button" data-bs-toggle="modal"
+					data-bs-target="#exampleModalToggle">Save Search Result</button>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="mb-3">
+								<label for="recipient-name" class="col-form-label">Name:</label>
+								<input type="text" class="form-control" id="file-name">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+							style="margin-right:35%;">Cancel</button>
+						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
+							data-bs-toggle="modal" data-bs-dismiss="modal"
+							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+			tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+						Your search has been saved!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+							style="margin-right:45%;">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="fixed-bottom py-3 bg-dark" style="color:white;">
+			<div class="container text-center">
+				(C) Copyright DTC 05, 2021
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Bootstrap JS script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+	</script>
+	<script>
+		var exampleModal = document.getElementById('exampleModalToggle')
+		exampleModal.addEventListener('show.bs.modal', function (event) {
+			// Button that triggered the modal
+			var button = event.relatedTarget
+			// Extract info from data-bs-* attributes
+			var recipient = button.getAttribute('data-bs-whatever')
+			// If necessary, you could initiate an AJAX request here
+			// and then do the updating in a callback.
+		})
+	</script>
+
+	<script>
+		function read_display_country() {
+			db.collection("Country").doc(
+					"France") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(FranceDoc => { //arrow notation
+					console.log("current document data: " + FranceDoc.data()); //.data() returns data object
+					document.getElementById("countrySelected").innerHTML = FranceDoc.data()
+					.france; //using javascript to display the data on the right place
+				})
+		}
+		read_display_country()
+
+		/*Save document*/
+        function saveInfo() {
+            let file_name = document.getElementById("file-name").value;
+            var countriesRef = db.collection("saved_document");
+            countriesRef.add({
+                nation: "France",
+				link: "http://127.0.0.1:5500/france.html",
+				name: file_name
+            });
+        }
+	</script>
+    <script>
+        function getData(){
+        var visa = localStorage.getItem("div1");
+        var test = "must obtain visa"
+        var no_visa = "do not need visa"
+        if (visa.includes('require') === true) {
+            document.getElementById("visa_info").innerHTML = test;
+            document.getElementById("visa_info").style.color = "red"
+            document.getElementById('show').style.display = 'block'
+            document.getElementById('not-needed-visa').style.display = 'none'
+        }
+        else {
+            document.getElementById("visa_info").innerHTML = no_visa;
+            document.getElementById("visa_info").style.color = "green"
+            document.getElementById('show').style.display = 'none'
+        }
+        };
+    getData()
+    </script>
+
+
+</body>
+
+</html>

@@ -70,8 +70,8 @@
 
 	<div class="conBox">
 		<div id="regulation-section" class="d-flex">
-			<p class="rbg1"></p>
-			<p class="rbg2"></p>
+			<!-- <p class="rbg1"></p> -->
+			<!-- <p class="rbg2"></p> -->
 			<div class="regulationTitle">
 				<h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
 			</div>
@@ -114,7 +114,7 @@
 		<br>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
-			<h2 class="collapseTitle">Based on your information you <span style="color: green;"> do not need visa </h2>
+			<h2 class="collapseTitle">Based on your information you <span style="color: green;"> do not need visa </span></h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
 					<b>To qualify as a fully vaccinated traveller to Canada, you must:</b>
@@ -494,28 +494,28 @@
 	</script>
 
 	<script>
-		function read_display_country() {
-		 	db.collection("Country").doc(
-		 			"Canada") //name of the collection and documents should matach excatly with what you have in Firestore
-		 		.onSnapshot(CanadaDoc => { //arrow notation
-		 			console.log("current document data: " + CanadaDoc.data()); //.data() returns data object
-		 			document.getElementById("countrySelected").innerHTML = CanadaDoc.data()
-		 				.canada; //using javascript to display the data on the right place
-		 		})
-		 }
-		 read_display_country() //calling the function
+		// function read_display_country() {
+		// 	db.collection("Country").doc(
+		// 			"Canada") //name of the collection and documents should matach excatly with what you have in Firestore
+		// 		.onSnapshot(CanadaDoc => { //arrow notation
+		// 			console.log("current document data: " + CanadaDoc.data()); //.data() returns data object
+		// 			document.getElementById("countrySelected").innerHTML = CanadaDoc.data()
+		// 				.canada; //using javascript to display the data on the right place
+		// 		})
+		// }
+		// read_display_country() //calling the function
 
 
 		/*Save document*/
-        function saveInfo() {
-             let file_name = document.getElementById("file-name").value;
-             var countriesRef = db.collection("saved_document");
-             countriesRef.add({
-                 nation: "Canada",
-		 		link: "http://127.0.0.1:5500/canada-no-visa.html",
-		 		name: file_name
-             });
-        }
+        // function saveInfo() {
+        //     let file_name = document.getElementById("file-name").value;
+        //     var countriesRef = db.collection("saved_document");
+        //     countriesRef.add({
+        //         nation: "Canada",
+		// 		link: "http://127.0.0.1:5500/canada.html",
+		// 		name: file_name
+        //     });
+        // }
 	</script>
 </body>
 

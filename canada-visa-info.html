@@ -109,9 +109,52 @@
 			</div>
 			<br>
 		</div>
-
+		<div id="not-needed-visa" style="text-align: center; height: 150px;">
+			<h1 style="vertical-align: middle; padding-top: 50px;">Based on our infromation</h1>
+			<h1><span style="color: green; margin-bottom: 50px;">You do not need a visa</span></h1>
+			<hr>
+		</div>
 		<br>
 		<br>
+		<div id="show">
+			<div class="d-flex mb-6 whiteB" id="auCollapseBox">
+				<h2 class="collapseTitle">Based on your information you <span id="visa_info" style="color: green;"> do not need visa</span> to go to Canada.</h2>
+				<div class="flex-fill ml-2">
+					<div class="card card-body">
+						<b>There are many types of visa, we outline some of the most popular here for you.</b>
+						<ul>
+							<li> The complete list of visas as follows:<a
+									href="https://www.canada.ca/en/services/immigration-citizenship.html">
+									VISAS </a>.
+								<br> <li>Visitors visa</li> 
+								<ul>
+									<li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html" style="text-decoration: underline; color: black;">Visitors visa </a></li>
+								</ul>
+								<li>Studying and Work visas</li> 
+								<ul>
+									<li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada.html">Work</a></li>
+									<li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html">Study</a></li>
+									<!-- <li>Training visa (subclass 407) </li> -->
+								</ul>
+								<li>Family and partner visas</li> 
+								<ul>
+									<li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/coronavirus-covid19/visitors/immediate-family.html">Reuniting with family</a></li>
+									<!-- <li>Aged Dependent Relative visa (subclass 114)</li> -->
+									<!-- <li>Aged Dependent Relative visa (subclass 838)</li> -->
+								</ul>
+							</li>
+						</ul>
+						<br>
+						<!-- <i>*More details can be found at<a
+								href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing">
+								Visa listings.</a></i> -->
+					</div>
+				</div>
+			<!-- </div> -->
+			</div>
+			<br>
+			<br>
+		</div>
 		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 		<div class="d-flex mb-3 whiteB" id="collapseExampleBox">
 			<h2 class="collapseTitle">Check if you qualify as a fully
@@ -518,6 +561,26 @@
             });
         }
 	</script>
+
+<script>
+	function getData(){
+	var visa = localStorage.getItem("div1");
+	var test = "must obtain visa"
+	var no_visa = "do not need visa"
+	if (visa.includes('require') === true) {
+		document.getElementById("visa_info").innerHTML = test;
+		document.getElementById("visa_info").style.color = "red"
+		document.getElementById('show').style.display = 'block'
+		document.getElementById('not-needed-visa').style.display = 'none'
+	}
+	else {
+		document.getElementById("visa_info").innerHTML = no_visa;
+		document.getElementById("visa_info").style.color = "green"
+		document.getElementById('show').style.display = 'none'
+	}
+	};
+getData()
+</script>
 </body>
 
 </html>

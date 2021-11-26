@@ -80,8 +80,12 @@
 	z-index: 10;
 }
 
+#show {
+	width: 100%;
+}
 .conBox .whiteB,
-.conBox .grayB {
+.conBox .grayB,
+.conBox .greenB {
 	width: 100%;
 	padding: 0 10%;
 	box-sizing: border-box;
@@ -107,6 +111,15 @@
 
 .grayB .card {
 	background: #F5F5F3 !important;
+	border: none;
+}
+
+.greenB {
+	background: #00ff62 !important;
+}
+
+.greenB .card {
+	background: #00ff62 !important;
 	border: none;
 }
 
