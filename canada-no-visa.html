@@ -495,28 +495,31 @@
 	</script>
 
 	<script>
-		// function read_display_country() {
-		// 	db.collection("Country").doc(
-		// 			"Canada") //name of the collection and documents should matach excatly with what you have in Firestore
-		// 		.onSnapshot(CanadaDoc => { //arrow notation
-		// 			console.log("current document data: " + CanadaDoc.data()); //.data() returns data object
-		// 			document.getElementById("countrySelected").innerHTML = CanadaDoc.data()
-		// 				.canada; //using javascript to display the data on the right place
-		// 		})
-		// }
-		// read_display_country() //calling the function
+		function read_display_country() {
+			db.collection("Country").doc(
+					"Canada") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(CanadaDoc => { //arrow notation
+					console.log("current document data: " + CanadaDoc.data()); //.data() returns data object
+					document.getElementById("countrySelected").innerHTML = CanadaDoc.data()
+						.canada; //using javascript to display the data on the right place
+				})
+		}
+		read_display_country() //calling the function
 
 
 		 /*Save document*/
-		// function saveInfo() {
-		// 	let file_name = document.getElementById("file-name").value;
-		// 	var countriesRef = db.collection("saved_document");
-		// 	countriesRef.add({
-		// 		nation: "Canada",
-		// 		link: "http://127.0.0.1:5500/canada.html",
-		// 		name: file_name
-		// 	});
-		// }
+		function saveInfo() {
+			let file_name = document.getElementById("file-name").value;
+			firebase.auth().onAuthStateChanged(user => {
+				if(user) {
+					db.collection("users").doc(user.uid).collection("saved_countries").add({
+						nation: "Canada",
+						link: "http://127.0.0.1:5500/canada-no-visa.html",
+						name: file_name
+					})
+				}
+			})
+		}
 
 		// firebase.auth().onAuthStateChanged(function (user) {
 		// 	if (user) {
@@ -540,6 +543,7 @@
 		// 	const uid = user.uid;
 		// }
 
+	
 		// function saveInfo() {
 		// 	let file_name = document.getElementById("file-name").value;
 		// 	const countriesRef = db.collection("users").doc(uid).collection("favarite");
@@ -555,6 +559,19 @@
 		// 			console.error("Error writing document: ", error);
 		// 		});
 
+		// }
+
+		// function test() {
+		// 	console.log("in")
+		// 	firebase.auth().onAuthStateChanged(user => {
+		// 		if (user) {
+		// 			var currentUser = db.collection("users").doc(user.uid)
+		// 			var userID = user.uid;
+		// 			console.log(uid)
+		// 			let file_name = document.getElementByID("file-name").value;
+		// 			const countriesRef = db.collection("users").doc(uid).collection("favorite")
+		// 		}
+		// 	})
 		// }
 	</script>
 </body>

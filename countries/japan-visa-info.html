@@ -617,27 +617,30 @@
 	</script>
 
 	<script>
-		// function read_display_country() {
-		// 	db.collection("Country").doc(
-		// 			"France") //name of the collection and documents should matach excatly with what you have in Firestore
-		// 		.onSnapshot(FranceDoc => { //arrow notation
-		// 			console.log("current document data: " + FranceDoc.data()); //.data() returns data object
-		// 			document.getElementById("countrySelected").innerHTML = FranceDoc.data()
-		// 			.france; //using javascript to display the data on the right place
-		// 		})
-		// }
-		// read_display_country()
+		function read_display_country() {
+			db.collection("Country").doc(
+					"Japan") //name of the collection and documents should matach excatly with what you have in Firestore
+				.onSnapshot(FranceDoc => { //arrow notation
+					console.log("current document data: " + FranceDoc.data()); //.data() returns data object
+					document.getElementById("countrySelected").innerHTML = FranceDoc.data()
+					.france; //using javascript to display the data on the right place
+				})
+		}
+		read_display_country()
 
 		/*Save document*/
-        // function saveInfo() {
-        //     let file_name = document.getElementById("file-name").value;
-        //     var countriesRef = db.collection("saved_document");
-        //     countriesRef.add({
-        //         nation: "France",
-		// 		link: "http://127.0.0.1:5500/france.html",
-		// 		name: file_name
-        //     });
-        // }
+		function saveInfo() {
+			let file_name = document.getElementById("file-name").value;
+			firebase.auth().onAuthStateChanged(user => {
+				if(user) {
+					db.collection("users").doc(user.uid).collection("saved_countries").add({
+						nation: "Japan",
+						link: "http://127.0.0.1:5500/countries/japan-visa-info.html",
+						name: file_name
+					})
+				}
+			})
+		}
 	</script>
     <script>
         function getData(){

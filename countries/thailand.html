@@ -440,16 +440,19 @@
 		}
 		read_display_country()
 
+		/*Save document*/
 		function saveInfo() {
-            let file_name = document.getElementById("file-name").value;
-            var countriesRef = db.collection("saved_document");
-            countriesRef.add({
-                nation: "Thailand",
-				link: "http://127.0.0.1:5500/thailand.html",
-				name: file_name
-            });
-        }
-
+			let file_name = document.getElementById("file-name").value;
+			firebase.auth().onAuthStateChanged(user => {
+				if(user) {
+					db.collection("users").doc(user.uid).collection("saved_countries").add({
+						nation: "Thailand",
+						link: "http://127.0.0.1:5500/countries/thailand.html",
+						name: file_name
+					})
+				}
+			})
+		}
 	</script>
 
 
