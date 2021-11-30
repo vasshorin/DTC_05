@@ -260,12 +260,12 @@ h1 {
         transform-origin: 50% 60%;
     }
 
-    #list {
-        /* border: 1px solid black; */
-        /* border: 1px solid black; */
-        /* grid-row: 1 / span 1; */
+    /* #list {
+        border: 1px solid black; 
+        border: 1px solid black;
+        grid-row: 1 / span 1;
     }
-    
+     */
     .visas {
         padding-top: 4%;
         grid-row: 2 / span 1;

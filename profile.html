@@ -14,7 +14,7 @@
 
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
 
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -86,12 +86,12 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          
+
           <h1 data-swiftype-index="true" id="main" tabindex="-1" class="page-heading__title">
             Hello <span id="name-goes-here"></span>
           </h1>
-          <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172"
-            style=" fill:#000000;">
+          <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96"
+            viewbox="0 0 172 172" style=" fill:#000000;">
             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
               stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
               font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -120,7 +120,7 @@
             <h5 class="card-title"><u>Personal Information</u></h5>
             <i class="material-icons body-icon">manage_accounts</i>
             <p class="card-text">Keep your information up to date</p>
-            <a href="#" class="btn btn1 btn-warning">Update Info</a>
+            <a href="personal_info.html" class="btn btn1 btn-warning">Update Info</a>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@
         </div>
       </div>
     </div>
-    <div class="row" class="row-bottom">
+    <div class="row row-bottom">
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
@@ -157,49 +157,49 @@
         </div>
       </div>
     </div>
+  </div>
 
 
 
-    <footer>
-      <div class="fixed-bottom py-3 bg-dark" style="color:white;">
-        <div class="container text-center">
-          (C) Copyright DTC 05, 2021
-        </div>
+  <footer>
+    <div class="fixed-bottom py-3 bg-dark" style="color:white;">
+      <div class="container text-center">
+        (C) Copyright DTC 05, 2021
       </div>
-    </footer>
-    <!-- Bootstrap JS script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    </div>
+  </footer>
+  <!-- Bootstrap JS script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
 
 
-    <script>
-
-      /* display user name */
-      function insertName() {
-        firebase.auth().onAuthStateChanged(user => {
-          //Check if user is signed in:
-          if (user) {
-            // Do something for the current logged-in user here: 
-            //console.log(user.uid);
-            //go to the correct user document by referencing to the user uid
-            currentUser = db.collection("users").doc(user.uid)
-            //get the document for current user.
-            currentUser.get()
-              .then(userDoc => {
-                var user_Name = userDoc.data().name;
-                console.log(user_Name);
-                //document.getElementById("username").innerText = n;
-                $("#name-goes-here").text(user_Name); //using jquery
-              })
-          } else {
-            //No user is signed in.
-          }
-        })
-      }
-      insertName();
-    </script>
+  <script>
+    /* display user name */
+    function insertName() {
+      firebase.auth().onAuthStateChanged(user => {
+        //Check if user is signed in:
+        if (user) {
+          // Do something for the current logged-in user here: 
+          //console.log(user.uid);
+          //go to the correct user document by referencing to the user uid
+          currentUser = db.collection("users").doc(user.uid)
+          //get the document for current user.
+          currentUser.get()
+            .then(userDoc => {
+              var user_Name = userDoc.data().name;
+              console.log(user_Name);
+              //document.getElementById("username").innerText = n;
+              $("#name-goes-here").text(user_Name); //using jquery
+            })
+        } else {
+          //No user is signed in.
+        }
+      })
+    }
+    insertName();
+  </script>
 </body>
 
 </html>
