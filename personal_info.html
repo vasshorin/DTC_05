@@ -283,15 +283,20 @@
                 });
         }
 
-
         function ShowNewAvatar() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    db.collection("users").doc(user.uid).get()
-                        .then(function (snap) {
-                            var pic = snap.data().avatarpic;
-                            $("#avatar-img").attr("src", pic);
-                        })
+                    db.collection("users").where("name", "==", user.displayName)
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        //console.log(doc.data());
+                        var avatarPic = doc.data().avatarpic;
+                        //console.log("#" + doc.data().name + "menu");
+                        //console.log(menuPic);
+                        $("#avatar-img").attr("src", avatarPic);
+                    })
+                })
                 } else {
                     console.log("No user is signed in")
                 }

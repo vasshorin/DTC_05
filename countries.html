@@ -69,9 +69,9 @@
 
     <section class="formContainer">
         <div id="title">
-        <h1>CHOOSE YOUR DESTINATION</h1>
-        <p>Please choose your desired country of destination to see specific to it information</p>
-        <button class="btn btn-secondary" type="button" id="selectBtn">SELECT YOUR DESTINATION</button>
+            <h1>CHOOSE YOUR DESTINATION</h1>
+            <p>Please choose your desired country of destination to see specific to it information</p>
+            <button class="btn btn-secondary" type="button" id="selectBtn">SELECT YOUR DESTINATION</button>
         </div>
         <div id="titleBackground">
         </div>
@@ -80,43 +80,40 @@
             <div class="card" style="width: 18rem;">
                 <img src="images/regulations.jpg" class="card-img-top" alt="regulation">
                 <div class="card-body">
-                  <h5 class="card-title">Regulations</h5>
-                  <p class="card-text">Find the most recently updated regulations based on your destination.</p>
+                    <h5 class="card-title">Regulations</h5>
+                    <p class="card-text">Find the most recently updated regulations based on your destination.</p>
                 </div>
-              </div>
+            </div>
 
-              <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;">
                 <img src="images/customs.jpg" class="card-img-top" alt="customs">
                 <div class="card-body">
-                  <h5 class="card-title">Customs information</h5>
-                  <p class="card-text">Check the customs rules for your destination.</p>
+                    <h5 class="card-title">Customs information</h5>
+                    <p class="card-text">Check the customs rules for your destination.</p>
                 </div>
-              </div>
+            </div>
         </div>
 
         <div id="list">
-        <div><label for="country" style="font-weight: bold;">Country</label><span style="color: red !important; display: inline; float: none;">*</span></div>
-        <select id="country" name="country" class="form-control" onchange="countryChange()">
-            <option value="" disabled selected>Select a country</option>
-            <option>Australia</option>
-            <option>Austria</option>
-            <option>Canada</option>
-            <option>France</option>
-            <option>Germany</option>
-            <option>Italy</option>
-            <option>Japan</option>
-            <option>Netherlands</option>
-            <option>New Zealand</option>
-            <option>Singapore</option>
-            <option>Switzerland</option>
-            <option>Thailand</option>
-            <option>United Kingdom</option>
-            <option>United States</option>
-        </select>
+            <div><label for="country" style="font-weight: bold;">Country</label><span
+                    style="color: red !important; display: inline; float: none;">*</span></div>
+            <select id="country" name="country" class="form-control" onchange="countryChange()">
+                <option value="" disabled selected>Select a country</option>
+                <option>Australia</option>
+                <option>Canada</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Japan</option>
+                <option>New Zealand</option>
+                <option>Singapore</option>
+                <option>Thailand</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+            </select>
         </div>
 
         <div id="list1">
-            <div><label for="country" style="font-weight: bold;">Province</label></div>
+            <div><label for="province" style="font-weight: bold;">Province</label></div>
             <select id="province" name="province" class="form-control" onchange="countryChange()">
                 <option value="" disabled selected>Select a province</option>
                 <option>Alberta</option>
@@ -133,10 +130,10 @@
                 <option>Saskatchewan</option>
                 <option>Yukon</option>
             </select>
-            </div>
-        
+        </div>
+
         <div class="centerButton">
-        <a onclick="saveUserInfo()" id="submitBtn" href="#">Submit</a>
+            <a onclick="saveUserInfo()" id="submitBtn" href="#">Submit</a>
         </div>
     </section>
 
@@ -153,6 +150,82 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+        function writeCountries() {
+
+            var countries = [{
+                "name": "Australia"},
+
+                {"name": "Canada"},
+
+                {"name": "France"},
+
+                {"name": "Germany"},
+
+                {"name": "Japan"},
+
+                {"name": "New Zealand"},
+
+                {"name": "Singapore"},
+
+                {"name": "Thailand"},
+
+                {"name": "United Kingdom"},
+
+                {"name": "United States"},
+            ];
+
+            countries.forEach(function (country) { //cycle thru json objects in array
+                console.log(country); //just to check it out
+                db.collection("Countries").add(country) //add this new document
+                    .then(function (doc) { //success 
+                        console.log("wrote to countries collection " + doc.id);
+                    })
+            })
+        }
+
+        function writeProvinces() {
+
+            var provinces = [{
+                "name": "Alberta"},
+
+                {"name": "British Columbia"},
+
+                {"name": "Manitoba"},
+
+                {"name": "New Brunswick"},
+
+                {"name": "Newfoundland and Labrador"},
+
+                {"name": "Northwest Territories"},
+
+                {"name": "Nova Scotia"},
+
+                {"name": "Nunavut"},
+
+                {"name": "Ontario"},
+
+                {"name": "Prince Edward Island"},
+
+                {"name": "Quebec"},
+
+                {"name": "Saskatchewan"},
+
+                {"name": "Yukon"},
+
+            ];
+
+            provinces.forEach(function (province) { //cycle thru json objects in array
+                console.log(province); //just to check it out
+                db.collection("Provinces").add(province) //add this new document
+                    .then(function (doc) { //success 
+                        console.log("wrote to provinces collection " + doc.id);
+                    })
+            })
+        }
+       
+    </script>
 
 
 </body>

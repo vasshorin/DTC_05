@@ -22,7 +22,7 @@
 
 
 	<!-- Link to the api keys for your firebase project -->
-	<script src="./scripts/firebaseAPI.js"></script>
+	<script src="../scripts/firebaseAPI.js"></script>
 
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="../styles/countryStyle.css" />
@@ -544,16 +544,18 @@
     </script>
 
     <script>
-        function read_display_country() {
-	 		db.collection("Country").doc(
-	 				"NewZealand") //name of the collection and documents should matach excatly with what you have in Firestore
-	 			.onSnapshot(NewZealandDoc => { //arrow notation
-	 				console.log("current document data: " + NewZealandDoc.data()); //.data() returns data object
-        				document.getElementById("countrySelected").innerHTML = NewZealandDoc.data()
-					.newzealand; //using javascript to display the data on the right place
-	 			})
-	 	}
-	    read_display_country()
+        function displayCountryName() {
+            db.collection("Countries").where("name", "==", "New Zealand").get()
+			.then(function (snap) {
+                    snap.forEach(function (doc) {
+                        //console.log(doc.data());
+                        var countryName = doc.data().name; //gets the name field
+                        document.getElementById("countrySelected").innerHTML = countryName;
+                    })
+
+                })
+        }
+		displayCountryName();
 
         /*Save document*/
         function saveInfo() {
