@@ -544,7 +544,6 @@
     </script>
 
     <script>
-        //Display country name by using database query (.where())
         function displayCountryName() {
             db.collection("Countries").where("name", "==", "New Zealand").get()
 			.then(function (snap) {
@@ -565,7 +564,7 @@
 				if(user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "New Zealand",
-						link: "/countries/newZealand-visa-info.html",
+						link: "./countries/newZealand-visa-info.html",
 						name: file_name
 					})
 				}

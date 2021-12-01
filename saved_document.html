@@ -217,7 +217,7 @@
             <template id="countryCardTemplate">
               <div class="card" id="collapseExample">
                 <div class="card-body">
-                  <a  href="#" id="link-goes-here" style="color:#000000"><span class="card-title">placeholder</span></a>
+                  <a  href="#" class="card-title" class="link-primary" style="color:#000000"><span></span>placeholder</a>
                 </div>
               </div>
             </template>
@@ -272,21 +272,32 @@
       let cardGroup = document.getElementById("countriesGroup");
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
+
+          while (cardGroup.firstChild) {
+                cardGroup.removeChild(cardGroup.firstChild)
+          }
+
           db.collection("users").doc(user.uid).collection("saved_countries").orderBy("name").get()
             .then(allCountries => {
               allCountries.forEach(doc => {
                 var customName = doc.data().name; // gets the name field
                 var link = doc.data().link; // gets the link here
+                
 
                 let testCard = cardTemplate.content.cloneNode(true);
                 testCard.querySelector('.card-title').innerHTML = customName;
-                //testCard.querySelector('#link-goes-here').innerHTML = link;
+                testCard.querySelector('a').onclick = () => goTo(link);
                 cardGroup.appendChild(testCard);
               })
             })
         }
       })
 
+    }
+
+    function goTo(link) {
+      console.log("redirect");
+      window.location.assign(link)
     }
   </script>
 </body>

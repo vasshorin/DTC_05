@@ -594,7 +594,7 @@
 				if(user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "Australia",
-						link: "http://127.0.0.1:5500/australia-visa-info.html",
+						link: "./australia-visa-info.html",
 						name: file_name
 					})
 				}

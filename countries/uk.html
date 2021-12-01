@@ -529,7 +529,7 @@
 				if(user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "the United Kingdom (UK)",
-						link: "http://127.0.0.1:5500/countries/uk.html",
+						link: "./countries/uk.html",
 						name: file_name
 					})
 				}

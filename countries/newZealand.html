@@ -522,7 +522,7 @@
 				if(user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "New Zealand",
-						link: "http://127.0.0.1:5500/countries/newZealand.html",
+						link: "./countries/newZealand.html",
 						name: file_name
 					})
 				}
