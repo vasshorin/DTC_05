@@ -36,39 +36,39 @@ function searchCountry(){
 
 
 //customs information and regulations
-let submitButton = document.getElementById("submitBtn1")
-let Country = document.getElementById("country1")
+let submitButtonNew = document.getElementById("submitBtn1")
+let CountryNew = document.getElementById("country1")
 function countryChange(){
-	console.log(Country.value)
-	if(Country.value == 'Australia'){
-		submitButton.setAttribute("href",'countries/australia.html')
+	console.log(CountryNew.value)
+	if(CountryNew.value == 'Australia'){
+		submitButtonNew.setAttribute("href",'countries/australia.html')
 	}
-	if(Country.value == 'Canada'){
-		submitButton.setAttribute("href",'countries/canada.html')
+	if(CountryNew.value == 'Canada'){
+		submitButtonNew.setAttribute("href",'countries/canada.html')
 	}
-	if(Country.value == 'France'){
-		submitButton.setAttribute("href",'countries/france.html')
+	if(CountryNew.value == 'France'){
+		submitButtonNew.setAttribute("href",'countries/france.html')
 	}
-	if(Country.value == 'Germany'){
-		submitButton.setAttribute("href",'countries/germany.html')
+	if(CountryNew.value == 'Germany'){
+		submitButtonNew.setAttribute("href",'countries/germany.html')
 	}
-	if(Country.value == 'Japan'){
-		submitButton.setAttribute("href",'countries/japan.html')
+	if(CountryNew.value == 'Japan'){
+		submitButtonNew.setAttribute("href",'countries/japan.html')
 	}
-	if(Country.value == 'New Zealand'){
-		submitButton.setAttribute("href",'countries/newZealand.html')
+	if(CountryNew.value == 'New Zealand'){
+		submitButtonNew.setAttribute("href",'countries/newZealand.html')
 	}
-	if(Country.value == 'Singapore'){
-		submitButton.setAttribute("href",'countries/singapore.html')
+	if(CountryNew.value == 'Singapore'){
+		submitButtonNew.setAttribute("href",'countries/singapore.html')
 	}
-	if(Country.value == 'Thailand'){
-		submitButton.setAttribute("href",'countries/thailand.html')
+	if(CountryNew.value == 'Thailand'){
+		submitButtonNew.setAttribute("href",'countries/thailand.html')
 	}
-	if(Country.value == 'United Kingdom'){
-		submitButton.setAttribute("href",'countries/uk.html')
+	if(CountryNew.value == 'United Kingdom'){
+		submitButtonNew.setAttribute("href",'countries/uk.html')
 	}
-	if(Country.value == 'United States'){
-		submitButton.setAttribute("href",'countries/usa.html')
+	if(CountryNew.value == 'United States'){
+		submitButtonNew.setAttribute("href",'countries/usa.html')
 	}
 }
 
