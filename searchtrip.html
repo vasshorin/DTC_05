@@ -23,26 +23,24 @@
         crossorigin="anonymous">
     <link type="text/css" rel="stylesheet"
         href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
      <!-- Boostrap JS CDN -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-     </script>
+     </script> -->
 
     <!-- Firebase 8 CDNs-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous">
-        </script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="styles/searchtrip.css">
     <!-- Link to the api keys for your firebase project -->
     <script src="./scripts/firebaseAPI.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/searchtrip.css">
+
 </head>
 
 <body>
@@ -87,49 +85,62 @@
 		</nav>
 	</div>
 
+    <div class="top-container">
+        <div id="top-section">
+        <p class="rbg1"></p>
+		<p class="rbg2"></p>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron">
+    
+        <h1 class="display-5"><b>GET BEST RESULT</b></h1>
+        <p class="lead"></p>
+    
+        <!-- <hr class="my-4"> -->
+        <!-- <p>Travel easy</p> -->
+        <!-- <p class="lead">
+         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p> -->
+    </div>
+     </div>
+    </div>
+
+
     <div id="container">
+        <h1 id="title">Please fill out the form to get receive most accurate information</h1>
+
         <form action="">
-        <h1>Please fill out the form to get receive most accurate information below:</h1>
-        <h6>Choose destination country:</h6>
         <div id="list">
-            <div><label for="country" style="font-weight: bold;">Country</label><span style="color: red !important; display: inline; float: none;">*</span></div>
+            <div><label for="country" style="font-weight: bold;">Destination Country</label><span style="color: red !important; display: inline; float: none;">*</span></div>
             <select id="country" name="country" class="form-control" onchange="searchCountry()">
                 <option value="" disabled selected>Select your destination</option>
                 <option>Australia</option>
-                <option>Austria</option>
                 <option>Canada</option>
                 <option>France</option>
                 <option>Germany</option>
-                <option>Italy</option>
                 <option>Japan</option>
-                <option>Netherlands</option>
                 <option>NewZealand</option>
                 <option>Singapore</option>
-                <option>Switzerland</option>
                 <option>Thailand</option>
                 <option>United Kingdom</option>
                 <option>United States</option>
             </select>
+        </div>
         <div id="list_nationality">
             <div><label for="nationality" style="font-weight: bold;">Nationality</label><span style="color: red !important; display: inline; float: none;">*</span></div>
             <select id="nationality" name="nationality" class="form-control"  onchange="searchCountry()">
                 <option value="" disabled selected>Select your destination</option>
                 <option>Australia</option>
-                <option>Austria</option>
                 <option>Canada</option>
                 <option>France</option>
                 <option>Germany</option>
-                <option>Italy</option>
                 <option>Japan</option>
-                <option>Netherlands</option>
                 <option>New Zealand</option>
                 <option>Singapore</option>
-                <option>Switzerland</option>
                 <option>Thailand</option>
                 <option>United Kingdom</option>
                 <option>United States</option>
-                
             </select>
+        </div>
         <h6>Country of residence:</h6>
         <select class="form-control">
             <option>--Select one--</option>
@@ -161,7 +172,7 @@
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
+            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2"
                 value="option2">
             <label class="form-check-label" for="exampleRadios2">
                 No
@@ -183,16 +194,20 @@
             </label>
         </div> -->
         <br>
+        <br>
         <a id="submitBtn"  onclick="" href="#">Submit</a>
         <!-- <button><a href="#"></a> Enter</button> -->
         <input type="reset" value="Reset" id="reset">
+       
     </form>
+    <br>
+    <br>
 
 
     </div>
 
     <footer>
-        <div class="fixed-bottom py-3 bg-secondary">
+        <div class="fixed-bottom py-3 bg-dark" style="color:white;">
             <div class="container text-center">
                 (C) Copyright DTC 05, 2021
             </div>
@@ -213,7 +228,6 @@
             }
             saveUserInfo();
         </script> -->
-    </div>
 </body>
 
 </html>
