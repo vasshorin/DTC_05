@@ -326,12 +326,8 @@
 						data-bs-parent="#accordionExample">
 						<div class="accordion-body">
 							<p>From 1 July 2017, you can bring 25 grams of tobacco in any form (cigarette, loose
-								leaf,
-								etc.), equivalent to
-								approximately 25 cigarettes, plus an open packet, for each traveller 18 years or
-								older,
-								regardless of whether
-								you are travelling as a passenger or crew member.</p>
+								leaf, etc.), equivalent to approximately 25 cigarettes, plus an open packet, for each traveller 18 years or
+								older, regardless of whether you are travelling as a passenger or crew member.</p>
 							<br>
 							<i>*More details can be found at<a
 									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
@@ -469,6 +465,7 @@
 	</script>
 
 	<script>
+		//Display country name by using database query (.where())
 		function displayCountryName() {
             db.collection("Countries").where("name", "==", "Australia").get()
 			.then(function (snap) {

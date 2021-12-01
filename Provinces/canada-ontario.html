@@ -257,6 +257,7 @@
 	</script>
 
 	<script>
+		//Display province name by using database query (.where())
 		function displayProvinceName() {
             db.collection("Provinces").where("name", "==", "Ontario").get()
 			.then(function (snap) {

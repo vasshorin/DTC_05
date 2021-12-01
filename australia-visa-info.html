@@ -80,14 +80,13 @@
 				<h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
 			</div>
 
-			<h3 class="mb-3">Regulations:</h3>
+			<div id="top-title">
+			<h3 class="mb-3" id="regulations">Regulations:</h3>
 			<ol>
 				<li class="mb-3">Entering Australia as a fully vaccinated travellers</li>
 				<p>
 					<button id="auCheckBtn" class="btn btn-outline-secondary" type="button">
-						Check if you qualify as a fully
-						vaccinated
-						traveller
+						Check if you qualify as a fully vaccinated traveller
 					</button>
 				</p>
 				<li class="mb-3">Pre-entry testing and other requirements</li>
@@ -98,10 +97,8 @@
 				</p>
 
 				<p>
-					<button id="auQuarantineBtn" class="btn btn-outline-secondary" type="button">
-						Quarantine plan in case you don’t qualify
-						as
-						a fully vaccinated traveller
+					<button id="auQuarantineBtn" class="btn btn-outline-secondary quarantine" type="button">
+						Quarantine plan in case you don’t qualify as a fully vaccinated traveller
 					</button>
 				</p>
 
@@ -112,6 +109,7 @@
 				</p>
 
 			</ol>
+			</div>
 
 
 			<div class="itemsBox">
@@ -122,6 +120,8 @@
 					</button>
 				</h3>
 			</div>
+		</div>
+			<br>
 			<br>
 		</div>
 		<div id="not-needed-visa" style="text-align: center; height: 150px;">
@@ -574,16 +574,18 @@
 	</script>
 
 <script>
-	function read_display_country() {
-			db.collection("Country").doc(
-					"Australia") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(AustraliaDoc => { //arrow notation
-					console.log("current document data: " + AustraliaDoc.data()); //.data() returns data object
-					document.getElementById("countrySelected").innerHTML = AustraliaDoc.data()
-					.australia; //using javascript to display the data on the right place
-				})
-		}
-		read_display_country()
+	function displayCountryName() {
+            db.collection("Countries").where("name", "==", "Australia").get()
+			.then(function (snap) {
+                    snap.forEach(function (doc) {
+                        //console.log(doc.data());
+                        var countryName = doc.data().name; //gets the name field
+                        document.getElementById("countrySelected").innerHTML = countryName;
+                    })
+
+                })
+        }
+		displayCountryName();
 
 	/*Save document*/
 	function saveInfo() {

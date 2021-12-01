@@ -508,6 +508,7 @@
 	</script>
 
 	<script>
+		//Display country name by using database query (.where())
 		function displayCountryName() {
             db.collection("Countries").where("name", "==", "United Kingdom").get()
 			.then(function (snap) {

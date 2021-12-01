@@ -195,9 +195,6 @@ h1 {
 }
 
 @media screen and (max-width: 700px) {
-    body {
-        background-color: red;
-    }
     .options {
         display: grid;
         grid-template-columns: 100%;
