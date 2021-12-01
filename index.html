@@ -52,6 +52,9 @@
 
     <!-- Link to the api keys for your firebase project -->
     <script src="./scripts/firebaseAPI.js"></script>
+
+    <!-- Link to script files -->
+    <script src="./scripts/redirect.js"></script>
     
 
 
@@ -93,7 +96,7 @@
                 <div id="nav-right">
                     <i class="material-icons"><a href="./upload.html">upload_file</a></i>
                     <i class="material-icons"><a href="./notification.html">notifications</a></i>
-                    <i class="material-icons"><a href="./login.html">account_circle</a></i>
+                    <i class="material-icons"><a id="check-login-status">account_circle</a></i>
                 </div>
             </div>
         </nav>
@@ -146,7 +149,6 @@
                     <option>United Kingdom</option>
                     <option>United States</option>
                 </select>
-            
             <div id="list_nationality">
                 <div><label for="nationality" style="font-weight: bold;">Nationality</label><span style="color: red !important; display: inline; float: none;">*</span></div>
                 <select id="nationality" name="nationality" class="form-control"  onchange="searchCountry()">
@@ -165,6 +167,7 @@
                     <option>Thailand</option>
                     <option>United Kingdom</option>
                     <option>United States</option>
+                    
                 </select>
                 </div>
             <h6>Country of residence:</h6>

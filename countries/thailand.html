@@ -429,16 +429,18 @@
 	</script>
 
 	<script>
-		function read_display_country() {
-			db.collection("Country").doc(
-					"Thailand") //name of the collection and documents should matach excatly with what you have in Firestore
-				.onSnapshot(ThailandDoc => { //arrow notation
-					console.log("current document data: " + ThailandDoc.data()); //.data() returns data object
-					document.getElementById("countrySelected").innerHTML = ThailandDoc.data()
-					.thailand; //using javascript to display the data on the right place
-				})
-		}
-		read_display_country()
+		function displayCountryName() {
+            db.collection("Countries").where("name", "==", "Thailand").get()
+			.then(function (snap) {
+                    snap.forEach(function (doc) {
+                        //console.log(doc.data());
+                        var countryName = doc.data().name; //gets the name field
+                        document.getElementById("countrySelected").innerHTML = countryName;
+                    })
+
+                })
+        }
+		displayCountryName();
 
 		/*Save document*/
 		function saveInfo() {
