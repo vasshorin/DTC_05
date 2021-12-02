@@ -70,13 +70,26 @@ h1 {
     border: 1px solid black;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color: red;
+  }
+  
 .visas {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     padding-top: 4%;
     border: 1px solid black;
 }
-
+.back {
+    background-color: #f1f1f1;
+    color: red;
+  }
+  .round {
+    border-radius: 50%;
+  }
 #news {
     grid-column: 3 / span 1;
     grid-row: 1 / span 4;

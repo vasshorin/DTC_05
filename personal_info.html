@@ -70,9 +70,11 @@
 
     <div class="page-heading">
         <div class="container">
+            <a href="#" onclick="return_back()"><img src="./images/back-button-white.png" alt="" id="back" width="20" height="20"></a>
             <div class="row">
+                
                 <div class="col-12">
-
+                    
                     <h1 data-swiftype-index="true" id="main" tabindex="-1" class="page-heading__title">
                         <i class="fa fa-file-text" style="font-size:55px;color:rgb(255, 255, 255)"></i>
                         User Profile
@@ -165,6 +167,10 @@
 
 
     <script>
+        function return_back() {
+      window.history.back();
+        }
+
         var currentUser
 
         function populateInfo() {
