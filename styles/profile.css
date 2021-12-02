@@ -48,6 +48,28 @@ div.container {
   width: 100%;
 }
 
+#logoutBtn{
+    border: 2px solid #333;
+    background: #333;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: -3%;
+    padding:5px 20px 5px 20px;
+  }
+  
+  #logoutBtn:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+
 @media (min-width: 576px) {
   div.container {
     max-width: 540px;
@@ -75,6 +97,14 @@ div.container {
 @media (max-width: 768px) {
   div.container {
     max-width: none;
+  }
+  #logoutBtn{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding:5px 20px 5px 20px;
   }
 }
 
@@ -106,6 +136,7 @@ nav.breadcrumb-container {
   nav.breadcrumb-container {
     display: block;
   }
+  
 }
 
 ol.breadcrumb {
@@ -201,6 +232,7 @@ h1#main.page-heading__title:focus {
   outline: none;
 }
 
+
 @media (min-width: 576px) {
   h1#main.page-heading__title {
     font-size: 4.8rem;
@@ -218,6 +250,7 @@ p.page-heading__lead.lead {
   max-width: 76rem;
   padding: 0;
 }
+
 
 @media (min-width: 576px) {
   p.page-heading__lead.lead {
