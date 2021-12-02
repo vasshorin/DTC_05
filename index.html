@@ -3,7 +3,7 @@
 
 <head>
 
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>My BCIT Project</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
@@ -16,21 +16,27 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+
     <!-- Boostrap JS CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet"
+        href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
 
     <!-- Firebase 8 related CSS CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous">
+    </script>
     <!-- Firebase 8 CDNs-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -45,27 +51,27 @@
 <body>
     <div class="top-container">
         <div id="top-section">
-        <p class="rbg1"></p>
-		<p class="rbg2"></p> 
+            <p class="rbg1"></p>
+            <p class="rbg2"></p>
 
-    <!-- JUMBOTRON -->
-    <div class="jumbotron">
-        <main>
-            <img src="./images/user.png" alt="" width="100" height="100" class="pic">
-            <h1 id="body-title">Welcome to Easy Travel!</h1>
-            <h2>Let's Sign in or Sign up!</h2>
-        </main>
-    
-        <br>
-    
-        <!--div for firebase-->
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+            <!-- JUMBOTRON -->
+            <div class="jumbotron">
+                <main>
+                    <img src="./images/user.png" alt="" width="100" height="100" class="pic">
+                    <h1 id="body-title">Welcome to Easy Travel!</h1>
+                    <h2>Let's Sign in or Sign up!</h2>
+                </main>
 
-    </div>
-     </div>
+                <br>
 
-     
+                <!--div for firebase-->
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+
+            </div>
+        </div>
+
+
     </div>
     <footer>
         <div class="fixed-bottom py-3 bg-dark" style="color:white;">
@@ -81,8 +87,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"> </script>
-    
-        <script>
+
+    <script>
         // Initialize the FirebaseUI Widget using Firebase.
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         var uiConfig = {
@@ -94,15 +100,15 @@
                     var user = authResult.user;
                     if (authResult.additionalUserInfo.isNewUser) {
                         db.collection("users").doc(user.uid).set({
-                            name: user.displayName,
-                            email: user.email
-                        }).then(function () {
-                            console.log("New user added to firestore");
-                            window.location.assign("profile.html");
-                        })
-                        .catch(function (error) {
-                            console.log("Error adding new user: " + error);
-                        });
+                                name: user.displayName,
+                                email: user.email
+                            }).then(function () {
+                                console.log("New user added to firestore");
+                                window.location.assign("profile.html");
+                            })
+                            .catch(function (error) {
+                                console.log("Error adding new user: " + error);
+                            });
                     } else {
                         return true;
                     }
@@ -135,7 +141,7 @@
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-   
+
 </body>
 
 </html>
