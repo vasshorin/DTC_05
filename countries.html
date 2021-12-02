@@ -45,7 +45,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./countries.html">Countries</a>
@@ -59,9 +59,9 @@
                     </ul>
                 </div>
                 <div id="nav-right">
-                    <i class="material-icons"><a href="./upload.html">upload_file</a> </i>
+                    <i class="material-icons"><a href="./saved_document.html">upload_file</a> </i>
                     <i class="material-icons"><a href="./notification.html">notifications</a></i>
-                    <i class="material-icons"><a href="./login.html">account_circle</a></i>
+                    <i class="material-icons"><a href="./profile.html">account_circle</a></i>
                 </div>
             </div>
         </nav>
@@ -152,29 +152,145 @@
     <script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
 
     <script>
-        //write countries' names into database
         function writeCountries() {
 
             var countries = [{
-                "name": "Australia"},
+                "name": "Australia",
+                "link": "./australia-visa-info.html",
+                "link_no": "./australia-visa-info.html",
+                "need": "require",
+                "no_need": "noo",
+                "allowed": {
+                    "0": "New Zealand",
+                    "1": "Canada"
+                },
+            },
 
-                {"name": "Canada"},
+            {
+                "name": "Canada",
+                "link": "./canada-visa-info,html",
+                "link_no": "/.canada-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Australia",
+                    "1": "Austria",
+                    "2": "France",
+                    "3": "Germany",
+                    "4": "Italy",
+                    "5": "Japan",
+                    "6": "Netherlands",
+                    "7": "New Zealand",
+                    "8": "Singapore",
+                    "9": "United States",
+                    "10": "United Kingdom",
+                },
+                "not_allowed": {
+                    "0": "Thailand",
+                },
+                
+            },
 
-                {"name": "France"},
+            {
+                "name": "France",
+                "link": "./countries/france-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Germany",
+                    "1": "Canada",
+                    "2": "United Kingdom",
+                    "3": "United States",
+                    "4": "New Zealand",
+                    "5": "Japan",
+                    "6": "Australia",
+                    "7": "Singapore",
+                },
+                "not_allowed": {
+                    "0": "Thailand"
+                },
+            },
 
-                {"name": "Germany"},
+            {
+                "name": "Germany",
+                "link": "./countries/germany-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Australia",
+                    "1": "Canada",
+                    "2": "France",
+                    "3": "Germany",
+                    "4": "Japan",
+                    "5": "New Zealand",
+                    "6": "Singapore",
+                    "7": "United Kingdom",
+                    "8": "United States",
+                },
+                "not_allowed": {
+                    "0": "Thailand"
+                },
+            },
 
-                {"name": "Japan"},
+            {
+                "name": "Japan",
+                "link": "./countries/japan-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Australia",
+                    "1": "Canada",
+                    "2": "France",
+                    "3": "Germany",
+                    "4": "Japan",
+                    "5": "New Zealand",
+                    "6": "Singapore",
+                    "7": "United Kingdom",
+                    "8": "United States",
+                },
+                "not_allowed": {
+                    "0": "Thailand"
+                },
+            },
 
-                {"name": "New Zealand"},
+            {
+                "name": "New Zealand",
+                "link": "./countries/newZealand-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Australia",
+                    "1": "Canada",
+                    "2": "France",
+                    "3": "Germany",
+                    "4": "Japan",
+                    "5": "New Zealand",
+                    "6": "Singapore",
+                    "7": "United Kingdom",
+                    "8": "United States",
+                },
+                "not_allowed": {
+                    "0": "Thailand"
+                },
+            },
 
-                {"name": "Singapore"},
+            {
+                "name": "Singapore",
+                "link": "./countries/singapore-visa-info.html",
+                "need": "require",
+                "allowed": {
+                    "0": "Canada",
+                    "1": "France",
+                    "2": "Germany",
+                    "3": "Japan",
+                    "4": "Singapore",
+                    "5": "United Kingdom",
+                },
+                "not_allowed": {
+                    "0": "Thailand"
+                },
+            },
 
-                {"name": "Thailand"},
+            {"name": "Thailand"},
 
-                {"name": "United Kingdom"},
+            {"name": "United Kingdom"},
 
-                {"name": "United States"},
+            {"name": "United States"},
             ];
 
             countries.forEach(function (country) { //cycle thru json objects in array
@@ -186,7 +302,6 @@
             })
         }
 
-        //write provinces' names into database
         function writeProvinces() {
 
             var provinces = [{

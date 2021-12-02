@@ -11,30 +11,29 @@
   <!-- Link to the css file-->
   <link rel="stylesheet" type="text/css" href="styles/index.css">
   <link rel="stylesheet" type="text/css" href="styles/profile.css">
+  <link rel="stylesheet" type="text/css" href="styles/countryStyle.css" />
 
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!--jQuery bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- Bootstrap JS script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-  <!-- Boostrap JS CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-  </script>
-
-  <!--jQuery bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Firebase 8 related CSS CDN -->
-
   <!-- Firebase 8 CDNs-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
@@ -42,20 +41,19 @@
   <!-- Link to the api keys for your firebase project -->
   <script src="./scripts/firebaseAPI.js"></script>
 
-
 </head>
 
 <body>
   <!-- NAVIGATION -->
   <div id="navigation">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <!-- <img src="./images/logo1.png" alt="" width="30" height="24"> -->
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
+                  data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,23 +62,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.html" style="color: white;">Home</a>
+              <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./countries.html" style="color: white;">Countries</a>
+              <a class="nav-link" href="./countries.html">Countries</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">Map</a>
+              <a class="nav-link" href="#">Map</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./searchtrip.html" style="color: white;">Search trip</a>
+              <a class="nav-link" href="./searchtrip.html">Search trip</a>
             </li>
           </ul>
         </div>
         <div id="nav-right">
-          <i class="material-icons"><a href="./upload.html">upload_file</a></i>
+          <i class="material-icons"><a href="./saved_document.html">upload_file</a> </i>
           <i class="material-icons"><a href="./notification.html">notifications</a></i>
-          <i class="material-icons"><a href="./login.html">account_circle</a></i>
+          <i class="material-icons"><a href="./profile.html">account_circle</a></i>
         </div>
       </div>
     </nav>
@@ -88,9 +86,10 @@
 
   <div class="page-heading">
     <div class="container">
+      <a href="#" onclick="return_back()"><img src="./images/back-button-white.png" alt="" id="back" width="20" height="20"></a>
       <div class="row">
         <div class="col-12">
-
+         
           <h1 data-swiftype-index="true" id="main" tabindex="-1" class="page-heading__title">
             <i class="fa fa-file-text" style="font-size:55px;color:rgb(255, 255, 255)"></i>
             Your Document
@@ -125,11 +124,15 @@
                 </g>
               </svg>
               <p class="card-text">Keep your passport here</p>
-              <input type="file"/>
+              <input type="file" class="myFile" title=" ">
+              
+              <!-- <progress min="0" max="100" value="0" class="progressBar"></progress> -->
+              <img src="images/logo.jpg" id="mypic-goes-here" width="1" height="1">
+              <img src="" id="display-pic" width="100" height="100" alt="">
               <br>
               <br>
-              <a href="#" class="btn btn1 btn-warning">Open</a>
-              <a href="#" class="btn btn1 btn-danger">Delete</a>
+              <a href="#" id="submitBtnPassport" target="_blank">Open</a>
+              <!-- <a href="#" class="btn btn1 btn-danger">Delete</a> -->
             </div>
           </div>
         </div>
@@ -161,11 +164,14 @@
                 </g>
               </svg>
               <p class="card-text">Keep your vaccination proof here</p>
-              <input type="file" class=""/>
+              <input type="file" id="vaccine" />
+              <!-- <progress min="0" max="100" value="0" class="progressBarVaccine"></progress> -->
+              <img src="images/logo.jpg" id="mypic-goes-here-vaccine" width="1" height="1" style="padding-top: 5%;">
+              <img src="" id="display-pic-vaccine" width="100" height="100" alt="" style="padding-top: 1%">
               <br>
               <br>
-              <a href="#" class="btn btn2 btn-warning">Open</a>
-              <a href="#" class="btn btn2 btn-danger">Delete</a>
+              <a href="#" id="submitBtnVaccine" target="_blank">Open</a>
+              <!-- <a href="#" class="btn btn2 btn-danger">Delete</a> -->
             </div>
           </div>
         </div>
@@ -177,13 +183,13 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><u>Other Documents</u></h5>
-            <img src="https://img.icons8.com/glyph-neue/64/000000/documents.png"/>
+            <img src="https://img.icons8.com/glyph-neue/64/000000/documents.png" />
             <p class="card-text">Keep your necessary documents here</p>
-            <input type="file" class=""/>
+            <input type="file" class="" />
             <br>
             <br>
-            <a href="#" class="btn btn2 btn-warning">Open</a>
-            <a href="#" class="btn btn2 btn-danger">Delete</a>
+            <a href="#" id="submitBtnDocs" target="_blank">Open</a>
+            <!-- <a href="#" class="btn btn2 btn-danger">Delete</a> -->
           </div>
         </div>
       </div>
@@ -207,66 +213,219 @@
               </g>
             </svg>
             <p class="card-text">See all the documents you have saved</p>
-            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+
+            <!--toggle part-->
+            <div class="countainer_for_toggle">
+              <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample" onclick="displayCountries()">
+                Click to see the list of countries
+              </a>
+            </div>
+            <br>
+            <!--inside of toggle-->
+            <template id="countryCardTemplate">
+              <div class="card" id="collapseExample">
+                <div class="card-body">
+                  <a  href="#" class="card-title" class="link-primary" style="color:#000000"><span></span>placeholder</a>
+                </div>
+              </div>
+            </template>
+
+            <div class="container">
+              <div class="card-group" id="countriesGroup">
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <!-- <div class="row">
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </div>
+  <footer>
+    <div class="fixed-bottom py-3 bg-dark" style="color:white;">
+      <div class="container text-center">
+        (C) Copyright DTC 05, 2021
       </div>
-      <div class="col">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
-        </div>
-      </div> -->
-    </div> 
+    </div>
+  </footer>
 
 
 
-    <footer>
-      <div class="fixed-bottom py-3 bg-dark" style="color:white;">
-        <div class="container text-center">
-          (C) Copyright DTC 05, 2021
-        </div>
-      </div>
-    </footer>
-    <!-- Bootstrap JS script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
 
+  <!-- FILES UPLOADS -->
+  <!-- PASSPORT UPLOAD -->
+  <script>
+    function return_back() {
+      window.history.back();
+    }
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        const image = document.getElementById('mypic-goes-here');
+        document.querySelector('.myFile').addEventListener('change', (e) => {
+          console.log(e)
+          var file = e.target.files[0]
+          // var blob = URL.createObjectURL(file)
 
+          var storageRef = storage.ref("Images/" + user.uid + e.target.files[0].name)
+          console.log(storageRef + "INK")
 
-    <script>
-      function displayCountries() {
-            let hikeCardTemplate = document.getElementById("countryCardTemplate");
-            let hikeCardGroup = document.getElementById("countryCardGroup");
-            
-            db.collection("Saved_document").get()
-                .then(allHikes => {
-                    allHikes.forEach(doc => {
-                        var countryName = doc.data().name; //gets the name field
-                        var countryID = doc.data().code; //gets the unique ID field
-                        let testCountryCard = countryCardTemplate.content.cloneNode(true);
-                        testCountryCard.querySelector('.card-title').innerHTML = countryName;
-                        testCountryCard.querySelector('a').onclick = () => setCountryData(countryID);
-                        testCountryCard.querySelector('img').src = `./images/${countryID}.jpg`;
-                        countryCardGroup.appendChild(testCountryCard);
-                    })
-
-                })
+          var task = storageRef.put(file);
+          // image.src = blob
+          task.on('state_changed', s => {
+            console.log((s.bytesTransferred / s.totalBytes) * 100);
+            document.querySelector('.progressBar').value = (s.bytesTransferred / s
+              .totalBytes) * 100;
+          });
+          storageRef.getDownloadURL().then(function (url) {
+            console.log(url);
+            image.src = url
+            db.collection('users').doc(user.uid).update({
+                "passport": url
+              })
+              .then(function () {
+                console.log('Loaded picture URL')
+              })
+          })
+        });
+      }
+    });
+  </script>
+  <script>
+    function displayPassport() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          db.collection('users').doc(user.uid)
+            .get()
+            .then(function (doc) {
+              var picUrl = doc.data().passport;
+              $('#display-pic').attr("src", picUrl)
+            })
         }
- displayCountries();
+      })
+    }
+    displayPassport()
+
+    let submitButton = document.getElementById("submitBtnPassport")
+    const collectionRef = db.collection('users')
+    function showImage() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log(user)
+          db.collection('users').doc(user.uid).get().then(function (doc) {
+            var passportUrl = doc.data().passport
+            console.log(passportUrl);
+            submitButton.setAttribute("href", passportUrl)
+          })
+        }
+      })
+    }
+    showImage()
+  </script>
+<!-- VACCINE SECTION -->
+  <script>
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        const image = document.getElementById('mypic-goes-here-vaccine');
+        document.querySelector('#vaccine').addEventListener('change', (e) => {
+          console.log(e)
+          var file = e.target.files[0]
+
+          var storageRef = storage.ref("Vaccines/" + user.uid + e.target.files[0].name)
+
+          var task = storageRef.put(file);
+
+          task.on('state_changed', s => {
+            console.log((s.bytesTransferred / s.totalBytes) * 100);
+            document.querySelector('.progressBarVaccine').value = (s
+              .bytesTransferred / s.totalBytes) * 100;
+          });
+          storageRef.getDownloadURL().then(function (url) {
+            console.log(url);
+            image.src = url
+            db.collection('users').doc(user.uid).update({
+                "vaccine": url
+              })
+              .then(function () {
+                console.log('Loaded picture URL')
+              })
+          })
+        });
+      }
+    });
+  </script>
+  <script>
+    let submitButtonVaccine = document.getElementById("submitBtnVaccine")
+    const collectionRefnew = db.collection('users')
+    function showImageVaccine() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log(user)
+          db.collection('users').doc(user.uid).get().then(function (doc) {
+            var vaccineUrl = doc.data().vaccine
+            console.log(vaccineUrl);
+            submitButtonVaccine.setAttribute("href", vaccineUrl)
+          })
+        }
+      })
+    }
+    showImageVaccine()
+  </script>
+  <!-- Show  vaccine picture-->
+    <script>
+      function displayImg() {
+        firebase.auth().onAuthStateChanged(function (user) {
+          if (user) {
+            db.collection('users').doc(user.uid)
+              .get()
+              .then(function (doc) {
+                var picUrl = doc.data().vaccine;
+                $('#display-pic-vaccine').attr("src", picUrl)
+              })
+
+          }
+        })
+      }
+      displayImg()
     </script>
+
+    <!--Display saved countries as a custom name-->
+  <script>
+    function displayCountries() {
+      let cardTemplate = document.getElementById("countryCardTemplate")
+      let cardGroup = document.getElementById("countriesGroup");
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+
+          while (cardGroup.firstChild) {
+                cardGroup.removeChild(cardGroup.firstChild)
+          }
+
+          db.collection("users").doc(user.uid).collection("saved_countries").orderBy("name").get()
+            .then(allCountries => {
+              allCountries.forEach(doc => {
+                var customName = doc.data().name; // gets the name field
+                var link = doc.data().link; // gets the link here
+                
+
+                let testCard = cardTemplate.content.cloneNode(true);
+                testCard.querySelector('.card-title').innerHTML = customName;
+                testCard.querySelector('a').onclick = () => goTo(link);
+                cardGroup.appendChild(testCard);
+              })
+            })
+        }
+      })
+
+    }
+
+    function goTo(link) {
+      console.log("redirect");
+      window.location.assign(link)
+    }
+  </script>
 </body>
 
 </html>

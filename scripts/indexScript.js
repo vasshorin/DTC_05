@@ -1,3 +1,25 @@
+//Verify Login
+var link = document.getElementById("btn");
+function checkLogin() {
+    firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        document.getElementById('btn').onclick = function () {
+        link.setAttribute('href', './profile.html')
+        // document.getElementById('btn').href = "profile.html"
+        console.log("logged in")
+        // return false;
+        }
+        // window.location.href = "profile.html";
+    } else {
+        link.setAttribute('href', './login.html')
+        // window.location.href = "login.html";
+        console.log("NOT")
+    }
+    })
+}
+checkLogin()
+
+
 //choose destination country based on user input
 const collectionRef = db.collection('Country')
    

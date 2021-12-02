@@ -2,13 +2,15 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+
+<meta charset="utf-8">
     <title>My BCIT Project</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- Link to the css file-->
-    <link rel="stylesheet" type="text/css" href="styles/index-test.css">
+    <link rel="stylesheet" type="text/css" href="styles/index1.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/login.css"> -->
 
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,10 +21,16 @@
     
     <!-- Boostrap JS CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+
     <!-- Firebase 8 related CSS CDN -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
     <!-- Firebase 8 CDNs-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -32,6 +40,9 @@
 
     <!-- Link to the api keys for your firebase project -->
     <script src="./scripts/firebaseAPI.js"></script>
+
+    <!-- Link to script files -->
+    <script src="./scripts/redirect.js"></script>
     
 
 
@@ -59,7 +70,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/index.html" style="color: white;">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="./countries.html" style="color: white;">Countries</a>
                         </li>
                         <li class="nav-item">
@@ -67,14 +78,14 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./searchtrip.html" style="color: white;">Search trip</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
-                <div id="nav-right">
+                <!-- <div id="nav-right">
                     <i class="material-icons"><a href="./upload.html">upload_file</a></i>
                     <i class="material-icons"><a href="./notification.html">notifications</a></i>
-                    <i class="material-icons"><a href="./login.html">account_circle</a></i>
-                </div>
+                    <i class="material-icons"><a href="#" id="btn">account_circle</a></i>
+                </div> -->
             </div>
         </nav>
     </div>
@@ -87,146 +98,24 @@
 
     <!-- JUMBOTRON -->
     <div class="jumbotron">
+        <!-- <h1 class="display-5" style="font-size: 3em;"><b>Travel Easy</b></h1> -->
+        <main>
+            <img src="./images/user.png" alt="" width="100" height="100" class="pic">
+            <h1 id="body-title">Welcome to Easy Travel!</h1>
+            <h2>Let's Sign in or Sign up!</h2>
+        </main>
     
-        <h1 class="display-5" style="font-size: 3em;"><b>Easy Travel</b></h1>
-        <p class="lead"></p>
+        <br>
+    
+        <!--div for firebase-->
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+        <!-- <p class="lead"></p> -->
     </div>
      </div>
+
+     
     </div>
-
-    <br>
-    <div id="h33"><h2><b>Planning to travel soon? </b></h2>
-        <br>
-    <h3>Make sure you are familiar with the most recent regulation, visa statuses, and customs for the country of interest.</h3>
-    </div>
-
-    <hr>
-    <section class="options">
-        <div id="container">
-            <form action="">
-            <!-- <h1>Please fill out the form to get receive most accurate information below:</h1> -->
-            <h4><b>Choose destination country:</b></h4>
-            <br>
-            <div id="list">
-                <div><label for="country" style="font-weight: bold;">Country</label><span style="color: red !important; display: inline; float: none;">*</span></div>
-                <select id="country" name="country" class="form-control" onchange="searchCountry()">
-                    <option value="" disabled selected>Select your destination</option>
-                    <option>Australia</option>
-                    <option>Canada</option>
-                    <option>France</option>
-                    <option>Germany</option>
-                    <option>Japan</option>
-                    <option>NewZealand</option>
-                    <option>Singapore</option>
-                    <option>Thailand</option>
-                    <option>United Kingdom</option>
-                    <option>United States</option>
-                </select>
-            
-            <br>
-            <div id="list_nationality">
-                <div><label for="nationality" style="font-weight: bold;">Nationality</label><span style="color: red !important; display: inline; float: none;">*</span></div>
-                <select id="nationality" name="nationality" class="form-control"  onchange="searchCountry()">
-                    <option value="" disabled selected>Select your destination</option>
-                    <option>Australia</option>
-                    <option>Canada</option>
-                    <option>France</option>
-                    <option>Germany</option>
-                    <option>Japan</option>
-                    <option>New Zealand</option>
-                    <option>Singapore</option>
-                    <option>Thailand</option>
-                    <option>United Kingdom</option>
-                    <option>United States</option>
-                </select>
-                </div>
-            <br>
-            <h6>Country of residence:</h6>
-            <select class="form-control">
-                <option>--Select one--</option>
-                <option value="Australia">Australia</option>
-                    <option value="Austria">Austria</option>
-                    <option value="Canada">Canada</option>
-                    <option value="France">France</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Italy">Italy</option>
-                    <option value="Netherlands">Netherlands</option>
-                    <option value="New Zealand">New Zealand</option>
-                    <option value="Norway">Norway</option>
-                    <option value="Switzerland">Switzerland</option>
-            </select>
-            <br>
-            <h6>Purpose of stay:</h6>
-            <select class="form-control">
-                <option>--Select one--</option>
-                <option value="Tourism">Tourism</option>
-                <option value="Business">Business</option>
-                <option value="Study">Study</option>
-                <option value="Duty">Duty</option>
-            </select>
-            <br>
-            <h6>Transit country?</h6>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
-                    value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                    Yes
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2"
-                    value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                    No
-                </label>
-            </div>
-            <br>
-            <a id="submitBtn"  onclick="" href="#">Submit</a>
-            <input type="reset" value="Reset" id="reset">
-            </div>
-        </form>
-            <br>
-            <hr>
-        
-            <div class="visas">
-            <div><label for="country" style="font-weight: bold; font-size: 1.5em;">Customs information, regulation, and more </label></div>
-            <br>
-            <select id="country1" name="country" class="form-control" onchange="countryChange()">
-                <option value="" disabled selected>Select your destination</option>
-                <option>Australia</option>
-                <option>Canada</option>
-                <option>France</option>
-                <option>Germany</option>
-                <option>Japan</option>
-                <option>New Zealand</option>
-                <option>Singapore</option>
-                <option>Thailand</option>
-                <option>United Kingdom</option>
-                <option>United States</option>
-            </select>
-            <br>
-            <p>Using this field will provide you with sufficient information regarding regulations, custom regulation like pets, taxes, cash, duties.</p>
-            <br>
-            <a id="submitBtn1" href="#">Submit</a>
-            </div>
-            <br>
-            <hr>
-            <div id="news">
-                <h2>Latest news for Canada:</h2>
-                <br>
-                <ul id="latest news">
-                    <li>October 30, 20:19 PST: This is a test article, please update me later before submitting it.</li>
-                    <li>September 23, 19:45 PST: This is another fake news article that needs to be updated. Do not hesitate to make it happen!</li>
-                    <li>October 30, 20:19 PST: This is a test article, please update me later before submitting it.</li>
-                    <li>September 23, 19:45 PST: This is another fake news article that needs to be updated. Do not hesitate to make it happen!</li>
-                    <li>October 30, 20:19 PST: This is a test article, please update me later before submitting it.</li>
-                    <li>September 23, 19:45 PST: This is another fake news article that needs to be updated. Do not hesitate to make it happen!</li>
-                </ul>
-            </div>
-            </div>
-    </section>
-        
-
     <footer>
         <div class="fixed-bottom py-3 bg-dark" style="color:white;">
             <div class="container text-center">
@@ -241,6 +130,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"> </script>
+    
+        <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    var user = authResult.user;
+                    if (authResult.additionalUserInfo.isNewUser) {
+                        db.collection("users").doc(user.uid).set({
+                            name: user.displayName,
+                            email: user.email
+                        }).then(function () {
+                            console.log("New user added to firestore");
+                            window.location.assign("profile.html");
+                        })
+                        .catch(function (error) {
+                            console.log("Error adding new user: " + error);
+                        });
+                    } else {
+                        return true;
+                    }
+                    return false;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: 'main.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
    
 </body>
 
