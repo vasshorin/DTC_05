@@ -8,8 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="BCIT">
 	<!-- Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
 	<!-- Google Icons (Material Design)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Firebase 8 CDNs-->
@@ -32,14 +34,15 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
+							<a class="nav-link active" aria-current="page"
+								href="../main.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href=".././countries.html">Countries</a>
@@ -62,33 +65,35 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
+				<h1 class="mb-3">Regulations and Customs Results for Travel to <span
+						id="countrySelected"></span></h1>
 			</div>
 
 			<div id="top-title">
-			<h3 class="mb-3" id="regulations">Regulations:</h3>
-			<ol>
-				<li class="mb-3">Entering Canada as a fully vaccinated travellers</li>
-				<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
-						Check if you qualify as a fully vaccinated traveller
-					</button></p>
-				<li class="mb-3">Pre-entry testing and other requirements</li>
-				<p>
-					<button id="getBtn" class="btn btn-outline-secondary" type="button">
-						Get a pre-entry test
-					</button>
-				</p>
-				<p>
-					<button id="quarantineBtn" class="btn btn-outline-secondary" type="button">
-						Quarantine plan in case you don’t qualify as a fully vaccinated traveller
-					</button>
-				</p>
-				<p>
-					<button id="uploadBtn" class="btn btn-outline-secondary" type="button">
-						Upload proof of vaccination in ArriveCAN
-					</button>
-				</p>
-			</ol>
+				<h3 class="mb-3" id="regulations">Regulations:</h3>
+				<ol>
+					<li class="mb-3">Entering Canada as a fully vaccinated travellers</li>
+					<p><button id="checkBtn" class="btn btn-outline-secondary" type="button">
+							Check if you qualify as a fully vaccinated traveller
+						</button></p>
+					<li class="mb-3">Pre-entry testing and other requirements</li>
+					<p>
+						<button id="getBtn" class="btn btn-outline-secondary" type="button">
+							Get a pre-entry test
+						</button>
+					</p>
+					<p>
+						<button id="quarantineBtn" class="btn btn-outline-secondary" type="button">
+							Quarantine plan in case you don’t qualify as a fully vaccinated
+							traveller
+						</button>
+					</p>
+					<p>
+						<button id="uploadBtn" class="btn btn-outline-secondary" type="button">
+							Upload proof of vaccination in ArriveCAN
+						</button>
+					</p>
+				</ol>
 			</div>
 
 			<div class="itemsBox">
@@ -111,10 +116,12 @@
 				<div class="card card-body" id="fully">
 					<b>To qualify as a fully vaccinated traveller to Canada, you must:</b>
 					<ul>
-						<li> Have received at least 2 doses of a Government of Canada-accepted COVID-19 vaccine
+						<li> Have received at least 2 doses of a Government of Canada-accepted
+							COVID-19 vaccine
 							or a
 							mix of 2 accepted vaccines</li>
-						<li> Have received your second dose at least 14 full days prior to the day you enter
+						<li> Have received your second dose at least 14 full days prior to the day
+							you enter
 							Canada
 						</li>
 						<li> Upload your proof of vaccination in ArriveCAN</li>
@@ -133,11 +140,13 @@
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
 					<b>Who must take a pre-entry test</b>
-					<p>All travellers <b>5 years of age or older</b>, regardless of citizenship or vaccination
+					<p>All travellers <b>5 years of age or older</b>, regardless of citizenship or
+						vaccination
 						status, must:</p>
 					<ul>
 						<li>
-							Provide proof of a COVID-19 negative molecular test result to enter Canada <b>OR</b>
+							Provide proof of a COVID-19 negative molecular test result to enter
+							Canada <b>OR</b>
 						</li>
 						<li>
 							Proof of a previous positive test result taken between 14 and 180 days.
@@ -149,18 +158,23 @@
 					<ul>
 						<li>PCR - Polymerase chain reaction</li>
 						<li>Nucleic acid test (NAT) or Nucleic acid amplification test (NAATs)</li>
-						<li>Reverse transcription loop-mediated isothermal amplification (RT-LAMP)</li>
+						<li>Reverse transcription loop-mediated isothermal amplification (RT-LAMP)
+						</li>
 					</ul>
-					<p>These tests use methods such as a nasopharyngeal (NP) swab, nose swab, or saliva sample.
+					<p>These tests use methods such as a nasopharyngeal (NP) swab, nose swab, or
+						saliva sample.
 					</p>
 
 					<b>When to get a negative pre-entry test result</b>
 					<i>Flying to Canada</i>
-					<p>You must take a molecular test within <b>72 hours</b> of the scheduled departure time of
+					<p>You must take a molecular test within <b>72 hours</b> of the scheduled
+						departure time of
 						your
 						flight to Canada.</p>
-					<p>Airlines will refuse boarding to travellers who are unable to provide a valid negative
-						molecular test result or proof of a previous positive molecular test result taken
+					<p>Airlines will refuse boarding to travellers who are unable to provide a valid
+						negative
+						molecular test result or proof of a previous positive molecular test result
+						taken
 						between 14
 						and 180 days.</p>
 
@@ -181,7 +195,8 @@
 						<li>Don’t meet the requirements of a fully vaccinated traveller</li>
 					</ul>
 					<br>
-					<p>A suitable quarantine plan must be entered into ArriveCAN. You may be asked to explain
+					<p>A suitable quarantine plan must be entered into ArriveCAN. You may be asked
+						to explain
 						your
 						quarantine plan at the border. </p>
 					<i>*More details can be found at<a
@@ -195,20 +210,26 @@
 			<h2 class="collapseTitle">Upload proof of vaccination in ArriveCAN</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>You <b>must use ArriveCAN</b>, which is free to use, to enter your proof of vaccination,
+					<p>You <b>must use ArriveCAN</b>, which is free to use, to enter your proof of
+						vaccination,
 						quarantine and travel information up to 72 hours before your travel.</p>
-					<p>If you <b>don't </b>provide the required information in ArriveCAN before arriving at the
-						border you <b>won't</b> be considered as a fully vaccinated traveller, even if you meet
+					<p>If you <b>don't </b>provide the required information in ArriveCAN before
+						arriving at the
+						border you <b>won't</b> be considered as a fully vaccinated traveller, even
+						if you meet
 						all
 						the other requirements.</p>
 					<b>Use an official proof of vaccination</b>
-					<p>The photos or files of your proof of vaccination may include a QR code and must include
+					<p>The photos or files of your proof of vaccination may include a QR code and
+						must include
 						text
 						with:</p>
 					<ul>
 						<li>Your name</li>
-						<li>The name of the government or organization who administered the vaccine</li>
-						<li>The brand name or any other information that identifies the vaccine that was
+						<li>The name of the government or organization who administered the vaccine
+						</li>
+						<li>The brand name or any other information that identifies the vaccine that
+							was
 							administered</li>
 						<li>The date(s) on which the vaccine(s) was (were) given</li>
 					</ul>
@@ -216,9 +237,11 @@
 					<b>Uploading proof of your vaccination in ArriveCAN</b>
 					<p>In ArriveCAN, <b>within 72 hours before your travel</b>, you must:</p>
 					<ul>
-						<li>provide information on your vaccination status. This includes information on any
+						<li>provide information on your vaccination status. This includes
+							information on any
 							first
-							or, if applicable, second vaccine doses that you received, including:</li>
+							or, if applicable, second vaccine doses that you received, including:
+						</li>
 						<ul>
 							<li>Dates the vaccines were administered</li>
 							<li>The country where they were given</li>
@@ -226,24 +249,32 @@
 						</ul>
 						<li>Upload a photo or PDF file of your proof of each vaccination:</li>
 						<ul>
-							<li>Upload either one image containing proof of all vaccine doses with dates and
+							<li>Upload either one image containing proof of all vaccine doses with
+								dates and
 								vaccine
 								details (for example, your vaccination card)
-								<i>OR </i>upload separate images for each dose that include the dates and vaccine
+								<i>OR </i>upload separate images for each dose that include the
+								dates and vaccine
 								details
 							</li>
 							<li>File formats accepted: PDF, PNG, JPEG or JPG</li>
-							<li>Maximum file size for upload: each image upload has a 2 MB size limit</li>
+							<li>Maximum file size for upload: each image upload has a 2 MB size
+								limit</li>
 						</ul>
-						<li>Preferred file format: if you received a PDF file of your vaccination record, upload
-							the PDF rather than an image, since the PDF is clearer and easier to read</li>
-						<li>These must be in English, French, or a <b>certified translation into English or
+						<li>Preferred file format: if you received a PDF file of your vaccination
+							record, upload
+							the PDF rather than an image, since the PDF is clearer and easier to
+							read</li>
+						<li>These must be in English, French, or a <b>certified translation into
+								English or
 								French</b></li>
 					</ul>
 					<br>
-					<p>Bring your original proof of vaccination with you while you travel and for 14 days after
+					<p>Bring your original proof of vaccination with you while you travel and for 14
+						days after
 						entry.</p>
-					<p>Final determination of your vaccination status will be made at the border. You must bring
+					<p>Final determination of your vaccination status will be made at the border.
+						You must bring
 						a digital or paper copy of your proof(s) of vaccination with you.</p>
 					<i>*More details can be found at<a
 							href="https://travel.gc.ca/travel-covid/travel-restrictions/covid-vaccinated-travellers-entering-canada">
@@ -260,19 +291,26 @@
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne">
 						<button class="accordion-button" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							data-bs-target="#collapseOne" aria-expanded="true"
+							aria-controls="collapseOne">
 							Cash
 						</button>
 					</h2>
-					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-						data-bs-parent="#accordionExample">
+					<div id="collapseOne" class="accordion-collapse collapse"
+						aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>Under Canada's <u>Proceeds of Crime (Money Laundering) and Terrorist Financing
-								Act</u>, there are no restrictions on the amount of money that you can bring into or
-								take out of Canada. You must, however, report amounts of currency <b>equal to or
-								greater than CAN $10,000 or its equivalent in a foreign currency</b> to the
-								<u>Canada Border Services Agency</u>. These rules apply whether you are bringing the money
-								into, or taking it out of Canada, or carrying the money with you or sending it by mail or
+							<p>Under Canada's <u>Proceeds of Crime (Money Laundering) and Terrorist
+									Financing
+									Act</u>, there are no restrictions on the amount of money that
+								you can bring into or
+								take out of Canada. You must, however, report amounts of currency
+								<b>equal to or
+									greater than CAN $10,000 or its equivalent in a foreign
+									currency</b> to the
+								<u>Canada Border Services Agency</u>. These rules apply whether you
+								are bringing the money
+								into, or taking it out of Canada, or carrying the money with you or
+								sending it by mail or
 								by courier.
 							</p>
 							<i>*More details can be found at<a
@@ -284,17 +322,21 @@
 				</div>
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingTwo">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+							aria-expanded="false" aria-controls="collapseTwo">
 							Alcoholic Beverages
 						</button>
 					</h2>
-					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-						data-bs-parent="#accordionExample">
+					<div id="collapseTwo" class="accordion-collapse collapse"
+						aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>Alcoholic beverages are products that <b>exceed 0.5% alcohol by volume</b>.</p>
-							<p>You are allowed to import only one of the following amounts of alcohol and alcoholic
-								beverages free of duty and taxes as part of your personal exemption:</p>
+							<p>Alcoholic beverages are products that <b>exceed 0.5% alcohol by
+									volume</b>.</p>
+							<p>You are allowed to import only one of the following amounts of
+								alcohol and alcoholic
+								beverages free of duty and taxes as part of your personal exemption:
+							</p>
 							<table class="table">
 								<thead>
 									<tr>
@@ -321,14 +363,17 @@
 										<td scope="row"><b>Beer or Ale</b></td>
 										<td>Up to 8.5 litres</td>
 										<td>Up to 287 fluid ounces</td>
-										<td>Approximately 24, 355-ml cans or bottles of beer or ale</td>
+										<td>Approximately 24, 355-ml cans or bottles of beer or ale
+										</td>
 									</tr>
 								</tbody>
 							</table>
 							<p>*Bottle sizes vary, but the amounts listed are firm.</p>
-							<p>You <b> must be of legal age </b>in the province into which you are importing
+							<p>You <b> must be of legal age </b>in the province into which you are
+								importing
 								the alcoholic beverages. While you are permitted to import more than
-								the amounts listed above, you will be responsible for paying duty and
+								the amounts listed above, you will be responsible for paying duty
+								and
 								taxes on the additional alcoholic beverages you are importing.</p>
 							<i>*More details can be found at<a
 									href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
@@ -339,15 +384,17 @@
 				</div>
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingThree">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#collapseThree"
+							aria-expanded="false" aria-controls="collapseThree">
 							Tobacco Products
 						</button>
 					</h2>
-					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-						data-bs-parent="#accordionExample">
+					<div id="collapseThree" class="accordion-collapse collapse"
+						aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>If you are <b>18 years of age or over</b>, you are allowed to bring in all
+							<p>If you are <b>18 years of age or over</b>, you are allowed to bring
+								in all
 								of the following amounts of tobacco into Canada duty- and taxes-free
 								within your personal exemption:</p>
 							<ul>
@@ -365,24 +412,32 @@
 				</div>
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingFour">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#collapseFour"
+							aria-expanded="false" aria-controls="collapseFour">
 							Gifts
 						</button>
 					</h2>
-					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-						data-bs-parent="#accordionExample">
+					<div id="collapseFour" class="accordion-collapse collapse"
+						aria-labelledby="headingFour" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<p>While you are outside Canada, you can send gifts free of duty and taxes to
-								friends at home in Canada under certain conditions. To qualify, each gift
-								<b>must not be worth more than CAN$60 </b>and cannot be a tobacco product, an
-								alcoholic beverage or advertising matter. If the gift is worth more than
-								CAN$60, the recipient will have to pay regular duty and taxes on the excess
+							<p>While you are outside Canada, you can send gifts free of duty and
+								taxes to
+								friends at home in Canada under certain conditions. To qualify, each
+								gift
+								<b>must not be worth more than CAN$60 </b>and cannot be a tobacco
+								product, an
+								alcoholic beverage or advertising matter. If the gift is worth more
+								than
+								CAN$60, the recipient will have to pay regular duty and taxes on the
+								excess
 								amount. It is always a good idea to include a gift card to avoid any
 								misunderstanding.
 							</p>
-							<p>Gifts you send from outside Canada do not count as part of your personal exemption,
-								but gifts you bring back in your personal baggage do and are treated like any other
+							<p>Gifts you send from outside Canada do not count as part of your
+								personal exemption,
+								but gifts you bring back in your personal baggage do and are treated
+								like any other
 								purchases. </p>
 							<i>*More details can be found at<a
 									href="https://travel.gc.ca/returning/customs/what-you-can-bring-home-to-canada#partofyear">
@@ -408,14 +463,14 @@
 					data-bs-target="#exampleModalToggle">Save Search Result</button>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-			aria-hidden="true">
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1"
+			aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
-							aria-label="Close"></button>
+						<button type="button" class="btn-close btn-close-dark"
+							data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form>
@@ -428,22 +483,26 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary"
+							id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+							data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-			tabindex="-1">
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+			aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalToggleLabel2" style="font-weight: bold;">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title" id="exampleModalToggleLabel2"
+							style="font-weight: bold;">Save Search Result</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
-					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+					<div class="modal-body"
+						style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
 						Your search has been saved!
 					</div>
 					<div class="modal-footer">
@@ -467,7 +526,8 @@
 	<script src="../scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
 		var exampleModal = document.getElementById('exampleModalToggle')
 		exampleModal.addEventListener('show.bs.modal', function (event) {
 			// Button that triggered the modal
@@ -480,19 +540,18 @@
 	</script>
 
 	<script>
-		
 		//Display country name by using database query (.where())
 		function displayCountryName() {
-            db.collection("Countries").where("name", "==", "Canada").get()
-			.then(function (snap) {
-                    snap.forEach(function (doc) {
-                        //console.log(doc.data());
-                        var countryName = doc.data().name; //gets the name field
-                        document.getElementById("countrySelected").innerHTML = countryName;
-                    })
+			db.collection("Countries").where("name", "==", "Canada").get()
+				.then(function (snap) {
+					snap.forEach(function (doc) {
+						//console.log(doc.data());
+						var countryName = doc.data().name; //gets the name field
+						document.getElementById("countrySelected").innerHTML = countryName;
+					})
 
-                })
-        }
+				})
+		}
 		displayCountryName();
 
 
@@ -500,7 +559,7 @@
 		function saveInfo() {
 			let file_name = document.getElementById("file-name").value;
 			firebase.auth().onAuthStateChanged(user => {
-				if(user) {
+				if (user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "Canada",
 						link: "./countries/canada.html",

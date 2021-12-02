@@ -8,9 +8,11 @@
 	<meta name="author" content="BCIT">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
+
 	<!-- Google Icons (Material Design)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -36,14 +38,15 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
+							<a class="nav-link active" aria-current="page"
+								href="../main.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href=".././countries.html">Countries</a>
@@ -67,38 +70,41 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
+				<h1 class="mb-3">Regulations and Customs Results for Travel to <span
+						id="countrySelected"></span></h1>
 			</div>
 
 			<div id="top-title">
-			<h3 class="mb-3" id="regulations">Regulations:</h3>
-			<ol>
-				<li class="mb-3">Entering Australia as a fully vaccinated travellers</li>
-				<p>
-					<button id="auCheckBtn" class="btn btn-outline-secondary" type="button">
-						Check if you qualify as a fully vaccinated traveller
-					</button>
-				</p>
-				<li class="mb-3">Pre-entry testing and other requirements</li>
-				<p>
-					<button id="auGetBtn" class="btn btn-outline-secondary" type="button">
-						Get a pre-entry test
-					</button>
-				</p>
+				<h3 class="mb-3" id="regulations">Regulations:</h3>
+				<ol>
+					<li class="mb-3">Entering Australia as a fully vaccinated travellers</li>
+					<p>
+						<button id="auCheckBtn" class="btn btn-outline-secondary" type="button">
+							Check if you qualify as a fully vaccinated traveller
+						</button>
+					</p>
+					<li class="mb-3">Pre-entry testing and other requirements</li>
+					<p>
+						<button id="auGetBtn" class="btn btn-outline-secondary" type="button">
+							Get a pre-entry test
+						</button>
+					</p>
 
-				<p>
-					<button id="auQuarantineBtn" class="btn btn-outline-secondary quarantine" type="button">
-						Quarantine plan in case you don’t qualify as a fully vaccinated traveller
-					</button>
-				</p>
+					<p>
+						<button id="auQuarantineBtn" class="btn btn-outline-secondary quarantine"
+							type="button">
+							Quarantine plan in case you don’t qualify as a fully vaccinated
+							traveller
+						</button>
+					</p>
 
-				<p>
-					<button id="auPresentBtn" class="btn btn-outline-secondary" type="button">
-						Present proof of vaccination
-					</button>
-				</p>
+					<p>
+						<button id="auPresentBtn" class="btn btn-outline-secondary" type="button">
+							Present proof of vaccination
+						</button>
+					</p>
 
-			</ol>
+				</ol>
 			</div>
 
 
@@ -111,372 +117,415 @@
 				</h3>
 			</div>
 		</div>
-			<br>
-			<br>
-		</div>
-		<div id="not-needed-visa" style="text-align: center; height: 150px;">
-			<h1 style="vertical-align: middle; padding-top: 50px;">Based on our infromation</h1>
-			<h1><span style="color: green; margin-bottom: 50px;">You do not need a visa</span></h1>
-			<hr>
-		</div>
-		
-		<div id="show">
-			<div class="d-flex mb-6 whiteB" id="auCollapseBox">
-				<h2 class="collapseTitle">Based on your information you <span id="visa_info" style="color: green;"> do not need visa</span> to go to Australia.</h2>
-				<div class="flex-fill ml-2">
-					<div class="card card-body">
-						<b>There are many types of visa, we outline some of the most popular here for you.</b>
+		<br>
+		<br>
+	</div>
+	<div id="not-needed-visa" style="text-align: center; height: 150px;">
+		<h1 style="vertical-align: middle; padding-top: 50px;">Based on our infromation</h1>
+		<h1><span style="color: green; margin-bottom: 50px;">You do not need a visa</span></h1>
+		<hr>
+	</div>
+
+	<div id="show">
+		<div class="d-flex mb-6 whiteB" id="auCollapseBox">
+			<h2 class="collapseTitle">Based on your information you <span id="visa_info"
+					style="color: green;"> do not need visa</span> to go to Australia.</h2>
+			<div class="flex-fill ml-2">
+				<div class="card card-body">
+					<b>There are many types of visa, we outline some of the most popular here for
+						you.</b>
+					<ul>
+						<li> The complete list of visas as follows:<a
+								href="https://immi.homeaffairs.gov.au/visas/">
+								VISAS </a>.
+							<br>
+						<li>Visitors visa</li>
 						<ul>
-							<li> The complete list of visas as follows:<a
-									href="https://immi.homeaffairs.gov.au/visas/">
-									VISAS </a>.
-								<br> <li>Visitors visa</li> 
-								<ul>
-									<li>Electronic Travel Authority (subclass 601)</li>
-									<li>eVisitor (subclass 651)</li>
-									<li>Transit visa (subclass 771) </li>
-									<li>Visitor (subclass 600)</li>
-									<li>Work and Holiday visa (subclass 462)</li>
-									<li>Working Holiday visa (subclass 417)</li>
-									<li> Bharat Biotech Covaxin.</li>
-								</ul>
-								<li>Studying and training visas</li> 
-								<ul>
-									<li>Student visa (subclass 500) </li>
-									<li>Student Guardian visa (subclass 590) </li>
-									<li>Training visa (subclass 407) </li>
-								</ul>
-								<li>Family and partner visas</li> 
-								<ul>
-									<li>Adoption visa (subclass 102) </li>
-									<li>Aged Dependent Relative visa (subclass 114)</li>
-									<li>Aged Dependent Relative visa (subclass 838)</li>
-								</ul>
-							</li>
+							<li>Electronic Travel Authority (subclass 601)</li>
+							<li>eVisitor (subclass 651)</li>
+							<li>Transit visa (subclass 771) </li>
+							<li>Visitor (subclass 600)</li>
+							<li>Work and Holiday visa (subclass 462)</li>
+							<li>Working Holiday visa (subclass 417)</li>
+							<li> Bharat Biotech Covaxin.</li>
 						</ul>
+						<li>Studying and training visas</li>
+						<ul>
+							<li>Student visa (subclass 500) </li>
+							<li>Student Guardian visa (subclass 590) </li>
+							<li>Training visa (subclass 407) </li>
+						</ul>
+						<li>Family and partner visas</li>
+						<ul>
+							<li>Adoption visa (subclass 102) </li>
+							<li>Aged Dependent Relative visa (subclass 114)</li>
+							<li>Aged Dependent Relative visa (subclass 838)</li>
+						</ul>
+						</li>
+					</ul>
+					<br>
+					<i>*More details can be found at<a
+							href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing">
+							Visa listings.</a></i>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+
+	<!--  -->
+	<div class="d-flex mb-3 whiteB" id="auCollapseBox1">
+		<h2 class="collapseTitle">Check if you qualify as a fully vaccinated traveller</h2>
+		<div class="flex-fill ml-2">
+			<div class="card card-body" id="fully">
+				<b>To qualify as a fully vaccinated traveller to Australia, you must:</b>
+				<ul>
+					<li> if you have completed a course, including a mixed dose, of a <a
+							href="https://www.tga.gov.au/covid-19-vaccines-not-registered-australia-current-international-use-tga-advice-recognition-0">
+							TGA approved or recognised vaccine </a>. Current accepted vaccines and
+						dosages
+						for
+						the purposes of travel are:
+						<br> Two doses at least 14 days apart of:
+
+						<ul>
+							<li>AstraZeneca Vaxzevria </li>
+							<li> AstraZeneca Covishield</li>
+							<li> Pfizer/Biontech Comirnaty </li>
+							<li> Moderna Spikevax</li>
+							<li>Sinovac Coronavac</li>
+							<li> Sinopharm BBIBP-CorV (for people aged 18-60) </li>
+							<li> Bharat Biotech Covaxin.</li>
+						</ul>
+						Or one dose of:
+						<ul>
+							<li>Johnson & Johnson/ Janssen-Cilag COVID Vaccine. </li>
+
+						</ul>
+					</li>
+
+
+					<li> Seven days must have passed since the final dose of vaccine in a course of
+						immunisation for you to be considered fully vaccinated. Mixed doses count
+						towards
+						being fully vaccinated as long as all vaccines are approved or recognised by
+						the
+						TGA.
+					</li>
+					<li> Travellers vaccinated in Australia will need to present an Australian
+						International
+						COVID-19 Vaccination Certificate (ICVC).</li>
+					<li> Have no signs or symptoms of COVID-19</li>
+					<li> Get pre-entry test result and meet other requirements listed below</li>
+				</ul>
+				<br>
+				<i>*More details can be found at<a
+						href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
+						COVID-19 international travellers to Australia.</a></i>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex mb-3 grayB" id="auCollapseBox2">
+		<h2 class="collapseTitle">Get a pre-entry test</h2>
+		<div class="flex-fill ml-2">
+			<div class="card card-body">
+				<ul>
+					<li>People travelling to Australia need to provide a negative COVID-19 PCR test
+						result.
+					</li>
+
+					<li> This includes people travelling on flights from New Zealand. </li>
+
+					<li> You must present evidence of a negative COVID-19 PCR test taken within 3
+						days of
+						your
+						flight’s scheduled departure to your airline when you check-in for your
+						flight.
+					</li>
+
+					<li> Find out more about PCR test requirements, including what to do if your PCR
+						test
+						result
+						is positive,
+						when you have already had and recovered from COVID-19, and medical
+						exemptions for
+						pre-departure testing. </li>
+				</ul>
+				<br>
+
+				<i>*More details can be found at<a
+						href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
+						COVID-19 international travellers to Australia.</a></i>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex mb-3 whiteB" id="auCollapseBox3">
+		<h2 class="collapseTitle">Quarantine plan in case you don’t qualify
+			as
+			a fully vaccinated traveller</h2>
+		<div class="flex-fill ml-2">
+			<div class="card card-body">
+				<p> <b>What are the current quarantine arrangements? </b> </p>
+				<p>Quarantine arrangements are managed by the state and territory governments, with
+					the
+					support
+					of the Australian
+					Government. Modified quarantine arrangements, including home quarantine, may
+					vary
+					depending
+					on the state or
+					territory of your first arrival. You can find information on the current
+					quarantine
+					arrangements for the state
+					or territory of your first arrival via their local government website. </p>
+
+				<br>
+
+				<i>*More details can be found at<a
+						href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19">
+						Advice for International travellers page.</a></i>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex mb-3 grayB" id="auCollapseBox4">
+		<h2 class="collapseTitle">Present proof of vaccination</h2>
+		<div class="flex-fill ml-2">
+			<div class="card card-body">
+				<p>Traveling to Australia must provide an international COVID-19 vaccination
+					certificate
+					(ICVC)
+					as evidence of vaccination.
+				</p>
+				<p>You can get your ICVC through the <a
+						href="https://my.gov.au/LoginServices/main/login?execution=e1s1">MyGov
+						portal</a>.
+				</p>
+				<p>Travellers vaccinated in other countries will be able to present certificates in
+					formats
+					that meet the following criteria:</p>
+				<ul>
+					<li>Issued by a national or state/provincial-level authority or an accredited
+						vaccination provider</li>
+					<li> written in English or accompanied by a certified translation</li>
+					<li>containing at a minimum:</li>
+					<ul>
+						<li> name as it appears in the traveller's passport</li>
+						<li> either date of birth or passport number</li>
+						<li> the vaccine brand name, and</li>
+						<li> the date of each dose or the date on which a full course of
+							immunisation was
+							completed.</li>
+					</ul>
+				</ul>
+				<i>*More details can be found at<a
+						href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
+						COVID-19 international travellers to Australia.</a></i>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex mb-3 whiteB" id="auCollapseBox5">
+		<h2 class="collapseTitle">Find out if your vaccines are eligible.</h2>
+		<div class="flex-fill ml-2">
+			<div class="card card-body" id="fully1">
+				<b>To qualify as a fully vaccinated traveller to Australia, you must:</b>
+				<ul>
+					<li> if you have completed a course, including a mixed dose, of a <a
+							href="https://www.tga.gov.au/covid-19-vaccines-not-registered-australia-current-international-use-tga-advice-recognition-0">
+							TGA approved or recognised vaccine </a>. Current accepted vaccines and
+						dosages
+						for
+						the purposes of travel are:
+						<br> Two doses at least 14 days apart of:
+
+						<ul>
+							<li>AstraZeneca Vaxzevria </li>
+							<li> AstraZeneca Covishield</li>
+							<li> Pfizer/Biontech Comirnaty </li>
+							<li> Moderna Spikevax</li>
+							<li>Sinovac Coronavac</li>
+							<li> Sinopharm BBIBP-CorV (for people aged 18-60) </li>
+							<li> Bharat Biotech Covaxin.</li>
+						</ul>
+						Or one dose of:
+						<ul>
+							<li>Johnson & Johnson/ Janssen-Cilag COVID Vaccine. </li>
+
+						</ul>
+					</li>
+
+
+					<li> Seven days must have passed since the final dose of vaccine in a course of
+						immunisation for you to be considered fully vaccinated. Mixed doses count
+						towards
+						being fully vaccinated as long as all vaccines are approved or recognised by
+						the
+						TGA.
+					</li>
+					<li> Travellers vaccinated in Australia will need to present an Australian
+						International
+						COVID-19 Vaccination Certificate (ICVC).</li>
+					<li> Have no signs or symptoms of COVID-19</li>
+					<li> Get pre-entry test result and meet other requirements listed below</li>
+				</ul>
+				<br>
+				<i>*More details can be found at<a
+						href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
+						COVID-19 international travellers to Australia.</a></i>
+			</div>
+		</div>
+	</div>
+	<div id="custom-section">
+		<h3 class="customTitle">Items You Can Bring Into Australia</h3>
+		<div class="accordion accordion-flush" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse"
+						data-bs-target="#collapseOne" aria-expanded="true"
+						aria-controls="collapseOne">
+						Cash
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse"
+					aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<p>There is no limit to the amount of currency (cash) you can bring in or
+							out of
+							Australia.
+							However, you must declare amounts of AUD 10,000 or more in Australian
+							currency or
+							foreign equivalent.</p>
+
+						<p>You must disclose any promissory notes, travellers' cheques, personal
+							cheques,
+							money orders, postal orders or other bearer negotiable instruments,
+							regardless of
+							value,
+							if requested by one of our officers or a police officer.</p>
+						<i>*More details can be found at<a
+								href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
+								What items can be brought in free of duty and tax.</a></i>
+
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingTwo">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+						aria-expanded="false" aria-controls="collapseTwo">
+						Alcoholic Beverages
+					</button>
+				</h2>
+				<div id="collapseTwo" class="accordion-collapse collapse"
+					aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<p>If you are aged 18 years or over, you can bring 2.25 litres of alcoholic
+							beverages
+							duty free into Australia with you, regardless of whether you are
+							travelling as a
+							passenger or crew member. All alcoholic beverages in accompanied baggage
+							are
+							included
+							in this category, regardless of where or how they were purchased.</p>
+
+						<p>Aviation security regulations may restrict the volume of liquids that you
+							can bring
+							into
+							Australia as
+							hand luggage. As an alternative, duty free alcoholic beverages can be
+							purchased in
+							an
+							airport duty free
+							shop on arrival in Australia. </p>
+						<i>*More details can be found at<a
+								href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
+								What items can be brought in free of duty and tax.</a></i>
+
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#collapseThree"
+						aria-expanded="false" aria-controls="collapseThree">
+						Tobacco Products
+					</button>
+				</h2>
+				<div id="collapseThree" class="accordion-collapse collapse"
+					aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<p>From 1 July 2017, you can bring 25 grams of tobacco in any form
+							(cigarette, loose
+							leaf,
+							etc.), equivalent to
+							approximately 25 cigarettes, plus an open packet, for each traveller 18
+							years or
+							older,
+							regardless of whether
+							you are travelling as a passenger or crew member.</p>
 						<br>
 						<i>*More details can be found at<a
-								href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing">
-								Visa listings.</a></i>
+								href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
+								What items can be brought in free of duty and tax.</a></i>
+
 					</div>
 				</div>
-			<!-- </div> -->
 			</div>
-		</div>
-		
-		<br>
-		<br>
-		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingFour">
+					<button class="accordion-button collapsed" type="button"
+						data-bs-toggle="collapse" data-bs-target="#collapseFour"
+						aria-expanded="false" aria-controls="collapseFour">
+						General goods
+					</button>
+				</h2>
+				<div id="collapseFour" class="accordion-collapse collapse"
+					aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<p>General goods include gifts, souvenirs, cameras, electronic equipment,
+							leather goods,
+							perfume concentrates,
+							jewellery, watches and sporting equipment.
+						</p>
+						<p><b>Return to Australia with goods subject to the Tourist Refund Scheme
+								(TRS)
+								provisions</b></p>
+						<p>If you return to Australia with goods for which you have claimed a GST
+							refund under
+							the
+							TRS on departure,
+							you must declare those goods at Question 3 on the Incoming Passenger
+							Card (IPC).</p>
 
+						<p> GST refunds received on goods claimed under the TRS will have to be
+							repaid if the
+							items
+							are brought into Australia.</p>
 
-		<!--  -->
-		<div class="d-flex mb-3 whiteB" id="auCollapseBox1">
-			<h2 class="collapseTitle">Check if you qualify as a fully vaccinated traveller</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body" id="fully">
-					<b>To qualify as a fully vaccinated traveller to Australia, you must:</b>
-					<ul>
-						<li> if you have completed a course, including a mixed dose, of a <a
-								href="https://www.tga.gov.au/covid-19-vaccines-not-registered-australia-current-international-use-tga-advice-recognition-0">
-								TGA approved or recognised vaccine </a>. Current accepted vaccines and dosages
-							for
-							the purposes of travel are:
-							<br> Two doses at least 14 days apart of:
+						<p> See the <a
+								href="https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme">Tourist
+								Refund Scheme</a>
+							page for more detail about how it works.</p>
+						<br>
+						<i>*More details can be found at<a
+								href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
+								What items can be brought in free of duty and tax.</a></i>
 
-							<ul>
-								<li>AstraZeneca Vaxzevria </li>
-								<li> AstraZeneca Covishield</li>
-								<li> Pfizer/Biontech Comirnaty </li>
-								<li> Moderna Spikevax</li>
-								<li>Sinovac Coronavac</li>
-								<li> Sinopharm BBIBP-CorV (for people aged 18-60) </li>
-								<li> Bharat Biotech Covaxin.</li>
-							</ul>
-							Or one dose of:
-							<ul>
-								<li>Johnson & Johnson/ Janssen-Cilag COVID Vaccine. </li>
-
-							</ul>
-						</li>
-
-
-						<li> Seven days must have passed since the final dose of vaccine in a course of
-							immunisation for you to be considered fully vaccinated. Mixed doses count towards
-							being fully vaccinated as long as all vaccines are approved or recognised by the
-							TGA.
-						</li>
-						<li> Travellers vaccinated in Australia will need to present an Australian International
-							COVID-19 Vaccination Certificate (ICVC).</li>
-						<li> Have no signs or symptoms of COVID-19</li>
-						<li> Get pre-entry test result and meet other requirements listed below</li>
-					</ul>
-					<br>
-					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
-				</div>
-			</div>
-		</div>
-		<div class="d-flex mb-3 grayB" id="auCollapseBox2">
-			<h2 class="collapseTitle">Get a pre-entry test</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body">
-					<ul>
-						<li>People travelling to Australia need to provide a negative COVID-19 PCR test result.
-						</li>
-
-						<li> This includes people travelling on flights from New Zealand. </li>
-
-						<li> You must present evidence of a negative COVID-19 PCR test taken within 3 days of
-							your
-							flight’s scheduled departure to your airline when you check-in for your flight.
-						</li>
-
-						<li> Find out more about PCR test requirements, including what to do if your PCR test
-							result
-							is positive,
-							when you have already had and recovered from COVID-19, and medical exemptions for
-							pre-departure testing. </li>
-					</ul>
-					<br>
-
-					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
-				</div>
-			</div>
-		</div>
-		<div class="d-flex mb-3 whiteB" id="auCollapseBox3">
-			<h2 class="collapseTitle">Quarantine plan in case you don’t qualify
-				as
-				a fully vaccinated traveller</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body">
-					<p> <b>What are the current quarantine arrangements? </b> </p>
-					<p>Quarantine arrangements are managed by the state and territory governments, with the
-						support
-						of the Australian
-						Government. Modified quarantine arrangements, including home quarantine, may vary
-						depending
-						on the state or
-						territory of your first arrival. You can find information on the current quarantine
-						arrangements for the state
-						or territory of your first arrival via their local government website. </p>
-
-					<br>
-
-					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19">
-							Advice for International travellers page.</a></i>
-				</div>
-			</div>
-		</div>
-		<div class="d-flex mb-3 grayB" id="auCollapseBox4">
-			<h2 class="collapseTitle">Present proof of vaccination</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body">
-					<p>Traveling to Australia must provide an international COVID-19 vaccination certificate
-						(ICVC)
-						as evidence of vaccination.
-					</p>
-					<p>You can get your ICVC through the <a
-							href="https://my.gov.au/LoginServices/main/login?execution=e1s1">MyGov portal</a>.
-					</p>
-					<p>Travellers vaccinated in other countries will be able to present certificates in formats
-						that meet the following criteria:</p>
-					<ul>
-						<li>Issued by a national or state/provincial-level authority or an accredited
-							vaccination provider</li>
-						<li> written in English or accompanied by a certified translation</li>
-						<li>containing at a minimum:</li>
-						<ul>
-							<li> name as it appears in the traveller's passport</li>
-							<li> either date of birth or passport number</li>
-							<li> the vaccine brand name, and</li>
-							<li> the date of each dose or the date on which a full course of immunisation was
-								completed.</li>
-						</ul>
-					</ul>
-					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
-				</div>
-			</div>
-		</div>
-		<div class="d-flex mb-3 whiteB" id="auCollapseBox5">
-			<h2 class="collapseTitle">Find out if your vaccines are eligible.</h2>
-			<div class="flex-fill ml-2">
-				<div class="card card-body" id="fully1">
-					<b>To qualify as a fully vaccinated traveller to Australia, you must:</b>
-					<ul>
-						<li> if you have completed a course, including a mixed dose, of a <a
-								href="https://www.tga.gov.au/covid-19-vaccines-not-registered-australia-current-international-use-tga-advice-recognition-0">
-								TGA approved or recognised vaccine </a>. Current accepted vaccines and dosages
-							for
-							the purposes of travel are:
-							<br> Two doses at least 14 days apart of:
-
-							<ul>
-								<li>AstraZeneca Vaxzevria </li>
-								<li> AstraZeneca Covishield</li>
-								<li> Pfizer/Biontech Comirnaty </li>
-								<li> Moderna Spikevax</li>
-								<li>Sinovac Coronavac</li>
-								<li> Sinopharm BBIBP-CorV (for people aged 18-60) </li>
-								<li> Bharat Biotech Covaxin.</li>
-							</ul>
-							Or one dose of:
-							<ul>
-								<li>Johnson & Johnson/ Janssen-Cilag COVID Vaccine. </li>
-
-							</ul>
-						</li>
-
-
-						<li> Seven days must have passed since the final dose of vaccine in a course of
-							immunisation for you to be considered fully vaccinated. Mixed doses count towards
-							being fully vaccinated as long as all vaccines are approved or recognised by the
-							TGA.
-						</li>
-						<li> Travellers vaccinated in Australia will need to present an Australian International
-							COVID-19 Vaccination Certificate (ICVC).</li>
-						<li> Have no signs or symptoms of COVID-19</li>
-						<li> Get pre-entry test result and meet other requirements listed below</li>
-					</ul>
-					<br>
-					<i>*More details can be found at<a
-							href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-travel-and-restrictions/international-travel-and-covid-19/coronavirus-covid-19-faqs-international-travellers-to-australia">
-							COVID-19 international travellers to Australia.</a></i>
-				</div>
-			</div>
-		</div>
-		<div id="custom-section">
-			<h3 class="customTitle">Items You Can Bring Into Australia</h3>
-			<div class="accordion accordion-flush" id="accordionExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingOne">
-						<button class="accordion-button" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							Cash
-						</button>
-					</h2>
-					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-						data-bs-parent="#accordionExample">
-						<div class="accordion-body">
-							<p>There is no limit to the amount of currency (cash) you can bring in or out of
-								Australia.
-								However, you must declare amounts of AUD 10,000 or more in Australian currency or
-								foreign equivalent.</p>
-
-							<p>You must disclose any promissory notes, travellers' cheques, personal cheques,
-								money orders, postal orders or other bearer negotiable instruments, regardless of
-								value,
-								if requested by one of our officers or a police officer.</p>
-							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
-
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingTwo">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							Alcoholic Beverages
-						</button>
-					</h2>
-					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-						data-bs-parent="#accordionExample">
-						<div class="accordion-body">
-							<p>If you are aged 18 years or over, you can bring 2.25 litres of alcoholic beverages
-								duty free into Australia with you, regardless of whether you are travelling as a
-								passenger or crew member. All alcoholic beverages in accompanied baggage are
-								included
-								in this category, regardless of where or how they were purchased.</p>
-
-							<p>Aviation security regulations may restrict the volume of liquids that you can bring
-								into
-								Australia as
-								hand luggage. As an alternative, duty free alcoholic beverages can be purchased in
-								an
-								airport duty free
-								shop on arrival in Australia. </p>
-							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
-
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingThree">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							Tobacco Products
-						</button>
-					</h2>
-					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-						data-bs-parent="#accordionExample">
-						<div class="accordion-body">
-							<p>From 1 July 2017, you can bring 25 grams of tobacco in any form (cigarette, loose
-								leaf,
-								etc.), equivalent to
-								approximately 25 cigarettes, plus an open packet, for each traveller 18 years or
-								older,
-								regardless of whether
-								you are travelling as a passenger or crew member.</p>
-							<br>
-							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
-
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="headingFour">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-							General goods
-						</button>
-					</h2>
-					<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-						data-bs-parent="#accordionExample">
-						<div class="accordion-body">
-							<p>General goods include gifts, souvenirs, cameras, electronic equipment, leather goods,
-								perfume concentrates,
-								jewellery, watches and sporting equipment.
-							</p>
-							<p><b>Return to Australia with goods subject to the Tourist Refund Scheme (TRS)
-									provisions</b></p>
-							<p>If you return to Australia with goods for which you have claimed a GST refund under
-								the
-								TRS on departure,
-								you must declare those goods at Question 3 on the Incoming Passenger Card (IPC).</p>
-
-							<p> GST refunds received on goods claimed under the TRS will have to be repaid if the
-								items
-								are brought into Australia.</p>
-
-							<p> See the <a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme">Tourist
-									Refund Scheme</a>
-								page for more detail about how it works.</p>
-							<br>
-							<i>*More details can be found at<a
-									href="https://www.abf.gov.au/entering-and-leaving-australia/duty-free">
-									What items can be brought in free of duty and tax.</a></i>
-
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<br>
-		<br>
-		<br>
+	<br>
+	<br>
+	<br>
 
 	</div>
 
@@ -490,13 +539,14 @@
 					Result</button>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-			aria-hidden="true">
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1"
+			aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form>
@@ -509,22 +559,26 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary"
+							id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+							data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-			tabindex="-1">
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+			aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
-					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+					<div class="modal-body"
+						style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
 						Your search has been saved!
 					</div>
 					<div class="modal-footer">
@@ -549,7 +603,8 @@
 	<script src="scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous">
 	</script>
 	<script>
 		var exampleModal = document.getElementById('exampleModalToggle')
@@ -563,25 +618,25 @@
 		})
 	</script>
 
-<script>
-	function displayCountryName() {
-            db.collection("Countries").where("name", "==", "Australia").get()
-			.then(function (snap) {
-                    snap.forEach(function (doc) {
-                        //console.log(doc.data());
-                        var countryName = doc.data().name; //gets the name field
-                        document.getElementById("countrySelected").innerHTML = countryName;
-                    })
+	<script>
+		function displayCountryName() {
+			db.collection("Countries").where("name", "==", "Australia").get()
+				.then(function (snap) {
+					snap.forEach(function (doc) {
+						//console.log(doc.data());
+						var countryName = doc.data().name; //gets the name field
+						document.getElementById("countrySelected").innerHTML = countryName;
+					})
 
-                })
-        }
+				})
+		}
 		displayCountryName();
 
-	/*Save document*/
-	function saveInfo() {
+		/*Save document*/
+		function saveInfo() {
 			let file_name = document.getElementById("file-name").value;
 			firebase.auth().onAuthStateChanged(user => {
-				if(user) {
+				if (user) {
 					db.collection("users").doc(user.uid).collection("saved_countries").add({
 						nation: "Australia",
 						link: "./australia-visa-info.html",
@@ -590,27 +645,25 @@
 				}
 			})
 		}
-
-</script>
+	</script>
 	<script>
 		// Get data from the form and adjust base on the results
-		function getData(){
-		var visa = localStorage.getItem("div1");
-		var test = "must obtain visa"
-		var no_visa = "do not need visa"
-		if (visa.includes('require') === true) {
-			document.getElementById("visa_info").innerHTML = test;
-			document.getElementById("visa_info").style.color = "red"
-			document.getElementById('show').style.display = 'block'
-			document.getElementById('not-needed-visa').style.display = 'none'
-		}
-		else {
-			document.getElementById("visa_info").innerHTML = no_visa;
-			document.getElementById("visa_info").style.color = "green"
-			document.getElementById('show').style.display = 'none'
-		}
+		function getData() {
+			var visa = localStorage.getItem("div1");
+			var test = "must obtain visa"
+			var no_visa = "do not need visa"
+			if (visa.includes('require') === true) {
+				document.getElementById("visa_info").innerHTML = test;
+				document.getElementById("visa_info").style.color = "red"
+				document.getElementById('show').style.display = 'block'
+				document.getElementById('not-needed-visa').style.display = 'none'
+			} else {
+				document.getElementById("visa_info").innerHTML = no_visa;
+				document.getElementById("visa_info").style.color = "green"
+				document.getElementById('show').style.display = 'none'
+			}
 		};
-	getData()
+		getData()
 	</script>
 
 

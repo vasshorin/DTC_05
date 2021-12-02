@@ -8,8 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="BCIT">
 	<!-- Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
 	<!-- Google Icons (Material Design)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Firebase 8 CDNs-->
@@ -32,14 +34,15 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
+							<a class="nav-link active" aria-current="page"
+								href="../main.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href=".././countries.html">Countries</a>
@@ -62,7 +65,8 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span> (Canada)</h1>
+				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span>
+					(Canada)</h1>
 			</div>
 
 			<h3 class="mb-3">Restrictions:</h3>
@@ -77,14 +81,14 @@
 						Self-isolation requirements
 					</button>
 				</p>
-				
+
 				<p>
 					<button id="bcMaskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-	
+
 		</div>
 
 		<br>
@@ -94,30 +98,40 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>The <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-covid-19-proof-vaccination.html">
-						Government of Canada</a> requires <b>all travellers 12 years and 4 months of age and older</b> 
-						to be fully vaccinated and show proof of vaccination to use federally regulated methods of travel:</p>
-	
+					<p>The <a
+							href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-covid-19-proof-vaccination.html">
+							Government of Canada</a> requires <b>all travellers 12 years and 4
+							months of age and older</b>
+						to be fully vaccinated and show proof of vaccination to use federally
+						regulated methods of travel:</p>
+
 					<ul>
 						<li>Departing from any Canadian airport </li>
 						<li>Travelling on VIA Rail and Rocky Mountaineer trains</li>
-						<li>Staying on a non-essential passenger vessel for more than 24 hours (like a cruise ship)</li>
+						<li>Staying on a non-essential passenger vessel for more than 24 hours (like
+							a cruise ship)</li>
 						<ul>
 							<li>BC Ferries does not require proof of vaccination</li>
 						</ul>
 					</ul>
 
-					<p><b>Note</b>: For travel within Canada, you're considered fully vaccinated 14 days after you get your second dose of vaccine.</p>
-					<p>During the transition period to November 30, 2021, anyone who is partially vaccinated can travel if they show a negative COVID-19 molecular 
-					   test from within 72 hours prior to departure.</p>
+					<p><b>Note</b>: For travel within Canada, you're considered fully vaccinated 14
+						days after you get your second dose of vaccine.</p>
+					<p>During the transition period to November 30, 2021, anyone who is partially
+						vaccinated can travel if they show a negative COVID-19 molecular
+						test from within 72 hours prior to departure.</p>
 
 					<br>
 					<b>Federal COVID-19 proof of vaccination for travel:</b>
-					<p>The Government of Canada has created a federal COVID-19 proof of vaccination document for travel. It's recommended you use the document for travel 
+					<p>The Government of Canada has created a federal COVID-19 proof of vaccination
+						document for travel. It's recommended you use the document for travel
 						within Canada and internationally.</p>
-					<p>The federal COVID-19 proof of vaccination document has <b>the Government of Canada flag and a QR code</b> that contains your COVID-19 vaccination history. <b>As shown below</b>:</p>
-					<img src="../images/proof_of_vaccination_example.png" alt="example" width="400" style="margin-left: 7%;">
-					
+					<p>The federal COVID-19 proof of vaccination document has <b>the Government of
+							Canada flag and a QR code</b> that contains your COVID-19 vaccination
+						history. <b>As shown below</b>:</p>
+					<img src="../images/proof_of_vaccination_example.png" alt="example" width="400"
+						style="margin-left: 7%;">
+
 					<br>
 					<i>*More details can be found at<a
 							href="https://www2.gov.bc.ca/gov/content/covid-19/travel/current">
@@ -129,8 +143,9 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>You <b>do not need to quarantine</b> when entering B.C. from another province or territory.</p>
-					
+					<p>You <b>do not need to quarantine</b> when entering B.C. from another province
+						or territory.</p>
+
 					<i>*More details can be found at<a
 							href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19/prevention-risks/travel">
 							COVID-19 requirements for traveling within Canada.</a></i>
@@ -141,7 +156,8 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>Masks are required in all public indoor settings for all people born in 2016 or earlier (5+). </b>
+					<b>Masks are required in all public indoor settings for all people born in 2016
+						or earlier (5+). </b>
 					<p>This includes:</p>
 					<ul>
 						<li>Airports</li>
@@ -149,12 +165,14 @@
 						<li>Grocery and liquor stores</li>
 						<li>Restaurants, pubs and bars when not seated at a table</li>
 						<li>On public transportation, in a taxi or ride-sharing vehicle</li>
-						<li>Common areas of sport and fitness centres when not engaged in physical activity</li>
+						<li>Common areas of sport and fitness centres when not engaged in physical
+							activity</li>
 					</ul>
 
-					<p><b>Note</b>: A face shield is not a substitute for a mask as it has an opening below the mouth. </p>
+					<p><b>Note</b>: A face shield is not a substitute for a mask as it has an
+						opening below the mouth. </p>
 					<br>
-					
+
 					<i>*More details can be found at<a
 							href="https://www2.gov.bc.ca/gov/content/covid-19/info/restrictions?keyword=mask">
 							PHO order on masks in public indoor settings.</a></i>
@@ -176,14 +194,14 @@
 					data-bs-target="#exampleModalToggle">Save Search Result</button>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-			aria-hidden="true">
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1"
+			aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
-							aria-label="Close"></button>
+						<button type="button" class="btn-close btn-close-dark"
+							data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form>
@@ -196,22 +214,26 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary"
+							id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+							data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-			tabindex="-1">
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+			aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
-					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+					<div class="modal-body"
+						style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
 						Your search has been saved!
 					</div>
 					<div class="modal-footer">
@@ -235,7 +257,8 @@
 	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
 		var exampleModal = document.getElementById('exampleModalToggle')
 		exampleModal.addEventListener('show.bs.modal', function (event) {
 			// Button that triggered the modal
@@ -250,29 +273,29 @@
 	<script>
 		//Display province name by using database query (.where())
 		function displayProvinceName() {
-            db.collection("Provinces").where("name", "==", "British Columbia").get()
-			.then(function (snap) {
-                    snap.forEach(function (doc) {
-                        //console.log(doc.data());
-                        var provinceName = doc.data().name; //gets the name field
-                        document.getElementById("provinceSelected").innerHTML = provinceName;
-                    })
+			db.collection("Provinces").where("name", "==", "British Columbia").get()
+				.then(function (snap) {
+					snap.forEach(function (doc) {
+						//console.log(doc.data());
+						var provinceName = doc.data().name; //gets the name field
+						document.getElementById("provinceSelected").innerHTML = provinceName;
+					})
 
-                })
-        }
+				})
+		}
 		displayProvinceName();
 
 
 		// /*Save document*/
-        // function saveInfo() {
-    	//      let file_name = document.getElementById("file-name").value;
-        //      var countriesRef = db.collection("saved_document");
-        //      countriesRef.add({
-        //          nation: "Canada",
+		// function saveInfo() {
+		//      let file_name = document.getElementById("file-name").value;
+		//      var countriesRef = db.collection("saved_document");
+		//      countriesRef.add({
+		//          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-        //      });
-        //  }
+		//      });
+		//  }
 	</script>
 </body>
 

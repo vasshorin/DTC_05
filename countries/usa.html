@@ -8,8 +8,10 @@
     <meta name="author" content="BCIT">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -31,68 +33,70 @@
 <body>
     <!-- NAVIGATION -->
     <div id="navigation">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container-fluid">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href=".././countries.html">Countries</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href=".././searchtrip.html">Search trip</a>
-						</li>
-					</ul>
-				</div>
-				<div id="nav-right">
-					<i class="material-icons"><a href="../saved_document.html">upload_file</a> </i>
-					<i class="material-icons"><a href="../profile.html">account_circle</a></i>
-				</div>
-			</div>
-		</nav>
-	</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../main.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=".././countries.html">Countries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=".././searchtrip.html">Search trip</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="nav-right">
+                    <i class="material-icons"><a href="../saved_document.html">upload_file</a> </i>
+                    <i class="material-icons"><a href="../profile.html">account_circle</a></i>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <div class="conBox">
         <div id="regulation-section" class="d-flex">
             <p class="rbg1"></p>
             <p class="rbg2"></p>
             <div class="regulationTitle">
-                <h1 class="mb-3">Regulations and Customs Results for Travel to the <span id="countrySelected"></span></h1>
+                <h1 class="mb-3">Regulations and Customs Results for Travel to the <span
+                        id="countrySelected"></span></h1>
             </div>
 
             <div id="top-title">
-            <h3 class="mb-3" id="regulations">Regulations:</h3>
-            <ol>
-                <li>Entering the United States as a fully vaccinated travellers</li>
-                <br>
-                <p>
-                    <button id="usaCheckBtn" class="btn btn-outline-secondary" type="button">
-                        Check if you qualify as a fully vaccinated traveller
-                    </button>
-                </p>
+                <h3 class="mb-3" id="regulations">Regulations:</h3>
+                <ol>
+                    <li>Entering the United States as a fully vaccinated travellers</li>
+                    <br>
+                    <p>
+                        <button id="usaCheckBtn" class="btn btn-outline-secondary" type="button">
+                            Check if you qualify as a fully vaccinated traveller
+                        </button>
+                    </p>
 
-                <li>Pre-entry testing and other requirements</li>
-                <br>
-                <p>
-                    <button id="usaGetBtn" class="btn btn-outline-secondary" type="button">
-                        Get a pre-entry test
-                    </button>
-                </p>
+                    <li>Pre-entry testing and other requirements</li>
+                    <br>
+                    <p>
+                        <button id="usaGetBtn" class="btn btn-outline-secondary" type="button">
+                            Get a pre-entry test
+                        </button>
+                    </p>
 
-                <p>
-                    <button id="usaShowBtn" class="btn btn-outline-secondary" type="button">
-                        Present proof of vaccination
-                    </button>
-                </p>
+                    <p>
+                        <button id="usaShowBtn" class="btn btn-outline-secondary" type="button">
+                            Present proof of vaccination
+                        </button>
+                    </p>
 
-            </ol>
+                </ol>
             </div>
 
             <div class="itemsBox">
@@ -116,23 +120,30 @@
                 <div class="card card-body" id="fully">
                     <b>You are considered fully vaccinated:</b>
                     <ul>
-                        <li> 2 weeks (14 days) after your dose of an accepted single-dose vaccine</li>
+                        <li> 2 weeks (14 days) after your dose of an accepted single-dose vaccine
+                        </li>
                         <li> 2 weeks (14 days) after your second dose of an accepted 2-dose series
                         </li>
-                        <li> 2 weeks (14 days) after you received the full series of an accepted COVID-19
+                        <li> 2 weeks (14 days) after you received the full series of an accepted
+                            COVID-19
                             vaccine
                             (not placebo) in a clinical trial </li>
-                        <li> 2 weeks (14 days) after you received the full series of a Novavax (or Covavax)
+                        <li> 2 weeks (14 days) after you received the full series of a Novavax (or
+                            Covavax)
                             COVID-19
                             vaccine (not placebo) in a phase 3 clinical trial</li>
-                        <li> 2 weeks (14 days) after you received 2 doses of any “mix-and-match” combination of
+                        <li> 2 weeks (14 days) after you received 2 doses of any “mix-and-match”
+                            combination of
                             accepted COVID-19 vaccines administered at least 17 days apart*</li>
                     </ul>
                     <br>
-                    <p>CDC has not recommended the use of mix-and-match COVID-19 vaccine primary series.
+                    <p>CDC has not recommended the use of mix-and-match COVID-19 vaccine primary
+                        series.
                         However,
-                        such strategies are increasingly common in many countries outside of the United States.
-                        Therefore, for the purpose of interpreting vaccination records for travel to the United
+                        such strategies are increasingly common in many countries outside of the
+                        United States.
+                        Therefore, for the purpose of interpreting vaccination records for travel to
+                        the United
                         States, CDC will accept combinations of <a
                             href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/proof-of-vaccination.html#covid-vaccines">accepted
                             COVID-19 vaccines</a>.</p>
@@ -148,27 +159,35 @@
             <div class="flex-fill ml-2">
                 <div class="card card-body">
                     <b>Who must take a pre-entry test</b>
-                    <p><b>Effective November 8, 2021 at 12:01am EST (5:01am GMT)</b>, before boarding a flight
+                    <p><b>Effective November 8, 2021 at 12:01am EST (5:01am GMT)</b>, before
+                        boarding a flight
                         to
                         the US
-                        from a foreign country, <b>all air passengers 2 years or older</b> – are required to
+                        from a foreign country, <b>all air passengers 2 years or older</b> – are
+                        required to
                         present
                         a
-                        negative COVID-19 viral test result, within a time period based on their vaccination
+                        negative COVID-19 viral test result, within a time period based on their
+                        vaccination
                         status
-                        (see table below), or present documentation of having recovered from COVID-19 in the
+                        (see table below), or present documentation of having recovered from
+                        COVID-19 in the
                         last 90
-                        days. Air passengers will also be required to confirm in the form of an attestation that
+                        days. Air passengers will also be required to confirm in the form of an
+                        attestation that
                         the
                         information they present is true.</p>
-                    <p>Time Period for Testing for Air Passengers to Obtain a Negative COVID-19 Viral Test</p>
+                    <p>Time Period for Testing for Air Passengers to Obtain a Negative COVID-19
+                        Viral Test</p>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th class="table-secondary" scope="col">Type of Air Passager<br>(2 years or
+                                <th class="table-secondary" scope="col">Type of Air Passager<br>(2
+                                    years or
                                     older)
                                 </th>
-                                <th class="table-secondary" scope="col">Number of Days to get a <br>COVID-19
+                                <th class="table-secondary" scope="col">Number of Days to get a
+                                    <br>COVID-19
                                     Viral
                                     Test Before <br>a Flight's Departure to the US</th>
                             </tr>
@@ -189,22 +208,28 @@
                     <p>You must be tested with a <a
                             href="https://www.cdc.gov/coronavirus/2019-ncov/testing/diagnostic-testing.html">viral
                             test</a>
-                        that could be either an antigen test or a nucleic acid amplification test (NAAT). </p>
-                    <p>Examples of available NAATs for SARS-CoV-2 include but are not restricted to reverse
+                        that could be either an antigen test or a nucleic acid amplification test
+                        (NAAT). </p>
+                    <p>Examples of available NAATs for SARS-CoV-2 include but are not restricted to
+                        reverse
                         transcription polymerase chain reaction
-                        (RT-PCR), reverse transcription loop-mediated isothermal amplification (RT-LAMP),
+                        (RT-PCR), reverse transcription loop-mediated isothermal amplification
+                        (RT-LAMP),
                         transcription-mediated amplification (TMA),
-                        nicking enzyme amplification reaction (NEAR), and helicase-dependent amplification
+                        nicking enzyme amplification reaction (NEAR), and helicase-dependent
+                        amplification
                         (HDA).
                     </p>
-                    <p>The test used must be authorized for use by the relevant national authority for the
+                    <p>The test used must be authorized for use by the relevant national authority
+                        for the
                         detection
                         of SARS-CoV-2 in the country
                         where the test is administered. </p>
                     <br>
                     <i>*More details can be found at<a
                             href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/testing-international-air-travelers.html">
-                            COVID-19 Testing Requirement for International Travel to the United States.</a></i>
+                            COVID-19 Testing Requirement for International Travel to the United
+                            States.</a></i>
                 </div>
             </div>
         </div>
@@ -223,19 +248,23 @@
                         <tbody>
                             <tr>
                                 <td scope="row"><b>Verifiable records (digital or paper)</b></td>
-                                <td>Vaccination certificate with QR code1, digital pass via Smartphone
+                                <td>Vaccination certificate with QR code1, digital pass via
+                                    Smartphone
                                     application
-                                    with QR code1 (e.g., United Kingdom National Health Service COVID Pass,
+                                    with QR code1 (e.g., United Kingdom National Health Service
+                                    COVID Pass,
                                     European
                                     Union Digital COVID Certificate)</td>
 
                             </tr>
                             <tr>
                                 <td scope="row"><b>Non-verifiable paper records</b></td>
-                                <td>Printout of COVID-19 vaccination record or a COVID-19 vaccination
+                                <td>Printout of COVID-19 vaccination record or a COVID-19
+                                    vaccination
                                     certificate
                                     issued
-                                    at national or subnational level or by an authorized vaccine provider (e.g.,
+                                    at national or subnational level or by an authorized vaccine
+                                    provider (e.g.,
                                     the
                                     CDC
                                     vaccination card)</td>
@@ -243,29 +272,37 @@
                             </tr>
                             <tr>
                                 <td scope="row"><b>Non-verifiable digital records</b></td>
-                                <td>Digital photos of vaccination card or record, downloaded vaccine record or
+                                <td>Digital photos of vaccination card or record, downloaded vaccine
+                                    record or
                                     vaccination
-                                    certificate from official source (e.g., public health agency, government
+                                    certificate from official source (e.g., public health agency,
+                                    government
                                     agency,
                                     or other
-                                    authorized vaccine provider), or a mobile phone application without QR code1
+                                    authorized vaccine provider), or a mobile phone application
+                                    without QR code1
                                 </td>
 
                             </tr>
                         </tbody>
                     </table>
-                    <p>1. The QR code in a verifiable vaccination record links to information confirming the
-                        credential was generated from an immunization record in an official database and is
+                    <p>1. The QR code in a verifiable vaccination record links to information
+                        confirming the
+                        credential was generated from an immunization record in an official database
+                        and is
                         protected from tampering.</p>
                     <br>
                     <p><b>All forms of proof of COVID-19 vaccination must have</b></p>
                     <ul>
-                        <li>Personal identifiers (full name plus at least one other identifier such as date of
+                        <li>Personal identifiers (full name plus at least one other identifier such
+                            as date of
                             birth
-                            or passport number) that match the personal identifiers on the passenger’s passport
+                            or passport number) that match the personal identifiers on the
+                            passenger’s passport
                             or
                             other travel documents</li>
-                        <li> Name of official source issuing the record (e.g., public health agency, government
+                        <li> Name of official source issuing the record (e.g., public health agency,
+                            government
                             agency, or other authorized vaccine provider)</li>
                         <li> Vaccine manufacturer and date(s) of vaccination</li>
                     </ul>
@@ -282,24 +319,31 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
                             Cash
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>You may bring into or take out of the country, including by mail, as much money as
+                            <p>You may bring into or take out of the country, including by mail, as
+                                much money as
                                 you
-                                wish. However, if it is<b> more than $10,000</b>, you will need to <b>report it to
+                                wish. However, if it is<b> more than $10,000</b>, you will need to
+                                <b>report it to
                                     CBP</b>. Use the
-                                online <a href="https://fincen105.cbp.dhs.gov/#/">Fincen 105 currency reporting site
+                                online <a href="https://fincen105.cbp.dhs.gov/#/">Fincen 105
+                                    currency reporting site
                                 </a>
-                                or ask a CBP officer for the paper copy of the Currency Reporting Form (FinCen 105).
+                                or ask a CBP officer for the paper copy of the Currency Reporting
+                                Form (FinCen 105).
                                 The penalties for non-compliance can be severe.</p>
 
-                            <p> "Money" means monetary instruments and includes U.S. or foreign coins currently in
-                                circulation, currency, travelers' checks in any form, money orders, and negotiable
+                            <p> "Money" means monetary instruments and includes U.S. or foreign
+                                coins currently in
+                                circulation, currency, travelers' checks in any form, money orders,
+                                and negotiable
                                 instruments or investment securities in bearer form.</p>
                             <br>
                             <i>*More details can be found at<a
@@ -311,31 +355,39 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
                             Alcoholic Beverages
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>Generally, <b>one liter of alcohol per person </b>may be entered into United States
+                            <p>Generally, <b>one liter of alcohol per person </b>may be entered into
+                                United States
                                 duty-free by
-                                travelers <b>who are 21 years or older</b>. Additional quantities may beentered but will
+                                travelers <b>who are 21 years or older</b>. Additional quantities
+                                may beentered but will
                                 be subject
-                                to duty and Federal Excise taxes, which will be assessed and collected at the Port
+                                to duty and Federal Excise taxes, which will be assessed and
+                                collected at the Port
                                 of Entry.</p>
 
-                            <p>Alcoholic beverages purchased in duty-free shops are subject to duty and Federal
-                                Excise Tax when accompanying you into the United States. The Federal Excise Tax rates
+                            <p>Alcoholic beverages purchased in duty-free shops are subject to duty
+                                and Federal
+                                Excise Tax when accompanying you into the United States. The Federal
+                                Excise Tax rates
                                 are for
-                                informational purposes only, as actual tax or fee may vary according to a person's
+                                informational purposes only, as actual tax or fee may vary according
+                                to a person's
                                 circumstances.
                             </p>
 
                             <i>*More details can be found at<a
                                     href="https://help.cbp.gov/s/article/Article-190?language=en_US#:~:text=There%20is%20no%20federal%20limit,that%20you%20comply%20with%20the">
-                                    Bringing alcohol (including homemade wine) into the United States for personal
+                                    Bringing alcohol (including homemade wine) into the United
+                                    States for personal
                                     use.</a></i>
 
                         </div>
@@ -343,31 +395,40 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
                             Tobacco Products
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>In accordance with <a
                                     href="http://uscode.house.gov/view.xhtml?req=(title:26%20section:5702%20edition:prelim)">26
-                                    U.S.C. § 5702(c)</a>, "tobacco products" means cigars, cigarettes,
-                                e-cigarettes, smokeless tobacco (snuff or chewing tobacco), pipe tobacco, and
-                                roll-your-own tobacco. For pipe/loose tobacco products, contact the Ports of Entry.
+                                    U.S.C. § 5702(c)</a>, "tobacco products" means cigars,
+                                cigarettes,
+                                e-cigarettes, smokeless tobacco (snuff or chewing tobacco), pipe
+                                tobacco, and
+                                roll-your-own tobacco. For pipe/loose tobacco products, contact the
+                                Ports of Entry.
                             </p>
-                            <p>Returning resident travelers, for those <b>over the age of 21</b>, may import tobacco
+                            <p>Returning resident travelers, for those <b>over the age of 21</b>,
+                                may import tobacco
                                 products
-                                only in quantities not exceeding the amounts specified in the personal exemptions
+                                only in quantities not exceeding the amounts specified in the
+                                personal exemptions
                                 for
-                                which the traveler qualifies <b>not more than 200 cigarettes and 100 cigars if
+                                which the traveler qualifies <b>not more than 200 cigarettes and 100
+                                    cigars if
                                     arriving
-                                    from other than a beneficiary country and insular possession</b>.
+                                    from other than a beneficiary country and insular
+                                    possession</b>.
                             </p>
                             <i>*More details can be found at<a
                                     href="https://help.cbp.gov/s/article/Article-53?language=en_US">
-                                    Travelers bringing in tobacco products (Cigarettes, Cigars, Bidis) into the U.S.
+                                    Travelers bringing in tobacco products (Cigarettes, Cigars,
+                                    Bidis) into the U.S.
                                     for personal use.</a></i>
 
                         </div>
@@ -375,29 +436,37 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
                             Gifts
                         </button>
                     </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p> The value of goods that do not require the traveler to pay duty will be <b>$200,
+                            <p> The value of goods that do not require the traveler to pay duty will
+                                be <b>$200,
                                     $800 or
-                                    $1600 depending on the countries visited</b>. At entry level, you may include
+                                    $1600 depending on the countries visited</b>. At entry level,
+                                you may include
                                 only
-                                very limited amounts of alcoholic beverages and tobacco products in your duty free
+                                very limited amounts of alcoholic beverages and tobacco products in
+                                your duty free
                                 personal exemption.
                             </p>
                             <ul>
-                                <li>All items you receive as gifts while abroad and items you buy to give as gifts
+                                <li>All items you receive as gifts while abroad and items you buy to
+                                    give as gifts
                                     must
                                     be declared.</li>
-                                <li>Gifts may be included in the value of your duty free personal exemption.</li>
-                                <li>Gifts for business or commercial purposes may not be included in your duty free
+                                <li>Gifts may be included in the value of your duty free personal
+                                    exemption.</li>
+                                <li>Gifts for business or commercial purposes may not be included in
+                                    your duty free
                                     personal exemption.</li>
-                                <li>Gifts worth more than $5 that contain alcohol, tobacco products and perfume
+                                <li>Gifts worth more than $5 that contain alcohol, tobacco products
+                                    and perfume
                                     containing alcohol may not be
                                     included as gifts in your duty free personal exemption.</li>
                             </ul>
@@ -425,13 +494,14 @@
                     data-bs-target="#exampleModalToggle">Save Search Result</button>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="exampleModalToggle" tabindex="-1"
+            aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -444,22 +514,26 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             style="margin-right:35%;">Cancel</button>
-                        <button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal" data-bs-dismiss="modal"
+                        <button onclick="saveInfo()" type="button" class="btn btn-primary"
+                            id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
                             style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-            tabindex="-1">
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+                    <div class="modal-body"
+                        style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
                         Your search has been saved!
                     </div>
                     <div class="modal-footer">
@@ -483,7 +557,8 @@
     <script src="../scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
     <!-- Bootstrap JS script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
         var exampleModal = document.getElementById('exampleModalToggle')
         exampleModal.addEventListener('show.bs.modal', function (event) {
             // Button that triggered the modal
@@ -496,34 +571,34 @@
     </script>
 
     <script>
-		//Display country name by using database query (.where())
+        //Display country name by using database query (.where())
         function displayCountryName() {
             db.collection("Countries").where("name", "==", "United States").get()
-			.then(function (snap) {
+                .then(function (snap) {
                     snap.forEach(function (doc) {
                         //console.log(doc.data());
                         var countryName = doc.data().name; //gets the name field
-                        document.getElementById("countrySelected").innerHTML = countryName;
+                        document.getElementById("countrySelected").innerHTML =
+                            countryName;
                     })
 
                 })
         }
-		displayCountryName();
+        displayCountryName();
 
         /*Save document*/
-		function saveInfo() {
-			let file_name = document.getElementById("file-name").value;
-			firebase.auth().onAuthStateChanged(user => {
-				if(user) {
-					db.collection("users").doc(user.uid).collection("saved_countries").add({
-						nation: "the United States of America (USA)",
-						link: "./countries/usa.html",
-						name: file_name
-					})
-				}
-			})
-		}
-
+        function saveInfo() {
+            let file_name = document.getElementById("file-name").value;
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    db.collection("users").doc(user.uid).collection("saved_countries").add({
+                        nation: "the United States of America (USA)",
+                        link: "./countries/usa.html",
+                        name: file_name
+                    })
+                }
+            })
+        }
     </script>
 
 

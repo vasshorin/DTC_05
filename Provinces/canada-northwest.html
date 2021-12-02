@@ -8,8 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="BCIT">
 	<!-- Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
 	<!-- Google Icons (Material Design)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Firebase 8 CDNs-->
@@ -32,14 +34,15 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
+							<a class="nav-link active" aria-current="page"
+								href="../main.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href=".././countries.html">Countries</a>
@@ -62,12 +65,14 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span> (Canada)</h1>
+				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span>
+					(Canada)</h1>
 			</div>
 
 			<h3 class="mb-3">Restrictions:</h3>
 			<ol>
-				<li class="mb-3">Entering Northwest Territories as a fully vaccinated travellers</li>
+				<li class="mb-3">Entering Northwest Territories as a fully vaccinated travellers
+				</li>
 				<p><button id="northCheckBtn" class="btn btn-outline-secondary" type="button">
 						Proof of vaccination
 					</button></p>
@@ -82,14 +87,14 @@
 						Additional Testing
 					</button>
 				</p>
-				
+
 				<p>
 					<button id="northMaskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-	
+
 		</div>
 
 		<br>
@@ -99,20 +104,27 @@
 			<h2 class="collapseTitle">Proof of vanccination</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body" id="fully">
-					<p>Non-residents or those who <b>received their vaccine outside the NWT</b> will be required to <b>provide proof of vaccination upon request</b>. 
-					   It is recommended that these travellers have proof of vaccination from the jurisdiction in which it was received before travelling.</p>
-					
-					<p>All travellers entering the NWT are required to <b>complete a self-isolation plan</b>, to show their vaccination status. We recommend you complete 
-						your self-isolation plan <b>two weeks before you will arrive in the NWT</b>. </p>
+					<p>Non-residents or those who <b>received their vaccine outside the NWT</b> will
+						be required to <b>provide proof of vaccination upon request</b>.
+						It is recommended that these travellers have proof of vaccination from the
+						jurisdiction in which it was received before travelling.</p>
+
+					<p>All travellers entering the NWT are required to <b>complete a self-isolation
+							plan</b>, to show their vaccination status. We recommend you complete
+						your self-isolation plan <b>two weeks before you will arrive in the NWT</b>.
+					</p>
 					<ul>
-						<li>Complete your <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
-							self-isolation plan</a>.</li>
-						<li>After you have completely your self-isolation plan, you will receive an email approving your plan and providing you with information about whether 
+						<li>Complete your <a
+								href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
+								self-isolation plan</a>.</li>
+						<li>After you have completely your self-isolation plan, you will receive an
+							email approving your plan and providing you with information about
+							whether
 							you need to self-isolate and how to complete your symptom checks.</li>
 					</ul>
 
 					<br>
-	
+
 					<i>*More details can be found at<a
 							href="https://www.gov.nt.ca/covid-19/en/services/vaccination-testing/self-isolation-plan">
 							Self-isolation plan.</a></i>
@@ -123,16 +135,23 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<b>All travellers need to submit a <a href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
-					Self-Isolation Plan</a> regardless of vaccination status.</b>
+					<b>All travellers need to submit a <a
+							href="https://g53116db8cb3786-sip.adb.ca-toronto-1.oraclecloudapps.com/ords/r/sip/sip-form/sip-based-on-database">
+							Self-Isolation Plan</a> regardless of vaccination status.</b>
 
-					<p><b>No self-isolation for fully vaccinated travellers</b> and household members (regardless of vaccination status) who did not travel, 
-						provided they are not sharing accommodations with travellers who are not fully vaccinated.</p>
-					<p>Fully vaccinated individuals travelling with <b>unvaccinated individuals</b> will be <b>required to isolate</b> upon return to the NWT for the 
-						duration of the least vaccinated traveller if they live in the same household.</p>
+					<p><b>No self-isolation for fully vaccinated travellers</b> and household
+						members (regardless of vaccination status) who did not travel,
+						provided they are not sharing accommodations with travellers who are not
+						fully vaccinated.</p>
+					<p>Fully vaccinated individuals travelling with <b>unvaccinated individuals</b>
+						will be <b>required to isolate</b> upon return to the NWT for the
+						duration of the least vaccinated traveller if they live in the same
+						household.</p>
 
-					<p>Fully vaccinated travellers will be able to <b>return directly to small communities</b>, but they <b>must complete a Day 1 and Day 8 COVID-19 test</b>.</p>
-					
+					<p>Fully vaccinated travellers will be able to <b>return directly to small
+							communities</b>, but they <b>must complete a Day 1 and Day 8 COVID-19
+							test</b>.</p>
+
 					<i>*More details can be found at<a
 							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
 							Self-Isolation.</a></i>
@@ -145,16 +164,20 @@
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
 					<ul>
-						<li><b>Fully vaccinated travellers</b> entering small NWT communities will require a day 1 test and a day 8 test.</li>
-						<li><b>Partially vaccinated travellers</b> will require a day 8 negative test if they are travelling to a small community 
+						<li><b>Fully vaccinated travellers</b> entering small NWT communities will
+							require a day 1 test and a day 8 test.</li>
+						<li><b>Partially vaccinated travellers</b> will require a day 8 negative
+							test if they are travelling to a small community
 							after completing their self-isolation in a larger centre.</li>
-						<li><b>Unvaccinated travellers</b> will require a day 10 negative test if they are travelling to a small community after
-							 completing their self-isolation in a larger centre.</li>
+						<li><b>Unvaccinated travellers</b> will require a day 10 negative test if
+							they are travelling to a small community after
+							completing their self-isolation in a larger centre.</li>
 					</ul>
 
-					<p>Small communities are any NWT community that does not include the hub communities of Yellowknife, Hay River, Inuvik, 
+					<p>Small communities are any NWT community that does not include the hub
+						communities of Yellowknife, Hay River, Inuvik,
 						and Fort Smith, as well as Fort Simpson and Norman Wells.</p>
-					
+
 					<br>
 					<i>*More details can be found at<a
 							href="https://www.gov.nt.ca/covid-19/en/self-isolation">
@@ -167,19 +190,22 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>COVID-19 spreads in the air far more easily than by surface. To protect yourself and others, 
+					<p>COVID-19 spreads in the air far more easily than by surface. To protect
+						yourself and others,
 						<b>wear a non-medical mask</b> or face covering:</p>
-					
+
 					<ul>
 						<li>Anytime it is required by a business or service</li>
 						<li>Indoors in crowded places</li>
 						<li>Indoors in a location with poor ventilation</li>
-						<li>Indoors where there is shouting, singing, playing music (especially wind instruments) or exercise (if applicable)</li>
-						<li>Outdoors in crowded spaces when it is difficult to maintain physical distance.</li>
+						<li>Indoors where there is shouting, singing, playing music (especially wind
+							instruments) or exercise (if applicable)</li>
+						<li>Outdoors in crowded spaces when it is difficult to maintain physical
+							distance.</li>
 					</ul>
 
 					<br>
-					
+
 					<i>*More details can be found at<a
 							href="https://www.gov.nt.ca/covid-19/en/services/healthy-habits/masks">
 							Masks - GNWT's Response to COVID-19.</a></i>
@@ -201,14 +227,14 @@
 					data-bs-target="#exampleModalToggle">Save Search Result</button>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-			aria-hidden="true">
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1"
+			aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
-							aria-label="Close"></button>
+						<button type="button" class="btn-close btn-close-dark"
+							data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form>
@@ -221,22 +247,26 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary"
+							id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+							data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-			tabindex="-1">
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+			aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
-					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+					<div class="modal-body"
+						style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
 						Your search has been saved!
 					</div>
 					<div class="modal-footer">
@@ -260,7 +290,8 @@
 	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
 		var exampleModal = document.getElementById('exampleModalToggle')
 		exampleModal.addEventListener('show.bs.modal', function (event) {
 			// Button that triggered the modal
@@ -275,29 +306,29 @@
 	<script>
 		//Display province name by using database query (.where())
 		function displayProvinceName() {
-            db.collection("Provinces").where("name", "==", "Northwest Territories").get()
-			.then(function (snap) {
-                    snap.forEach(function (doc) {
-                        //console.log(doc.data());
-                        var provinceName = doc.data().name; //gets the name field
-                        document.getElementById("provinceSelected").innerHTML = provinceName;
-                    })
+			db.collection("Provinces").where("name", "==", "Northwest Territories").get()
+				.then(function (snap) {
+					snap.forEach(function (doc) {
+						//console.log(doc.data());
+						var provinceName = doc.data().name; //gets the name field
+						document.getElementById("provinceSelected").innerHTML = provinceName;
+					})
 
-                })
-        }
+				})
+		}
 		displayProvinceName();
 
 
 		// /*Save document*/
-        // function saveInfo() {
-    	//      let file_name = document.getElementById("file-name").value;
-        //      var countriesRef = db.collection("saved_document");
-        //      countriesRef.add({
-        //          nation: "Canada",
+		// function saveInfo() {
+		//      let file_name = document.getElementById("file-name").value;
+		//      var countriesRef = db.collection("saved_document");
+		//      countriesRef.add({
+		//          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-        //      });
-        //  }
+		//      });
+		//  }
 	</script>
 </body>
 

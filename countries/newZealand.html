@@ -8,8 +8,10 @@
     <meta name="author" content="BCIT">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -30,71 +32,73 @@
 <body>
     <!-- NAVIGATION -->
     <div id="navigation">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container-fluid">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href=".././countries.html">Countries</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href=".././searchtrip.html">Search trip</a>
-						</li>
-					</ul>
-				</div>
-				<div id="nav-right">
-					<i class="material-icons"><a href="../saved_document.html">upload_file</a> </i>
-					<i class="material-icons"><a href="../profile.html">account_circle</a></i>
-				</div>
-			</div>
-		</nav>
-	</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../main.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=".././countries.html">Countries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=".././searchtrip.html">Search trip</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="nav-right">
+                    <i class="material-icons"><a href="../saved_document.html">upload_file</a> </i>
+                    <i class="material-icons"><a href="../profile.html">account_circle</a></i>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <div class="conBox">
         <div id="regulation-section" class="d-flex">
             <p class="rbg1"></p>
             <p class="rbg2"></p>
             <div class="regulationTitle">
-                <h1 class="mb-3">Regulations and Customs Results for Travel to <span id="countrySelected"></span></h1>
+                <h1 class="mb-3">Regulations and Customs Results for Travel to <span
+                        id="countrySelected"></span></h1>
             </div>
 
             <div id="top-title">
-            <h3 class="mb-3" id="regulations">Regulations:</h3>
-            <ol>
-                <li class="mb-3">Entering New Zealand as a fully vaccinated travellers</li>
-                <p>
-                    <button id="newCheckBtn" class="btn btn-outline-secondary" type="button">
-                        Check if you qualify as a fully vaccinated traveller
-                    </button>
-                </p>
+                <h3 class="mb-3" id="regulations">Regulations:</h3>
+                <ol>
+                    <li class="mb-3">Entering New Zealand as a fully vaccinated travellers</li>
+                    <p>
+                        <button id="newCheckBtn" class="btn btn-outline-secondary" type="button">
+                            Check if you qualify as a fully vaccinated traveller
+                        </button>
+                    </p>
 
-                <li class="mb-3">Pre-entry testing and other requirements</li>
-                <p>
-                    <button id="newGetBtn" class="btn btn-outline-secondary" type="button">
-                        Get a pre-entry test
-                    </button>
-                </p>
+                    <li class="mb-3">Pre-entry testing and other requirements</li>
+                    <p>
+                        <button id="newGetBtn" class="btn btn-outline-secondary" type="button">
+                            Get a pre-entry test
+                        </button>
+                    </p>
 
-                <p>
-                    <button id="newManagedBtn" class="btn btn-outline-secondary" type="button">
-                        Managed isolation and quarantine
-                    </button>
-                </p>
+                    <p>
+                        <button id="newManagedBtn" class="btn btn-outline-secondary" type="button">
+                            Managed isolation and quarantine
+                        </button>
+                    </p>
 
-                <p>
-                    <button id="newShowBtn" class="btn btn-outline-secondary" type="button">
-                        Present proof of vaccination
-                    </button>
-                </p>
-            </ol>
+                    <p>
+                        <button id="newShowBtn" class="btn btn-outline-secondary" type="button">
+                            Present proof of vaccination
+                        </button>
+                    </p>
+                </ol>
             </div>
 
             <div class="itemsBox">
@@ -119,22 +123,27 @@
                 traveller</h2>
             <div class="flex-fill ml-2">
                 <div class="card card-body" id="fully">
-                    <p>Full vaccination will become a requirement for non-New Zealand citizens arriving into the
+                    <p>Full vaccination will become a requirement for non-New Zealand citizens
+                        arriving into the
                         country from 1 November 2021.</p>
 
                     <b> To qualify as a fully vaccinated traveller to New Zealand, you must:</b>
                     <ul>
-                        <li>have had a full course of any of the COVID-19 vaccines that have been approved by a
+                        <li>have had a full course of any of the COVID-19 vaccines that have been
+                            approved by a
                             government health authority or approval authority, and</li>
-                        <li>have had the last dose at least 14 days before you depart for New Zealand.</li>
+                        <li>have had the last dose at least 14 days before you depart for New
+                            Zealand.</li>
                     </ul>
                     <p>A full course of some of the approved vaccines is 1 dose only.</p>
-                    <p>You can have a combination of different vaccines if that combination is an approved
+                    <p>You can have a combination of different vaccines if that combination is an
+                        approved
                         course in
                         the country you received them.
                         Each of the vaccines must be on the list of approved vaccines.</p>
 
-                    <p>Check the<a href="https://covid19.trackvaccines.org/vaccines/approved/#vaccine-list">list
+                    <p>Check the<a
+                            href="https://covid19.trackvaccines.org/vaccines/approved/#vaccine-list">list
                             of
                             COVID-19 vaccines</a> that are
                         accepted for entry into New Zealand</p>
@@ -149,53 +158,66 @@
             <h2 class="collapseTitle">Get a pre-entry test</h2>
             <div class="flex-fill ml-2">
                 <div class="card card-body">
-                    <p>If you have received a COVID-19 vaccination, you will still need to have evidence of a
+                    <p>If you have received a COVID-19 vaccination, you will still need to have
+                        evidence of a
                         negative COVID-19 test
-                        result from an accredited laboratory <b>within 72 hours of their first scheduled
+                        result from an accredited laboratory <b>within 72 hours of their first
+                            scheduled
                             international flight</b>.</p>
                     <b>Approved pre-departure tests:</b>
-                    <p>The Director-General of Health has confirmed the following types of test are acceptable
+                    <p>The Director-General of Health has confirmed the following types of test are
+                        acceptable
                         for
                         all countries —
                         except Australia and very high risk countries:</p>
                     <ul>
-                        <li>Nucleic Acid Amplification Testing (NAAT), which includes PCR, RT-PCR and TMA, or
+                        <li>Nucleic Acid Amplification Testing (NAAT), which includes PCR, RT-PCR
+                            and TMA, or
                         </li>
                         <li>LAMP, or</li>
                         <li>antigen test (they may also be referred to as viral antigen tests).</li>
                     </ul>
-                    <p><b>Travellers from Australia</b> are required to get PCR or RT-PCR pre-departure tests.
+                    <p><b>Travellers from Australia</b> are required to get PCR or RT-PCR
+                        pre-departure tests.
                     </p>
-                    <p><b>Travellers from very high risk countries</b> — Brazil, India, Indonesia, Pakistan and
+                    <p><b>Travellers from very high risk countries</b> — Brazil, India, Indonesia,
+                        Pakistan and
                         Papua New Guinea — must have
-                        evidence of negative nasopharyngeal RT-PCR (PCR) test from an accredited laboratory.
+                        evidence of negative nasopharyngeal RT-PCR (PCR) test from an accredited
+                        laboratory.
                         Travellers from Fiji,
                         which is a very high risk country, do not need pre-departure tests.</p>
                     <a
                         href="https://covid19.govt.nz/travel/international-travel-and-transit/travel-restrictions-for-very-high-risk-countries/">
                         Restrictions on travel to New Zealand from very high risk countries</a>
-                    <p>All tests (including at-home tests) must be processed by a laboratory recognised in the
+                    <p>All tests (including at-home tests) must be processed by a laboratory
+                        recognised in the
                         country of origin as authorised or
-                        accredited to conduct tests. You are responsible for the costs associated with your
+                        accredited to conduct tests. You are responsible for the costs associated
+                        with your
                         test.
                     </p>
                     <br>
                     <b>Acceptable pre-departure documentation:</b>
                     <ul>
-                        <li>You must make sure that the testing provider you choose can provide your test
+                        <li>You must make sure that the testing provider you choose can provide your
+                            test
                             results
                             with acceptable pre-departure documentation
                             to the specified standard required by the New Zealand Government.</li>
-                        <li>Free community testing stations often do not provide all the information required
+                        <li>Free community testing stations often do not provide all the information
+                            required
                             for
                             travel clearance, so check <b>before</b> having
                             your pre-departure test.</li>
-                        <li>If your pre-departure documentation does not contain the required information, or is
+                        <li>If your pre-departure documentation does not contain the required
+                            information, or is
                             not
                             in the required format, you may be prevented
                             from boarding your plane.</li>
 
-                        <li>The New Zealand Government requires that<b>all pre-departure tests contain the
+                        <li>The New Zealand Government requires that<b>all pre-departure tests
+                                contain the
                                 following
                                 information</b> for travel clearance: </li>
                         <ul>
@@ -218,16 +240,19 @@
             <div class="flex-fill ml-2">
                 <div class="card card-body">
                     <p><b>The managed isolation booking system:</b></p>
-                    <p>The Managed Isolation Allocation System is how travellers to New Zealand get a voucher
+                    <p>The Managed Isolation Allocation System is how travellers to New Zealand get
+                        a voucher
                         for
                         managed isolation. You will not be able to board your flight if you do not
                         have a voucher confirming your place in managed isolation.</p>
                     <p>Find out <a
                             href="https://www.miq.govt.nz/travel-to-new-zealand/secure-your-place-in-managed-isolation/how-to-get-your-voucher/">How
                             to get your voucher</a>. </p>
-                    <p><b>From 14 November 2021</b>, the managed isolation period for international arrivals
+                    <p><b>From 14 November 2021</b>, the managed isolation period for international
+                        arrivals
                         into
-                        New Zealand will <b>reduce from 14 days to 7 days</b>, followed by isolation at home
+                        New Zealand will <b>reduce from 14 days to 7 days</b>, followed by isolation
+                        at home
                         until the result of a day 9 test has been received.</p>
                     <br>
                     <i>*More details can be found at<a
@@ -241,12 +266,15 @@
             <div class="flex-fill ml-2">
                 <div class="card card-body">
                     <b>Evidence you must have:</b>
-                    <p>You need a digital vaccine passport or another form of electronic or paper document from
+                    <p>You need a digital vaccine passport or another form of electronic or paper
+                        document from
                         a
                         government
-                        health authority or approval authority confirming you have had a full COVID-19 vaccine
+                        health authority or approval authority confirming you have had a full
+                        COVID-19 vaccine
                         course.</p>
-                    <p>Your evidence must confirm that you have received 1 or more COVID-19 vaccines (how many
+                    <p>Your evidence must confirm that you have received 1 or more COVID-19 vaccines
+                        (how many
                         doses
                         depends
                         on which vaccine you have received), and:</p>
@@ -255,9 +283,11 @@
                         <li>the name of the vaccine or vaccines you received</li>
                         <li>the name of the agency that administered them</li>
                         <li>the name of the place where you received them</li>
-                        <li>the date you received them — if you received 2 doses, you must have 2 dates.</li>
+                        <li>the date you received them — if you received 2 doses, you must have 2
+                            dates.</li>
                     </ul>
-                    <p>Your evidence must confirm your<b> last dose was at least 14 days before departure</b>
+                    <p>Your evidence must confirm your<b> last dose was at least 14 days before
+                            departure</b>
                         for
                         New Zealand.</p>
                     <br>
@@ -273,15 +303,17 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
                             Cash
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p><b>Bringing money into NZ</b></p>
-                            <p>You must complete a <a href="">NZCS 337: Border Cash Report </a>(DOC 332 KB) if you
+                            <p>You must complete a <a href="">NZCS 337: Border Cash Report </a>(DOC
+                                332 KB) if you
                                 carry
                                 <b>NZ$10,000 (or foreign equivalent)
                                     or more cash</b> or equivalent into or out of New Zealand.
@@ -295,7 +327,8 @@
                                 <li>bearer bonds</li>
                                 <li>a bill of exchange</li>
                                 <li>promissory notes</li>
-                                <li>any instrument prescribed by regulations under the Anti-Money Laundering and
+                                <li>any instrument prescribed by regulations under the Anti-Money
+                                    Laundering and
                                     Countering Financing of Terrorism Act 2009.</li>
                             </ul>
 
@@ -309,24 +342,29 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
                             Alcoholic Beverages
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>You have to be <b>17 years or older </b>to claim the alcohol concessions. </p>
-                            <p>If you <b>don't want to pay GST and duties</b> on alcohol, you are limited to no more
+                            <p>You have to be <b>17 years or older </b>to claim the alcohol
+                                concessions. </p>
+                            <p>If you <b>don't want to pay GST and duties</b> on alcohol, you are
+                                limited to no more
                                 than: </p>
                             <ul>
                                 <li>4.5 litres of wine or beer</li>
-                                <li>3 bottles (or other containers) of spirits or liqueur (each bottle or container
+                                <li>3 bottles (or other containers) of spirits or liqueur (each
+                                    bottle or container
                                     can
                                     hold a maximum of 1.125 litres).</li>
                             </ul>
-                            <p>The duty-free concession only applies to items you’re bringing with you for your
+                            <p>The duty-free concession only applies to items you’re bringing with
+                                you for your
                                 personal
                                 use, or as gifts, provided the items:</p>
                             <ul>
@@ -343,23 +381,27 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
                             Tobacco Products
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p>You have to be <b>17 years or older </b>to claim the tobacco concessions. </p>
+                            <p>You have to be <b>17 years or older </b>to claim the tobacco
+                                concessions. </p>
                             <p>Duty-free tobacco is limited to:</p>
                             <ul>
                                 <li>50 cigarettes or 50 grams of cigars or tobacco products or</li>
                                 <li>50 grams of a mixture of all three</li>
                             </ul>
-                            <p>You have to declare if you are over the limit and pay duty and GST on the excess
+                            <p>You have to declare if you are over the limit and pay duty and GST on
+                                the excess
                                 amount.
-                                If you fail to declare tobacco, it will be seized and you could face further action.
+                                If you fail to declare tobacco, it will be seized and you could face
+                                further action.
                             </p>
                             <br>
                             <i>*More details can be found at<a
@@ -371,27 +413,32 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
                             Duty-free items
                         </button>
                     </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>You will have to pay <a
                                     href="https://app-as.readspeaker.com/cgi-bin/rsent?customerid=9464&lang=en_au&readid=mp-pusher&url=https%3a%2f%2fwww.customs.govt.nz%2fpersonal%2ftravel-to-and-from-nz%2fduty-free-shopping%2f">
-                                    GST and duty</a> (where applicable) if your duty-free items or other goods
+                                    GST and duty</a> (where applicable) if your duty-free items or
+                                other goods
                                 purchased
                                 overseas cost
-                                <b>more than NZ$700 in total</b>. This does not apply to tobacco and alcohol, which
+                                <b>more than NZ$700 in total</b>. This does not apply to tobacco and
+                                alcohol, which
                                 have
                                 different limits.
                             </p>
-                            <p> If you're travelling with other people, you <b>can't combine your $700
+                            <p> If you're travelling with other people, you <b>can't combine your
+                                    $700
                                     concessions</b>.
                             </p>
-                            <p> Children can only claim the concession if the items are for them and are items a
+                            <p> Children can only claim the concession if the items are for them and
+                                are items a
                                 child
                                 would own and use.</p>
                             <br>
@@ -419,13 +466,14 @@
                     data-bs-target="#exampleModalToggle">Save Search Result</button>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="exampleModalToggle" tabindex="-1"
+            aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
@@ -438,22 +486,26 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             style="margin-right:35%;">Cancel</button>
-                        <button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal" data-bs-dismiss="modal"
+                        <button onclick="saveInfo()" type="button" class="btn btn-primary"
+                            id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                            data-bs-dismiss="modal"
                             style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-            tabindex="-1">
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+                    <div class="modal-body"
+                        style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
                         Your search has been saved!
                     </div>
                     <div class="modal-footer">
@@ -477,7 +529,8 @@
     <script src="../scripts/countryScript.js" type="text/javascript" charset="utf-8"></script>
     <!-- Bootstrap JS script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
         var exampleModal = document.getElementById('exampleModalToggle')
         exampleModal.addEventListener('show.bs.modal', function (event) {
             // Button that triggered the modal
@@ -493,30 +546,31 @@
         //Display country name by using database query (.where())
         function displayCountryName() {
             db.collection("Countries").where("name", "==", "New Zealand").get()
-			.then(function (snap) {
+                .then(function (snap) {
                     snap.forEach(function (doc) {
                         //console.log(doc.data());
                         var countryName = doc.data().name; //gets the name field
-                        document.getElementById("countrySelected").innerHTML = countryName;
+                        document.getElementById("countrySelected").innerHTML =
+                            countryName;
                     })
 
                 })
         }
-		displayCountryName();
+        displayCountryName();
 
         /*Save document*/
-		function saveInfo() {
-			let file_name = document.getElementById("file-name").value;
-			firebase.auth().onAuthStateChanged(user => {
-				if(user) {
-					db.collection("users").doc(user.uid).collection("saved_countries").add({
-						nation: "New Zealand",
-						link: "./countries/newZealand.html",
-						name: file_name
-					})
-				}
-			})
-		}
+        function saveInfo() {
+            let file_name = document.getElementById("file-name").value;
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    db.collection("users").doc(user.uid).collection("saved_countries").add({
+                        nation: "New Zealand",
+                        link: "./countries/newZealand.html",
+                        name: file_name
+                    })
+                }
+            })
+        }
     </script>
 
 </body>

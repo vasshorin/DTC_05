@@ -8,8 +8,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="BCIT">
 	<!-- Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
 	<!-- Google Icons (Material Design)-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Firebase 8 CDNs-->
@@ -32,14 +34,15 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="../main.html">Home</a>
+							<a class="nav-link active" aria-current="page"
+								href="../main.html">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href=".././countries.html">Countries</a>
@@ -62,7 +65,8 @@
 			<p class="rbg1"></p>
 			<p class="rbg2"></p>
 			<div class="regulationTitle">
-				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span> (Canada)</h1>
+				<h1 class="mb-3">Restrictions for Travel to <span id="provinceSelected"></span>
+					(Canada)</h1>
 			</div>
 
 			<h3 class="mb-3">Restrictions:</h3>
@@ -77,14 +81,14 @@
 						Self-isolation requirements
 					</button>
 				</p>
-				
+
 				<p>
 					<button id="maskBtn" class="btn btn-outline-secondary" type="button">
 						Mask requirements
 					</button>
 				</p>
 			</ol>
-	
+
 		</div>
 
 		<br>
@@ -96,17 +100,26 @@
 				<div class="card card-body" id="fully">
 					<b>People must be fully vaccinated (+14 days) to be eligible for a PEI Pass.</b>
 					<br>
-					<p><a href="https://www.princeedwardisland.ca/en/service/apply-for-a-pei-pass">Apply for a PEI Pass</a>:</p>
+					<p><a href="https://www.princeedwardisland.ca/en/service/apply-for-a-pei-pass">Apply
+							for a PEI Pass</a>:</p>
 					<ul>
-						<li>The PEI Pass allows returning Islanders and visitors who meet the appropriate criteria to be exempt from self-isolation when entering the province.</li>
-						<li>Travelers who have been <b>fully vaccinated</b> (e.g. two doses + 14 days) with a COVID-19 vaccine are eligible to apply for a PEI Pass</li>
+						<li>The PEI Pass allows returning Islanders and visitors who meet the
+							appropriate criteria to be exempt from self-isolation when entering the
+							province.</li>
+						<li>Travelers who have been <b>fully vaccinated</b> (e.g. two doses + 14
+							days) with a COVID-19 vaccine are eligible to apply for a PEI Pass</li>
 					</ul>
-					
-					<p>Proof of vaccination may be required on airplanes, trains, marine vessels or other conveyances  
-						by the federal government or private businesses. You are responsible for confirming your eligibility to travel with the transportation service provider.</p>
-					<p>For information about the Government of Canada’s vaccination requirements in the <a href="https://travel.gc.ca/travel-covid">transportation sector</a>.</p>
+
+					<p>Proof of vaccination may be required on airplanes, trains, marine vessels or
+						other conveyances
+						by the federal government or private businesses. You are responsible for
+						confirming your eligibility to travel with the transportation service
+						provider.</p>
+					<p>For information about the Government of Canada’s vaccination requirements in
+						the <a href="https://travel.gc.ca/travel-covid">transportation sector</a>.
+					</p>
 					<br>
-	
+
 					<i>*More details can be found at<a
 							href="https://www.princeedwardisland.ca/en/topic/non-residents-travelling-to-pei">
 							Non-Residents Travelling to PEI.</a></i>
@@ -117,8 +130,12 @@
 			<h2 class="collapseTitle">Self-isolation requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>All people arriving in PEI who are <b>not fully vaccinated</b>, including those who are <b>partially vaccinated</b>, will need to self-isolate for <b>8 days</b> (subject to a test on day 8) 
-						and complete a <a href="https://www.princeedwardisland.ca/en/service/pei-self-isolation-declaration">self-isolation declaration</a>. </p>
+					<p>All people arriving in PEI who are <b>not fully vaccinated</b>, including
+						those who are <b>partially vaccinated</b>, will need to self-isolate for
+						<b>8 days</b> (subject to a test on day 8)
+						and complete a <a
+							href="https://www.princeedwardisland.ca/en/service/pei-self-isolation-declaration">self-isolation
+							declaration</a>. </p>
 
 
 					<br>
@@ -132,17 +149,20 @@
 			<h2 class="collapseTitle">Mask requirements</h2>
 			<div class="flex-fill ml-2">
 				<div class="card card-body">
-					<p>Masks are <b>mandatory in all enclosed public spaces</b> in Prince Edward Island including:</p>
+					<p>Masks are <b>mandatory in all enclosed public spaces</b> in Prince Edward
+						Island including:</p>
 					<ul>
-						<li>Retail businesses, shopping centres, buildings or rooms of businesses where services are provided to the public</li>
-						<li>Restaurants or drinking establishments (except when drinking or eating)</li>
+						<li>Retail businesses, shopping centres, buildings or rooms of businesses
+							where services are provided to the public</li>
+						<li>Restaurants or drinking establishments (except when drinking or eating)
+						</li>
 						<li>Arts, cultural, entertainment venues when not seated</li>
 						<li>Bus stations, ferry terminals, airports</li>
 						<li>Public transit, public passenger vehicles, taxis</li>
 					</ul>
 
 					<br>
-					
+
 					<i>*More details can be found at<a
 							href="https://www.princeedwardisland.ca/en/information/health-and-wellness/wearing-non-medical-masks-in-the-community">
 							Wearing Non-Medical Masks in the Community.</a></i>
@@ -164,14 +184,14 @@
 					data-bs-target="#exampleModalToggle">Save Search Result</button>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel"
-			aria-hidden="true">
+		<div class="modal fade" id="exampleModalToggle" tabindex="-1"
+			aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalToggleLabel">Save Search Result</h5>
-						<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
-							aria-label="Close"></button>
+						<button type="button" class="btn-close btn-close-dark"
+							data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
 						<form>
@@ -184,22 +204,26 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
 							style="margin-right:35%;">Cancel</button>
-						<button onclick="saveInfo()" type="button" class="btn btn-primary" id="saves" data-bs-target="#exampleModalToggle2"
-							data-bs-toggle="modal" data-bs-dismiss="modal"
+						<button onclick="saveInfo()" type="button" class="btn btn-primary"
+							id="saves" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+							data-bs-dismiss="modal"
 							style="margin-right:18%; padding-left:4%; padding-right:4%;">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-			tabindex="-1">
+		<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+			aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title" id="exampleModalToggleLabel2">Save Search Result
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
 					</div>
-					<div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+					<div class="modal-body"
+						style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
 						Your search has been saved!
 					</div>
 					<div class="modal-footer">
@@ -223,7 +247,8 @@
 	<script src="../scripts/provinceScript.js" type="text/javascript" charset="utf-8"></script>
 	<!-- Bootstrap JS script -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
 		var exampleModal = document.getElementById('exampleModalToggle')
 		exampleModal.addEventListener('show.bs.modal', function (event) {
 			// Button that triggered the modal
@@ -238,29 +263,29 @@
 	<script>
 		//Display province name by using database query (.where())
 		function displayProvinceName() {
-            db.collection("Provinces").where("name", "==", "Prince Edward Island").get()
-			.then(function (snap) {
-                    snap.forEach(function (doc) {
-                        //console.log(doc.data());
-                        var provinceName = doc.data().name; //gets the name field
-                        document.getElementById("provinceSelected").innerHTML = provinceName;
-                    })
+			db.collection("Provinces").where("name", "==", "Prince Edward Island").get()
+				.then(function (snap) {
+					snap.forEach(function (doc) {
+						//console.log(doc.data());
+						var provinceName = doc.data().name; //gets the name field
+						document.getElementById("provinceSelected").innerHTML = provinceName;
+					})
 
-                })
-        }
+				})
+		}
 		displayProvinceName();
 
 
 		// /*Save document*/
-        // function saveInfo() {
-    	//      let file_name = document.getElementById("file-name").value;
-        //      var countriesRef = db.collection("saved_document");
-        //      countriesRef.add({
-        //          nation: "Canada",
+		// function saveInfo() {
+		//      let file_name = document.getElementById("file-name").value;
+		//      var countriesRef = db.collection("saved_document");
+		//      countriesRef.add({
+		//          nation: "Canada",
 		//  		link: "http://127.0.0.1:5500/canada.html",
 		//  		name: file_name
-        //      });
-        //  }
+		//      });
+		//  }
 	</script>
 </body>
 

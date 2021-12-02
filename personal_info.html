@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Information</title>
     <!-- Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -21,7 +23,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
     <!-- Link to the api keys for your firebase project -->
-    
+
     <script src="scripts/firebaseAPI.js"></script>
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="styles/personal_information.css" />
@@ -33,14 +35,15 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="./main.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./countries.html">Countries</a>
@@ -60,13 +63,16 @@
 
     <div class="page-heading">
         <div class="container">
-            <a href="#" onclick="return_back()"><img src="./images/back-button-white.png" alt="" id="back" width="20" height="20"></a>
+            <a href="#" onclick="return_back()"><img src="./images/back-button-white.png" alt=""
+                    id="back" width="20" height="20"></a>
             <div class="row">
-                
+
                 <div class="col-12">
-                    
-                    <h1 data-swiftype-index="true" id="main" tabindex="-1" class="page-heading__title">
-                        <i class="fa fa-file-text" style="font-size:55px;color:rgb(255, 255, 255)"></i>
+
+                    <h1 data-swiftype-index="true" id="main" tabindex="-1"
+                        class="page-heading__title">
+                        <i class="fa fa-file-text"
+                            style="font-size:55px;color:rgb(255, 255, 255)"></i>
                         User Profile
                     </h1>
                     <p data-swiftype-index="true" class="page-heading__lead lead">
@@ -80,45 +86,54 @@
         <div id="user-img">
             <img id="avatar-img" src="images/user.png" alt="user">
             <h6><span id="name-goes-here"></span></h6>
-            <button id="send" onclick="document.getElementById('avatar').click()">Change Avatar</button>
+            <button id="send" onclick="document.getElementById('avatar').click()">Change
+                Avatar</button>
             <input type="file" id="avatar" style="display:none">
         </div>
         <form>
             <fieldset class="mb-3" id="personalInfoFields" disabled>
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+                    <input type="text" id="nameInput" class="form-control"
+                        placeholder="Enter your name">
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="text" id="emailInput" class="form-control" placeholder="Enter your email">
+                    <input type="text" id="emailInput" class="form-control"
+                        placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label>Telephone</label>
-                    <input type="text" id="phoneInput" class="form-control" placeholder="Enter your telephone">
+                    <input type="text" id="phoneInput" class="form-control"
+                        placeholder="Enter your telephone">
                 </div>
                 <div class="form-group">
                     <label>Nationality</label>
-                    <input type="text" id="regionInput" class="form-control" placeholder="Enter your nationality">
+                    <input type="text" id="regionInput" class="form-control"
+                        placeholder="Enter your nationality">
                 </div>
             </fieldset>
             <div class="d-flex justify-content-end mt-5">
-                <button type="button" class="btn btn-secondary manage" onclick="editUserInfo()">Manage Account</button>
+                <button type="button" class="btn btn-secondary manage"
+                    onclick="editUserInfo()">Manage Account</button>
                 <span style="width: 10px"></span>
                 <button type="button" class="btn btn-secondary save" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal" data-bs-whatever="@save" onclick="saveUserInfo()">Save</button>
+                    data-bs-target="#exampleModal" data-bs-whatever="@save"
+                    onclick="saveUserInfo()">Save</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Save User Profile</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Save User Profile
+                                </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body" style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
+                            <div class="modal-body"
+                                style="text-align: center; padding-top: 10%; padding-bottom: 10%;">
                                 Your profile has been saved!
                             </div>
                             <div class="modal-footer">
@@ -141,10 +156,10 @@
         </div>
     </footer>
 
-
     <!-- Bootstrap JS script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
         var exampleModal = document.getElementById('exampleModal')
         exampleModal.addEventListener('show.bs.modal', function (event) {
             var button = event.relatedTarget
@@ -152,18 +167,13 @@
         })
     </script>
 
-
-
-
-
     <script>
-
         function return_back() {
-        window.history.back();
+            window.history.back();
         }
 
         var currentUser
-        
+
 
         // populate user information
         function populateInfo() {
@@ -185,10 +195,12 @@
                                 document.getElementById("emailInput").value = userEmail;
                             }
                             if (userTelephone != null) {
-                                document.getElementById("phoneInput").value = userTelephone;
+                                document.getElementById("phoneInput").value =
+                                    userTelephone;
                             }
                             if (userNationality != null) {
-                                document.getElementById("regionInput").value = userNationality;
+                                document.getElementById("regionInput").value =
+                                    userNationality;
                             }
                         })
                 } else {
@@ -240,13 +252,13 @@
         }
         insertName();
 
-     
+
         // Add Listeners to the file upload input field
         function AddUploadListener() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    const fileInput = document.getElementById("avatar"); 
-                    const image = document.getElementById("avatar-img"); 
+                    const fileInput = document.getElementById("avatar");
+                    const image = document.getElementById("avatar-img");
 
                     fileInput.addEventListener('change', function (e) {
 
@@ -256,7 +268,7 @@
                         image.src = blob;
 
                         addImage(user.uid, targetfile);
-                        
+
                     });
                 }
             });
@@ -267,17 +279,17 @@
 
         //store image information to database
         function addImage(userid, pickedfile) {
-            var storageRef = storage.ref("avatar-images/" + userid + ".jpg"); 
+            var storageRef = storage.ref("avatar-images/" + userid + ".jpg");
             var metadata = {
                 contentType: 'image/jpeg',
             };
 
             storageRef.put(pickedfile, metadata)
                 .then(function () {
-                    storageRef.getDownloadURL() 
+                    storageRef.getDownloadURL()
                         .then(function (url) {
                             alert("Image uploaded successfully!");
-                            console.log(url); 
+                            console.log(url);
                             db.collection("users").doc(userid).update({
                                 "avatarpic": url
                             })
@@ -290,20 +302,19 @@
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
                     db.collection("users").where("name", "==", user.displayName)
-                .get()
-                .then(function (snap) {
-                    snap.forEach(function (doc) {
-                        var avatarPic = doc.data().avatarpic;
-                        $("#avatar-img").attr("src", avatarPic);
-                    })
-                })
+                        .get()
+                        .then(function (snap) {
+                            snap.forEach(function (doc) {
+                                var avatarPic = doc.data().avatarpic;
+                                $("#avatar-img").attr("src", avatarPic);
+                            })
+                        })
                 } else {
                     console.log("No user is signed in")
                 }
             });
         }
         ShowNewAvatar();
-
     </script>
 </body>
 
