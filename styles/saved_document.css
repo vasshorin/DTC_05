@@ -1,9 +1,133 @@
 
+/* Navbar */
+ul li a {
+  color: white;
+}
+
+i a:link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0px 0px 0px 10px;
+}
+
+#nav-right i a {
+color: white;
+text-decoration: none;
+}
+
+#nav-right {
+  width: 5rem;
+  display: inline-block;
+}
+
+#submitBtnPassport {
+  text-decoration: none;
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+#submitBtnPassport:hover {
+  background: #FFCC00;
+}
+
+#submitBtnVaccine {
+  text-decoration: none;
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+
+#submitBtnVaccine:hover {
+  background: #FFCC00;
+}
+
+#submitBtnDocs {
+text-decoration: none;
+border: 2px solid #333;
+background: #fff;
+color: #333;
+font-weight: bold;
+font-size: 20px;
+padding: 5px 15px;
+}
+
+#submitBtnDocs:hover {
+background: #FFCC00;
+}
+
+#send {
+  border: 2px solid #333;
+  background: #333;
+  border-radius: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+}
+
+#send:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#send_vaccine {
+  border: 2px solid #333;
+  background: #333;
+  border-radius: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+}
+
+#send_vaccine:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#send_doc {
+  border: 2px solid #333;
+  background: #333;
+  border-radius: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+}
+
+#send_doc:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#submitBtnSavedCountries {
+  text-decoration: none;
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+#submitBtnSavedCountries:hover {
+  background: #FFCC00;
+}
+
+
+/* body part */
 body {
   font-family: "Open Sans", Helvetica, sans-serif;
   background: #eee;
   padding-bottom: 60px;
-  /* This is just a helper in case the element has a transparent background or white colors. */
 }
 
 div.page-heading {
@@ -240,8 +364,6 @@ p.page-heading__lead.lead {
 path {
     padding-left: 70px;
 }
-
-
 
 .card-title {
     text-align: center;

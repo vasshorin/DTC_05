@@ -256,16 +256,20 @@
 		displayProvinceName();
 
 
-		// /*Save document*/
-		// function saveInfo() {
-		//      let file_name = document.getElementById("file-name").value;
-		//      var countriesRef = db.collection("saved_document");
-		//      countriesRef.add({
-		//          nation: "Canada",
-		//  		link: "http://127.0.0.1:5500/canada.html",
-		//  		name: file_name
-		//      });
-		//  }
+		/*Save document*/
+		function saveInfo() {
+			let file_name = document.getElementById("file-name").value;
+			firebase.auth().onAuthStateChanged(user => {
+				if(user) {
+					db.collection("users").doc(user.uid).collection("saved_countries").add({
+						nation: "Canada",
+						province: "Yukon",
+						link: "./Provinces/canada-yukon.html",
+						name: file_name
+					})
+				}
+			})
+		}
 	</script>
 </body>
 
