@@ -5,6 +5,28 @@ body {
   /* This is just a helper in case the element has a transparent background or white colors. */
 }
 
+/* Navbar */
+ul li a {
+  color: white;
+}
+
+i a:link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0px 0px 0px 10px;
+}
+
+#nav-right i a {
+color: white;
+text-decoration: none;
+}
+
+#nav-right {
+  width: 5rem;
+  display: inline-block;
+}
+
 .material-icons{
   text-decoration: none;
 }
