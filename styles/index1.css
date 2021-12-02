@@ -140,7 +140,7 @@ h1 {
   	box-shadow: 1px 1px; */
 	background: #ff3131;
 }
-@media screen and (min-width: 701px) {
+@media screen and (max-width: 701px) {
     .top-container {
         width: 100%;
         margin: 0 auto;
