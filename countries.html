@@ -295,7 +295,7 @@
 
             countries.forEach(function (country) { //cycle thru json objects in array
                 console.log(country); //just to check it out
-                db.collection("Countries").add(cousntry) //add this new document
+                db.collection("Countries").add(country) //add this new document
                     .then(function (doc) { //success 
                         console.log("wrote to countries collection " + doc.id);
                     })

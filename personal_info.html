@@ -177,6 +177,7 @@
         var currentUser
         
 
+        // populate user information
         function populateInfo() {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
@@ -214,6 +215,7 @@
             document.getElementById('personalInfoFields').disabled = false;
         }
 
+        //save new user information when there is a change
         function saveUserInfo() {
             userName = document.getElementById('nameInput').value;
             userEmail = document.getElementById('emailInput').value;
@@ -232,6 +234,7 @@
             document.getElementById('personalInfoFields').disabled = true;
         }
 
+        //show user name to the page
         function insertName() {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
@@ -250,7 +253,7 @@
         insertName();
 
      
-
+        // Add Listeners to the file upload input field
         function AddUploadListener() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
@@ -274,6 +277,7 @@
         AddUploadListener("user");
 
 
+        //store image information to database
         function addImage(userid, pickedfile) {
             var storageRef = storage.ref("avatar-images/" + userid + ".jpg"); 
             var metadata = {
@@ -293,6 +297,7 @@
                 });
         }
 
+        // Show the avatar image to the personal information page
         function ShowNewAvatar() {
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
@@ -300,10 +305,7 @@
                 .get()
                 .then(function (snap) {
                     snap.forEach(function (doc) {
-                        //console.log(doc.data());
                         var avatarPic = doc.data().avatarpic;
-                        //console.log("#" + doc.data().name + "menu");
-                        //console.log(menuPic);
                         $("#avatar-img").attr("src", avatarPic);
                     })
                 })
