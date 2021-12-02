@@ -182,3 +182,22 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+function getData(){
+	var visa = localStorage.getItem("div1");
+	var test = "must obtain visa"
+	var no_visa = "do not need visa"
+	if (visa.includes('require') === true) {
+		document.getElementById("visa_info").innerHTML = test;
+		document.getElementById("visa_info").style.color = "red"
+		document.getElementById('show').style.display = 'block'
+		document.getElementById('not-needed-visa').style.display = 'none'
+	}
+	else {
+		document.getElementById("visa_info").innerHTML = no_visa;
+		document.getElementById("visa_info").style.color = "green"
+		document.getElementById('show').style.display = 'none'
+	}
+	};
+getData()
