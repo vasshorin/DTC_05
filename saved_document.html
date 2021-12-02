@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>My BCIT Project</title>
-  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="comp1800 boilerplate code" content="Travel Easy">
   <meta name="author" content="BCIT">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 
@@ -124,11 +124,10 @@
                 </g>
               </svg>
               <p class="card-text">Keep your passport here</p>
-              <input type="file" class="myFile" title=" ">
-              
-              <!-- <progress min="0" max="100" value="0" class="progressBar"></progress> -->
-              <img src="images/logo.jpg" id="mypic-goes-here" width="1" height="1">
-              <img src="" id="display-pic" width="100" height="100" alt="">
+              <img id="passportPic" src="images/white.jpg" alt="user" width="100" height="100"> 
+              <br><br>
+              <button id="send" onclick="document.getElementById('passportInput').click()">Upload Passport</button>
+              <input type="file" id="passportInput" style="display:none">
               <br>
               <br>
               <a href="#" id="submitBtnPassport" target="_blank">Open</a>
@@ -164,10 +163,10 @@
                 </g>
               </svg>
               <p class="card-text">Keep your vaccination proof here</p>
-              <input type="file" id="vaccine" />
-              <!-- <progress min="0" max="100" value="0" class="progressBarVaccine"></progress> -->
-              <img src="images/logo.jpg" id="mypic-goes-here-vaccine" width="1" height="1" style="padding-top: 5%;">
-              <img src="" id="display-pic-vaccine" width="100" height="100" alt="" style="padding-top: 1%">
+              <img id="vaccinePic" src="images/white.jpg" alt="user" width="100" height="100"> 
+              <br><br>
+              <button id="send_vaccine" onclick="document.getElementById('vaccineInput').click()">Upload Vaccine</button>
+              <input type="file" id="vaccineInput" style="display:none">
               <br>
               <br>
               <a href="#" id="submitBtnVaccine" target="_blank">Open</a>
@@ -185,7 +184,10 @@
             <h5 class="card-title"><u>Other Documents</u></h5>
             <img src="https://img.icons8.com/glyph-neue/64/000000/documents.png" />
             <p class="card-text">Keep your necessary documents here</p>
-            <input type="file" class="" />
+            <img id="docPic" src="./images/white.jpg" alt="user" width="100" height="100"> 
+            <br><br>
+            <button id="send_doc" onclick="document.getElementById('docInput').click()">Upload Vaccine</button>
+            <input type="file" id="docInput" style="display:none">
             <br>
             <br>
             <a href="#" id="submitBtnDocs" target="_blank">Open</a>
@@ -254,69 +256,80 @@
 
 
 
-
-  <!-- FILES UPLOADS -->
-  <!-- PASSPORT UPLOAD -->
+<!-- MAIN SCRIPTS -->
   <script>
+    // RETURN BACK BUTTON
     function return_back() {
       window.history.back();
     }
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        const image = document.getElementById('mypic-goes-here');
-        document.querySelector('.myFile').addEventListener('change', (e) => {
-          console.log(e)
-          var file = e.target.files[0]
-          // var blob = URL.createObjectURL(file)
-
-          var storageRef = storage.ref("Images/" + user.uid + e.target.files[0].name)
-          console.log(storageRef + "INK")
-
-          var task = storageRef.put(file);
-          // image.src = blob
-          task.on('state_changed', s => {
-            console.log((s.bytesTransferred / s.totalBytes) * 100);
-            document.querySelector('.progressBar').value = (s.bytesTransferred / s
-              .totalBytes) * 100;
-          });
-          storageRef.getDownloadURL().then(function (url) {
-            console.log(url);
-            image.src = url
-            db.collection('users').doc(user.uid).update({
-                "passport": url
-              })
-              .then(function () {
-                console.log('Loaded picture URL')
-              })
-          })
-        });
-      }
-    });
   </script>
-  <script>
-    function displayPassport() {
-      firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-          db.collection('users').doc(user.uid)
-            .get()
-            .then(function (doc) {
-              var picUrl = doc.data().passport;
-              $('#display-pic').attr("src", picUrl)
-            })
-        }
-      })
-    }
-    displayPassport()
 
+  <!-- PASSPORT SHOW, UPDATE, READ -->
+  <script>
+    function AddUploadListenerPassport() {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                const fileInput = document.getElementById("passportInput"); 
+                const image = document.getElementById("passportPic"); 
+                fileInput.addEventListener('change', function (e) {
+                    var blob = URL.createObjectURL(e.target.files[0]);
+                    var targetfile = (e.target.files[0]);
+                    image.src = blob;
+                    addImagePassport(user.uid, targetfile);
+                    
+                });
+            }
+        });
+    }
+
+    AddUploadListenerPassport("user");
+
+    //Add image
+    function addImagePassport(userid, pickedfile) {
+        var storageRef = storage.ref("passports/" + userid + ".jpg"); 
+        var metadata = {
+            contentType: 'image/jpeg',
+        };
+        storageRef.put(pickedfile, metadata)
+            .then(function () {
+                storageRef.getDownloadURL() 
+                    .then(function (url) {
+                        // console.log(url); 
+                        db.collection("users").doc(userid).update({
+                            "passport": url
+                        })
+                    })
+            });
+    }
+    
+    // Show picture
+    function ShowNewPassport() {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                db.collection("users").where("name", "==", user.displayName)
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    var passportPic = doc.data().passport;
+                    // console.log('Showing new passport', passportPic)
+                    $("#passportPic").attr("src", passportPic);
+                })
+            })
+            }
+        });
+    }
+    ShowNewPassport();
+
+    // Change passport open link
     let submitButton = document.getElementById("submitBtnPassport")
     const collectionRef = db.collection('users')
     function showImage() {
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          console.log(user)
+          // console.log(user)
           db.collection('users').doc(user.uid).get().then(function (doc) {
             var passportUrl = doc.data().passport
-            console.log(passportUrl);
+            // console.log(passportUrl);
             submitButton.setAttribute("href", passportUrl)
           })
         }
@@ -324,48 +337,71 @@
     }
     showImage()
   </script>
-<!-- VACCINE SECTION -->
+
+  <!-- VACCINE READ, GET, POST -->
   <script>
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        const image = document.getElementById('mypic-goes-here-vaccine');
-        document.querySelector('#vaccine').addEventListener('change', (e) => {
-          console.log(e)
-          var file = e.target.files[0]
-
-          var storageRef = storage.ref("Vaccines/" + user.uid + e.target.files[0].name)
-
-          var task = storageRef.put(file);
-
-          task.on('state_changed', s => {
-            console.log((s.bytesTransferred / s.totalBytes) * 100);
-            document.querySelector('.progressBarVaccine').value = (s
-              .bytesTransferred / s.totalBytes) * 100;
-          });
-          storageRef.getDownloadURL().then(function (url) {
-            console.log(url);
-            image.src = url
-            db.collection('users').doc(user.uid).update({
-                "vaccine": url
-              })
-              .then(function () {
-                console.log('Loaded picture URL')
-              })
-          })
+    function AddUploadListenerVaccine() {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+              // console.log(user.uid)
+                const fileInput = document.getElementById("vaccineInput"); 
+                const image = document.getElementById("vaccinePic"); 
+                fileInput.addEventListener('change', function (e) {
+                    var blob = URL.createObjectURL(e.target.files[0]);
+                    var targetfile = (e.target.files[0]);
+                    image.src = blob;
+                    addImageVaccine(user.uid, targetfile);
+                });
+            }
         });
-      }
-    });
-  </script>
-  <script>
+    }
+
+    AddUploadListenerVaccine("user");
+    // Add new picture
+    function addImageVaccine(userid, pickedfile) {
+        var storageRef = storage.ref("vaccine/" + userid + ".jpg"); 
+        var metadata = {
+            contentType: 'image/jpeg',
+        };
+        storageRef.put(pickedfile, metadata)
+            .then(function () {
+                storageRef.getDownloadURL() 
+                    .then(function (url) {
+                        // console.log(url); 
+                        db.collection("users").doc(userid).update({
+                            "vaccine": url
+                        })
+                    })
+            });
+    }
+    //Show new picture
+    function ShowNewVaccine() {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                db.collection("users").where("name", "==", user.displayName)
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    var vaccinePic = doc.data().vaccine;
+                    // console.log('Showing new img', vaccinePic)
+                    $("#vaccinePic").attr("src", vaccinePic);
+                })
+            })
+            }
+        });
+    }
+    ShowNewVaccine();
+
+    // Update vaccine open file link
     let submitButtonVaccine = document.getElementById("submitBtnVaccine")
     const collectionRefnew = db.collection('users')
+
     function showImageVaccine() {
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          console.log(user)
+          // console.log(user)
           db.collection('users').doc(user.uid).get().then(function (doc) {
             var vaccineUrl = doc.data().vaccine
-            console.log(vaccineUrl);
             submitButtonVaccine.setAttribute("href", vaccineUrl)
           })
         }
@@ -373,23 +409,76 @@
     }
     showImageVaccine()
   </script>
-  <!-- Show  vaccine picture-->
-    <script>
-      function displayImg() {
+  <!-- OTHER DOCUMENTS  READ, GET, POST-->
+  <script>
+    function AddUploadListenerDoc() {
         firebase.auth().onAuthStateChanged(function (user) {
-          if (user) {
-            db.collection('users').doc(user.uid)
-              .get()
-              .then(function (doc) {
-                var picUrl = doc.data().vaccine;
-                $('#display-pic-vaccine').attr("src", picUrl)
-              })
+            if (user) {
+              // console.log(user.uid)
+                const fileInput = document.getElementById("docInput"); 
+                const image = document.getElementById("docPic"); 
+                fileInput.addEventListener('change', function (e) {
+                    var blob = URL.createObjectURL(e.target.files[0]);
+                    var targetfile = (e.target.files[0]);
+                    image.src = blob;
+                    addImageDoc(user.uid, targetfile);                 
+                });
+            }
+        });
+    }
 
-          }
-        })
-      }
-      displayImg()
-    </script>
+    AddUploadListenerDoc("user");
+
+    function addImageDoc(userid, pickedfile) {
+        var storageRef = storage.ref("docs/" + userid + ".jpg"); 
+        var metadata = {
+            contentType: 'image/jpeg',
+        };
+        storageRef.put(pickedfile, metadata)
+            .then(function () {
+                storageRef.getDownloadURL() 
+                    .then(function (url) {
+                        console.log(url); 
+                        db.collection("users").doc(userid).update({
+                            "docs": url
+                        })
+                    })
+            });
+    }
+
+    function ShowNewDoc() {
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                db.collection("users").where("name", "==", user.displayName)
+            .get()
+            .then(function (snap) {
+                snap.forEach(function (doc) {
+                    var docPic = doc.data().docs;
+                    $("#docPic").attr("src", docPic);
+                })
+            })
+            }
+        });
+    }
+    ShowNewDoc();
+
+    // Update open picture link
+    let submitButtonDocs = document.getElementById("submitBtnDocs")
+    const collectionRefnewDoc = db.collection('users')
+
+    function showImageDoc() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // console.log(user)
+          db.collection('users').doc(user.uid).get().then(function (doc) {
+            var docUrl = doc.data().docs
+            submitButtonDocs.setAttribute("href", docUrl) //update url
+          })
+        }
+      })
+    }
+    showImageDoc()
+  </script>
 
     <!--Display saved countries as a custom name-->
   <script>

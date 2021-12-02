@@ -156,6 +156,7 @@
           </div>
         </div>
       </div>
+      <button onclick="logOut()">Log Out</button>
     </div>
   </div>
 
@@ -200,6 +201,19 @@
     }
     insertName();
   </script>
+  <!-- LOG OUT -->
+  <script>
+    function logOut() {
+      console.log("logging out user");
+      firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+        console.log("Logged out")
+        window.location.href = "index.html";
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
+</script>
 </body>
 
 </html>

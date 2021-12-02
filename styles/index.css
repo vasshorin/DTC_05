@@ -74,7 +74,6 @@ a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-    color: red;
   }
   
 .visas {
@@ -171,7 +170,50 @@ background: #FFCC00;
     background: #FFCC00;
 }
 
+#send {
+    border: 2px solid #333;
+    background: #333;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+}
 
+#send:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#send_vaccine {
+    border: 2px solid #333;
+    background: #333;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+}
+
+#send_vaccine:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#send_doc {
+    border: 2px solid #333;
+    background: #333;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+}
+
+#send_doc:hover {
+    background-color: #fff;
+    color: #333;
+}
 @media screen and (max-width: 700px) {
     body {
         background-color: red;
