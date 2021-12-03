@@ -1,9 +1,11 @@
 body {
     width: 100%;
 }
+
 ul li a {
     color: white;
 }
+
 .jumbotron {
     justify-content: center;
     align-items: center;
@@ -27,19 +29,19 @@ main {
         width: 100%;
         margin: 0 auto;
     }
-    
+
     .top-container>div {
         width: 80%;
         margin: 0 auto;
     }
-    
+
     .top-container>h1,
     .top-container>h2,
     .top-container>h3 {
         width: 80%;
         margin: 0 auto;
     }
-    
+
     .top-container #top-section {
         width: 100%;
         /* padding: 50px 10%; */
@@ -48,15 +50,15 @@ main {
         position: relative;
         overflow: hidden;
     }
-    
-    
+
+
     .rbg1,
     .rbg2 {
         background: #fc0;
         width: 100%;
         height: 6rem;
     }
-    
+
     .rbg1 {
         position: absolute;
         top: 0;
@@ -69,7 +71,7 @@ main {
         transform: translateX(-50%) rotate(-45deg);
         transform-origin: 50% 0;
     }
-    
+
     .rbg2 {
         position: absolute;
         bottom: 0;
