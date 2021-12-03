@@ -73,7 +73,7 @@ It has the following subfolders and files:
     /user.png
     /white.jpg
     /worldMap.jpg      
-├──Provinces                 # Folder for provinces
+├──provinces                 # Folder for provinces
     /canada-alberta.html
     /canada-bc.html
     /canada-brimswick.html
