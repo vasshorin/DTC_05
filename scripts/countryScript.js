@@ -36,43 +36,43 @@ function countryChange(){
 
 // Provinces
 	if(Country.value == 'Canada' && Province.value == "Alberta"){
-		submitButton.setAttribute("href",'provinces/canada-alberta.html')
+		submitButton.setAttribute("href",'Provinces/canada-alberta.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "British Columbia"){
-		submitButton.setAttribute("href",'provinces/canada-bc.html')
+		submitButton.setAttribute("href",'Provinces/canada-bc.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Manitoba"){
-		submitButton.setAttribute("href",'provinces/canada-manitoba.html')
+		submitButton.setAttribute("href",'Provinces/canada-manitoba.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "New Brunswick"){
-		submitButton.setAttribute("href",'provinces/canada-brunswick.html')
+		submitButton.setAttribute("href",'Provinces/canada-brunswick.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Newfoundland and Labrador"){
-		submitButton.setAttribute("href",'provinces/canada-newfoundland.html')
+		submitButton.setAttribute("href",'Provinces/canada-newfoundland.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Northwest Territories"){
-		submitButton.setAttribute("href",'provinces/canada-northwest.html')
+		submitButton.setAttribute("href",'Provinces/canada-northwest.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Nova Scotia"){
-		submitButton.setAttribute("href",'provinces/canada-novaScotia.html')
+		submitButton.setAttribute("href",'Provinces/canada-novaScotia.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Nunavut"){
-		submitButton.setAttribute("href",'provinces/canada-nunavut.html')
+		submitButton.setAttribute("href",'Provinces/canada-nunavut.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Ontario"){
-		submitButton.setAttribute("href",'provinces/canada-ontario.html')
+		submitButton.setAttribute("href",'Provinces/canada-ontario.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Prince Edward Island"){
-		submitButton.setAttribute("href",'provinces/canada-princeEdward.html')
+		submitButton.setAttribute("href",'Provinces/canada-princeEdward.html')
 	}	
 	if(Country.value == 'Canada' && Province.value == "Quebec"){
-		submitButton.setAttribute("href",'provinces/canada-quebec.html')
+		submitButton.setAttribute("href",'Provinces/canada-quebec.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Saskatchewan"){
-		submitButton.setAttribute("href",'provinces/canada-saskatchewan.html')
+		submitButton.setAttribute("href",'Provinces/canada-saskatchewan.html')
 	}
 	if(Country.value == 'Canada' && Province.value == "Yukon"){
-		submitButton.setAttribute("href",'provinces/canada-yukon.html')
+		submitButton.setAttribute("href",'Provinces/canada-yukon.html')
 	}
 
 }

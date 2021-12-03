@@ -1,3 +1,4 @@
+// Run check against the database to verify user's input and return result
 const collectionRef = db.collection('Country')
    
 let submitButton = document.getElementById("submitBtn")
@@ -6,11 +7,7 @@ let Nationality = document.getElementById("nationality")
 let div1 = document.getElementById('test')
 
 function searchCountry(){
-//   console.log(Country.value)
-//   console.log(Nationality.value)
-//   console.log(collectionRef)
   console.log(collectionRef.doc(Country.value).get().then((snapshot) => {
-    // console.log(snapshot.data())
 	const visa = snapshot.data()['Need']
 	// const visa = "require visa"
 	const noVisa = snapshot.data()['No_need']
