@@ -110,16 +110,7 @@ It has the following subfolders and files:
     /searchtrip.css 	
 Firebase hosting files: 	
 ├── .firebaserc...	
+
+
 ```	
 
-## Images references
-- Images in countries.html 
-       - customs.jpg from Bidges world wide (Open source https://www.bridgesworldwide.co.uk/customs-brokerage/)
-       - regulations.jpg from Pexel (Open source https://www.pexels.com/  photoasphalt-road-with-inscription-stay-safe-stay-apart-5428704)
-       - worldMap.jpg from Pexel (Open source https://www.pexels.com/photo/flight-landscape-bird-people-5725589/)
-- Images in login.html, index.html, and personal_information.html
-       - user.png from Flyclipart (Open source https://flyclipart.com/boss-circle-man-person-profile-staff-user-icon-user-icon-png-133441)
-- Image in canada-bc.html
-       - proof_of_vaccination_example.png from Government of British Columbia (Open source https://www2.gov.bc.ca/gov/content/covid-19/travel/current)
-- Images in saved_document and personal_information.html
-       - back-button-white.png from Pngitem (Open source https://www.pngitem.com/so/back-button/)
